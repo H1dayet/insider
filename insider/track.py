@@ -58,6 +58,36 @@ def annotate_exits(conn, trades: list[store.StoredTrade]) -> None:
             store.set_member_exited(conn, rec.ticker, rec.alert_date, min(exit_dates))
 
 
+def update_live_prices(conn, stats: dict) -> None:
+    """Refresh every recommendation's current price/RS, every run - unlike the
+    frozen 30/60/90/120d checkpoints, this always reflects today's numbers, so
+    you can see how a position is doing without waiting for its next milestone.
+    """
+    bench_cache: dict[str, float] = {}
+    for rec in store.all_recommendations(conn):
+        try:
+            quote = prices.lookup(rec.ticker, rec.alert_date)
+        except prices.PriceUnavailable:
+            stats["price_lookup_failures"] = stats.get("price_lookup_failures", 0) + 1
+            time.sleep(0.5)
+            continue
+
+        if rec.sector_etf not in bench_cache:
+            try:
+                bench_cache[rec.sector_etf] = prices.lookup(rec.sector_etf, rec.alert_date).current
+            except prices.PriceUnavailable:
+                stats["price_lookup_failures"] = stats.get("price_lookup_failures", 0) + 1
+                time.sleep(0.5)
+                continue
+        bench_current = bench_cache[rec.sector_etf]
+
+        stock_return = quote.current / rec.entry_price - 1
+        bench_return = bench_current / rec.bench_entry - 1
+        rs = (stock_return - bench_return) * 100
+        store.update_recommendation_price(conn, rec.ticker, rec.alert_date, quote.current, rs)
+        time.sleep(0.5)
+
+
 def score_due_checkpoints(conn, today: date, stats: dict) -> None:
     """Price and score every checkpoint whose date has passed but isn't scored yet."""
     bench_cache: dict[tuple[str, date], float] = {}

@@ -70,7 +70,43 @@ def test_migration_adds_columns_to_pre_existing_db():
             assert trades[0].current_price is None  # pre-existing row, not yet checked
 
 
+def test_recommendation_migration_adds_live_price_columns():
+    with tempfile.TemporaryDirectory() as tmp:
+        db_path = str(Path(tmp) / "old.db")
+
+        # Simulate a recommendations table from before the live-price columns
+        # existed (this shipped and got real rows before current_price/
+        # current_relative_strength/checked_at were added).
+        conn = sqlite3.connect(db_path)
+        conn.executescript("""
+            CREATE TABLE recommendations (
+                ticker TEXT NOT NULL, alert_date TEXT NOT NULL, entry_price REAL NOT NULL,
+                sector_etf TEXT NOT NULL, bench_entry REAL NOT NULL, company_name TEXT,
+                members TEXT, fill_count INTEGER NOT NULL, member_exited_on TEXT,
+                PRIMARY KEY (ticker, alert_date)
+            );
+            INSERT INTO recommendations VALUES
+                ('KO', '2026-07-01', 60.0, 'XLP', 50.0, 'Coca-Cola', 'Someone', 1, NULL);
+        """)
+        conn.commit()
+        conn.close()
+
+        with store.connect(db_path) as conn:
+            columns = {row[1] for row in conn.execute("PRAGMA table_info(recommendations)")}
+            assert {"current_price", "current_relative_strength", "checked_at"} <= columns
+
+            recs = store.all_recommendations(conn)
+            assert len(recs) == 1
+            assert recs[0].current_price is None  # pre-existing row, not yet live-priced
+
+            store.update_recommendation_price(conn, "KO", date(2026, 7, 1), 65.0, 3.2)
+            recs = store.all_recommendations(conn)
+            assert recs[0].current_price == 65.0
+            assert recs[0].current_relative_strength == 3.2
+
+
 if __name__ == "__main__":
     test_sale_suppresses_only_preceding_buys()
     test_migration_adds_columns_to_pre_existing_db()
+    test_recommendation_migration_adds_live_price_columns()
     print("ok")

@@ -99,6 +99,39 @@ def test_win_loss_boundary_is_strict_positive_relative_strength():
         assert all(c.relative_strength == 0.0 for c in checkpoints)
 
 
+def test_update_live_prices_refreshes_every_run_unlike_frozen_checkpoints():
+    # stock up 20% since alert, bench flat -> rs should be +20pp
+    quotes = {"KO": Quote(100.0, 120.0, None), "XLP": Quote(50.0, 50.0, None)}
+
+    def fake_lookup(ticker, d):
+        q = quotes.get(ticker)
+        if q is None:
+            raise PriceUnavailable(ticker)
+        return q
+
+    with store.connect(":memory:") as conn:
+        alert_date = date(2026, 7, 31)  # today - nowhere near a checkpoint
+        track.record_recommendations(
+            conn, [_fired("KO", "Alice", current=100.0, sector_etf="XLP", bench_current=50.0)], alert_date
+        )
+
+        real_lookup = track.prices.lookup
+        real_sleep = track.time.sleep
+        track.prices.lookup = fake_lookup
+        track.time.sleep = lambda _: None
+        try:
+            track.update_live_prices(conn, {})
+        finally:
+            track.prices.lookup = real_lookup
+            track.time.sleep = real_sleep
+
+        rec = store.all_recommendations(conn)[0]
+        assert rec.current_price == 120.0
+        assert round(rec.current_relative_strength, 1) == 20.0
+        # no checkpoints written - this is the live number, not a milestone verdict
+        assert store.all_checkpoints(conn) == []
+
+
 def test_no_data_is_excluded_from_hit_rate_denominator():
     def failing_lookup(ticker, d):
         raise PriceUnavailable(ticker)
@@ -134,5 +167,6 @@ if __name__ == "__main__":
     test_future_checkpoint_is_not_due()
     test_past_checkpoints_are_due_and_get_scored()
     test_win_loss_boundary_is_strict_positive_relative_strength()
+    test_update_live_prices_refreshes_every_run_unlike_frozen_checkpoints()
     test_no_data_is_excluded_from_hit_rate_denominator()
     print("ok")

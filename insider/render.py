@@ -244,6 +244,15 @@ def _checkpoint_cell(checkpoints_by_key: dict, ticker: str, alert_date: date, ho
     return f'<td class="{cls}">{cp.relative_strength:+.1f}pp</td>'
 
 
+def _live_cell(rec: Recommendation) -> str:
+    """Today's price/RS - refreshed every run, unlike the frozen checkpoints."""
+    if rec.current_price is None:
+        return '<td class="unknown">pending</td>'
+    rs = rec.current_relative_strength or 0.0
+    cls = "good" if rs > 0 else "bad" if rs < 0 else "unknown"
+    return f'<td class="{cls}">${rec.current_price:.2f} ({rs:+.1f}pp)</td>'
+
+
 def _track_row_html(rec: Recommendation, checkpoints_by_key: dict) -> str:
     members = ", ".join(escape(m) for m in rec.members)
     fills_note = f" &middot; {rec.fill_count} fills" if rec.fill_count != len(rec.members) else ""
@@ -256,6 +265,7 @@ def _track_row_html(rec: Recommendation, checkpoints_by_key: dict) -> str:
   <td><a class="ticker-sm" href="https://finance.yahoo.com/quote/{quote(rec.ticker)}" target="_blank" rel="noopener noreferrer">{escape(rec.ticker)}</a>{company}</td>
   <td>{rec.alert_date.isoformat()}</td>
   <td>${rec.entry_price:.2f}</td>
+  {_live_cell(rec)}
   <td class="muted">{members}{fills_note}{exited_note}</td>
   {cells}
 </tr>"""
@@ -312,7 +322,7 @@ def _track_panel_html(track_data: dict | None) -> str:
 {best_worst}
 <div class="track-table-wrap">
 <table class="track-table">
-<thead><tr><th>Ticker</th><th>Alert date</th><th>Entry</th><th>Members</th>{header_cells}</tr></thead>
+<thead><tr><th>Ticker</th><th>Alert date</th><th>Entry</th><th>Now</th><th>Members</th>{header_cells}</tr></thead>
 <tbody>
 {rows}
 </tbody>
@@ -473,7 +483,7 @@ summary:hover {{ color: var(--text-muted); }}
 <section id="panel-track" class="panel">
 {track_panel}
 
-<p class="disclaimer">Track record covers only trades the bot actually alerted on (not every disclosed buy), priced from the alert date - what copying it would really have cost you, not the member's own entry. Each recommendation is scored at 30/60/90/120 days by holding to that checkpoint with no early exit, against the same sector-ETF benchmark the alert gate uses. "Member exited" is an annotation, not a rule - it does not change the verdict. The first cohort shares one alert date, so its hit rate is not yet meaningful; it becomes informative once several independent alert dates have accumulated.</p>
+<p class="disclaimer">Track record covers only trades the bot actually alerted on (not every disclosed buy), priced from the alert date - what copying it would really have cost you, not the member's own entry. "Now" is refreshed every run and is informational only; the 30/60/90/120-day checkpoints are the frozen win/loss verdicts, scored by holding to that checkpoint with no early exit against the same sector-ETF benchmark the alert gate uses, and never change once set. "Member exited" is an annotation, not a rule - it does not change the verdict. The first cohort shares one alert date, so its hit rate is not yet meaningful; it becomes informative once several independent alert dates have accumulated.</p>
 </section>
 </div>
 

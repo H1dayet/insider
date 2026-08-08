@@ -48,12 +48,17 @@ CREATE TABLE IF NOT EXISTS checkpoints (
 
 # Columns added after the initial release - existing trades.db files won't have
 # them, so connect() adds any that are missing on every startup (idempotent).
-_MIGRATIONS = {
+_TRADE_MIGRATIONS = {
     "current_price": "ALTER TABLE trades ADD COLUMN current_price REAL",
     "checked_at": "ALTER TABLE trades ADD COLUMN checked_at TEXT",
     "company_name": "ALTER TABLE trades ADD COLUMN company_name TEXT",
     "sector_etf": "ALTER TABLE trades ADD COLUMN sector_etf TEXT",
     "relative_strength": "ALTER TABLE trades ADD COLUMN relative_strength REAL",
+}
+_RECOMMENDATION_MIGRATIONS = {
+    "current_price": "ALTER TABLE recommendations ADD COLUMN current_price REAL",
+    "current_relative_strength": "ALTER TABLE recommendations ADD COLUMN current_relative_strength REAL",
+    "checked_at": "ALTER TABLE recommendations ADD COLUMN checked_at TEXT",
 }
 
 
@@ -85,6 +90,9 @@ class Recommendation:
     members: list[str]
     fill_count: int
     member_exited_on: str | None
+    current_price: float | None
+    current_relative_strength: float | None
+    checked_at: str | None
 
 
 @dataclass
@@ -117,11 +125,16 @@ def _row_to_trade(r: sqlite3.Row) -> StoredTrade:
     )
 
 
-def _migrate(conn: sqlite3.Connection) -> None:
-    existing = {row[1] for row in conn.execute("PRAGMA table_info(trades)")}
-    for column, ddl in _MIGRATIONS.items():
+def _migrate_table(conn: sqlite3.Connection, table: str, migrations: dict[str, str]) -> None:
+    existing = {row[1] for row in conn.execute(f"PRAGMA table_info({table})")}
+    for column, ddl in migrations.items():
         if column not in existing:
             conn.execute(ddl)
+
+
+def _migrate(conn: sqlite3.Connection) -> None:
+    _migrate_table(conn, "trades", _TRADE_MIGRATIONS)
+    _migrate_table(conn, "recommendations", _RECOMMENDATION_MIGRATIONS)
 
 
 @contextmanager
@@ -291,6 +304,9 @@ def _row_to_recommendation(r: sqlite3.Row) -> Recommendation:
         members=(r["members"] or "").split(",") if r["members"] else [],
         fill_count=r["fill_count"],
         member_exited_on=r["member_exited_on"],
+        current_price=r["current_price"],
+        current_relative_strength=r["current_relative_strength"],
+        checked_at=r["checked_at"],
     )
 
 
@@ -317,6 +333,22 @@ def insert_recommendation(
 def all_recommendations(conn: sqlite3.Connection) -> list[Recommendation]:
     rows = conn.execute("SELECT * FROM recommendations ORDER BY alert_date DESC").fetchall()
     return [_row_to_recommendation(r) for r in rows]
+
+
+def update_recommendation_price(
+    conn: sqlite3.Connection, ticker: str, alert_date: date, price: float, relative_strength: float
+) -> None:
+    """Refresh today's price/relative-strength for a recommendation.
+
+    Unlike checkpoints (frozen milestones at 30/60/90/120 days), this is
+    overwritten every run - same live-tracking pattern as trades.current_price
+    for unalerted buys, just kept going indefinitely instead of freezing at alert.
+    """
+    conn.execute(
+        "UPDATE recommendations SET current_price=?, current_relative_strength=?, checked_at=? "
+        "WHERE ticker=? AND alert_date=?",
+        (price, relative_strength, date.today().isoformat(), ticker, alert_date.isoformat()),
+    )
 
 
 def set_member_exited(conn: sqlite3.Connection, ticker: str, alert_date: date, exited_on: date) -> None:

@@ -195,6 +195,7 @@ def main() -> None:
         if fired:
             track.record_recommendations(conn, fired, today)
         track.annotate_exits(conn, store.all_trades(conn))  # sells still present pre-prune
+        track.update_live_prices(conn, stats)
         track.score_due_checkpoints(conn, today, stats)
         store.prune_older_than(conn, cutoff)
         all_trades = store.all_trades(conn)
