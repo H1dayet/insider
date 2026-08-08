@@ -5,6 +5,7 @@ Usage:
     python -m insider.run --dry-run              # print alerts instead of sending; nothing recorded
     python -m insider.run --no-notify             # skip Telegram but still mark alerted + record
     python -m insider.run --test-notify           # send one hello message, then exit
+    python -m insider.run --find-chat-id           # reply to the latest message with its chat_id, then exit
     python -m insider.run --since 2026-06-01       # override the current/last-month cutoff
 """
 from __future__ import annotations
@@ -218,12 +219,18 @@ def main() -> None:
     parser.add_argument("--dry-run", action="store_true", help="print alerts, mark/record nothing")
     parser.add_argument("--no-notify", action="store_true", help="skip Telegram, still mark alerted + record")
     parser.add_argument("--test-notify", action="store_true")
+    parser.add_argument("--find-chat-id", action="store_true",
+                         help="one-shot: reply to the latest Telegram message with its chat_id, then exit")
     parser.add_argument("--since", type=date.fromisoformat, default=None,
                          help="override the current/last-month cutoff for testing")
     args = parser.parse_args()
 
     if args.test_notify:
         notify.send("insider bot: hello, wiring works.")
+        return
+
+    if args.find_chat_id:
+        notify.reply_with_chat_id()
         return
 
     cutoff = args.since or month_cutoff(date.today())
