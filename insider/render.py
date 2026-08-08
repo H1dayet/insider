@@ -158,11 +158,11 @@ def _bar_geometry(entry_min: float, entry_max: float, current: float) -> dict:
     }
 
 
-def _bar_html(card: TickerCard) -> str:
-    if card.current is None:
+def _bar_html(entry_min: float, entry_max: float, entry_avg: float, current: float | None) -> str:
+    if current is None:
         return '<div class="bar bar-empty"><div class="track"></div></div>'
-    geo = _bar_geometry(card.entry_min, card.entry_max, card.current)
-    _, marker_cls = _pct_and_class(card.entry_avg, card.current)
+    geo = _bar_geometry(entry_min, entry_max, current)
+    _, marker_cls = _pct_and_class(entry_avg, current)
     band = (
         f'<div class="tick paid" style="left:{geo["entry_tick"]:.2f}%"></div>'
         if geo["single_fill"]
@@ -171,11 +171,11 @@ def _bar_html(card: TickerCard) -> str:
     return f"""<div class="bar">
   <div class="track"></div>
   {band}
-  <div class="marker {marker_cls}" style="left:{geo["marker_left"]:.2f}%" title="now ${card.current:.2f}"></div>
+  <div class="marker {marker_cls}" style="left:{geo["marker_left"]:.2f}%" title="now ${current:.2f}"></div>
 </div>
 <div class="bar-labels">
-  <span>paid ${card.entry_min:.2f}{f'–${card.entry_max:.2f}' if not geo["single_fill"] else ''}</span>
-  <span>now ${card.current:.2f}</span>
+  <span>paid ${entry_min:.2f}{f'–${entry_max:.2f}' if not geo["single_fill"] else ''}</span>
+  <span>now ${current:.2f}</span>
 </div>"""
 
 
@@ -214,7 +214,7 @@ def _card_html(card: TickerCard, sales: dict[tuple[str, str], date]) -> str:
     </div>
     <span class="badge {card.status}">{badge_text}</span>
   </div>
-  {_bar_html(card)}
+  {_bar_html(card.entry_min, card.entry_max, card.entry_avg, card.current)}
   <div class="card-meta">
     <span>{len(card.fills)} buy{'s' if len(card.fills) != 1 else ''} &middot; {card.first_date.isoformat()}{f' to {card.last_date.isoformat()}' if card.first_date != card.last_date else ''}</span>
   </div>
@@ -234,41 +234,98 @@ def _card_html(card: TickerCard, sales: dict[tuple[str, str], date]) -> str:
 </div>"""
 
 
-def _checkpoint_cell(checkpoints_by_key: dict, ticker: str, alert_date: date, horizon: int) -> str:
+def _checkpoint_chip(checkpoints_by_key: dict, ticker: str, alert_date: date, horizon: int) -> str:
     cp = checkpoints_by_key.get((ticker, alert_date, horizon))
     if cp is None:
-        return '<td class="unknown">pending</td>'
-    if cp.status == "no_data":
-        return '<td class="unknown">no data</td>'
-    cls = "good" if cp.status == "win" else "bad"
-    return f'<td class="{cls}">{cp.relative_strength:+.1f}pp</td>'
+        value_html = '<span class="cp-value unknown">pending</span>'
+    elif cp.status == "no_data":
+        value_html = '<span class="cp-value unknown">no data</span>'
+    else:
+        cls = "good" if cp.status == "win" else "bad"
+        value_html = f'<span class="cp-value {cls}">{cp.relative_strength:+.1f}pp</span>'
+    return f'<div class="checkpoint"><span class="cp-label">{horizon}d</span>{value_html}</div>'
 
 
-def _live_cell(rec: Recommendation) -> str:
-    """Today's price/RS - refreshed every run, unlike the frozen checkpoints."""
+def _live_badge(rec: Recommendation) -> tuple[str, str]:
+    """Today's status vs. sector - informational, secondary to the frozen checkpoints below it."""
     if rec.current_price is None:
-        return '<td class="unknown">pending</td>'
+        return "pending", "pending"
     rs = rec.current_relative_strength or 0.0
-    cls = "good" if rs > 0 else "bad" if rs < 0 else "unknown"
-    return f'<td class="{cls}">${rec.current_price:.2f} ({rs:+.1f}pp)</td>'
+    if rs > 0:
+        return "beating sector", "beating"
+    if rs < 0:
+        return "lagging", "lagging"
+    return "flat", "flat"
 
 
-def _track_row_html(rec: Recommendation, checkpoints_by_key: dict) -> str:
-    members = ", ".join(escape(m) for m in rec.members)
-    fills_note = f" &middot; {rec.fill_count} fills" if rec.fill_count != len(rec.members) else ""
-    exited_note = (
-        f' <span class="unknown">(member exited {rec.member_exited_on})</span>' if rec.member_exited_on else ""
+def _track_card_html(rec: Recommendation, checkpoints_by_key: dict) -> str:
+    company_html = f'<div class="company">{escape(rec.company_name)}</div>' if rec.company_name else ""
+    badge_text, badge_cls = _live_badge(rec)
+
+    if rec.current_price is not None:
+        pct, pct_cls = _pct_and_class(rec.entry_price, rec.current_price)
+        pct_text = f"{pct:+.1f}% vs entry"
+        rs = rec.current_relative_strength or 0.0
+        rs_cls = "good" if rs > 0 else "bad" if rs < 0 else "unknown"
+        rs_text = f"{rs:+.1f}pp vs {rec.sector_etf}"
+    else:
+        pct_text, pct_cls = "no current price", "unknown"
+        rs_text, rs_cls = "no data", "unknown"
+
+    exited_html = (
+        f'<div class="card-meta muted"><span>member exited {rec.member_exited_on}</span></div>'
+        if rec.member_exited_on else ""
     )
-    company = f'<div class="company">{escape(rec.company_name)}</div>' if rec.company_name else ""
-    cells = "".join(_checkpoint_cell(checkpoints_by_key, rec.ticker, rec.alert_date, h) for h in HORIZONS)
-    return f"""<tr>
-  <td><a class="ticker-sm" href="https://finance.yahoo.com/quote/{quote(rec.ticker)}" target="_blank" rel="noopener noreferrer">{escape(rec.ticker)}</a>{company}</td>
-  <td>{rec.alert_date.isoformat()}</td>
-  <td>${rec.entry_price:.2f}</td>
-  {_live_cell(rec)}
-  <td class="muted">{members}{fills_note}{exited_note}</td>
-  {cells}
-</tr>"""
+    members = ", ".join(escape(m) for m in rec.members)
+    fills_note = (
+        f" &middot; {rec.fill_count} fills" if rec.fill_count != len(rec.members) else ""
+    )
+    checkpoints_html = "".join(_checkpoint_chip(checkpoints_by_key, rec.ticker, rec.alert_date, h) for h in HORIZONS)
+
+    return f"""<div class="card track-card">
+  <div class="card-head">
+    <div>
+      <a class="ticker" href="https://finance.yahoo.com/quote/{quote(rec.ticker)}" target="_blank" rel="noopener noreferrer">{escape(rec.ticker)}</a>
+      {company_html}
+    </div>
+    <span class="badge {badge_cls}">{badge_text}</span>
+  </div>
+  {exited_html}
+  {_bar_html(rec.entry_price, rec.entry_price, rec.entry_price, rec.current_price)}
+  <div class="card-meta">
+    <span class="pct {pct_cls}">{pct_text}</span>
+    <span class="pct {rs_cls}">{rs_text}</span>
+  </div>
+  <div class="checkpoints">
+    {checkpoints_html}
+  </div>
+  <div class="card-meta muted">
+    <span>alerted {rec.alert_date.isoformat()}</span>
+  </div>
+  <details>
+    <summary>{rec.fill_count} buy{'s' if rec.fill_count != 1 else ''} &middot; {len(rec.members)} member{'s' if len(rec.members) != 1 else ''}</summary>
+    <div class="fills"><div class="fill-row-track">{members}{fills_note}</div></div>
+  </details>
+</div>"""
+
+
+def _kpi_tiles_html(summary: dict) -> str:
+    tiles = []
+    for h in HORIZONS:
+        hs = summary["per_horizon"].get(h, {"scored": 0})
+        if not hs.get("scored"):
+            value_html = '<div class="kpi-value unknown">pending</div>'
+            sub = "not scored yet"
+        else:
+            cls = "good" if hs["hit_rate"] >= 50 else "bad"
+            value_html = f'<div class="kpi-value {cls}">{hs["hit_rate"]:.0f}%</div>'
+            sub = f'{hs["wins"]}/{hs["scored"]} &middot; median {hs["median_rs"]:+.1f}pp'
+        tiles.append(f"""<div class="kpi-tile">
+  <div class="kpi-label">{h}d</div>
+  {value_html}
+  <div class="kpi-sub">{sub}</div>
+</div>""")
+    return '<div class="kpi-row">' + "\n".join(tiles) + "</div>"
 
 
 def _track_panel_html(track_data: dict | None) -> str:
@@ -291,17 +348,6 @@ def _track_panel_html(track_data: dict | None) -> str:
         maturity[(c.ticker, c.alert_date)].add(c.horizon_days)
     fully_scored = sum(1 for r in recs if len(maturity[(r.ticker, r.alert_date)]) == len(HORIZONS))
 
-    horizon_bits = []
-    for h in HORIZONS:
-        hs = summary["per_horizon"].get(h, {"scored": 0})
-        if not hs.get("scored"):
-            horizon_bits.append(f"{h}d pending")
-        else:
-            horizon_bits.append(
-                f"{h}d: {hs['wins']}/{hs['scored']} beat sector ({hs['hit_rate']:.0f}%), "
-                f"median {hs['median_rs']:+.1f}pp"
-            )
-
     best, worst = summary.get("best"), summary.get("worst")
     best_worst = ""
     if best and worst:
@@ -314,19 +360,13 @@ def _track_panel_html(track_data: dict | None) -> str:
             f"({worst.horizon_days}d)</p>"
         )
 
-    rows = "\n".join(_track_row_html(r, checkpoints_by_key) for r in recs)
-    header_cells = "".join(f"<th>{h}d</th>" for h in HORIZONS)
+    cards_html = "\n".join(_track_card_html(r, checkpoints_by_key) for r in recs)
 
-    return f"""<p class="track-summary-line">{" &middot; ".join(horizon_bits)}</p>
+    return f"""{_kpi_tiles_html(summary)}
 <p class="track-summary-line muted">{len(recs)} recommendation{'s' if len(recs) != 1 else ''} tracked &middot; {fully_scored} fully scored (all {len(HORIZONS)} checkpoints)</p>
 {best_worst}
-<div class="track-table-wrap">
-<table class="track-table">
-<thead><tr><th>Ticker</th><th>Alert date</th><th>Entry</th><th>Now</th><th>Members</th>{header_cells}</tr></thead>
-<tbody>
-{rows}
-</tbody>
-</table>
+<div class="cards">
+{cards_html}
 </div>"""
 
 
@@ -444,16 +484,32 @@ summary:hover {{ color: var(--text-muted); }}
 .track-summary-line .good {{ color: var(--good); }}
 .track-summary-line .bad {{ color: var(--bad); }}
 
-.track-table-wrap {{ overflow-x: auto; margin-top: 0.75rem; }}
-.track-table {{ width: 100%; border-collapse: collapse; font-size: 0.8125rem; white-space: nowrap; }}
-.track-table th, .track-table td {{ padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border); text-align: left; }}
-.track-table th {{ color: var(--text-faint); font-weight: 600; font-size: 0.75rem; }}
-.track-table td.good {{ color: var(--good); }}
-.track-table td.bad {{ color: var(--bad); }}
-.track-table td.unknown {{ color: var(--text-faint); }}
-.track-table .company {{ color: var(--text-muted); font-size: 0.75rem; margin-top: 0.1rem; white-space: normal; }}
-.ticker-sm {{ font-weight: 700; color: var(--text); text-decoration: none; }}
-.ticker-sm:hover {{ text-decoration: underline; }}
+.kpi-row {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.6rem; margin: 0.75rem 0 1rem; }}
+.kpi-tile {{ background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 0.75rem 0.9rem; }}
+.kpi-label {{ color: var(--text-faint); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; }}
+.kpi-value {{ font-size: 1.375rem; font-weight: 700; margin: 0.15rem 0; }}
+.kpi-value.good {{ color: var(--good); }}
+.kpi-value.bad {{ color: var(--bad); }}
+.kpi-value.unknown {{ color: var(--text-faint); }}
+.kpi-sub {{ color: var(--text-faint); font-size: 0.6875rem; }}
+
+.badge.beating {{ background: var(--good-bg); color: var(--good); }}
+.badge.flat {{ background: var(--unknown-bg); color: var(--text-muted); }}
+.badge.lagging {{ background: var(--bad-bg); color: var(--bad); }}
+.badge.pending {{ background: var(--unknown-bg); color: var(--text-faint); }}
+
+.checkpoints {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem; margin-top: 0.2rem; }}
+.checkpoint {{
+  display: flex; flex-direction: column; align-items: center; gap: 0.15rem;
+  background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 0.35rem 0.2rem;
+}}
+.cp-label {{ color: var(--text-faint); font-size: 0.625rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; }}
+.cp-value {{ font-size: 0.75rem; font-weight: 600; }}
+.cp-value.good {{ color: var(--good); }}
+.cp-value.bad {{ color: var(--bad); }}
+.cp-value.unknown {{ color: var(--text-faint); }}
+
+.fill-row-track {{ color: var(--text-muted); font-size: 0.75rem; }}
 
 @media (prefers-reduced-motion: reduce) {{
   .card {{ transition: none; }}

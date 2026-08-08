@@ -112,16 +112,32 @@ summary:hover { color: var(--text-muted); }
 .track-summary-line .good { color: var(--good); }
 .track-summary-line .bad { color: var(--bad); }
 
-.track-table-wrap { overflow-x: auto; margin-top: 0.75rem; }
-.track-table { width: 100%; border-collapse: collapse; font-size: 0.8125rem; white-space: nowrap; }
-.track-table th, .track-table td { padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border); text-align: left; }
-.track-table th { color: var(--text-faint); font-weight: 600; font-size: 0.75rem; }
-.track-table td.good { color: var(--good); }
-.track-table td.bad { color: var(--bad); }
-.track-table td.unknown { color: var(--text-faint); }
-.track-table .company { color: var(--text-muted); font-size: 0.75rem; margin-top: 0.1rem; white-space: normal; }
-.ticker-sm { font-weight: 700; color: var(--text); text-decoration: none; }
-.ticker-sm:hover { text-decoration: underline; }
+.kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.6rem; margin: 0.75rem 0 1rem; }
+.kpi-tile { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 0.75rem 0.9rem; }
+.kpi-label { color: var(--text-faint); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; }
+.kpi-value { font-size: 1.375rem; font-weight: 700; margin: 0.15rem 0; }
+.kpi-value.good { color: var(--good); }
+.kpi-value.bad { color: var(--bad); }
+.kpi-value.unknown { color: var(--text-faint); }
+.kpi-sub { color: var(--text-faint); font-size: 0.6875rem; }
+
+.badge.beating { background: var(--good-bg); color: var(--good); }
+.badge.flat { background: var(--unknown-bg); color: var(--text-muted); }
+.badge.lagging { background: var(--bad-bg); color: var(--bad); }
+.badge.pending { background: var(--unknown-bg); color: var(--text-faint); }
+
+.checkpoints { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem; margin-top: 0.2rem; }
+.checkpoint {
+  display: flex; flex-direction: column; align-items: center; gap: 0.15rem;
+  background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 0.35rem 0.2rem;
+}
+.cp-label { color: var(--text-faint); font-size: 0.625rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; }
+.cp-value { font-size: 0.75rem; font-weight: 600; }
+.cp-value.good { color: var(--good); }
+.cp-value.bad { color: var(--bad); }
+.cp-value.unknown { color: var(--text-faint); }
+
+.fill-row-track { color: var(--text-muted); font-size: 0.75rem; }
 
 @media (prefers-reduced-motion: reduce) {
   .card { transition: none; }
@@ -130,7 +146,7 @@ summary:hover { color: var(--text-muted); }
 <body>
 <div class="wrap">
 <h1>Congressional Buy Signals</h1>
-<p class="subhead">Generated 2026-08-08 11:54 UTC &middot; 29 tickers tracked (52 buys)</p>
+<p class="subhead">Generated 2026-08-08 13:11 UTC &middot; 29 tickers tracked (52 buys)</p>
 
 <input type="radio" name="tab" id="tab-signals" class="tab-input" checked>
 <input type="radio" name="tab" id="tab-track" class="tab-input">
@@ -141,7 +157,7 @@ summary:hover { color: var(--text-muted); }
 
 <div class="panels">
 <section id="panel-signals" class="panel">
-<p class="health">Scanned 0 filings &middot; 0 price lookups failed &middot; 783 filings skipped (too old) &middot; 0 PDF fetch errors &middot; 0 sector lookups fell back to SPY</p>
+<p class="health">Scanned 0 filings &middot; 0 price lookups failed &middot; 0 filings skipped (too old) &middot; 0 PDF fetch errors &middot; 0 sector lookups fell back to SPY</p>
 
 <section class="actionable"><div class="section-head"><h2>Actionable now</h2><span class="count">14</span></div><div class="cards"><div class="card actionable">
   <div class="card-head">
@@ -1157,135 +1173,524 @@ summary:hover { color: var(--text-muted); }
 </section>
 
 <section id="panel-track" class="panel">
-<p class="track-summary-line">30d pending &middot; 60d pending &middot; 90d pending &middot; 120d pending</p>
+<div class="kpi-row"><div class="kpi-tile">
+  <div class="kpi-label">30d</div>
+  <div class="kpi-value unknown">pending</div>
+  <div class="kpi-sub">not scored yet</div>
+</div>
+<div class="kpi-tile">
+  <div class="kpi-label">60d</div>
+  <div class="kpi-value unknown">pending</div>
+  <div class="kpi-sub">not scored yet</div>
+</div>
+<div class="kpi-tile">
+  <div class="kpi-label">90d</div>
+  <div class="kpi-value unknown">pending</div>
+  <div class="kpi-sub">not scored yet</div>
+</div>
+<div class="kpi-tile">
+  <div class="kpi-label">120d</div>
+  <div class="kpi-value unknown">pending</div>
+  <div class="kpi-sub">not scored yet</div>
+</div></div>
 <p class="track-summary-line muted">15 recommendations tracked &middot; 0 fully scored (all 4 checkpoints)</p>
 
-<div class="track-table-wrap">
-<table class="track-table">
-<thead><tr><th>Ticker</th><th>Alert date</th><th>Entry</th><th>Now</th><th>Members</th><th>30d</th><th>60d</th><th>90d</th><th>120d</th></tr></thead>
-<tbody>
-<tr>
-  <td><a class="ticker-sm" href="https://finance.yahoo.com/quote/CHRW" target="_blank" rel="noopener noreferrer">CHRW</a><div class="company">C.H. Robinson Worldwide, Inc.</div></td>
-  <td>2026-08-08</td>
-  <td>$149.34</td>
-  <td class="unknown">$149.34 (+0.0pp)</td>
-  <td class="muted">April McClain Delaney</td>
-  <td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td>
-</tr>
-<tr>
-  <td><a class="ticker-sm" href="https://finance.yahoo.com/quote/FWONK" target="_blank" rel="noopener noreferrer">FWONK</a><div class="company">Formula One Group</div></td>
-  <td>2026-08-08</td>
-  <td>$102.85</td>
-  <td class="unknown">$102.85 (+0.0pp)</td>
-  <td class="muted">April McClain Delaney &middot; 4 fills</td>
-  <td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td>
-</tr>
-<tr>
-  <td><a class="ticker-sm" href="https://finance.yahoo.com/quote/LTH" target="_blank" rel="noopener noreferrer">LTH</a><div class="company">Life Time Group Holdings, Inc.</div></td>
-  <td>2026-08-08</td>
-  <td>$43.81</td>
-  <td class="unknown">$43.81 (+0.0pp)</td>
-  <td class="muted">April McClain Delaney &middot; 7 fills</td>
-  <td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td>
-</tr>
-<tr>
-  <td><a class="ticker-sm" href="https://finance.yahoo.com/quote/SGI" target="_blank" rel="noopener noreferrer">SGI</a><div class="company">Somnigroup International Inc.</div></td>
-  <td>2026-08-08</td>
-  <td>$65.25</td>
-  <td class="unknown">$65.25 (+0.0pp)</td>
-  <td class="muted">April McClain Delaney</td>
-  <td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td>
-</tr>
-<tr>
-  <td><a class="ticker-sm" href="https://finance.yahoo.com/quote/TDG" target="_blank" rel="noopener noreferrer">TDG</a><div class="company">TransDigm Group Incorporated</div></td>
-  <td>2026-08-08</td>
-  <td>$1225.25</td>
-  <td class="unknown">$1225.25 (+0.0pp)</td>
-  <td class="muted">April McClain Delaney</td>
-  <td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td>
-</tr>
-<tr>
-  <td><a class="ticker-sm" href="https://finance.yahoo.com/quote/BWXT" target="_blank" rel="noopener noreferrer">BWXT</a><div class="company">BWX Technologies, Inc.</div></td>
-  <td>2026-08-08</td>
-  <td>$169.90</td>
-  <td class="unknown">$169.90 (+0.0pp)</td>
-  <td class="muted">April McClain Delaney &middot; 2 fills</td>
-  <td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td>
-</tr>
-<tr>
-  <td><a class="ticker-sm" href="https://finance.yahoo.com/quote/MLM" target="_blank" rel="noopener noreferrer">MLM</a><div class="company">Martin Marietta Materials, Inc.</div></td>
-  <td>2026-08-08</td>
-  <td>$548.57</td>
-  <td class="unknown">$548.57 (+0.0pp)</td>
-  <td class="muted">April McClain Delaney &middot; 3 fills</td>
-  <td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td>
-</tr>
-<tr>
-  <td><a class="ticker-sm" href="https://finance.yahoo.com/quote/KR" target="_blank" rel="noopener noreferrer">KR</a><div class="company">The Kroger Co.</div></td>
-  <td>2026-08-08</td>
-  <td>$56.73</td>
-  <td class="unknown">$56.73 (+0.0pp)</td>
-  <td class="muted">David J. Taylor</td>
-  <td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td>
-</tr>
-<tr>
-  <td><a class="ticker-sm" href="https://finance.yahoo.com/quote/GOOGL" target="_blank" rel="noopener noreferrer">GOOGL</a><div class="company">Alphabet Inc.</div></td>
-  <td>2026-08-08</td>
-  <td>$354.30</td>
-  <td class="unknown">$354.30 (+0.0pp)</td>
-  <td class="muted">David J. Taylor</td>
-  <td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td>
-</tr>
-<tr>
-  <td><a class="ticker-sm" href="https://finance.yahoo.com/quote/TSM" target="_blank" rel="noopener noreferrer">TSM</a><div class="company">Taiwan Semiconductor Manufacturing Company Limited</div></td>
-  <td>2026-08-08</td>
-  <td>$420.04</td>
-  <td class="unknown">$420.04 (+0.0pp)</td>
-  <td class="muted">Cleo Fields</td>
-  <td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td>
-</tr>
-<tr>
-  <td><a class="ticker-sm" href="https://finance.yahoo.com/quote/ANET" target="_blank" rel="noopener noreferrer">ANET</a><div class="company">Arista Networks, Inc.</div></td>
-  <td>2026-08-08</td>
-  <td>$188.67</td>
-  <td class="unknown">$188.67 (+0.0pp)</td>
-  <td class="muted">Dan Newhouse</td>
-  <td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td>
-</tr>
-<tr>
-  <td><a class="ticker-sm" href="https://finance.yahoo.com/quote/COST" target="_blank" rel="noopener noreferrer">COST</a><div class="company">Costco Wholesale Corporation</div></td>
-  <td>2026-08-08</td>
-  <td>$947.82</td>
-  <td class="unknown">$947.82 (+0.0pp)</td>
-  <td class="muted">Dan Newhouse</td>
-  <td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td>
-</tr>
-<tr>
-  <td><a class="ticker-sm" href="https://finance.yahoo.com/quote/FIS" target="_blank" rel="noopener noreferrer">FIS</a><div class="company">Fidelity National Information Services, Inc.</div></td>
-  <td>2026-08-08</td>
-  <td>$42.77</td>
-  <td class="unknown">$42.77 (+0.0pp)</td>
-  <td class="muted">Dan Newhouse</td>
-  <td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td>
-</tr>
-<tr>
-  <td><a class="ticker-sm" href="https://finance.yahoo.com/quote/MS" target="_blank" rel="noopener noreferrer">MS</a><div class="company">Morgan Stanley</div></td>
-  <td>2026-08-08</td>
-  <td>$216.33</td>
-  <td class="unknown">$216.33 (+0.0pp)</td>
-  <td class="muted">Dan Newhouse</td>
-  <td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td>
-</tr>
-<tr>
-  <td><a class="ticker-sm" href="https://finance.yahoo.com/quote/UBER" target="_blank" rel="noopener noreferrer">UBER</a><div class="company">Uber Technologies, Inc.</div></td>
-  <td>2026-08-08</td>
-  <td>$75.02</td>
-  <td class="unknown">$75.02 (+0.0pp)</td>
-  <td class="muted">Dan Newhouse</td>
-  <td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td><td class="unknown">pending</td>
-</tr>
-</tbody>
-</table>
+<div class="cards">
+<div class="card track-card">
+  <div class="card-head">
+    <div>
+      <a class="ticker" href="https://finance.yahoo.com/quote/CHRW" target="_blank" rel="noopener noreferrer">CHRW</a>
+      <div class="company">C.H. Robinson Worldwide, Inc.</div>
+    </div>
+    <span class="badge flat">flat</span>
+  </div>
+  
+  <div class="bar">
+  <div class="track"></div>
+  <div class="tick paid" style="left:50.00%"></div>
+  <div class="marker good" style="left:50.00%" title="now $149.34"></div>
+</div>
+<div class="bar-labels">
+  <span>paid $149.34</span>
+  <span>now $149.34</span>
+</div>
+  <div class="card-meta">
+    <span class="pct good">+0.0% vs entry</span>
+    <span class="pct unknown">+0.0pp vs XLI</span>
+  </div>
+  <div class="checkpoints">
+    <div class="checkpoint"><span class="cp-label">30d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">60d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">90d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">120d</span><span class="cp-value unknown">pending</span></div>
+  </div>
+  <div class="card-meta muted">
+    <span>alerted 2026-08-08</span>
+  </div>
+  <details>
+    <summary>1 buy &middot; 1 member</summary>
+    <div class="fills"><div class="fill-row-track">April McClain Delaney</div></div>
+  </details>
+</div>
+<div class="card track-card">
+  <div class="card-head">
+    <div>
+      <a class="ticker" href="https://finance.yahoo.com/quote/FWONK" target="_blank" rel="noopener noreferrer">FWONK</a>
+      <div class="company">Formula One Group</div>
+    </div>
+    <span class="badge flat">flat</span>
+  </div>
+  
+  <div class="bar">
+  <div class="track"></div>
+  <div class="tick paid" style="left:50.00%"></div>
+  <div class="marker good" style="left:50.00%" title="now $102.85"></div>
+</div>
+<div class="bar-labels">
+  <span>paid $102.85</span>
+  <span>now $102.85</span>
+</div>
+  <div class="card-meta">
+    <span class="pct good">+0.0% vs entry</span>
+    <span class="pct unknown">+0.0pp vs XLC</span>
+  </div>
+  <div class="checkpoints">
+    <div class="checkpoint"><span class="cp-label">30d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">60d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">90d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">120d</span><span class="cp-value unknown">pending</span></div>
+  </div>
+  <div class="card-meta muted">
+    <span>alerted 2026-08-08</span>
+  </div>
+  <details>
+    <summary>4 buys &middot; 1 member</summary>
+    <div class="fills"><div class="fill-row-track">April McClain Delaney &middot; 4 fills</div></div>
+  </details>
+</div>
+<div class="card track-card">
+  <div class="card-head">
+    <div>
+      <a class="ticker" href="https://finance.yahoo.com/quote/LTH" target="_blank" rel="noopener noreferrer">LTH</a>
+      <div class="company">Life Time Group Holdings, Inc.</div>
+    </div>
+    <span class="badge flat">flat</span>
+  </div>
+  
+  <div class="bar">
+  <div class="track"></div>
+  <div class="tick paid" style="left:50.00%"></div>
+  <div class="marker good" style="left:50.00%" title="now $43.81"></div>
+</div>
+<div class="bar-labels">
+  <span>paid $43.81</span>
+  <span>now $43.81</span>
+</div>
+  <div class="card-meta">
+    <span class="pct good">+0.0% vs entry</span>
+    <span class="pct unknown">+0.0pp vs XLY</span>
+  </div>
+  <div class="checkpoints">
+    <div class="checkpoint"><span class="cp-label">30d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">60d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">90d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">120d</span><span class="cp-value unknown">pending</span></div>
+  </div>
+  <div class="card-meta muted">
+    <span>alerted 2026-08-08</span>
+  </div>
+  <details>
+    <summary>7 buys &middot; 1 member</summary>
+    <div class="fills"><div class="fill-row-track">April McClain Delaney &middot; 7 fills</div></div>
+  </details>
+</div>
+<div class="card track-card">
+  <div class="card-head">
+    <div>
+      <a class="ticker" href="https://finance.yahoo.com/quote/SGI" target="_blank" rel="noopener noreferrer">SGI</a>
+      <div class="company">Somnigroup International Inc.</div>
+    </div>
+    <span class="badge flat">flat</span>
+  </div>
+  
+  <div class="bar">
+  <div class="track"></div>
+  <div class="tick paid" style="left:50.00%"></div>
+  <div class="marker good" style="left:50.00%" title="now $65.25"></div>
+</div>
+<div class="bar-labels">
+  <span>paid $65.25</span>
+  <span>now $65.25</span>
+</div>
+  <div class="card-meta">
+    <span class="pct good">+0.0% vs entry</span>
+    <span class="pct unknown">+0.0pp vs XLB</span>
+  </div>
+  <div class="checkpoints">
+    <div class="checkpoint"><span class="cp-label">30d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">60d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">90d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">120d</span><span class="cp-value unknown">pending</span></div>
+  </div>
+  <div class="card-meta muted">
+    <span>alerted 2026-08-08</span>
+  </div>
+  <details>
+    <summary>1 buy &middot; 1 member</summary>
+    <div class="fills"><div class="fill-row-track">April McClain Delaney</div></div>
+  </details>
+</div>
+<div class="card track-card">
+  <div class="card-head">
+    <div>
+      <a class="ticker" href="https://finance.yahoo.com/quote/TDG" target="_blank" rel="noopener noreferrer">TDG</a>
+      <div class="company">TransDigm Group Incorporated</div>
+    </div>
+    <span class="badge flat">flat</span>
+  </div>
+  
+  <div class="bar">
+  <div class="track"></div>
+  <div class="tick paid" style="left:50.00%"></div>
+  <div class="marker good" style="left:50.00%" title="now $1225.25"></div>
+</div>
+<div class="bar-labels">
+  <span>paid $1225.25</span>
+  <span>now $1225.25</span>
+</div>
+  <div class="card-meta">
+    <span class="pct good">+0.0% vs entry</span>
+    <span class="pct unknown">+0.0pp vs XLI</span>
+  </div>
+  <div class="checkpoints">
+    <div class="checkpoint"><span class="cp-label">30d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">60d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">90d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">120d</span><span class="cp-value unknown">pending</span></div>
+  </div>
+  <div class="card-meta muted">
+    <span>alerted 2026-08-08</span>
+  </div>
+  <details>
+    <summary>1 buy &middot; 1 member</summary>
+    <div class="fills"><div class="fill-row-track">April McClain Delaney</div></div>
+  </details>
+</div>
+<div class="card track-card">
+  <div class="card-head">
+    <div>
+      <a class="ticker" href="https://finance.yahoo.com/quote/BWXT" target="_blank" rel="noopener noreferrer">BWXT</a>
+      <div class="company">BWX Technologies, Inc.</div>
+    </div>
+    <span class="badge flat">flat</span>
+  </div>
+  
+  <div class="bar">
+  <div class="track"></div>
+  <div class="tick paid" style="left:50.00%"></div>
+  <div class="marker good" style="left:50.00%" title="now $169.90"></div>
+</div>
+<div class="bar-labels">
+  <span>paid $169.90</span>
+  <span>now $169.90</span>
+</div>
+  <div class="card-meta">
+    <span class="pct good">+0.0% vs entry</span>
+    <span class="pct unknown">+0.0pp vs XLI</span>
+  </div>
+  <div class="checkpoints">
+    <div class="checkpoint"><span class="cp-label">30d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">60d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">90d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">120d</span><span class="cp-value unknown">pending</span></div>
+  </div>
+  <div class="card-meta muted">
+    <span>alerted 2026-08-08</span>
+  </div>
+  <details>
+    <summary>2 buys &middot; 1 member</summary>
+    <div class="fills"><div class="fill-row-track">April McClain Delaney &middot; 2 fills</div></div>
+  </details>
+</div>
+<div class="card track-card">
+  <div class="card-head">
+    <div>
+      <a class="ticker" href="https://finance.yahoo.com/quote/MLM" target="_blank" rel="noopener noreferrer">MLM</a>
+      <div class="company">Martin Marietta Materials, Inc.</div>
+    </div>
+    <span class="badge flat">flat</span>
+  </div>
+  
+  <div class="bar">
+  <div class="track"></div>
+  <div class="tick paid" style="left:50.00%"></div>
+  <div class="marker good" style="left:50.00%" title="now $548.57"></div>
+</div>
+<div class="bar-labels">
+  <span>paid $548.57</span>
+  <span>now $548.57</span>
+</div>
+  <div class="card-meta">
+    <span class="pct good">+0.0% vs entry</span>
+    <span class="pct unknown">+0.0pp vs XLB</span>
+  </div>
+  <div class="checkpoints">
+    <div class="checkpoint"><span class="cp-label">30d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">60d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">90d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">120d</span><span class="cp-value unknown">pending</span></div>
+  </div>
+  <div class="card-meta muted">
+    <span>alerted 2026-08-08</span>
+  </div>
+  <details>
+    <summary>3 buys &middot; 1 member</summary>
+    <div class="fills"><div class="fill-row-track">April McClain Delaney &middot; 3 fills</div></div>
+  </details>
+</div>
+<div class="card track-card">
+  <div class="card-head">
+    <div>
+      <a class="ticker" href="https://finance.yahoo.com/quote/KR" target="_blank" rel="noopener noreferrer">KR</a>
+      <div class="company">The Kroger Co.</div>
+    </div>
+    <span class="badge flat">flat</span>
+  </div>
+  
+  <div class="bar">
+  <div class="track"></div>
+  <div class="tick paid" style="left:50.00%"></div>
+  <div class="marker good" style="left:50.00%" title="now $56.73"></div>
+</div>
+<div class="bar-labels">
+  <span>paid $56.73</span>
+  <span>now $56.73</span>
+</div>
+  <div class="card-meta">
+    <span class="pct good">+0.0% vs entry</span>
+    <span class="pct unknown">+0.0pp vs XLP</span>
+  </div>
+  <div class="checkpoints">
+    <div class="checkpoint"><span class="cp-label">30d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">60d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">90d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">120d</span><span class="cp-value unknown">pending</span></div>
+  </div>
+  <div class="card-meta muted">
+    <span>alerted 2026-08-08</span>
+  </div>
+  <details>
+    <summary>1 buy &middot; 1 member</summary>
+    <div class="fills"><div class="fill-row-track">David J. Taylor</div></div>
+  </details>
+</div>
+<div class="card track-card">
+  <div class="card-head">
+    <div>
+      <a class="ticker" href="https://finance.yahoo.com/quote/GOOGL" target="_blank" rel="noopener noreferrer">GOOGL</a>
+      <div class="company">Alphabet Inc.</div>
+    </div>
+    <span class="badge flat">flat</span>
+  </div>
+  
+  <div class="bar">
+  <div class="track"></div>
+  <div class="tick paid" style="left:50.00%"></div>
+  <div class="marker good" style="left:50.00%" title="now $354.30"></div>
+</div>
+<div class="bar-labels">
+  <span>paid $354.30</span>
+  <span>now $354.30</span>
+</div>
+  <div class="card-meta">
+    <span class="pct good">+0.0% vs entry</span>
+    <span class="pct unknown">+0.0pp vs XLK</span>
+  </div>
+  <div class="checkpoints">
+    <div class="checkpoint"><span class="cp-label">30d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">60d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">90d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">120d</span><span class="cp-value unknown">pending</span></div>
+  </div>
+  <div class="card-meta muted">
+    <span>alerted 2026-08-08</span>
+  </div>
+  <details>
+    <summary>1 buy &middot; 1 member</summary>
+    <div class="fills"><div class="fill-row-track">David J. Taylor</div></div>
+  </details>
+</div>
+<div class="card track-card">
+  <div class="card-head">
+    <div>
+      <a class="ticker" href="https://finance.yahoo.com/quote/TSM" target="_blank" rel="noopener noreferrer">TSM</a>
+      <div class="company">Taiwan Semiconductor Manufacturing Company Limited</div>
+    </div>
+    <span class="badge flat">flat</span>
+  </div>
+  
+  <div class="bar">
+  <div class="track"></div>
+  <div class="tick paid" style="left:50.00%"></div>
+  <div class="marker good" style="left:50.00%" title="now $420.04"></div>
+</div>
+<div class="bar-labels">
+  <span>paid $420.04</span>
+  <span>now $420.04</span>
+</div>
+  <div class="card-meta">
+    <span class="pct good">+0.0% vs entry</span>
+    <span class="pct unknown">+0.0pp vs XLK</span>
+  </div>
+  <div class="checkpoints">
+    <div class="checkpoint"><span class="cp-label">30d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">60d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">90d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">120d</span><span class="cp-value unknown">pending</span></div>
+  </div>
+  <div class="card-meta muted">
+    <span>alerted 2026-08-08</span>
+  </div>
+  <details>
+    <summary>1 buy &middot; 1 member</summary>
+    <div class="fills"><div class="fill-row-track">Cleo Fields</div></div>
+  </details>
+</div>
+<div class="card track-card">
+  <div class="card-head">
+    <div>
+      <a class="ticker" href="https://finance.yahoo.com/quote/ANET" target="_blank" rel="noopener noreferrer">ANET</a>
+      <div class="company">Arista Networks, Inc.</div>
+    </div>
+    <span class="badge flat">flat</span>
+  </div>
+  
+  <div class="bar">
+  <div class="track"></div>
+  <div class="tick paid" style="left:50.00%"></div>
+  <div class="marker good" style="left:50.00%" title="now $188.67"></div>
+</div>
+<div class="bar-labels">
+  <span>paid $188.67</span>
+  <span>now $188.67</span>
+</div>
+  <div class="card-meta">
+    <span class="pct good">+0.0% vs entry</span>
+    <span class="pct unknown">+0.0pp vs XLI</span>
+  </div>
+  <div class="checkpoints">
+    <div class="checkpoint"><span class="cp-label">30d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">60d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">90d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">120d</span><span class="cp-value unknown">pending</span></div>
+  </div>
+  <div class="card-meta muted">
+    <span>alerted 2026-08-08</span>
+  </div>
+  <details>
+    <summary>1 buy &middot; 1 member</summary>
+    <div class="fills"><div class="fill-row-track">Dan Newhouse</div></div>
+  </details>
+</div>
+<div class="card track-card">
+  <div class="card-head">
+    <div>
+      <a class="ticker" href="https://finance.yahoo.com/quote/COST" target="_blank" rel="noopener noreferrer">COST</a>
+      <div class="company">Costco Wholesale Corporation</div>
+    </div>
+    <span class="badge flat">flat</span>
+  </div>
+  
+  <div class="bar">
+  <div class="track"></div>
+  <div class="tick paid" style="left:50.00%"></div>
+  <div class="marker good" style="left:50.00%" title="now $947.82"></div>
+</div>
+<div class="bar-labels">
+  <span>paid $947.82</span>
+  <span>now $947.82</span>
+</div>
+  <div class="card-meta">
+    <span class="pct good">+0.0% vs entry</span>
+    <span class="pct unknown">+0.0pp vs XLY</span>
+  </div>
+  <div class="checkpoints">
+    <div class="checkpoint"><span class="cp-label">30d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">60d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">90d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">120d</span><span class="cp-value unknown">pending</span></div>
+  </div>
+  <div class="card-meta muted">
+    <span>alerted 2026-08-08</span>
+  </div>
+  <details>
+    <summary>1 buy &middot; 1 member</summary>
+    <div class="fills"><div class="fill-row-track">Dan Newhouse</div></div>
+  </details>
+</div>
+<div class="card track-card">
+  <div class="card-head">
+    <div>
+      <a class="ticker" href="https://finance.yahoo.com/quote/FIS" target="_blank" rel="noopener noreferrer">FIS</a>
+      <div class="company">Fidelity National Information Services, Inc.</div>
+    </div>
+    <span class="badge flat">flat</span>
+  </div>
+  
+  <div class="bar">
+  <div class="track"></div>
+  <div class="tick paid" style="left:50.00%"></div>
+  <div class="marker good" style="left:50.00%" title="now $42.77"></div>
+</div>
+<div class="bar-labels">
+  <span>paid $42.77</span>
+  <span>now $42.77</span>
+</div>
+  <div class="card-meta">
+    <span class="pct good">+0.0% vs entry</span>
+    <span class="pct unknown">+0.0pp vs XLK</span>
+  </div>
+  <div class="checkpoints">
+    <div class="checkpoint"><span class="cp-label">30d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">60d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">90d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">120d</span><span class="cp-value unknown">pending</span></div>
+  </div>
+  <div class="card-meta muted">
+    <span>alerted 2026-08-08</span>
+  </div>
+  <details>
+    <summary>1 buy &middot; 1 member</summary>
+    <div class="fills"><div class="fill-row-track">Dan Newhouse</div></div>
+  </details>
+</div>
+<div class="card track-card">
+  <div class="card-head">
+    <div>
+      <a class="ticker" href="https://finance.yahoo.com/quote/MS" target="_blank" rel="noopener noreferrer">MS</a>
+      <div class="company">Morgan Stanley</div>
+    </div>
+    <span class="badge flat">flat</span>
+  </div>
+  
+  <div class="bar">
+  <div class="track"></div>
+  <div class="tick paid" style="left:50.00%"></div>
+  <div class="marker good" style="left:50.00%" title="now $216.33"></div>
+</div>
+<div class="bar-labels">
+  <span>paid $216.33</span>
+  <span>now $216.33</span>
+</div>
+  <div class="card-meta">
+    <span class="pct good">+0.0% vs entry</span>
+    <span class="pct unknown">+0.0pp vs XLF</span>
+  </div>
+  <div class="checkpoints">
+    <div class="checkpoint"><span class="cp-label">30d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">60d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">90d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">120d</span><span class="cp-value unknown">pending</span></div>
+  </div>
+  <div class="card-meta muted">
+    <span>alerted 2026-08-08</span>
+  </div>
+  <details>
+    <summary>1 buy &middot; 1 member</summary>
+    <div class="fills"><div class="fill-row-track">Dan Newhouse</div></div>
+  </details>
+</div>
+<div class="card track-card">
+  <div class="card-head">
+    <div>
+      <a class="ticker" href="https://finance.yahoo.com/quote/UBER" target="_blank" rel="noopener noreferrer">UBER</a>
+      <div class="company">Uber Technologies, Inc.</div>
+    </div>
+    <span class="badge flat">flat</span>
+  </div>
+  
+  <div class="bar">
+  <div class="track"></div>
+  <div class="tick paid" style="left:50.00%"></div>
+  <div class="marker good" style="left:50.00%" title="now $75.02"></div>
+</div>
+<div class="bar-labels">
+  <span>paid $75.02</span>
+  <span>now $75.02</span>
+</div>
+  <div class="card-meta">
+    <span class="pct good">+0.0% vs entry</span>
+    <span class="pct unknown">+0.0pp vs XLK</span>
+  </div>
+  <div class="checkpoints">
+    <div class="checkpoint"><span class="cp-label">30d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">60d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">90d</span><span class="cp-value unknown">pending</span></div><div class="checkpoint"><span class="cp-label">120d</span><span class="cp-value unknown">pending</span></div>
+  </div>
+  <div class="card-meta muted">
+    <span>alerted 2026-08-08</span>
+  </div>
+  <details>
+    <summary>1 buy &middot; 1 member</summary>
+    <div class="fills"><div class="fill-row-track">Dan Newhouse</div></div>
+  </details>
+</div>
 </div>
 
 <p class="disclaimer">Track record covers only trades the bot actually alerted on (not every disclosed buy), priced from the alert date - what copying it would really have cost you, not the member's own entry. "Now" is refreshed every run and is informational only; the 30/60/90/120-day checkpoints are the frozen win/loss verdicts, scored by holding to that checkpoint with no early exit against the same sector-ETF benchmark the alert gate uses, and never change once set. "Member exited" is an annotation, not a rule - it does not change the verdict. The first cohort shares one alert date, so its hit rate is not yet meaningful; it becomes informative once several independent alert dates have accumulated.</p>
