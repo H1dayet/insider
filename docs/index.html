@@ -30,6 +30,21 @@ h1 { font-size: 1.375rem; font-weight: 600; margin: 0 0 0.35rem; }
 .health { color: var(--text-faint); font-size: 0.75rem; margin: 0 0 1.5rem; }
 .disclaimer { color: var(--text-faint); font-size: 0.75rem; margin: 2rem 0 0; border-top: 1px solid var(--border); padding-top: 1rem; }
 
+.tab-input { position: absolute; opacity: 0; pointer-events: none; }
+.tabs { display: flex; gap: 0.25rem; margin: 0.6rem 0 1.25rem; border-bottom: 1px solid var(--border); }
+.tab-label {
+  padding: 0.5rem 0.9rem; font-size: 0.8125rem; font-weight: 600; color: var(--text-faint);
+  cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px;
+  transition: color 150ms ease-out, border-color 150ms ease-out;
+}
+.tab-label:hover { color: var(--text-muted); }
+#tab-signals:checked ~ .tabs label[for="tab-signals"],
+#tab-track:checked ~ .tabs label[for="tab-track"] { color: var(--text); border-bottom-color: var(--text); }
+.panel { display: none; }
+#tab-signals:checked ~ .panels #panel-signals,
+#tab-track:checked ~ .panels #panel-track { display: block; }
+@media (prefers-reduced-motion: reduce) { .tab-label { transition: none; } }
+
 .section-head { display: flex; align-items: baseline; gap: 0.5rem; margin: 1.75rem 0 0.75rem; }
 .section-head h2 { font-size: 1rem; font-weight: 600; margin: 0; }
 .section-head .count { color: var(--text-faint); font-size: 0.8125rem; }
@@ -90,6 +105,23 @@ summary:hover { color: var(--text-muted); }
 .fill-row .unknown { color: var(--text-faint); }
 
 .empty { color: var(--text-faint); padding: 2rem 0; text-align: center; }
+.muted { color: var(--text-faint); }
+
+.track-summary-line { margin: 0 0 0.4rem; font-size: 0.8125rem; }
+.track-summary-line.muted { font-size: 0.75rem; }
+.track-summary-line .good { color: var(--good); }
+.track-summary-line .bad { color: var(--bad); }
+
+.track-table-wrap { overflow-x: auto; margin-top: 0.75rem; }
+.track-table { width: 100%; border-collapse: collapse; font-size: 0.8125rem; white-space: nowrap; }
+.track-table th, .track-table td { padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border); text-align: left; }
+.track-table th { color: var(--text-faint); font-weight: 600; font-size: 0.75rem; }
+.track-table td.good { color: var(--good); }
+.track-table td.bad { color: var(--bad); }
+.track-table td.unknown { color: var(--text-faint); }
+.track-table .company { color: var(--text-muted); font-size: 0.75rem; margin-top: 0.1rem; white-space: normal; }
+.ticker-sm { font-weight: 700; color: var(--text); text-decoration: none; }
+.ticker-sm:hover { text-decoration: underline; }
 
 @media (prefers-reduced-motion: reduce) {
   .card { transition: none; }
@@ -98,8 +130,18 @@ summary:hover { color: var(--text-muted); }
 <body>
 <div class="wrap">
 <h1>Congressional Buy Signals</h1>
-<p class="subhead">Generated 2026-08-08 10:21 UTC &middot; 29 tickers tracked (52 buys)</p>
-<p class="health">Scanned 0 filings &middot; 0 price lookups failed &middot; 783 filings skipped (too old) &middot; 0 PDF fetch errors &middot; 0 sector lookups fell back to SPY</p>
+<p class="subhead">Generated 2026-08-08 11:09 UTC &middot; 29 tickers tracked (52 buys)</p>
+
+<input type="radio" name="tab" id="tab-signals" class="tab-input" checked>
+<input type="radio" name="tab" id="tab-track" class="tab-input">
+<div class="tabs">
+  <label for="tab-signals" class="tab-label">Signals</label>
+  <label for="tab-track" class="tab-label">Track record</label>
+</div>
+
+<div class="panels">
+<section id="panel-signals" class="panel">
+<p class="health">Scanned 0 filings &middot; 0 price lookups failed &middot; 0 filings skipped (too old) &middot; 0 PDF fetch errors &middot; 0 sector lookups fell back to SPY</p>
 
 <section class="actionable"><div class="section-head"><h2>Actionable now</h2><span class="count">14</span></div><div class="cards"><div class="card actionable">
   <div class="card-head">
@@ -1112,5 +1154,14 @@ summary:hover { color: var(--text-muted); }
 </div></div></section>
 
 <p class="disclaimer">Not financial advice. Disclosure lag is ~52 days on average; entry price is the market close on the transaction date, averaged across fills. "Actionable" means relative strength vs. a sector-ETF benchmark (stock return minus benchmark return since the trade date) falls in a neutral band - not that the stock is nominally cheap. "Exited" means the member disclosed a sale of that ticker on or after the buy date - alerts are suppressed for these, but the same disclosure lag applies, so a sale may exist and not show up here yet. Sector mapping is an approximation (SEC EDGAR SIC code, hand-mapped to a sector ETF); unmapped tickers fall back to the S&amp;P 500. Data: House Clerk STOCK Act filings + Yahoo Finance + SEC EDGAR.</p>
+</section>
+
+<section id="panel-track" class="panel">
+<p class="empty">No recommendations recorded yet - this fills in once a real (non-dry-run) alert fires.</p>
+
+<p class="disclaimer">Track record covers only trades the bot actually alerted on (not every disclosed buy), priced from the alert date - what copying it would really have cost you, not the member's own entry. Each recommendation is scored at 30/60/90/120 days by holding to that checkpoint with no early exit, against the same sector-ETF benchmark the alert gate uses. "Member exited" is an annotation, not a rule - it does not change the verdict. The first cohort shares one alert date, so its hit rate is not yet meaningful; it becomes informative once several independent alert dates have accumulated.</p>
+</section>
+</div>
+
 </div>
 </body></html>

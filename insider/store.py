@@ -4,7 +4,7 @@ from __future__ import annotations
 import sqlite3
 from contextlib import contextmanager
 from dataclasses import dataclass
-from datetime import date
+from datetime import date, timedelta
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS trades (
@@ -20,6 +20,29 @@ CREATE TABLE IF NOT EXISTS trades (
 );
 CREATE TABLE IF NOT EXISTS processed_filings (
     doc_id TEXT PRIMARY KEY
+);
+CREATE TABLE IF NOT EXISTS recommendations (
+    ticker           TEXT NOT NULL,
+    alert_date       TEXT NOT NULL,
+    entry_price      REAL NOT NULL,
+    sector_etf       TEXT NOT NULL,
+    bench_entry      REAL NOT NULL,
+    company_name     TEXT,
+    members          TEXT,
+    fill_count       INTEGER NOT NULL,
+    member_exited_on TEXT,
+    PRIMARY KEY (ticker, alert_date)
+);
+CREATE TABLE IF NOT EXISTS checkpoints (
+    ticker            TEXT NOT NULL,
+    alert_date        TEXT NOT NULL,
+    horizon_days      INTEGER NOT NULL,
+    scored_on         TEXT NOT NULL,
+    price             REAL,
+    bench_price       REAL,
+    relative_strength REAL,
+    status            TEXT NOT NULL,
+    PRIMARY KEY (ticker, alert_date, horizon_days)
 );
 """
 
@@ -49,6 +72,31 @@ class StoredTrade:
     company_name: str | None
     sector_etf: str | None
     relative_strength: float | None
+
+
+@dataclass
+class Recommendation:
+    ticker: str
+    alert_date: date
+    entry_price: float
+    sector_etf: str
+    bench_entry: float
+    company_name: str | None
+    members: list[str]
+    fill_count: int
+    member_exited_on: str | None
+
+
+@dataclass
+class Checkpoint:
+    ticker: str
+    alert_date: date
+    horizon_days: int
+    scored_on: str
+    price: float | None
+    bench_price: float | None
+    relative_strength: float | None
+    status: str  # "win" | "loss" | "no_data"
 
 
 def _row_to_trade(r: sqlite3.Row) -> StoredTrade:
@@ -230,3 +278,111 @@ def has_exited(trade: StoredTrade, sales: dict[tuple[str, str], date]) -> bool:
     """
     sale_date = sales.get((trade.member, trade.ticker))
     return sale_date is not None and sale_date >= trade.tx_date
+
+
+def _row_to_recommendation(r: sqlite3.Row) -> Recommendation:
+    return Recommendation(
+        ticker=r["ticker"],
+        alert_date=date.fromisoformat(r["alert_date"]),
+        entry_price=r["entry_price"],
+        sector_etf=r["sector_etf"],
+        bench_entry=r["bench_entry"],
+        company_name=r["company_name"],
+        members=(r["members"] or "").split(",") if r["members"] else [],
+        fill_count=r["fill_count"],
+        member_exited_on=r["member_exited_on"],
+    )
+
+
+def insert_recommendation(
+    conn: sqlite3.Connection,
+    ticker: str,
+    alert_date: date,
+    entry_price: float,
+    sector_etf: str,
+    bench_entry: float,
+    company_name: str | None,
+    members: list[str],
+    fill_count: int,
+) -> None:
+    conn.execute(
+        """INSERT OR IGNORE INTO recommendations
+           (ticker, alert_date, entry_price, sector_etf, bench_entry, company_name, members, fill_count)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
+        (ticker, alert_date.isoformat(), entry_price, sector_etf, bench_entry,
+         company_name, ",".join(members), fill_count),
+    )
+
+
+def all_recommendations(conn: sqlite3.Connection) -> list[Recommendation]:
+    rows = conn.execute("SELECT * FROM recommendations ORDER BY alert_date DESC").fetchall()
+    return [_row_to_recommendation(r) for r in rows]
+
+
+def set_member_exited(conn: sqlite3.Connection, ticker: str, alert_date: date, exited_on: date) -> None:
+    conn.execute(
+        "UPDATE recommendations SET member_exited_on = ? WHERE ticker=? AND alert_date=?",
+        (exited_on.isoformat(), ticker, alert_date.isoformat()),
+    )
+
+
+def _row_to_checkpoint(r: sqlite3.Row) -> Checkpoint:
+    return Checkpoint(
+        ticker=r["ticker"],
+        alert_date=date.fromisoformat(r["alert_date"]),
+        horizon_days=r["horizon_days"],
+        scored_on=r["scored_on"],
+        price=r["price"],
+        bench_price=r["bench_price"],
+        relative_strength=r["relative_strength"],
+        status=r["status"],
+    )
+
+
+def insert_checkpoint(
+    conn: sqlite3.Connection,
+    ticker: str,
+    alert_date: date,
+    horizon_days: int,
+    scored_on: date,
+    price: float | None,
+    bench_price: float | None,
+    relative_strength: float | None,
+    status: str,
+) -> None:
+    """Write-once: a scored checkpoint is history and is never revised."""
+    conn.execute(
+        """INSERT OR IGNORE INTO checkpoints
+           (ticker, alert_date, horizon_days, scored_on, price, bench_price, relative_strength, status)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
+        (ticker, alert_date.isoformat(), horizon_days, scored_on.isoformat(),
+         price, bench_price, relative_strength, status),
+    )
+
+
+def checkpoints_for(conn: sqlite3.Connection, ticker: str, alert_date: date) -> list[Checkpoint]:
+    rows = conn.execute(
+        "SELECT * FROM checkpoints WHERE ticker=? AND alert_date=? ORDER BY horizon_days",
+        (ticker, alert_date.isoformat()),
+    ).fetchall()
+    return [_row_to_checkpoint(r) for r in rows]
+
+
+def all_checkpoints(conn: sqlite3.Connection) -> list[Checkpoint]:
+    rows = conn.execute("SELECT * FROM checkpoints").fetchall()
+    return [_row_to_checkpoint(r) for r in rows]
+
+
+def unscored_due_checkpoints(
+    conn: sqlite3.Connection, today: date, horizons: tuple[int, ...]
+) -> list[tuple[Recommendation, int, date]]:
+    """(recommendation, horizon_days, checkpoint_date) for every horizon whose date has
+    passed and has no checkpoint row yet."""
+    due = []
+    for rec in all_recommendations(conn):
+        scored = {c.horizon_days for c in checkpoints_for(conn, rec.ticker, rec.alert_date)}
+        for h in horizons:
+            cp_date = rec.alert_date + timedelta(days=h)
+            if h not in scored and cp_date <= today:
+                due.append((rec, h, cp_date))
+    return due

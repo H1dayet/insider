@@ -14,7 +14,8 @@ from html import escape
 from urllib.parse import quote
 
 from insider.config import RS_HIGH, RS_LOW, THRESHOLD
-from insider.store import StoredTrade, has_exited, latest_sales
+from insider.store import Checkpoint, Recommendation, StoredTrade, has_exited, latest_sales
+from insider.track import HORIZONS
 
 
 @dataclass
@@ -233,6 +234,92 @@ def _card_html(card: TickerCard, sales: dict[tuple[str, str], date]) -> str:
 </div>"""
 
 
+def _checkpoint_cell(checkpoints_by_key: dict, ticker: str, alert_date: date, horizon: int) -> str:
+    cp = checkpoints_by_key.get((ticker, alert_date, horizon))
+    if cp is None:
+        return '<td class="unknown">pending</td>'
+    if cp.status == "no_data":
+        return '<td class="unknown">no data</td>'
+    cls = "good" if cp.status == "win" else "bad"
+    return f'<td class="{cls}">{cp.relative_strength:+.1f}pp</td>'
+
+
+def _track_row_html(rec: Recommendation, checkpoints_by_key: dict) -> str:
+    members = ", ".join(escape(m) for m in rec.members)
+    fills_note = f" &middot; {rec.fill_count} fills" if rec.fill_count != len(rec.members) else ""
+    exited_note = (
+        f' <span class="unknown">(member exited {rec.member_exited_on})</span>' if rec.member_exited_on else ""
+    )
+    company = f'<div class="company">{escape(rec.company_name)}</div>' if rec.company_name else ""
+    cells = "".join(_checkpoint_cell(checkpoints_by_key, rec.ticker, rec.alert_date, h) for h in HORIZONS)
+    return f"""<tr>
+  <td><a class="ticker-sm" href="https://finance.yahoo.com/quote/{quote(rec.ticker)}" target="_blank" rel="noopener noreferrer">{escape(rec.ticker)}</a>{company}</td>
+  <td>{rec.alert_date.isoformat()}</td>
+  <td>${rec.entry_price:.2f}</td>
+  <td class="muted">{members}{fills_note}{exited_note}</td>
+  {cells}
+</tr>"""
+
+
+def _track_panel_html(track_data: dict | None) -> str:
+    """Recommendations = trades the bot actually alerted on, scored at 30/60/90/120
+    days against their sector ETF. Empty until the first non-dry-run alert fires."""
+    track_data = track_data or {}
+    recs: list[Recommendation] = track_data.get("recommendations") or []
+    checkpoints: list[Checkpoint] = track_data.get("checkpoints") or []
+    summary = track_data.get("summary") or {"n_recs": 0, "per_horizon": {}, "best": None, "worst": None}
+
+    if not recs:
+        return (
+            '<p class="empty">No recommendations recorded yet - this fills in once a real '
+            "(non-dry-run) alert fires.</p>"
+        )
+
+    checkpoints_by_key = {(c.ticker, c.alert_date, c.horizon_days): c for c in checkpoints}
+    maturity: dict[tuple[str, date], set] = defaultdict(set)
+    for c in checkpoints:
+        maturity[(c.ticker, c.alert_date)].add(c.horizon_days)
+    fully_scored = sum(1 for r in recs if len(maturity[(r.ticker, r.alert_date)]) == len(HORIZONS))
+
+    horizon_bits = []
+    for h in HORIZONS:
+        hs = summary["per_horizon"].get(h, {"scored": 0})
+        if not hs.get("scored"):
+            horizon_bits.append(f"{h}d pending")
+        else:
+            horizon_bits.append(
+                f"{h}d: {hs['wins']}/{hs['scored']} beat sector ({hs['hit_rate']:.0f}%), "
+                f"median {hs['median_rs']:+.1f}pp"
+            )
+
+    best, worst = summary.get("best"), summary.get("worst")
+    best_worst = ""
+    if best and worst:
+        best_cls = "good" if best.status == "win" else "bad"
+        worst_cls = "good" if worst.status == "win" else "bad"
+        best_worst = (
+            f'<p class="track-summary-line">Best: <span class="{best_cls}">{escape(best.ticker)} '
+            f'{best.relative_strength:+.1f}pp</span> ({best.horizon_days}d) &middot; '
+            f'Worst: <span class="{worst_cls}">{escape(worst.ticker)} {worst.relative_strength:+.1f}pp</span> '
+            f"({worst.horizon_days}d)</p>"
+        )
+
+    rows = "\n".join(_track_row_html(r, checkpoints_by_key) for r in recs)
+    header_cells = "".join(f"<th>{h}d</th>" for h in HORIZONS)
+
+    return f"""<p class="track-summary-line">{" &middot; ".join(horizon_bits)}</p>
+<p class="track-summary-line muted">{len(recs)} recommendation{'s' if len(recs) != 1 else ''} tracked &middot; {fully_scored} fully scored (all {len(HORIZONS)} checkpoints)</p>
+{best_worst}
+<div class="track-table-wrap">
+<table class="track-table">
+<thead><tr><th>Ticker</th><th>Alert date</th><th>Entry</th><th>Members</th>{header_cells}</tr></thead>
+<tbody>
+{rows}
+</tbody>
+</table>
+</div>"""
+
+
 _PAGE = """<!doctype html>
 <html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -264,6 +351,21 @@ h1 {{ font-size: 1.375rem; font-weight: 600; margin: 0 0 0.35rem; }}
 .subhead {{ color: var(--text-muted); font-size: 0.8125rem; margin: 0 0 0.15rem; }}
 .health {{ color: var(--text-faint); font-size: 0.75rem; margin: 0 0 1.5rem; }}
 .disclaimer {{ color: var(--text-faint); font-size: 0.75rem; margin: 2rem 0 0; border-top: 1px solid var(--border); padding-top: 1rem; }}
+
+.tab-input {{ position: absolute; opacity: 0; pointer-events: none; }}
+.tabs {{ display: flex; gap: 0.25rem; margin: 0.6rem 0 1.25rem; border-bottom: 1px solid var(--border); }}
+.tab-label {{
+  padding: 0.5rem 0.9rem; font-size: 0.8125rem; font-weight: 600; color: var(--text-faint);
+  cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px;
+  transition: color 150ms ease-out, border-color 150ms ease-out;
+}}
+.tab-label:hover {{ color: var(--text-muted); }}
+#tab-signals:checked ~ .tabs label[for="tab-signals"],
+#tab-track:checked ~ .tabs label[for="tab-track"] {{ color: var(--text); border-bottom-color: var(--text); }}
+.panel {{ display: none; }}
+#tab-signals:checked ~ .panels #panel-signals,
+#tab-track:checked ~ .panels #panel-track {{ display: block; }}
+@media (prefers-reduced-motion: reduce) {{ .tab-label {{ transition: none; }} }}
 
 .section-head {{ display: flex; align-items: baseline; gap: 0.5rem; margin: 1.75rem 0 0.75rem; }}
 .section-head h2 {{ font-size: 1rem; font-weight: 600; margin: 0; }}
@@ -325,6 +427,23 @@ summary:hover {{ color: var(--text-muted); }}
 .fill-row .unknown {{ color: var(--text-faint); }}
 
 .empty {{ color: var(--text-faint); padding: 2rem 0; text-align: center; }}
+.muted {{ color: var(--text-faint); }}
+
+.track-summary-line {{ margin: 0 0 0.4rem; font-size: 0.8125rem; }}
+.track-summary-line.muted {{ font-size: 0.75rem; }}
+.track-summary-line .good {{ color: var(--good); }}
+.track-summary-line .bad {{ color: var(--bad); }}
+
+.track-table-wrap {{ overflow-x: auto; margin-top: 0.75rem; }}
+.track-table {{ width: 100%; border-collapse: collapse; font-size: 0.8125rem; white-space: nowrap; }}
+.track-table th, .track-table td {{ padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border); text-align: left; }}
+.track-table th {{ color: var(--text-faint); font-weight: 600; font-size: 0.75rem; }}
+.track-table td.good {{ color: var(--good); }}
+.track-table td.bad {{ color: var(--bad); }}
+.track-table td.unknown {{ color: var(--text-faint); }}
+.track-table .company {{ color: var(--text-muted); font-size: 0.75rem; margin-top: 0.1rem; white-space: normal; }}
+.ticker-sm {{ font-weight: 700; color: var(--text); text-decoration: none; }}
+.ticker-sm:hover {{ text-decoration: underline; }}
 
 @media (prefers-reduced-motion: reduce) {{
   .card {{ transition: none; }}
@@ -334,17 +453,36 @@ summary:hover {{ color: var(--text-muted); }}
 <div class="wrap">
 <h1>Congressional Buy Signals</h1>
 <p class="subhead">Generated {generated} UTC &middot; {n_tickers} tickers tracked ({n_fills} buys)</p>
+
+<input type="radio" name="tab" id="tab-signals" class="tab-input" checked>
+<input type="radio" name="tab" id="tab-track" class="tab-input">
+<div class="tabs">
+  <label for="tab-signals" class="tab-label">Signals</label>
+  <label for="tab-track" class="tab-label">Track record</label>
+</div>
+
+<div class="panels">
+<section id="panel-signals" class="panel">
 <p class="health">{health}</p>
 
 {sections}
 
 <p class="disclaimer">Not financial advice. Disclosure lag is ~52 days on average; entry price is the market close on the transaction date, averaged across fills. "Actionable" means relative strength vs. a sector-ETF benchmark (stock return minus benchmark return since the trade date) falls in a neutral band - not that the stock is nominally cheap. "Exited" means the member disclosed a sale of that ticker on or after the buy date - alerts are suppressed for these, but the same disclosure lag applies, so a sale may exist and not show up here yet. Sector mapping is an approximation (SEC EDGAR SIC code, hand-mapped to a sector ETF); unmapped tickers fall back to the S&amp;P 500. Data: House Clerk STOCK Act filings + Yahoo Finance + SEC EDGAR.</p>
+</section>
+
+<section id="panel-track" class="panel">
+{track_panel}
+
+<p class="disclaimer">Track record covers only trades the bot actually alerted on (not every disclosed buy), priced from the alert date - what copying it would really have cost you, not the member's own entry. Each recommendation is scored at 30/60/90/120 days by holding to that checkpoint with no early exit, against the same sector-ETF benchmark the alert gate uses. "Member exited" is an annotation, not a rule - it does not change the verdict. The first cohort shares one alert date, so its hit rate is not yet meaningful; it becomes informative once several independent alert dates have accumulated.</p>
+</section>
+</div>
+
 </div>
 </body></html>
 """
 
 
-def render(trades: list[StoredTrade], out_path: str, stats: dict | None = None) -> None:
+def render(trades: list[StoredTrade], out_path: str, stats: dict | None = None, track_data: dict | None = None) -> None:
     buys = [t for t in trades if t.tx_type == "P"]
     sales = latest_sales(trades)
     cards = _aggregate(buys, sales)
@@ -398,6 +536,7 @@ def render(trades: list[StoredTrade], out_path: str, stats: dict | None = None) 
         n_fills=len(buys),
         health=health,
         sections="\n".join(sections),
+        track_panel=_track_panel_html(track_data),
     )
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(html)
