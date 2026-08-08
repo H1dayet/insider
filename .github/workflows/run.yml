@@ -1,3 +1,4 @@
+# Daily pipeline: sync filings, price buys, alert, render dashboard.
 name: insider
 
 on:
