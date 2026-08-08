@@ -23,7 +23,10 @@ jobs:
 
       - run: python -m pytest tests/
 
-      - run: python -m insider.run
+      # --no-notify until TELEGRAM_TOKEN/TELEGRAM_CHAT_ID secrets are set - without it,
+      # the first real alert 404s against Telegram and kills the run before it commits.
+      # Drop the flag once Telegram is configured.
+      - run: python -m insider.run --no-notify
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
