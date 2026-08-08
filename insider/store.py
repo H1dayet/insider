@@ -44,6 +44,34 @@ CREATE TABLE IF NOT EXISTS checkpoints (
     status            TEXT NOT NULL,
     PRIMARY KEY (ticker, alert_date, horizon_days)
 );
+CREATE TABLE IF NOT EXISTS insider_purchases (
+    accession_no    TEXT NOT NULL,
+    cik             TEXT NOT NULL,
+    ticker          TEXT NOT NULL,
+    company_name    TEXT,
+    insider_name    TEXT NOT NULL,
+    insider_title   TEXT,
+    tx_date         TEXT NOT NULL,
+    shares          REAL NOT NULL,
+    price_per_share REAL NOT NULL,
+    filing_date     TEXT NOT NULL,
+    PRIMARY KEY (accession_no, insider_name)
+);
+CREATE TABLE IF NOT EXISTS processed_form4_filings (
+    accession_no TEXT PRIMARY KEY,
+    filing_date  TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS insider_clusters (
+    ticker                  TEXT NOT NULL,
+    cluster_date            TEXT NOT NULL,
+    company_name            TEXT,
+    insiders                TEXT NOT NULL,
+    total_value             REAL NOT NULL,
+    avg_entry_price         REAL NOT NULL,
+    avg_daily_dollar_volume REAL,
+    alerted_at              TEXT,
+    PRIMARY KEY (ticker, cluster_date)
+);
 """
 
 # Columns added after the initial release - existing trades.db files won't have
@@ -418,3 +446,120 @@ def unscored_due_checkpoints(
             if h not in scored and cp_date <= today:
                 due.append((rec, h, cp_date))
     return due
+
+
+def _row_to_insider_purchase(r: sqlite3.Row) -> "InsiderPurchase":
+    from insider.form4 import InsiderPurchase  # local import - form4.py has no reason to import store.py
+
+    return InsiderPurchase(
+        accession_no=r["accession_no"],
+        cik=r["cik"],
+        ticker=r["ticker"],
+        company_name=r["company_name"],
+        insider_name=r["insider_name"],
+        insider_title=r["insider_title"],
+        tx_date=date.fromisoformat(r["tx_date"]),
+        shares=r["shares"],
+        price_per_share=r["price_per_share"],
+        filing_date=date.fromisoformat(r["filing_date"]),
+    )
+
+
+def insert_insider_purchase(conn: sqlite3.Connection, p: "InsiderPurchase") -> None:
+    conn.execute(
+        """INSERT OR IGNORE INTO insider_purchases
+           (accession_no, cik, ticker, company_name, insider_name, insider_title,
+            tx_date, shares, price_per_share, filing_date)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+        (p.accession_no, p.cik, p.ticker, p.company_name, p.insider_name, p.insider_title,
+         p.tx_date.isoformat(), p.shares, p.price_per_share, p.filing_date.isoformat()),
+    )
+
+
+def recent_insider_purchases(conn: sqlite3.Connection, since: date) -> list["InsiderPurchase"]:
+    rows = conn.execute(
+        "SELECT * FROM insider_purchases WHERE tx_date >= ? ORDER BY ticker, tx_date",
+        (since.isoformat(),),
+    ).fetchall()
+    return [_row_to_insider_purchase(r) for r in rows]
+
+
+def prune_insider_purchases_older_than(conn: sqlite3.Connection, cutoff: date) -> None:
+    conn.execute("DELETE FROM insider_purchases WHERE tx_date < ?", (cutoff.isoformat(),))
+
+
+def is_form4_processed(conn: sqlite3.Connection, accession_no: str) -> bool:
+    return conn.execute(
+        "SELECT 1 FROM processed_form4_filings WHERE accession_no = ?", (accession_no,)
+    ).fetchone() is not None
+
+
+def mark_form4_processed(conn: sqlite3.Connection, accession_no: str, filing_date: date) -> None:
+    conn.execute(
+        "INSERT OR IGNORE INTO processed_form4_filings (accession_no, filing_date) VALUES (?, ?)",
+        (accession_no, filing_date.isoformat()),
+    )
+
+
+def prune_processed_form4_filings_older_than(conn: sqlite3.Connection, cutoff: date) -> None:
+    conn.execute("DELETE FROM processed_form4_filings WHERE filing_date < ?", (cutoff.isoformat(),))
+
+
+@dataclass
+class InsiderCluster:
+    ticker: str
+    cluster_date: date
+    company_name: str | None
+    insiders: list[str]
+    total_value: float
+    avg_entry_price: float
+    avg_daily_dollar_volume: float | None
+    alerted_at: str | None
+
+
+def _row_to_insider_cluster(r: sqlite3.Row) -> InsiderCluster:
+    return InsiderCluster(
+        ticker=r["ticker"],
+        cluster_date=date.fromisoformat(r["cluster_date"]),
+        company_name=r["company_name"],
+        insiders=(r["insiders"] or "").split("|") if r["insiders"] else [],
+        total_value=r["total_value"],
+        avg_entry_price=r["avg_entry_price"],
+        avg_daily_dollar_volume=r["avg_daily_dollar_volume"],
+        alerted_at=r["alerted_at"],
+    )
+
+
+def cluster_exists(conn: sqlite3.Connection, ticker: str, cluster_date: date) -> bool:
+    return conn.execute(
+        "SELECT 1 FROM insider_clusters WHERE ticker = ? AND cluster_date = ?",
+        (ticker, cluster_date.isoformat()),
+    ).fetchone() is not None
+
+
+def insert_insider_cluster(
+    conn: sqlite3.Connection,
+    ticker: str,
+    cluster_date: date,
+    company_name: str | None,
+    insiders: list[str],
+    total_value: float,
+    avg_entry_price: float,
+    avg_daily_dollar_volume: float | None,
+) -> None:
+    """Records + marks alerted in one step - unlike Congress recommendations, an
+    insider cluster is only ever recorded once it's been decided to alert on it (no
+    RS gate to fail after the fact), so there's no separate not-yet-alerted state."""
+    conn.execute(
+        """INSERT OR IGNORE INTO insider_clusters
+           (ticker, cluster_date, company_name, insiders, total_value, avg_entry_price,
+            avg_daily_dollar_volume, alerted_at)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
+        (ticker, cluster_date.isoformat(), company_name, "|".join(insiders), total_value,
+         avg_entry_price, avg_daily_dollar_volume, date.today().isoformat()),
+    )
+
+
+def all_insider_clusters(conn: sqlite3.Connection) -> list[InsiderCluster]:
+    rows = conn.execute("SELECT * FROM insider_clusters ORDER BY cluster_date DESC").fetchall()
+    return [_row_to_insider_cluster(r) for r in rows]

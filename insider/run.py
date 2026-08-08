@@ -11,14 +11,23 @@ from __future__ import annotations
 
 import argparse
 import time
-from datetime import date
+from datetime import date, timedelta
 
-from insider import filings, notify, prices, sector, store, track
+from insider import cluster, filings, form4, notify, prices, sector, store, track
 from insider.config import RS_HIGH, RS_LOW
 from insider.render import render
 
 DB_PATH = "trades.db"
 DASHBOARD_PATH = "docs/index.html"
+
+FORM4_LOOKBACK_DAYS = 3  # trailing window fetched fresh each run - short enough to keep
+                          # runtime bounded, long enough to self-heal a missed cron day
+FORM4_MAX_FILINGS_PER_RUN = 300  # ponytail: EDGAR-wide Form 4 volume (hundreds/day
+                                   # across all issuers) dwarfs the Congress pipeline's;
+                                   # this caps one run's work so a big backlog (e.g. the
+                                   # first-ever run) can't blow out CI time in one go.
+                                   # processed_form4_filings makes progress resumable
+                                   # across runs - raise or parallelize if it can't keep up.
 
 
 def month_cutoff(today: date) -> date:
@@ -77,6 +86,44 @@ def sync_filings(conn, cutoff: date, stats: dict) -> None:
 
             store.mark_processed(conn, filing.doc_id)
             time.sleep(0.5)  # be polite to the Clerk's server and Yahoo alike
+
+
+def sync_insider_purchases(conn, stats: dict) -> None:
+    """Pull recent Form 4 filings, parse qualifying open-market purchases (see
+    form4.fetch_purchases for the filter: officer/director, code P, no 10b5-1 flag),
+    and store them. Bounded by FORM4_MAX_FILINGS_PER_RUN - see its comment above.
+    """
+    since = date.today() - timedelta(days=FORM4_LOOKBACK_DAYS)
+    try:
+        candidates = form4.list_form4_filings_since(since)
+    except Exception as e:
+        print(f"Form 4 index fetch failed: {e}")
+        return
+
+    processed_this_run = 0
+    for filing in candidates:
+        if processed_this_run >= FORM4_MAX_FILINGS_PER_RUN:
+            break
+        if store.is_form4_processed(conn, filing.accession_no):
+            continue
+        stats["form4_filings_scanned"] = stats.get("form4_filings_scanned", 0) + 1
+        try:
+            purchases = form4.fetch_purchases(filing)
+        except Exception as e:
+            print(f"skipping Form 4 {filing.accession_no} ({filing.issuer_name}): {e}")
+            stats["form4_fetch_errors"] = stats.get("form4_fetch_errors", 0) + 1
+            store.mark_form4_processed(conn, filing.accession_no, filing.filing_date)
+            processed_this_run += 1
+            time.sleep(0.5)
+            continue
+
+        for p in purchases:
+            store.insert_insider_purchase(conn, p)
+        if purchases:
+            stats["form4_purchases_found"] = stats.get("form4_purchases_found", 0) + len(purchases)
+        store.mark_form4_processed(conn, filing.accession_no, filing.filing_date)
+        processed_this_run += 1
+        time.sleep(0.5)  # be polite to SEC EDGAR
 
 
 def check_alerts(conn, cutoff: date, stats: dict, *, dry_run: bool, no_notify: bool = False) -> tuple[int, list[dict]]:
@@ -203,9 +250,18 @@ def main() -> None:
         recommendations = store.all_recommendations(conn)
         checkpoints = store.all_checkpoints(conn)
 
+        sync_insider_purchases(conn, stats)
+        cluster_since = today - timedelta(days=cluster.CLUSTER_WINDOW_DAYS)
+        detected = cluster.detect_clusters(conn, cluster_since)
+        insider_sent = cluster.alert_and_record(conn, detected, stats, dry_run=args.dry_run, no_notify=args.no_notify)
+        store.prune_insider_purchases_older_than(conn, cluster_since)
+        store.prune_processed_form4_filings_older_than(conn, cluster_since)
+        insider_clusters = store.all_insider_clusters(conn)
+
     render(all_trades, DASHBOARD_PATH, stats,
-           track_data={"recommendations": recommendations, "checkpoints": checkpoints, "summary": track_summary})
-    print(f"done: {sent} alert(s) sent")
+           track_data={"recommendations": recommendations, "checkpoints": checkpoints, "summary": track_summary},
+           insider_clusters=insider_clusters)
+    print(f"done: {sent} Congress alert(s), {insider_sent} insider cluster alert(s) sent")
 
 
 if __name__ == "__main__":

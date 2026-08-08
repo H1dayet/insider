@@ -39,10 +39,12 @@ h1 { font-size: 1.375rem; font-weight: 600; margin: 0 0 0.35rem; }
 }
 .tab-label:hover { color: var(--text-muted); }
 #tab-signals:checked ~ .tabs label[for="tab-signals"],
-#tab-track:checked ~ .tabs label[for="tab-track"] { color: var(--text); border-bottom-color: var(--text); }
+#tab-track:checked ~ .tabs label[for="tab-track"],
+#tab-insiders:checked ~ .tabs label[for="tab-insiders"] { color: var(--text); border-bottom-color: var(--text); }
 .panel { display: none; }
 #tab-signals:checked ~ .panels #panel-signals,
-#tab-track:checked ~ .panels #panel-track { display: block; }
+#tab-track:checked ~ .panels #panel-track,
+#tab-insiders:checked ~ .panels #panel-insiders { display: block; }
 @media (prefers-reduced-motion: reduce) { .tab-label { transition: none; } }
 
 .section-head { display: flex; align-items: baseline; gap: 0.5rem; margin: 1.75rem 0 0.75rem; }
@@ -139,6 +141,8 @@ summary:hover { color: var(--text-muted); }
 
 .fill-row-track { color: var(--text-muted); font-size: 0.75rem; }
 
+.insiders { display: flex; flex-direction: column; gap: 0.15rem; font-size: 0.75rem; color: var(--text-muted); }
+
 @media (prefers-reduced-motion: reduce) {
   .card { transition: none; }
 }
@@ -146,18 +150,20 @@ summary:hover { color: var(--text-muted); }
 <body>
 <div class="wrap">
 <h1>Congressional Buy Signals</h1>
-<p class="subhead">Generated 2026-08-08 13:36 UTC &middot; 29 tickers tracked (52 buys)</p>
+<p class="subhead">Generated 2026-08-08 14:14 UTC &middot; 29 tickers tracked (52 buys)</p>
 
 <input type="radio" name="tab" id="tab-signals" class="tab-input" checked>
 <input type="radio" name="tab" id="tab-track" class="tab-input">
+<input type="radio" name="tab" id="tab-insiders" class="tab-input">
 <div class="tabs">
   <label for="tab-signals" class="tab-label">Signals</label>
   <label for="tab-track" class="tab-label">Track record</label>
+  <label for="tab-insiders" class="tab-label">Insider Buys</label>
 </div>
 
 <div class="panels">
 <section id="panel-signals" class="panel">
-<p class="health">Scanned 0 filings &middot; 0 price lookups failed &middot; 783 filings skipped (too old) &middot; 0 PDF fetch errors &middot; 0 sector lookups fell back to SPY</p>
+<p class="health">Scanned 0 filings &middot; 0 price lookups failed &middot; 0 filings skipped (too old) &middot; 0 PDF fetch errors &middot; 0 sector lookups fell back to SPY</p>
 
 <section class="actionable"><div class="section-head"><h2>Actionable now</h2><span class="count">14</span></div><div class="cards"><div class="card actionable">
   <div class="card-head">
@@ -1694,6 +1700,12 @@ summary:hover { color: var(--text-muted); }
 </div>
 
 <p class="disclaimer">Track record covers only trades the bot actually alerted on (not every disclosed buy), priced from the alert date - what copying it would really have cost you, not the member's own entry. "Now" is refreshed every run and is informational only; the 30/60/90/120-day checkpoints are the frozen win/loss verdicts, scored by holding to that checkpoint with no early exit against the same sector-ETF benchmark the alert gate uses, and never change once set. "Member exited" is an annotation, not a rule - it does not change the verdict. The first cohort shares one alert date, so its hit rate is not yet meaningful; it becomes informative once several independent alert dates have accumulated.</p>
+</section>
+
+<section id="panel-insiders" class="panel">
+<p class="empty">No insider cluster buys recorded yet - this fills in once 2+ officers/directors independently buy the same company within 14 days.</p>
+
+<p class="disclaimer">SEC Form 4 open-market purchases (code P) by officers/directors only - option exercises, gifts, 10% owner activity, and Rule 10b5-1 scheduled trades are excluded (research: Cohen/Malloy/Pomorski 2012 found these "routine" trades carry ~zero predictive signal). A cluster requires 2+ distinct insiders buying the same company within 14 days, filtered to stocks with average daily dollar volume above $5,000,000. Unlike Congress buys, there is no relative-strength gate here - Form 4's ~2-business-day disclosure lag is too short for the staleness problem that gate solves - and no live price tracking yet. Not financial advice. Data: SEC EDGAR.</p>
 </section>
 </div>
 

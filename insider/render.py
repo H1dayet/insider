@@ -13,8 +13,9 @@ from datetime import date, datetime
 from html import escape
 from urllib.parse import quote
 
+from insider.cluster import CLUSTER_WINDOW_DAYS, MIN_AVG_DAILY_DOLLAR_VOLUME
 from insider.config import RS_HIGH, RS_LOW, THRESHOLD
-from insider.store import Checkpoint, Recommendation, StoredTrade, has_exited, latest_sales
+from insider.store import Checkpoint, InsiderCluster, Recommendation, StoredTrade, has_exited, latest_sales
 from insider.track import HORIZONS
 
 
@@ -370,6 +371,51 @@ def _track_panel_html(track_data: dict | None) -> str:
 </div>"""
 
 
+def _insider_card_html(c: InsiderCluster) -> str:
+    """One insider-cluster alert. No live price/bar here (unlike Signals/Track Record) -
+    this pipeline deliberately doesn't have a track-record system yet (see plan notes);
+    the card shows the facts that made it alert-worthy, not an ongoing position view."""
+    company_html = f'<div class="company">{escape(c.company_name)}</div>' if c.company_name else ""
+    insiders_html = "".join(f"<div>{escape(i)}</div>" for i in c.insiders)
+    adv_text = f"${c.avg_daily_dollar_volume:,.0f}" if c.avg_daily_dollar_volume is not None else "no data"
+
+    return f"""<div class="card insider-card">
+  <div class="card-head">
+    <div>
+      <a class="ticker" href="https://finance.yahoo.com/quote/{quote(c.ticker)}" target="_blank" rel="noopener noreferrer">{escape(c.ticker)}</a>
+      {company_html}
+    </div>
+    <span class="badge actionable">cluster buy</span>
+  </div>
+  <div class="card-meta">
+    <span>${c.total_value:,.0f} total &middot; avg ${c.avg_entry_price:.2f}/share</span>
+  </div>
+  <div class="card-meta muted">
+    <span>{len(c.insiders)} insider{'s' if len(c.insiders) != 1 else ''}</span>
+    <span>cluster {c.cluster_date.isoformat()}</span>
+  </div>
+  <div class="insiders">{insiders_html}</div>
+  <div class="card-meta muted">
+    <span>avg daily $ volume: {adv_text}</span>
+  </div>
+</div>"""
+
+
+def _insider_panel_html(clusters: list[InsiderCluster] | None) -> str:
+    clusters = clusters or []
+    if not clusters:
+        return (
+            '<p class="empty">No insider cluster buys recorded yet - this fills in once '
+            "2+ officers/directors independently buy the same company within "
+            f"{CLUSTER_WINDOW_DAYS} days.</p>"
+        )
+    cards_html = "\n".join(_insider_card_html(c) for c in clusters)
+    return f"""<p class="track-summary-line muted">{len(clusters)} cluster buy{'s' if len(clusters) != 1 else ''} tracked</p>
+<div class="cards">
+{cards_html}
+</div>"""
+
+
 _PAGE = """<!doctype html>
 <html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -411,10 +457,12 @@ h1 {{ font-size: 1.375rem; font-weight: 600; margin: 0 0 0.35rem; }}
 }}
 .tab-label:hover {{ color: var(--text-muted); }}
 #tab-signals:checked ~ .tabs label[for="tab-signals"],
-#tab-track:checked ~ .tabs label[for="tab-track"] {{ color: var(--text); border-bottom-color: var(--text); }}
+#tab-track:checked ~ .tabs label[for="tab-track"],
+#tab-insiders:checked ~ .tabs label[for="tab-insiders"] {{ color: var(--text); border-bottom-color: var(--text); }}
 .panel {{ display: none; }}
 #tab-signals:checked ~ .panels #panel-signals,
-#tab-track:checked ~ .panels #panel-track {{ display: block; }}
+#tab-track:checked ~ .panels #panel-track,
+#tab-insiders:checked ~ .panels #panel-insiders {{ display: block; }}
 @media (prefers-reduced-motion: reduce) {{ .tab-label {{ transition: none; }} }}
 
 .section-head {{ display: flex; align-items: baseline; gap: 0.5rem; margin: 1.75rem 0 0.75rem; }}
@@ -511,6 +559,8 @@ summary:hover {{ color: var(--text-muted); }}
 
 .fill-row-track {{ color: var(--text-muted); font-size: 0.75rem; }}
 
+.insiders {{ display: flex; flex-direction: column; gap: 0.15rem; font-size: 0.75rem; color: var(--text-muted); }}
+
 @media (prefers-reduced-motion: reduce) {{
   .card {{ transition: none; }}
 }}
@@ -522,9 +572,11 @@ summary:hover {{ color: var(--text-muted); }}
 
 <input type="radio" name="tab" id="tab-signals" class="tab-input" checked>
 <input type="radio" name="tab" id="tab-track" class="tab-input">
+<input type="radio" name="tab" id="tab-insiders" class="tab-input">
 <div class="tabs">
   <label for="tab-signals" class="tab-label">Signals</label>
   <label for="tab-track" class="tab-label">Track record</label>
+  <label for="tab-insiders" class="tab-label">Insider Buys</label>
 </div>
 
 <div class="panels">
@@ -541,6 +593,12 @@ summary:hover {{ color: var(--text-muted); }}
 
 <p class="disclaimer">Track record covers only trades the bot actually alerted on (not every disclosed buy), priced from the alert date - what copying it would really have cost you, not the member's own entry. "Now" is refreshed every run and is informational only; the 30/60/90/120-day checkpoints are the frozen win/loss verdicts, scored by holding to that checkpoint with no early exit against the same sector-ETF benchmark the alert gate uses, and never change once set. "Member exited" is an annotation, not a rule - it does not change the verdict. The first cohort shares one alert date, so its hit rate is not yet meaningful; it becomes informative once several independent alert dates have accumulated.</p>
 </section>
+
+<section id="panel-insiders" class="panel">
+{insider_panel}
+
+<p class="disclaimer">SEC Form 4 open-market purchases (code P) by officers/directors only - option exercises, gifts, 10% owner activity, and Rule 10b5-1 scheduled trades are excluded (research: Cohen/Malloy/Pomorski 2012 found these "routine" trades carry ~zero predictive signal). A cluster requires 2+ distinct insiders buying the same company within {cluster_window_days} days, filtered to stocks with average daily dollar volume above ${liquidity_floor}. Unlike Congress buys, there is no relative-strength gate here - Form 4's ~2-business-day disclosure lag is too short for the staleness problem that gate solves - and no live price tracking yet. Not financial advice. Data: SEC EDGAR.</p>
+</section>
 </div>
 
 </div>
@@ -548,7 +606,13 @@ summary:hover {{ color: var(--text-muted); }}
 """
 
 
-def render(trades: list[StoredTrade], out_path: str, stats: dict | None = None, track_data: dict | None = None) -> None:
+def render(
+    trades: list[StoredTrade],
+    out_path: str,
+    stats: dict | None = None,
+    track_data: dict | None = None,
+    insider_clusters: list[InsiderCluster] | None = None,
+) -> None:
     buys = [t for t in trades if t.tx_type == "P"]
     sales = latest_sales(trades)
     cards = _aggregate(buys, sales)
@@ -603,6 +667,9 @@ def render(trades: list[StoredTrade], out_path: str, stats: dict | None = None, 
         health=health,
         sections="\n".join(sections),
         track_panel=_track_panel_html(track_data),
+        insider_panel=_insider_panel_html(insider_clusters),
+        cluster_window_days=CLUSTER_WINDOW_DAYS,
+        liquidity_floor=f"{MIN_AVG_DAILY_DOLLAR_VOLUME:,.0f}",
     )
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(html)
