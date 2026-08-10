@@ -7,6 +7,7 @@ from typing import NamedTuple
 import requests
 
 CHART_URL = "https://query1.finance.yahoo.com/v8/finance/chart/{ticker}"
+QUOTE_SUMMARY_URL = "https://query1.finance.yahoo.com/v10/finance/quoteSummary/{ticker}"
 _UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
 
@@ -51,6 +52,35 @@ def lookup(ticker: str, tx_date: date) -> Quote:
     if entry_close is None or current is None:
         raise PriceUnavailable(f"{ticker}: no usable close price")
     return Quote(entry=float(entry_close), current=float(current), name=meta.get("longName") or meta.get("shortName"))
+
+
+def next_earnings_date(ticker: str) -> date | None:
+    """Next scheduled earnings report date for ticker, via Yahoo's unofficial
+    quoteSummary calendarEvents module - same keyless pattern as lookup() above,
+    same risk (undocumented, could change shape without notice).
+
+    Returns None if Yahoo has no upcoming date on file (not covered, delisted,
+    or just doesn't have one) - distinct from PriceUnavailable, which means the
+    request itself failed. Callers treat both as "can't evaluate, skip".
+    """
+    resp = requests.get(
+        QUOTE_SUMMARY_URL.format(ticker=ticker),
+        params={"modules": "calendarEvents"},
+        headers={"User-Agent": _UA},
+        timeout=30,
+    )
+    if resp.status_code != 200:
+        raise PriceUnavailable(f"{ticker}: HTTP {resp.status_code}")
+
+    data = resp.json().get("quoteSummary", {})
+    if data.get("error") or not data.get("result"):
+        raise PriceUnavailable(f"{ticker}: {data.get('error')}")
+
+    earnings = data["result"][0].get("calendarEvents", {}).get("earnings", {})
+    dates = earnings.get("earningsDate") or []
+    if not dates or "raw" not in dates[0]:
+        return None
+    return datetime.utcfromtimestamp(dates[0]["raw"]).date()
 
 
 def average_daily_dollar_volume(ticker: str, lookback_days: int = 30) -> float:

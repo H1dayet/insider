@@ -15,7 +15,8 @@ from urllib.parse import quote
 
 from insider.cluster import CLUSTER_WINDOW_DAYS, MIN_AVG_DAILY_DOLLAR_VOLUME
 from insider.config import RS_HIGH, RS_LOW, THRESHOLD
-from insider.store import Checkpoint, InsiderCluster, Recommendation, StoredTrade, has_exited, latest_sales
+from insider.earnings_watch import EARNINGS_WINDOW_DAYS
+from insider.store import Checkpoint, EarningsWatch, InsiderCluster, Recommendation, StoredTrade, has_exited, latest_sales
 from insider.track import HORIZONS
 
 
@@ -401,19 +402,68 @@ def _insider_card_html(c: InsiderCluster) -> str:
 </div>"""
 
 
-def _insider_panel_html(clusters: list[InsiderCluster] | None) -> str:
+def _earnings_watch_card_html(w: EarningsWatch) -> str:
+    """One near-earnings single-insider purchase - no liquidity number shown
+    (already filtered on it, same gate as clusters), just the facts that made
+    it alert-worthy: who bought, how much, and when the report lands."""
+    company_html = f'<div class="company">{escape(w.company_name)}</div>' if w.company_name else ""
+    insider_label = f"{w.insider_name} ({w.insider_title})" if w.insider_title else w.insider_name
+    total_value = w.shares * w.price_per_share
+    days_until = (w.earnings_date - date.today()).days
+
+    return f"""<div class="card insider-card">
+  <div class="card-head">
+    <div>
+      <a class="ticker" href="https://finance.yahoo.com/quote/{quote(w.ticker)}" target="_blank" rel="noopener noreferrer">{escape(w.ticker)}</a>
+      {company_html}
+    </div>
+    <span class="badge watching">earnings in {days_until}d</span>
+  </div>
+  <div class="card-meta">
+    <span>${total_value:,.0f} total &middot; ${w.price_per_share:.2f}/share</span>
+  </div>
+  <div class="card-meta muted">
+    <span>{escape(insider_label)}</span>
+    <span>bought {w.tx_date.isoformat()}</span>
+  </div>
+  <div class="card-meta muted">
+    <span>earnings expected {w.earnings_date.isoformat()}</span>
+  </div>
+</div>"""
+
+
+def _earnings_watch_panel_html(watches: list[EarningsWatch] | None) -> str:
+    watches = watches or []
+    if not watches:
+        return ""
+    cards_html = "\n".join(_earnings_watch_card_html(w) for w in watches)
+    return f"""<div class="section-head"><h2>Earnings Watch</h2><span class="count">{len(watches)}</span></div>
+<p class="track-summary-line muted">Insider bought within {EARNINGS_WINDOW_DAYS} days of the next earnings report</p>
+<div class="cards">
+{cards_html}
+</div>"""
+
+
+def _insider_panel_html(clusters: list[InsiderCluster] | None, watches: list[EarningsWatch] | None = None) -> str:
     clusters = clusters or []
+    earnings_html = _earnings_watch_panel_html(watches)
+
     if not clusters:
-        return (
+        cluster_html = (
             '<p class="empty">No insider cluster buys recorded yet - this fills in once '
             "2+ officers/directors independently buy the same company within "
             f"{CLUSTER_WINDOW_DAYS} days.</p>"
         )
-    cards_html = "\n".join(_insider_card_html(c) for c in clusters)
-    return f"""<p class="track-summary-line muted">{len(clusters)} cluster buy{'s' if len(clusters) != 1 else ''} tracked</p>
+    else:
+        cards_html = "\n".join(_insider_card_html(c) for c in clusters)
+        cluster_html = f"""<div class="section-head"><h2>Cluster buys</h2><span class="count">{len(clusters)}</span></div>
 <div class="cards">
 {cards_html}
 </div>"""
+
+    if earnings_html:
+        return f"{earnings_html}\n{cluster_html}"
+    return cluster_html
 
 
 _PAGE = """<!doctype html>
@@ -597,7 +647,7 @@ summary:hover {{ color: var(--text-muted); }}
 <section id="panel-insiders" class="panel">
 {insider_panel}
 
-<p class="disclaimer">SEC Form 4 open-market purchases (code P) by officers/directors only - option exercises, gifts, 10% owner activity, and Rule 10b5-1 scheduled trades are excluded (research: Cohen/Malloy/Pomorski 2012 found these "routine" trades carry ~zero predictive signal). A cluster requires 2+ distinct insiders buying the same company within {cluster_window_days} days, filtered to stocks with average daily dollar volume above ${liquidity_floor}. Unlike Congress buys, there is no relative-strength gate here - Form 4's ~2-business-day disclosure lag is too short for the staleness problem that gate solves - and no live price tracking yet. Not financial advice. Data: SEC EDGAR.</p>
+<p class="disclaimer">SEC Form 4 open-market purchases (code P) by officers/directors only - option exercises, gifts, 10% owner activity, and Rule 10b5-1 scheduled trades are excluded (research: Cohen/Malloy/Pomorski 2012 found these "routine" trades carry ~zero predictive signal). A cluster requires 2+ distinct insiders buying the same company within {cluster_window_days} days, filtered to stocks with average daily dollar volume above ${liquidity_floor}. Earnings Watch flags any single qualifying purchase (no 2+-insider requirement, same liquidity floor) made within {earnings_window_days} days of the company's next earnings report - checked once, when the purchase is first seen, so it won't retroactively flag a purchase that was far from earnings at the time. Unlike Congress buys, there is no relative-strength gate here - Form 4's ~2-business-day disclosure lag is too short for the staleness problem that gate solves - and no live price tracking yet. Not financial advice. Data: SEC EDGAR, Yahoo Finance.</p>
 </section>
 </div>
 
@@ -612,6 +662,7 @@ def render(
     stats: dict | None = None,
     track_data: dict | None = None,
     insider_clusters: list[InsiderCluster] | None = None,
+    earnings_watches: list[EarningsWatch] | None = None,
 ) -> None:
     buys = [t for t in trades if t.tx_type == "P"]
     sales = latest_sales(trades)
@@ -667,9 +718,10 @@ def render(
         health=health,
         sections="\n".join(sections),
         track_panel=_track_panel_html(track_data),
-        insider_panel=_insider_panel_html(insider_clusters),
+        insider_panel=_insider_panel_html(insider_clusters, earnings_watches),
         cluster_window_days=CLUSTER_WINDOW_DAYS,
         liquidity_floor=f"{MIN_AVG_DAILY_DOLLAR_VOLUME:,.0f}",
+        earnings_window_days=EARNINGS_WINDOW_DAYS,
     )
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(html)

@@ -14,7 +14,7 @@ import argparse
 import time
 from datetime import date, timedelta
 
-from insider import cluster, filings, form4, notify, prices, sector, store, track
+from insider import cluster, earnings_watch, filings, form4, notify, prices, sector, store, track
 from insider.config import RS_HIGH, RS_LOW
 from insider.render import render
 
@@ -89,10 +89,14 @@ def sync_filings(conn, cutoff: date, stats: dict) -> None:
             time.sleep(0.5)  # be polite to the Clerk's server and Yahoo alike
 
 
-def sync_insider_purchases(conn, stats: dict) -> None:
+def sync_insider_purchases(conn, stats: dict, *, dry_run: bool, no_notify: bool) -> None:
     """Pull recent Form 4 filings, parse qualifying open-market purchases (see
     form4.fetch_purchases for the filter: officer/director, code P, no 10b5-1 flag),
     and store them. Bounded by FORM4_MAX_FILINGS_PER_RUN - see its comment above.
+
+    Each newly-parsed purchase also gets a one-time earnings_watch check here -
+    "one-time" relies on is_form4_processed() below guaranteeing this filing
+    (and every purchase in it) is only ever seen on this one run.
     """
     since = date.today() - timedelta(days=FORM4_LOOKBACK_DAYS)
     try:
@@ -120,6 +124,7 @@ def sync_insider_purchases(conn, stats: dict) -> None:
 
         for p in purchases:
             store.insert_insider_purchase(conn, p)
+            earnings_watch.check_purchase(conn, p, stats, dry_run=dry_run, no_notify=no_notify)
         if purchases:
             stats["form4_purchases_found"] = stats.get("form4_purchases_found", 0) + len(purchases)
         store.mark_form4_processed(conn, filing.accession_no, filing.filing_date)
@@ -257,18 +262,22 @@ def main() -> None:
         recommendations = store.all_recommendations(conn)
         checkpoints = store.all_checkpoints(conn)
 
-        sync_insider_purchases(conn, stats)
+        sync_insider_purchases(conn, stats, dry_run=args.dry_run, no_notify=args.no_notify)
         cluster_since = today - timedelta(days=cluster.CLUSTER_WINDOW_DAYS)
         detected = cluster.detect_clusters(conn, cluster_since)
         insider_sent = cluster.alert_and_record(conn, detected, stats, dry_run=args.dry_run, no_notify=args.no_notify)
         store.prune_insider_purchases_older_than(conn, cluster_since)
         store.prune_processed_form4_filings_older_than(conn, cluster_since)
+        store.prune_earnings_watch_past(conn, today)
         insider_clusters = store.all_insider_clusters(conn)
+        earnings_watches = store.all_earnings_watch(conn)
 
     render(all_trades, DASHBOARD_PATH, stats,
            track_data={"recommendations": recommendations, "checkpoints": checkpoints, "summary": track_summary},
-           insider_clusters=insider_clusters)
-    print(f"done: {sent} Congress alert(s), {insider_sent} insider cluster alert(s) sent")
+           insider_clusters=insider_clusters, earnings_watches=earnings_watches)
+    earnings_sent = stats.get("earnings_watch_alerted", 0)
+    print(f"done: {sent} Congress alert(s), {insider_sent} insider cluster alert(s), "
+          f"{earnings_sent} earnings-watch alert(s) sent")
 
 
 if __name__ == "__main__":

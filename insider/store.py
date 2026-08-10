@@ -72,6 +72,19 @@ CREATE TABLE IF NOT EXISTS insider_clusters (
     alerted_at              TEXT,
     PRIMARY KEY (ticker, cluster_date)
 );
+CREATE TABLE IF NOT EXISTS earnings_watch (
+    accession_no    TEXT NOT NULL,
+    insider_name    TEXT NOT NULL,
+    ticker          TEXT NOT NULL,
+    company_name    TEXT,
+    insider_title   TEXT,
+    tx_date         TEXT NOT NULL,
+    shares          REAL NOT NULL,
+    price_per_share REAL NOT NULL,
+    earnings_date   TEXT NOT NULL,
+    alerted_at      TEXT NOT NULL,
+    PRIMARY KEY (accession_no, insider_name)
+);
 """
 
 # Columns added after the initial release - existing trades.db files won't have
@@ -563,3 +576,56 @@ def insert_insider_cluster(
 def all_insider_clusters(conn: sqlite3.Connection) -> list[InsiderCluster]:
     rows = conn.execute("SELECT * FROM insider_clusters ORDER BY cluster_date DESC").fetchall()
     return [_row_to_insider_cluster(r) for r in rows]
+
+
+@dataclass
+class EarningsWatch:
+    ticker: str
+    company_name: str | None
+    insider_name: str
+    insider_title: str | None
+    tx_date: date
+    shares: float
+    price_per_share: float
+    earnings_date: date
+    alerted_at: str
+
+
+def _row_to_earnings_watch(r: sqlite3.Row) -> EarningsWatch:
+    return EarningsWatch(
+        ticker=r["ticker"],
+        company_name=r["company_name"],
+        insider_name=r["insider_name"],
+        insider_title=r["insider_title"],
+        tx_date=date.fromisoformat(r["tx_date"]),
+        shares=r["shares"],
+        price_per_share=r["price_per_share"],
+        earnings_date=date.fromisoformat(r["earnings_date"]),
+        alerted_at=r["alerted_at"],
+    )
+
+
+def insert_earnings_watch(conn: sqlite3.Connection, p: "InsiderPurchase", earnings_date: date) -> None:
+    """Records + marks alerted in one step - mirrors insert_insider_cluster()'s
+    reasoning: this is only ever called once a purchase has already been decided
+    alert-worthy, so there's no separate not-yet-alerted state to track."""
+    conn.execute(
+        """INSERT OR IGNORE INTO earnings_watch
+           (accession_no, insider_name, ticker, company_name, insider_title,
+            tx_date, shares, price_per_share, earnings_date, alerted_at)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+        (p.accession_no, p.insider_name, p.ticker, p.company_name, p.insider_title,
+         p.tx_date.isoformat(), p.shares, p.price_per_share, earnings_date.isoformat(),
+         date.today().isoformat()),
+    )
+
+
+def all_earnings_watch(conn: sqlite3.Connection) -> list[EarningsWatch]:
+    rows = conn.execute("SELECT * FROM earnings_watch ORDER BY earnings_date ASC").fetchall()
+    return [_row_to_earnings_watch(r) for r in rows]
+
+
+def prune_earnings_watch_past(conn: sqlite3.Connection, today: date) -> None:
+    """Drop rows whose earnings date has already passed - once the report is
+    out, "earnings is near" is no longer true, so it has nothing left to show."""
+    conn.execute("DELETE FROM earnings_watch WHERE earnings_date < ?", (today.isoformat(),))
