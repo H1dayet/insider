@@ -20,10 +20,11 @@ PDF_URL = "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/{year}/{doc_
 
 # Data rows look like:
 #   Crown Castle Inc. Common Stock\n(CCI) [ST]\nS 06/30/202607/02/2026$1,001 - $15,000
-# i.e. two MM/DD/YYYY dates butted together with no separator.
+# The two MM/DD/YYYY dates may be butted together or separated by whitespace
+# (pypdf >= 6.16 inserts a space between them).
 _TXN_RE = re.compile(
     r"\(([A-Z][A-Z.\-]{0,5})\)\s*\[ST\]\s*"
-    r"([PS])\s+(\d{2}/\d{2}/\d{4})(\d{2}/\d{2}/\d{4})"
+    r"([PS])\s+(\d{2}/\d{2}/\d{4})\s*(\d{2}/\d{2}/\d{4})"
 )
 
 
