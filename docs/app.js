@@ -1,4 +1,4 @@
-const state = { data: null, filter: 'all', search: '', sort: 'score', investment: 10000 };
+const state = { data: null, filter: 'all', search: '', sort: 'score', investment: 10000, growthTicker: 'portfolio' };
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -115,9 +115,40 @@ function renderTrackRecord() {
     <div class="track-kpi"><span>Northstar return</span><strong class="${cls(track.strategy_return)}">${fmtPct(track.strategy_return)}</strong></div>
     <div class="track-kpi"><span>SPY ending value</span><strong>${fmtMoney(benchmarkValue)}</strong></div>`;
   $('#record-count').textContent = `${track.days_tracked} completed session${track.days_tracked === 1 ? '' : 's'} · started ${track.started_at}`;
-  $('#simulation-note').textContent = `Forward tracking only. Daily recommendations trade at the next session’s open with ${track.cost_bps_per_side} bps per transaction side. Cash earns 0%; taxes are excluded.`;
-  renderChart(track.equity_curve, amount);
+  const tickerOptions = [...new Set([
+    ...track.next_recommendations.selected.map(item => item.ticker),
+    ...track.daily_records.flatMap(record => record.holdings.map(item => item.ticker)),
+  ])].sort();
+  if (state.growthTicker !== 'portfolio' && !tickerOptions.includes(state.growthTicker)) state.growthTicker = 'portfolio';
+  $('#growth-stock').innerHTML = `<option value="portfolio">Northstar portfolio</option>${tickerOptions.map(ticker => `<option value="${escapeHtml(ticker)}">${escapeHtml(ticker)}</option>`).join('')}`;
+  $('#growth-stock').value = state.growthTicker;
+  const chart = growthSeries(track, state.growthTicker);
+  $('#growth-series-label').textContent = chart.label;
+  $('#simulation-note').textContent = chart.note || `Forward tracking only. Daily recommendations trade at the next session’s open with ${track.cost_bps_per_side} bps per transaction side. Cash earns 0%; taxes are excluded.`;
+  renderChart(chart.points, amount);
   renderDailyRecords(track);
+}
+
+function growthSeries(track, ticker) {
+  if (ticker === 'portfolio') return { points: track.equity_curve, label: 'Northstar', note: '' };
+  const benchmarkByDate = new Map(track.equity_curve.map(point => [point.date, point.benchmark]));
+  const points = [{ date: track.started_at, strategy: 1, benchmark: 1 }];
+  [...track.daily_records].reverse().forEach(record => {
+    const holding = record.holdings.find(item => item.ticker === ticker);
+    if (holding) points.push({
+      date: record.date,
+      strategy: 1 + holding.return,
+      benchmark: benchmarkByDate.get(record.date) ?? 1,
+    });
+  });
+  const growth = points.length > 1 ? points.at(-1).strategy - 1 : null;
+  return {
+    points,
+    label: ticker,
+    note: growth == null
+      ? `${ticker} is recommended, but its growth will appear after the first tracked market close.`
+      : `${ticker} position growth while held: ${fmtPct(growth)}. This uses the paper portfolio’s tracked cost basis and includes later rebalancing purchases.`,
+  };
 }
 
 function renderChart(points, amount) {
@@ -190,6 +221,7 @@ function bindEvents() {
     const value = Number(event.target.value.replace(/[^0-9.]/g, ''));
     if (Number.isFinite(value) && value >= 0) { state.investment = value; renderTrackRecord(); }
   });
+  $('#growth-stock').addEventListener('change', event => { state.growthTicker = event.target.value; renderTrackRecord(); });
   $('.dialog-close').addEventListener('click', () => $('#stock-dialog').close());
   $('#stock-dialog').addEventListener('click', event => { if (event.target === $('#stock-dialog')) $('#stock-dialog').close(); });
 }

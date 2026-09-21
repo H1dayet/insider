@@ -98,7 +98,11 @@
         <section class="panel chart-section" aria-labelledby="growth-title">
           <div class="panel-heading">
             <div><p class="eyebrow">Model portfolio</p><h2 id="growth-title">Growth comparison</h2></div>
-            <div class="legend"><span><i class="strategy"></i>Northstar</span><span><i class="benchmark"></i>SPY</span></div>
+            <div class="chart-controls">
+              <label for="growth-stock">View growth</label>
+              <select id="growth-stock"><option value="portfolio">Northstar portfolio</option></select>
+              <div class="legend"><span><i class="strategy"></i><b id="growth-series-label">Northstar</b></span><span><i class="benchmark"></i>SPY</span></div>
+            </div>
           </div>
           <div class="chart-card">
             <svg id="equity-chart" viewBox="0 0 1000 360" role="img" aria-label="Northstar and SPY hypothetical growth chart"></svg>

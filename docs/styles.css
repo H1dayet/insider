@@ -124,7 +124,11 @@ tbody tr:hover { background: var(--surface-soft); }
 .track-kpi.primary strong.positive { color: #c5dfbd; }
 .track-kpi.primary strong.negative { color: #edb8b6; }
 .chart-section, .cohorts-section { margin-top: 12px; }
+.chart-controls { display: flex; align-items: center; gap: 9px; }
+.chart-controls > label { color: var(--faint); font: 500 8px var(--mono); text-transform: uppercase; }
+.chart-controls select { max-width: 190px; padding: 7px 26px 7px 9px; border: 1px solid var(--line); border-radius: 5px; background: var(--surface); color: var(--ink); font: 10px var(--mono); }
 .legend { display: flex; gap: 14px; color: var(--muted); font: 9px var(--mono); }
+.legend b { color: inherit; font-weight: 500; }
 .legend i { display: inline-block; width: 14px; height: 2px; margin-right: 5px; vertical-align: 2px; }
 .legend .strategy { background: var(--green); }
 .legend .benchmark { background: #a5a5a0; }
@@ -215,6 +219,7 @@ footer { width: min(1180px, calc(100% - 64px)); margin: 0 auto; display: flex; j
   .stats-row { grid-template-columns: repeat(2, 1fr); }
   .stat { min-height: 96px; }
   .panel-heading { align-items: flex-start; flex-direction: column; }
+  .chart-controls { width: 100%; flex-wrap: wrap; }
   .toolbar { align-items: stretch; flex-direction: column; }
   .search-field { min-width: 0; }
   .sort-field { justify-content: space-between; }
