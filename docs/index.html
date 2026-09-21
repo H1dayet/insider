@@ -3,152 +3,141 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Transparent stock trend and momentum research with a preserved track record.">
-  <title>Northstar — Rules-based stock research</title>
+  <meta name="description" content="Personal rules-based stock research dashboard.">
+  <title>Northstar — Personal stock research</title>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <a class="brand" href="#" aria-label="Northstar home">
-      <span class="brand-mark" aria-hidden="true">✦</span>
-      <span>Northstar</span>
-    </a>
-    <nav aria-label="Primary">
-      <button class="nav-button active" data-view="screener">Screener</button>
-      <button class="nav-button" data-view="track">Track record</button>
-      <button class="nav-button" data-view="method">Method</button>
-    </nav>
-    <div class="data-pill" id="data-pill"><span></span> Loading data</div>
-  </header>
-
-  <main id="main">
-    <section class="view active" id="view-screener" aria-labelledby="screener-title">
-      <div class="hero shell">
-        <div class="eyebrow">Daily research screen · v<span id="strategy-version">—</span></div>
-        <div class="hero-grid">
-          <div>
-            <h1 id="screener-title">Find strength.<br><em>See the evidence.</em></h1>
-            <p class="lede">A transparent screen for liquid stocks with established trends, positive momentum, and market outperformance.</p>
-          </div>
-          <div class="market-card" id="market-card">
-            <div class="market-card-top"><span>Market regime</span><span class="status-dot"></span></div>
-            <strong id="market-state">Loading</strong>
-            <p id="market-detail">SPY compared with its 200-day average</p>
-          </div>
-        </div>
-        <div class="stats-row" id="overview-stats" aria-label="Screen overview"></div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Northstar home">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span><b>Northstar</b><small>Personal research</small></span>
+      </a>
+      <nav aria-label="Primary">
+        <button class="nav-button active" data-view="screener"><span>01</span>Screener</button>
+        <button class="nav-button" data-view="track"><span>02</span>Track record</button>
+        <button class="nav-button" data-view="method"><span>03</span>Method</button>
+      </nav>
+      <div class="sidebar-status">
+        <div class="data-pill" id="data-pill"><i></i> Loading data</div>
+        <p>Educational research only.<br>No trades are executed.</p>
       </div>
+    </aside>
 
-      <section class="results-section shell" aria-labelledby="results-title">
-        <div class="section-heading">
+    <main id="main">
+      <section class="view active" id="view-screener" aria-labelledby="screener-title">
+        <header class="page-header">
           <div>
-            <p class="kicker">Today’s screen</p>
-            <h2 id="results-title">Ranked candidates</h2>
+            <p class="eyebrow">Daily screen · Strategy v<span id="strategy-version">—</span></p>
+            <h1 id="screener-title">Stock screener</h1>
+            <p class="lede">Liquid stocks with established trends, positive momentum, and SPY outperformance.</p>
           </div>
           <p class="timestamp" id="timestamp">Latest completed session: —</p>
+        </header>
+
+        <div class="overview-grid">
+          <article class="market-card" id="market-card">
+            <div><span class="metric-label">Market regime</span><i class="status-dot"></i></div>
+            <strong id="market-state">Loading</strong>
+            <small id="market-detail">SPY compared with SMA200</small>
+          </article>
+          <div class="stats-row" id="overview-stats" aria-label="Screen overview"></div>
         </div>
 
-        <div class="toolbar">
-          <label class="search-field">
-            <span class="sr-only">Search stocks</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
-            <input id="search" type="search" placeholder="Search ticker or company">
-          </label>
-          <div class="filter-group" role="group" aria-label="Filter results">
-            <button class="filter active" data-filter="all">All</button>
-            <button class="filter" data-filter="qualified">Qualified</button>
-            <button class="filter" data-filter="failed">Not qualified</button>
+        <section class="panel results-section" aria-labelledby="results-title">
+          <div class="panel-heading">
+            <div><p class="eyebrow">Current results</p><h2 id="results-title">Candidates</h2></div>
+            <div class="filter-group" role="group" aria-label="Filter results">
+              <button class="filter active" data-filter="all">All</button>
+              <button class="filter" data-filter="qualified">Qualified</button>
+              <button class="filter" data-filter="failed">Failed</button>
+            </div>
           </div>
-          <label class="sort-field">Sort
-            <select id="sort">
-              <option value="score">Score</option>
-              <option value="momentum">6M momentum</option>
-              <option value="liquidity">Liquidity</option>
-              <option value="ticker">Ticker</option>
-            </select>
-          </label>
-        </div>
 
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th>Company</th><th>Status</th><th>Score</th><th>6M momentum</th><th>vs. SPY</th><th>Trend</th><th>Risk</th><th><span class="sr-only">Open details</span></th></tr>
-            </thead>
-            <tbody id="stock-table"></tbody>
-          </table>
-          <div class="empty-state" id="screen-empty" hidden>No stocks match this view.</div>
-        </div>
+          <div class="toolbar">
+            <label class="search-field">
+              <span class="sr-only">Search stocks</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
+              <input id="search" type="search" placeholder="Search ticker or company">
+            </label>
+            <label class="sort-field">Sort by
+              <select id="sort">
+                <option value="score">Score</option>
+                <option value="momentum">6M momentum</option>
+                <option value="liquidity">Liquidity</option>
+                <option value="ticker">Ticker</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Company</th><th>Status</th><th>Score</th><th>Momentum</th><th>vs. SPY</th><th>Trend</th><th>Risk</th><th><span class="sr-only">Details</span></th></tr></thead>
+              <tbody id="stock-table"></tbody>
+            </table>
+            <div class="empty-state" id="screen-empty" hidden>No stocks match this view.</div>
+          </div>
+          <p class="panel-note">Score is a relative rank within today’s qualifying universe. It is not a probability of profit.</p>
+        </section>
       </section>
 
-      <section class="explain-band">
-        <div class="shell explain-grid">
-          <div><p class="kicker">What the score means</p><h2>Relative rank,<br>not a promise.</h2></div>
-          <div class="explain-copy"><p>A score of 90 means the stock ranked highly within today’s qualifying universe. It does not mean a 90% probability of profit.</p><a href="#method" data-link-view="method">Read the full method <span>→</span></a></div>
-        </div>
-      </section>
-    </section>
-
-    <section class="view" id="view-track" aria-labelledby="track-title">
-      <div class="track-hero shell">
-        <div class="eyebrow">Preserved monthly selections</div>
-        <div class="track-title-row">
-          <div><h1 id="track-title">What if I had<br><em>followed the model?</em></h1><p class="lede">Change the starting amount to translate the recorded percentage return into hypothetical dollars.</p></div>
+      <section class="view" id="view-track" aria-labelledby="track-title">
+        <header class="page-header track-header">
+          <div><p class="eyebrow">Preserved monthly selections</p><h1 id="track-title">Track record</h1><p class="lede">Translate the model’s recorded return into a hypothetical dollar result.</p></div>
           <label class="investment-input">Starting amount
             <span><b>$</b><input id="investment" inputmode="decimal" value="10000" aria-describedby="investment-note"></span>
             <small id="investment-note">Research simulation only</small>
           </label>
-        </div>
+        </header>
+
         <div class="track-kpis" id="track-kpis"></div>
-      </div>
 
-      <section class="chart-section shell" aria-labelledby="growth-title">
-        <div class="section-heading">
-          <div><p class="kicker">Model portfolio</p><h2 id="growth-title">Growth of your hypothetical investment</h2></div>
-          <div class="legend"><span><i class="strategy"></i>Northstar</span><span><i class="benchmark"></i>SPY</span></div>
-        </div>
-        <div class="chart-card">
-          <svg id="equity-chart" viewBox="0 0 1000 360" role="img" aria-label="Northstar and SPY hypothetical growth chart"></svg>
-          <p class="chart-empty" id="chart-empty" hidden>A track record will appear after the first completed evaluation.</p>
-        </div>
-        <div class="simulation-note" id="simulation-note"></div>
+        <section class="panel chart-section" aria-labelledby="growth-title">
+          <div class="panel-heading">
+            <div><p class="eyebrow">Model portfolio</p><h2 id="growth-title">Growth comparison</h2></div>
+            <div class="legend"><span><i class="strategy"></i>Northstar</span><span><i class="benchmark"></i>SPY</span></div>
+          </div>
+          <div class="chart-card">
+            <svg id="equity-chart" viewBox="0 0 1000 360" role="img" aria-label="Northstar and SPY hypothetical growth chart"></svg>
+            <p class="chart-empty" id="chart-empty" hidden>A track record will appear after the first evaluation.</p>
+          </div>
+          <p class="panel-note" id="simulation-note"></p>
+        </section>
+
+        <section class="panel cohorts-section" aria-labelledby="cohorts-title">
+          <div class="panel-heading"><div><p class="eyebrow">Evaluation log</p><h2 id="cohorts-title">Monthly selections</h2></div><p class="timestamp" id="record-count"></p></div>
+          <div class="cohort-list" id="cohort-list"></div>
+        </section>
       </section>
 
-      <section class="cohorts-section shell" aria-labelledby="cohorts-title">
-        <div class="section-heading"><div><p class="kicker">Every signal survives</p><h2 id="cohorts-title">Evaluation history</h2></div><p class="timestamp" id="record-count"></p></div>
-        <div class="cohort-list" id="cohort-list"></div>
-      </section>
-    </section>
-
-    <section class="view" id="view-method" aria-labelledby="method-title">
-      <div class="method-hero shell">
-        <div class="eyebrow">Research specification</div>
-        <h1 id="method-title">Rules you can inspect.<br><em>Limits you can see.</em></h1>
-        <p class="lede">Northstar’s current model is an unvalidated research hypothesis. Every threshold, formula, and known data limitation is published below.</p>
-      </div>
-      <section class="method-body shell">
-        <aside class="method-nav" aria-label="Method sections">
-          <a href="#universe">01 · Universe</a><a href="#signals">02 · Signals</a><a href="#ranking">03 · Ranking</a><a href="#portfolio">04 · Portfolio</a><a href="#limits">05 · Limits</a>
-        </aside>
-        <div class="method-content">
-          <article id="universe"><span>01</span><h2>Universe & data</h2><p id="universe-description"></p><div class="definition-grid" id="data-definitions"></div></article>
-          <article id="signals"><span>02</span><h2>Eligibility & signals</h2><p>A stock must pass every eligibility, trend, and momentum rule. When SPY is below its 200-day average, stock results remain visible but the research portfolio stays in cash.</p><div class="rules-grid" id="rules-grid"></div></article>
-          <article id="ranking"><span>03</span><h2>Ranking formula</h2><div class="formula-feature">Score = <b>0.60</b> × percentile(M6) + <b>0.40</b> × percentile(M12)</div><p>Percentiles are calculated only among stocks that qualify on the same date. Ties use average ranks. A single qualifying stock receives a neutral score of 50.</p><div class="formula-list" id="formula-list"></div></article>
-          <article id="portfolio"><span>04</span><h2>Track-record rules</h2><p>Formal selections are frozen on each month’s final trading session and entered at the next session’s opening price. The model selects up to ten stocks at 10% target weights, with no more than two per sector. Unfilled weight stays in cash. The displayed simulation includes 10 basis points per transaction side.</p></article>
-          <article id="limits" class="limits"><span>05</span><h2>Known limitations</h2><ul id="limitations"></ul></article>
+      <section class="view" id="view-method" aria-labelledby="method-title">
+        <header class="page-header">
+          <div><p class="eyebrow">Research specification</p><h1 id="method-title">Method</h1><p class="lede">The complete rules, formulas, data conventions, and known limitations.</p></div>
+        </header>
+        <div class="method-layout">
+          <aside class="method-nav" aria-label="Method sections">
+            <a href="#universe">Universe</a><a href="#signals">Signals</a><a href="#ranking">Ranking</a><a href="#portfolio">Portfolio</a><a href="#limits">Limitations</a>
+          </aside>
+          <div class="method-content">
+            <article id="universe"><p class="eyebrow">01 · Inputs</p><h2>Universe and data</h2><p id="universe-description"></p><div class="definition-grid" id="data-definitions"></div></article>
+            <article id="signals"><p class="eyebrow">02 · Filters</p><h2>Eligibility and signals</h2><p>A stock must pass every eligibility, trend, and momentum rule. When SPY is below its 200-day average, results remain visible but the research portfolio stays in cash.</p><div class="rules-grid" id="rules-grid"></div></article>
+            <article id="ranking"><p class="eyebrow">03 · Score</p><h2>Ranking formula</h2><div class="formula-feature">Score = <b>0.60</b> × percentile(M6) + <b>0.40</b> × percentile(M12)</div><p>Percentiles use only stocks that qualify on the same date. Ties use average ranks.</p><div class="formula-list" id="formula-list"></div></article>
+            <article id="portfolio"><p class="eyebrow">04 · Simulation</p><h2>Track-record rules</h2><p>Formal selections are frozen on each month’s final trading session and entered at the next session’s opening price. Up to ten stocks receive 10% target weights, with no more than two per sector. Unfilled weight stays in cash. The simulation includes 10 basis points per transaction side.</p></article>
+            <article id="limits" class="limits"><p class="eyebrow">05 · Caveats</p><h2>Known limitations</h2><ul id="limitations"></ul></article>
+          </div>
         </div>
       </section>
-    </section>
-  </main>
+
+      <footer><span>Northstar · Personal research dashboard</span><span id="footer-provider">Loading data source…</span></footer>
+    </main>
+  </div>
 
   <dialog id="stock-dialog" aria-labelledby="dialog-title">
     <button class="dialog-close" aria-label="Close details">×</button>
     <div id="dialog-content"></div>
   </dialog>
-
-  <footer>
-    <div class="shell footer-grid"><div><a class="brand" href="#"><span class="brand-mark">✦</span><span>Northstar</span></a><p>Transparent, rules-based stock research.</p></div><div><b>Educational use only</b><p>Not personalized investment advice. No brokerage connection. No promise of profit.</p></div><div><b>Data provenance</b><p id="footer-provider">Loading…</p></div></div>
-  </footer>
 </body>
 </html>
