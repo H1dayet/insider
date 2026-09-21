@@ -1,0 +1,104 @@
+{
+  "evaluation_session": "2025-10-31",
+  "record_type": "reconstructed",
+  "created_at": "2026-09-21T14:20:27.361424+00:00",
+  "strategy_version": "1.0.0",
+  "data_version": "yahoo-v1",
+  "market": {
+    "ticker": "SPY",
+    "close": 682.05999756,
+    "sma200": 609.44199982,
+    "m6": 0.210341,
+    "active": true
+  },
+  "universe_size": 32,
+  "qualified_count": 13,
+  "selected": [
+    {
+      "ticker": "AVGO",
+      "permanent_id": "sec-cik:0001730168",
+      "name": "Broadcom",
+      "sector": "Information Technology",
+      "score": 95.0,
+      "signal_close": 369.63000488,
+      "weight": 0.1
+    },
+    {
+      "ticker": "AMD",
+      "permanent_id": "sec-cik:0000002488",
+      "name": "Advanced Micro Devices",
+      "sector": "Information Technology",
+      "score": 86.66666667,
+      "signal_close": 256.11999512,
+      "weight": 0.1
+    },
+    {
+      "ticker": "CAT",
+      "permanent_id": "sec-cik:0000018230",
+      "name": "Caterpillar",
+      "sector": "Industrials",
+      "score": 70.0,
+      "signal_close": 577.26000977,
+      "weight": 0.1
+    },
+    {
+      "ticker": "GOOGL",
+      "permanent_id": "sec-cik:0001652044",
+      "name": "Alphabet",
+      "sector": "Communication Services",
+      "score": 65.0,
+      "signal_close": 281.19000244,
+      "weight": 0.1
+    },
+    {
+      "ticker": "TSLA",
+      "permanent_id": "sec-cik:0001318605",
+      "name": "Tesla",
+      "sector": "Consumer Discretionary",
+      "score": 63.33333333,
+      "signal_close": 456.55999756,
+      "weight": 0.1
+    },
+    {
+      "ticker": "GE",
+      "permanent_id": "sec-cik:0000040545",
+      "name": "GE Aerospace",
+      "sector": "Industrials",
+      "score": 61.66666667,
+      "signal_close": 308.95001221,
+      "weight": 0.1
+    },
+    {
+      "ticker": "BAC",
+      "permanent_id": "sec-cik:0000070858",
+      "name": "Bank of America",
+      "sector": "Financials",
+      "score": 21.66666667,
+      "signal_close": 53.45000076,
+      "weight": 0.1
+    },
+    {
+      "ticker": "JPM",
+      "permanent_id": "sec-cik:0000019617",
+      "name": "JPMorgan Chase",
+      "sector": "Financials",
+      "score": 18.33333333,
+      "signal_close": 311.11999512,
+      "weight": 0.1
+    },
+    {
+      "ticker": "JNJ",
+      "permanent_id": "sec-cik:0000200406",
+      "name": "Johnson & Johnson",
+      "sector": "Health Care",
+      "score": 3.33333333,
+      "signal_close": 188.86999512,
+      "weight": 0.1
+    }
+  ],
+  "disclosures": [
+    "Reconstructed results use the current curated universe and contain survivorship and selection bias.",
+    "SEC CIK identifies the issuer, not an individual share class.",
+    "Yahoo Finance data does not provide complete delisting returns or institutional point-in-time reference data."
+  ]
+}

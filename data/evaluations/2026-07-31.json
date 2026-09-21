@@ -1,0 +1,113 @@
+{
+  "evaluation_session": "2026-07-31",
+  "record_type": "reconstructed",
+  "created_at": "2026-09-21T14:20:27.829759+00:00",
+  "strategy_version": "1.0.0",
+  "data_version": "yahoo-v1",
+  "market": {
+    "ticker": "SPY",
+    "close": 747.0300293,
+    "sma200": 700.38610077,
+    "m6": 0.0820702,
+    "active": true
+  },
+  "universe_size": 32,
+  "qualified_count": 16,
+  "selected": [
+    {
+      "ticker": "AMD",
+      "permanent_id": "sec-cik:0000002488",
+      "name": "Advanced Micro Devices",
+      "sector": "Information Technology",
+      "score": 100.0,
+      "signal_close": 476.1499939,
+      "weight": 0.1
+    },
+    {
+      "ticker": "CSCO",
+      "permanent_id": "sec-cik:0000858877",
+      "name": "Cisco Systems",
+      "sector": "Information Technology",
+      "score": 90.66666667,
+      "signal_close": 115.98999786,
+      "weight": 0.1
+    },
+    {
+      "ticker": "CAT",
+      "permanent_id": "sec-cik:0000018230",
+      "name": "Caterpillar",
+      "sector": "Industrials",
+      "score": 89.33333333,
+      "signal_close": 814.80999756,
+      "weight": 0.1
+    },
+    {
+      "ticker": "GE",
+      "permanent_id": "sec-cik:0000040545",
+      "name": "GE Aerospace",
+      "sector": "Industrials",
+      "score": 60.0,
+      "signal_close": 360.07000732,
+      "weight": 0.1
+    },
+    {
+      "ticker": "KO",
+      "permanent_id": "sec-cik:0000021344",
+      "name": "Coca-Cola",
+      "sector": "Consumer Staples",
+      "score": 58.66666667,
+      "signal_close": 87.58999634,
+      "weight": 0.1
+    },
+    {
+      "ticker": "JNJ",
+      "permanent_id": "sec-cik:0000200406",
+      "name": "Johnson & Johnson",
+      "sector": "Health Care",
+      "score": 48.0,
+      "signal_close": 256.3500061,
+      "weight": 0.1
+    },
+    {
+      "ticker": "CVX",
+      "permanent_id": "sec-cik:0000093410",
+      "name": "Chevron",
+      "sector": "Energy",
+      "score": 46.66666667,
+      "signal_close": 196.83000183,
+      "weight": 0.1
+    },
+    {
+      "ticker": "BAC",
+      "permanent_id": "sec-cik:0000070858",
+      "name": "Bank of America",
+      "sector": "Financials",
+      "score": 45.33333333,
+      "signal_close": 61.95000076,
+      "weight": 0.1
+    },
+    {
+      "ticker": "LLY",
+      "permanent_id": "sec-cik:0000059478",
+      "name": "Eli Lilly",
+      "sector": "Health Care",
+      "score": 41.33333333,
+      "signal_close": 1148.83996582,
+      "weight": 0.1
+    },
+    {
+      "ticker": "JPM",
+      "permanent_id": "sec-cik:0000019617",
+      "name": "JPMorgan Chase",
+      "sector": "Financials",
+      "score": 29.33333333,
+      "signal_close": 351.79000854,
+      "weight": 0.1
+    }
+  ],
+  "disclosures": [
+    "Reconstructed results use the current curated universe and contain survivorship and selection bias.",
+    "SEC CIK identifies the issuer, not an individual share class.",
+    "Yahoo Finance data does not provide complete delisting returns or institutional point-in-time reference data."
+  ]
+}

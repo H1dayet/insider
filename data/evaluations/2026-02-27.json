@@ -1,0 +1,113 @@
+{
+  "evaluation_session": "2026-02-27",
+  "record_type": "reconstructed",
+  "created_at": "2026-09-21T14:20:27.569468+00:00",
+  "strategy_version": "1.0.0",
+  "data_version": "yahoo-v1",
+  "market": {
+    "ticker": "SPY",
+    "close": 685.98999023,
+    "sma200": 654.18269958,
+    "m6": 0.06695398,
+    "active": true
+  },
+  "universe_size": 32,
+  "qualified_count": 17,
+  "selected": [
+    {
+      "ticker": "CAT",
+      "permanent_id": "sec-cik:0000018230",
+      "name": "Caterpillar",
+      "sector": "Industrials",
+      "score": 100.0,
+      "signal_close": 742.83001709,
+      "weight": 0.1
+    },
+    {
+      "ticker": "GOOGL",
+      "permanent_id": "sec-cik:0001652044",
+      "name": "Alphabet",
+      "sector": "Communication Services",
+      "score": 91.25,
+      "signal_close": 311.76000977,
+      "weight": 0.1
+    },
+    {
+      "ticker": "JNJ",
+      "permanent_id": "sec-cik:0000200406",
+      "name": "Johnson & Johnson",
+      "sector": "Health Care",
+      "score": 78.75,
+      "signal_close": 248.42999268,
+      "weight": 0.1
+    },
+    {
+      "ticker": "XOM",
+      "permanent_id": "sec-cik:0002115436",
+      "name": "Exxon Mobil",
+      "sector": "Energy",
+      "score": 70.0,
+      "signal_close": 152.5,
+      "weight": 0.1
+    },
+    {
+      "ticker": "GE",
+      "permanent_id": "sec-cik:0000040545",
+      "name": "GE Aerospace",
+      "sector": "Industrials",
+      "score": 70.0,
+      "signal_close": 342.26000977,
+      "weight": 0.1
+    },
+    {
+      "ticker": "AMD",
+      "permanent_id": "sec-cik:0000002488",
+      "name": "Advanced Micro Devices",
+      "sector": "Information Technology",
+      "score": 67.5,
+      "signal_close": 200.21000671,
+      "weight": 0.1
+    },
+    {
+      "ticker": "WMT",
+      "permanent_id": "sec-cik:0000104169",
+      "name": "Walmart",
+      "sector": "Consumer Staples",
+      "score": 61.25,
+      "signal_close": 127.94999695,
+      "weight": 0.1
+    },
+    {
+      "ticker": "LLY",
+      "permanent_id": "sec-cik:0000059478",
+      "name": "Eli Lilly",
+      "sector": "Health Care",
+      "score": 57.5,
+      "signal_close": 1051.98999023,
+      "weight": 0.1
+    },
+    {
+      "ticker": "KO",
+      "permanent_id": "sec-cik:0000021344",
+      "name": "Coca-Cola",
+      "sector": "Consumer Staples",
+      "score": 46.25,
+      "signal_close": 81.55999756,
+      "weight": 0.1
+    },
+    {
+      "ticker": "CVX",
+      "permanent_id": "sec-cik:0000093410",
+      "name": "Chevron",
+      "sector": "Energy",
+      "score": 41.25,
+      "signal_close": 186.75999451,
+      "weight": 0.1
+    }
+  ],
+  "disclosures": [
+    "Reconstructed results use the current curated universe and contain survivorship and selection bias.",
+    "SEC CIK identifies the issuer, not an individual share class.",
+    "Yahoo Finance data does not provide complete delisting returns or institutional point-in-time reference data."
+  ]
+}

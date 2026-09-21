@@ -1,0 +1,34 @@
+ticker,name,sector
+AAPL,Apple,Information Technology
+MSFT,Microsoft,Information Technology
+NVDA,NVIDIA,Information Technology
+AMZN,Amazon,Consumer Discretionary
+META,Meta Platforms,Communication Services
+GOOGL,Alphabet,Communication Services
+AVGO,Broadcom,Information Technology
+TSLA,Tesla,Consumer Discretionary
+BRK-B,Berkshire Hathaway,Financials
+JPM,JPMorgan Chase,Financials
+V,Visa,Financials
+LLY,Eli Lilly,Health Care
+WMT,Walmart,Consumer Staples
+ORCL,Oracle,Information Technology
+MA,Mastercard,Financials
+COST,Costco Wholesale,Consumer Staples
+HD,Home Depot,Consumer Discretionary
+NFLX,Netflix,Communication Services
+BAC,Bank of America,Financials
+PG,Procter & Gamble,Consumer Staples
+JNJ,Johnson & Johnson,Health Care
+ABBV,AbbVie,Health Care
+CRM,Salesforce,Information Technology
+AMD,Advanced Micro Devices,Information Technology
+KO,Coca-Cola,Consumer Staples
+PEP,PepsiCo,Consumer Staples
+CSCO,Cisco Systems,Information Technology
+MCD,McDonald's,Consumer Discretionary
+GE,GE Aerospace,Industrials
+CAT,Caterpillar,Industrials
+XOM,Exxon Mobil,Energy
+CVX,Chevron,Energy
+
