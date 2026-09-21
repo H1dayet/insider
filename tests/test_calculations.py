@@ -8,7 +8,7 @@ from northstar.calculations import (
     split_adjusted_close,
     total_return_index,
 )
-from northstar.pipeline import is_common_share, yahoo_symbol
+from northstar.pipeline import is_common_share, process_paper_session, yahoo_symbol
 
 
 def test_split_adjustment_removes_split_jump_but_not_dividend():
@@ -81,4 +81,31 @@ def test_listing_filter_keeps_common_shares_and_rejects_fund_instruments():
 
 def test_yahoo_symbol_normalizes_exchange_class_separator():
     assert yahoo_symbol("brk.b") == "BRK-B"
+
+
+def test_paper_portfolio_enters_prior_signal_at_next_open():
+    session = pd.Timestamp("2026-09-21")
+    stock = pd.DataFrame(
+        {"open": [100.0], "close": [110.0], "splits": [0.0], "dividends": [0.0]},
+        index=[session],
+    )
+    spy = pd.DataFrame(
+        {"open": [500.0], "close": [505.0], "splits": [0.0], "dividends": [0.0]},
+        index=[session],
+    )
+    state = {
+        "initial_capital": 10_000.0,
+        "cash": 10_000.0,
+        "positions": [],
+        "benchmark": {"cash": 10_000.0, "shares": 0.0},
+        "pending": {
+            "signal_session": "2026-09-18",
+            "selected": [{"ticker": "TEST", "name": "Test", "sector": "Industrials", "weight": 0.1}],
+        },
+        "daily_snapshots": [],
+    }
+    process_paper_session(state, session, {"TEST": stock, "SPY": spy})
+    assert state["positions"][0]["shares"] > 9.98
+    assert state["daily_snapshots"][0]["portfolio_value"] > 10_098
+    assert state["daily_snapshots"][0]["signal_session"] == "2026-09-18"
 

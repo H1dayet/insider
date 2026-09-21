@@ -1,0 +1,109 @@
+{
+  "strategy_version": "3.0.0",
+  "started_at": "2026-09-21",
+  "initial_capital": 10000.0,
+  "cash": 10000.0,
+  "positions": [],
+  "benchmark": {
+    "cash": 10000.0,
+    "shares": 0.0
+  },
+  "last_processed_session": "2026-09-18",
+  "pending": {
+    "signal_session": "2026-09-18",
+    "market_active": true,
+    "selected": [
+      {
+        "ticker": "TWST",
+        "permanent_id": "sec-cik:0001581280",
+        "name": "Twist Bioscience Corporation - Common Stock",
+        "sector": "Health Care",
+        "score": 99.26751592,
+        "signal_close": 166.99000549,
+        "weight": 0.1
+      },
+      {
+        "ticker": "TXG",
+        "permanent_id": "sec-cik:0001770787",
+        "name": "10x Genomics, Inc. - Common Stock",
+        "sector": "Industrials",
+        "score": 99.17197452,
+        "signal_close": 76.59999847,
+        "weight": 0.1
+      },
+      {
+        "ticker": "MXL",
+        "permanent_id": "sec-cik:0001288469",
+        "name": "MaxLinear, Inc - Common Stock",
+        "sector": "Technology",
+        "score": 99.07643312,
+        "signal_close": 81.12000275,
+        "weight": 0.1
+      },
+      {
+        "ticker": "DELL",
+        "permanent_id": "sec-cik:0001571996",
+        "name": "Dell Technologies Inc. Class C Common Stock",
+        "sector": "Technology",
+        "score": 98.59872611,
+        "signal_close": 568.05999756,
+        "weight": 0.1
+      },
+      {
+        "ticker": "MRNA",
+        "permanent_id": "sec-cik:0001682852",
+        "name": "Moderna, Inc. - Common Stock",
+        "sector": "Health Care",
+        "score": 98.34394904,
+        "signal_close": 154.03999329,
+        "weight": 0.1
+      },
+      {
+        "ticker": "AEHR",
+        "permanent_id": "sec-cik:0001040470",
+        "name": "Aehr Test Systems - Common Stock",
+        "sector": "Industrials",
+        "score": 95.31847134,
+        "signal_close": 93.48999786,
+        "weight": 0.1
+      },
+      {
+        "ticker": "FCEL",
+        "permanent_id": "sec-cik:0000886128",
+        "name": "FuelCell Energy, Inc. - Common Stock",
+        "sector": "Energy",
+        "score": 92.4522293,
+        "signal_close": 18.11000061,
+        "weight": 0.1
+      },
+      {
+        "ticker": "TH",
+        "permanent_id": "sec-cik:0001712189",
+        "name": "Target Hospitality Corp. - Common Stock",
+        "sector": "Consumer Discretionary",
+        "score": 91.71974522,
+        "signal_close": 21.19000053,
+        "weight": 0.1
+      },
+      {
+        "ticker": "APPS",
+        "permanent_id": "sec-cik:0000317788",
+        "name": "Digital Turbine, Inc. - Common Stock",
+        "sector": "Miscellaneous",
+        "score": 91.17834395,
+        "signal_close": 10.65999985,
+        "weight": 0.1
+      },
+      {
+        "ticker": "CLMT",
+        "permanent_id": "sec-cik:0002013745",
+        "name": "Calumet, Inc - Common Stock",
+        "sector": "Energy",
+        "score": 90.98726115,
+        "signal_close": 59.0,
+        "weight": 0.1
+      }
+    ]
+  },
+  "daily_snapshots": []
+}

@@ -86,7 +86,7 @@
 
       <section class="view" id="view-track" aria-labelledby="track-title">
         <header class="page-header track-header">
-          <div><p class="eyebrow">Preserved monthly selections</p><h1 id="track-title">Track record</h1><p class="lede">Translate the model’s recorded return into a hypothetical dollar result.</p></div>
+          <div><p class="eyebrow">Forward paper portfolio</p><h1 id="track-title">Track record</h1><p class="lede">See the daily profit or loss from following Northstar’s qualified-stock recommendations from today onward.</p></div>
           <label class="investment-input">Starting amount
             <span><b>$</b><input id="investment" inputmode="decimal" value="10000" aria-describedby="investment-note"></span>
             <small id="investment-note">Research simulation only</small>
@@ -102,13 +102,13 @@
           </div>
           <div class="chart-card">
             <svg id="equity-chart" viewBox="0 0 1000 360" role="img" aria-label="Northstar and SPY hypothetical growth chart"></svg>
-            <p class="chart-empty" id="chart-empty" hidden>A track record will appear after the first evaluation.</p>
+            <p class="chart-empty" id="chart-empty" hidden>The first result will appear after the recommendations can be entered at the next market open.</p>
           </div>
           <p class="panel-note" id="simulation-note"></p>
         </section>
 
         <section class="panel cohorts-section" aria-labelledby="cohorts-title">
-          <div class="panel-heading"><div><p class="eyebrow">Evaluation log</p><h2 id="cohorts-title">Monthly selections</h2></div><p class="timestamp" id="record-count"></p></div>
+          <div class="panel-heading"><div><p class="eyebrow">Daily ledger</p><h2 id="cohorts-title">Portfolio history</h2></div><p class="timestamp" id="record-count"></p></div>
           <div class="cohort-list" id="cohort-list"></div>
         </section>
       </section>
@@ -125,7 +125,7 @@
             <article id="universe"><p class="eyebrow">01 · Inputs</p><h2>Universe and data</h2><p id="universe-description"></p><div class="definition-grid" id="data-definitions"></div></article>
             <article id="signals"><p class="eyebrow">02 · Filters</p><h2>Eligibility and signals</h2><p>A stock must pass every eligibility, trend, and momentum rule. When SPY is below its 200-day average, results remain visible but the research portfolio stays in cash.</p><div class="rules-grid" id="rules-grid"></div></article>
             <article id="ranking"><p class="eyebrow">03 · Score</p><h2>Ranking formula</h2><div class="formula-feature">Score = <b>0.60</b> × percentile(M6) + <b>0.40</b> × percentile(M12)</div><p>Percentiles use only stocks that qualify on the same date. Ties use average ranks.</p><div class="formula-list" id="formula-list"></div></article>
-            <article id="portfolio"><p class="eyebrow">04 · Simulation</p><h2>Track-record rules</h2><p>Formal selections are frozen on each month’s final trading session and entered at the next session’s opening price. Up to ten stocks receive 10% target weights, with no more than two per sector. Unfilled weight stays in cash. The simulation includes 10 basis points per transaction side.</p></article>
+            <article id="portfolio"><p class="eyebrow">04 · Simulation</p><h2>Track-record rules</h2><p>The forward-only paper portfolio starts on the displayed inception date with $10,000 and no historical backfill. It rebalances at each session’s opening to the prior completed session’s top ten qualified stocks, using 10% targets and no more than two stocks per sector. Unfilled weight stays in cash. The simulation includes 10 basis points per transaction side.</p></article>
             <article id="limits" class="limits"><p class="eyebrow">05 · Caveats</p><h2>Known limitations</h2><ul id="limitations"></ul></article>
           </div>
         </div>

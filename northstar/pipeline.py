@@ -7,7 +7,7 @@ import math
 import os
 import re
 from dataclasses import dataclass
-from datetime import date, datetime, timezone
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -26,10 +26,9 @@ from .calculations import (
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
-EVALUATIONS = ROOT / "data" / "evaluations"
 UNIVERSE_CACHE = ROOT / "data" / "universe.json"
-STRATEGY_VERSION = "2.0.0"
-INCEPTION = ROOT / "data" / "inception-v2.json"
+PAPER_PORTFOLIO = ROOT / "data" / "paper-portfolio.json"
+STRATEGY_VERSION = "3.0.0"
 DATA_VERSION = "nasdaq-directory-yahoo-v2"
 BENCHMARK = "SPY"
 DEFAULT_COST_BPS = 10
@@ -65,13 +64,6 @@ def write_json(path: Path, payload: Any) -> None:
     temp = path.with_suffix(path.suffix + ".tmp")
     temp.write_text(json.dumps(payload, indent=2, allow_nan=False) + "\n", encoding="utf-8")
     temp.replace(path)
-
-
-def load_inception(latest_session: str) -> str:
-    if INCEPTION.exists():
-        return json.loads(INCEPTION.read_text(encoding="utf-8"))["session"]
-    write_json(INCEPTION, {"session": latest_session, "strategy_version": STRATEGY_VERSION})
-    return latest_session
 
 
 def sec_cik_map() -> dict[str, str]:
@@ -456,204 +448,253 @@ def benchmark_state(benchmark: pd.DataFrame, session: pd.Timestamp) -> dict[str,
     }
 
 
-def month_end_sessions(benchmark: pd.DataFrame, through: pd.Timestamp, months: int) -> list[pd.Timestamp]:
-    schedule = mcal.get_calendar("NYSE").schedule(
-        start_date=benchmark.index.min(), end_date=through + pd.offsets.MonthEnd(1)
-    )
-    sessions = pd.DatetimeIndex(schedule.index).tz_localize(None).normalize()
-    session_series = sessions.to_series(index=sessions)
-    official_ends = session_series.groupby(session_series.dt.to_period("M")).max()
-    completed_ends = official_ends[official_ends <= through]
-    available = [session for session in completed_ends if session in benchmark.index]
-    return [pd.Timestamp(item) for item in available[-months:]]
-
-
-def build_evaluation(
-    session: pd.Timestamp,
-    mode: str,
-    universe: list[Security],
-    frames: dict[str, pd.DataFrame],
-) -> dict[str, Any]:
+def daily_selection(
+    session: pd.Timestamp, universe: list[Security], frames: dict[str, pd.DataFrame]
+) -> tuple[list[dict[str, Any]], dict[str, Any], list[dict[str, Any]]]:
     benchmark = frames[BENCHMARK]
     results = rank_results(
         [result_for_date(sec, frames[sec.ticker], benchmark, session) for sec in universe]
     )
     market = benchmark_state(benchmark, session)
-    return {
-        "evaluation_session": session.date().isoformat(),
-        "record_type": mode,
-        "created_at": datetime.now(timezone.utc).isoformat(),
-        "strategy_version": STRATEGY_VERSION,
-        "data_version": DATA_VERSION,
-        "market": market,
-        "universe_size": len(results),
-        "qualified_count": sum(bool(item["qualified"]) for item in results),
-        "selected": select_portfolio(results, market["active"]),
-        "disclosures": [
-            "Reconstructed results use the current curated universe and contain survivorship and selection bias."
-            if mode == "reconstructed"
-            else "Recorded forward after the strategy inception date; the original signal values are preserved.",
-            "SEC CIK identifies the issuer, not an individual share class.",
-            "Yahoo Finance data does not provide complete delisting returns or institutional point-in-time reference data.",
-        ],
-    }
+    return select_portfolio(results, market["active"]), market, results
 
 
-def save_evaluations(
-    universe: list[Security],
-    frames: dict[str, pd.DataFrame],
-    latest: pd.Timestamp,
-    bootstrap_months: int,
-    inception: str,
-) -> list[dict[str, Any]]:
-    EVALUATIONS.mkdir(parents=True, exist_ok=True)
-    sessions = month_end_sessions(frames[BENCHMARK], latest, max(bootstrap_months, 1))
-    version_tag = STRATEGY_VERSION.split(".")[0]
-    for session in sessions:
-        path = EVALUATIONS / f"{session.date().isoformat()}-v{version_tag}.json"
-        if path.exists():
-            continue
-        mode = "recorded-forward" if session.date().isoformat() >= inception else "reconstructed"
-        write_json(path, build_evaluation(session, mode, universe, frames))
-    return [
-        payload
-        for path in sorted(EVALUATIONS.glob("*.json"))
-        for payload in [json.loads(path.read_text(encoding="utf-8"))]
-        if payload["evaluation_session"] <= latest.date().isoformat()
-        and payload.get("strategy_version") == STRATEGY_VERSION
-    ]
-
-
-def price_return(
-    frame: pd.DataFrame,
-    signal_date: str,
-    end_date: str | None = None,
-    end_at_open: bool = False,
-) -> tuple[float | None, str | None, float | None]:
-    signal = pd.Timestamp(signal_date)
-    later = frame.index[frame.index > signal]
-    if len(later) == 0:
-        return None, None, None
-    entry_date = later[0]
-    entry_open = float(frame.loc[entry_date, "open"])
-    entry_close = float(frame.loc[entry_date, "close"])
-    entry_t = float(frame.loc[entry_date, "t"])
-    if end_date:
-        target = pd.Timestamp(end_date)
-        candidates = frame.index[frame.index >= target]
-        if len(candidates) == 0:
-            return None, entry_date.date().isoformat(), entry_open
-        end = candidates[0]
-    else:
-        end = frame.index[-1]
-    end_t = float(frame.loc[end, "t"])
-    gross = (end_t / entry_t) * (entry_close / entry_open)
-    if end_at_open:
-        gross *= float(frame.loc[end, "open"]) / float(frame.loc[end, "close"])
-    return gross - 1.0, entry_date.date().isoformat(), entry_open
-
-
-def enrich_track_record(
-    evaluations: list[dict[str, Any]], frames: dict[str, pd.DataFrame], latest: pd.Timestamp
+def new_paper_portfolio(
+    latest: pd.Timestamp, selected: list[dict[str, Any]], market: dict[str, Any]
 ) -> dict[str, Any]:
-    cohorts: list[dict[str, Any]] = []
-    equity = 1.0
-    benchmark_equity = 1.0
-    equity_points: list[dict[str, Any]] = []
-    monthly_returns: list[float] = []
-    previous_weights: dict[str, float] = {}
-
-    for index, evaluation in enumerate(evaluations):
-        signal_date = evaluation["evaluation_session"]
-        next_signal = evaluations[index + 1]["evaluation_session"] if index + 1 < len(evaluations) else None
-        selected_details = []
-        current_returns = []
-        period_return = 0.0
-        weights = {item["ticker"]: item["weight"] for item in evaluation["selected"]}
-        turnover = sum(
-            abs(weights.get(ticker, 0.0) - previous_weights.get(ticker, 0.0))
-            for ticker in set(weights) | set(previous_weights)
-        )
-        for item in evaluation["selected"]:
-            frame = frames.get(item["ticker"])
-            if frame is None:
-                continue
-            current_return, entry_date, entry_open = price_return(frame, signal_date)
-            period, _, _ = price_return(frame, signal_date, next_signal, end_at_open=bool(next_signal))
-            selected_details.append(
-                {
-                    **item,
-                    "entry_date": entry_date,
-                    "entry_open": clean_number(entry_open),
-                    "current_return": clean_number(current_return),
-                }
-            )
-            if current_return is not None:
-                current_returns.append(current_return)
-            if period is not None:
-                period_return += item["weight"] * period
-        cost = turnover * (DEFAULT_COST_BPS / 10_000)
-        period_return -= cost
-        equity *= 1.0 + period_return
-        monthly_returns.append(period_return)
-
-        benchmark_period, _, _ = price_return(
-            frames[BENCHMARK], signal_date, next_signal, end_at_open=bool(next_signal)
-        )
-        if benchmark_period is not None:
-            benchmark_equity *= 1.0 + benchmark_period
-        cohort_return = sum(current_returns) / len(current_returns) if current_returns else None
-        cohorts.append(
-            {
-                "evaluation_session": signal_date,
-                "record_type": evaluation["record_type"],
-                "market_active": evaluation["market"]["active"],
-                "qualified_count": evaluation["qualified_count"],
-                "selected": selected_details,
-                "cohort_return": clean_number(cohort_return),
-                "turnover": clean_number(turnover),
-            }
-        )
-        equity_points.append(
-            {
-                "date": next_signal or latest.date().isoformat(),
-                "strategy": clean_number(equity),
-                "benchmark": clean_number(benchmark_equity),
-            }
-        )
-        previous_weights = weights
-
-    elapsed_years = 0.0
-    if evaluations:
-        elapsed_years = max(
-            (latest.date() - date.fromisoformat(evaluations[0]["evaluation_session"])).days / 365.25,
-            1 / 365.25,
-        )
-    values = pd.Series([1.0] + [float(p["strategy"]) for p in equity_points])
-    drawdowns = values / values.cummax() - 1.0
-    monthly = pd.Series(monthly_returns, dtype=float)
+    started_at = datetime.now(timezone.utc).date().isoformat()
     return {
-        "cost_bps_per_side": DEFAULT_COST_BPS,
-        "strategy_return": clean_number(equity - 1.0),
-        "benchmark_return": clean_number(benchmark_equity - 1.0),
-        "cagr": clean_number(equity ** (1 / elapsed_years) - 1.0) if evaluations else None,
-        "annualized_volatility": clean_number(monthly.std(ddof=1) * math.sqrt(12)) if len(monthly) > 1 else None,
-        "max_drawdown": clean_number(drawdowns.min()) if len(drawdowns) else None,
-        "evaluations": len(evaluations),
-        "forward_evaluations": sum(item["record_type"] == "recorded-forward" for item in evaluations),
-        "equity_curve": equity_points,
-        "cohorts": list(reversed(cohorts)),
+        "strategy_version": STRATEGY_VERSION,
+        "started_at": started_at,
+        "initial_capital": 10_000.0,
+        "cash": 10_000.0,
+        "positions": [],
+        "benchmark": {"cash": 10_000.0, "shares": 0.0},
+        "last_processed_session": latest.date().isoformat(),
+        "pending": {
+            "signal_session": latest.date().isoformat(),
+            "market_active": market["active"],
+            "selected": selected,
+        },
+        "daily_snapshots": [],
     }
 
 
-def previous_statuses(evaluations: list[dict[str, Any]]) -> dict[str, str]:
-    if not evaluations:
-        return {}
-    selected = {item["ticker"] for item in evaluations[-1]["selected"]}
-    return {ticker: "Selected" for ticker in selected}
+def session_price(frame: pd.DataFrame, session: pd.Timestamp, column: str) -> float | None:
+    if session not in frame.index:
+        return None
+    value = float(frame.loc[session, column])
+    return value if math.isfinite(value) and value > 0 else None
 
 
-def run(bootstrap_months: int) -> dict[str, Any]:
+def process_paper_session(
+    state: dict[str, Any], session: pd.Timestamp, frames: dict[str, pd.DataFrame]
+) -> None:
+    cost_rate = DEFAULT_COST_BPS / 10_000
+    positions = {item["ticker"]: dict(item) for item in state["positions"]}
+    warnings: list[str] = []
+
+    # Apply known distributions and splits before the opening rebalance.
+    for ticker, position in positions.items():
+        frame = frames.get(ticker)
+        if frame is None or session not in frame.index:
+            warnings.append(f"{ticker}: no price for session")
+            continue
+        split = float(frame.loc[session, "splits"])
+        if split > 0:
+            position["shares"] *= split
+            position["cost_basis_per_share"] /= split
+        dividend = float(frame.loc[session, "dividends"])
+        if dividend > 0:
+            state["cash"] += position["shares"] * dividend
+
+    pending = state.get("pending", {"selected": [], "signal_session": None})
+    targets = {item["ticker"]: item for item in pending.get("selected", [])}
+    open_prices: dict[str, float] = {}
+    for ticker in set(positions) | set(targets):
+        frame = frames.get(ticker)
+        price = session_price(frame, session, "open") if frame is not None else None
+        if price is not None:
+            open_prices[ticker] = price
+        else:
+            warnings.append(f"{ticker}: unavailable at rebalance open")
+
+    opening_value = state["cash"] + sum(
+        item["shares"] * open_prices.get(ticker, item.get("last_price", 0.0))
+        for ticker, item in positions.items()
+    )
+    transaction_cost = 0.0
+
+    # Sell reductions first, then fund purchases from the resulting cash.
+    for ticker, position in list(positions.items()):
+        price = open_prices.get(ticker)
+        if price is None:
+            continue
+        desired_value = opening_value * float(targets.get(ticker, {}).get("weight", 0.0))
+        current_value = position["shares"] * price
+        if current_value > desired_value:
+            sale_value = current_value - desired_value
+            sold_shares = sale_value / price
+            fraction = sold_shares / position["shares"]
+            position["shares"] -= sold_shares
+            position["cost_basis"] *= max(0.0, 1.0 - fraction)
+            fee = sale_value * cost_rate
+            transaction_cost += fee
+            state["cash"] += sale_value - fee
+        if position["shares"] <= 1e-10:
+            positions.pop(ticker, None)
+
+    for ticker, target in targets.items():
+        price = open_prices.get(ticker)
+        if price is None:
+            continue
+        position = positions.get(ticker)
+        current_value = position["shares"] * price if position else 0.0
+        desired_value = opening_value * float(target["weight"])
+        purchase_value = min(max(0.0, desired_value - current_value), state["cash"] / (1 + cost_rate))
+        if purchase_value <= 0:
+            continue
+        fee = purchase_value * cost_rate
+        transaction_cost += fee
+        shares = purchase_value / price
+        if position:
+            position["shares"] += shares
+            position["cost_basis"] += purchase_value + fee
+        else:
+            position = {
+                **target,
+                "shares": shares,
+                "cost_basis": purchase_value + fee,
+                "cost_basis_per_share": (purchase_value + fee) / shares,
+                "entry_session": session.date().isoformat(),
+            }
+            positions[ticker] = position
+        position["cost_basis_per_share"] = position["cost_basis"] / position["shares"]
+        state["cash"] -= purchase_value + fee
+
+    holdings: list[dict[str, Any]] = []
+    portfolio_value = state["cash"]
+    for ticker, position in positions.items():
+        frame = frames.get(ticker)
+        close = session_price(frame, session, "close") if frame is not None else None
+        if close is None:
+            close = float(position.get("last_price", 0.0))
+            warnings.append(f"{ticker}: valued at last available close")
+        position["last_price"] = close
+        market_value = position["shares"] * close
+        portfolio_value += market_value
+        holdings.append(
+            {
+                "ticker": ticker,
+                "name": position["name"],
+                "sector": position["sector"],
+                "shares": clean_number(position["shares"]),
+                "close": clean_number(close),
+                "market_value": clean_number(market_value),
+                "return": clean_number(market_value / position["cost_basis"] - 1.0),
+            }
+        )
+
+    benchmark = state["benchmark"]
+    if benchmark["shares"] > 0 and session in frames[BENCHMARK].index:
+        spy_split = float(frames[BENCHMARK].loc[session, "splits"])
+        if spy_split > 0:
+            benchmark["shares"] *= spy_split
+        spy_dividend = float(frames[BENCHMARK].loc[session, "dividends"])
+        if spy_dividend > 0:
+            benchmark["cash"] += benchmark["shares"] * spy_dividend
+    spy_open = session_price(frames[BENCHMARK], session, "open")
+    spy_close = session_price(frames[BENCHMARK], session, "close")
+    if benchmark["shares"] == 0 and spy_open:
+        purchase = benchmark["cash"] / (1 + cost_rate)
+        benchmark["shares"] = purchase / spy_open
+        benchmark["cash"] -= purchase * (1 + cost_rate)
+    benchmark_value = benchmark["cash"] + benchmark["shares"] * float(spy_close or spy_open or 0.0)
+
+    snapshots = state["daily_snapshots"]
+    prior_value = snapshots[-1]["portfolio_value"] if snapshots else state["initial_capital"]
+    snapshots.append(
+        {
+            "date": session.date().isoformat(),
+            "signal_session": pending.get("signal_session"),
+            "portfolio_value": clean_number(portfolio_value),
+            "benchmark_value": clean_number(benchmark_value),
+            "profit": clean_number(portfolio_value - state["initial_capital"]),
+            "daily_profit": clean_number(portfolio_value - prior_value),
+            "daily_return": clean_number(portfolio_value / prior_value - 1.0),
+            "transaction_cost": clean_number(transaction_cost),
+            "cash": clean_number(state["cash"]),
+            "holdings": sorted(holdings, key=lambda item: item["market_value"], reverse=True),
+            "warnings": sorted(set(warnings)),
+        }
+    )
+    state["positions"] = list(positions.values())
+    state["last_processed_session"] = session.date().isoformat()
+
+
+def update_paper_portfolio(
+    universe: list[Security], frames: dict[str, pd.DataFrame], latest: pd.Timestamp,
+    latest_selected: list[dict[str, Any]], latest_market: dict[str, Any]
+) -> dict[str, Any]:
+    if PAPER_PORTFOLIO.exists():
+        state = json.loads(PAPER_PORTFOLIO.read_text(encoding="utf-8"))
+    else:
+        state = new_paper_portfolio(latest, latest_selected, latest_market)
+        write_json(PAPER_PORTFOLIO, state)
+        return state
+
+    last = pd.Timestamp(state["last_processed_session"])
+    sessions = [session for session in frames[BENCHMARK].index if last < session <= latest]
+    for session in sessions:
+        process_paper_session(state, session, frames)
+        selected, market, _ = daily_selection(session, universe, frames)
+        state["pending"] = {
+            "signal_session": session.date().isoformat(),
+            "market_active": market["active"],
+            "selected": selected,
+        }
+    if not sessions:
+        state["pending"] = {
+            "signal_session": latest.date().isoformat(),
+            "market_active": latest_market["active"],
+            "selected": latest_selected,
+        }
+    write_json(PAPER_PORTFOLIO, state)
+    return state
+
+
+def track_record_payload(state: dict[str, Any]) -> dict[str, Any]:
+    initial = float(state["initial_capital"])
+    snapshots = state["daily_snapshots"]
+    current = float(snapshots[-1]["portfolio_value"]) if snapshots else initial
+    benchmark = float(snapshots[-1]["benchmark_value"]) if snapshots else initial
+    curve = [{"date": state["started_at"], "strategy": 1.0, "benchmark": 1.0}]
+    curve.extend(
+        {
+            "date": item["date"],
+            "strategy": clean_number(item["portfolio_value"] / initial),
+            "benchmark": clean_number(item["benchmark_value"] / initial),
+        }
+        for item in snapshots
+    )
+    return {
+        "started_at": state["started_at"],
+        "initial_capital": initial,
+        "current_value": clean_number(current),
+        "profit": clean_number(current - initial),
+        "strategy_return": clean_number(current / initial - 1.0),
+        "benchmark_value": clean_number(benchmark),
+        "benchmark_return": clean_number(benchmark / initial - 1.0),
+        "cost_bps_per_side": DEFAULT_COST_BPS,
+        "days_tracked": len(snapshots),
+        "status": "tracking" if snapshots else "awaiting next market open",
+        "equity_curve": curve,
+        "daily_records": list(reversed(snapshots)),
+        "next_recommendations": state["pending"],
+    }
+
+
+def run() -> dict[str, Any]:
     universe, universe_source = load_universe()
     tickers = [BENCHMARK] + [item.ticker for item in universe if item.ticker != BENCHMARK]
     frames, failures = download_histories(tickers)
@@ -661,13 +702,9 @@ def run(bootstrap_months: int) -> dict[str, Any]:
         raise RuntimeError(f"Benchmark download failed: {failures.get(BENCHMARK, 'unknown error')}")
     available = [security for security in universe if security.ticker in frames]
     latest = common_session({BENCHMARK: frames[BENCHMARK]})
-    inception = load_inception(latest.date().isoformat())
-    evaluations = save_evaluations(available, frames, latest, bootstrap_months, inception)
-    benchmark = benchmark_state(frames[BENCHMARK], latest)
-    screen = rank_results(
-        [result_for_date(sec, frames[sec.ticker], frames[BENCHMARK], latest) for sec in available]
-    )
-    previous = previous_statuses(evaluations[:-1])
+    selected, benchmark, screen = daily_selection(latest, available, frames)
+    paper_state = update_paper_portfolio(available, frames, latest, selected, benchmark)
+    previous = {item["ticker"]: "Selected" for item in paper_state.get("positions", [])}
     for row in screen:
         row["previous_status"] = previous.get(row["ticker"], "Not selected")
         row["status_change"] = (
@@ -702,7 +739,7 @@ def run(bootstrap_months: int) -> dict[str, Any]:
             "sector_cap": 2,
         },
         "screen": screen,
-        "track_record": enrich_track_record(evaluations, frames, latest),
+        "track_record": track_record_payload(paper_state),
         "methodology": {
             "formulas": [
                 "SMAₙ(t) = Σ P[t−k] / n",
@@ -716,7 +753,7 @@ def run(bootstrap_months: int) -> dict[str, Any]:
                 "Score = 0.60 × percentile(M6) + 0.40 × percentile(M12)",
             ],
             "limitations": [
-                "The current listing universe is broad but not point-in-time complete; reconstructed results contain survivorship bias.",
+                "The track record begins on its displayed start date and contains no reconstructed historical performance.",
                 "Delisted, acquired and bankrupt securities are not fully represented, and delisting returns are unavailable.",
                 "SEC CIK is a permanent issuer identifier, not a security-level identifier.",
                 "Provider bars are not independently cross-checked in this public-data version.",
@@ -730,14 +767,12 @@ def run(bootstrap_months: int) -> dict[str, Any]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Build the Northstar research dataset")
-    parser.add_argument("--bootstrap-months", type=int, default=12)
-    args = parser.parse_args()
-    payload = run(max(args.bootstrap_months, 1))
+    argparse.ArgumentParser(description="Build the Northstar research dataset").parse_args()
+    payload = run()
     print(
         f"Built {len(payload['screen'])} securities through "
         f"{payload['meta']['latest_completed_session']} with "
-        f"{payload['track_record']['evaluations']} evaluations"
+        f"{payload['track_record']['days_tracked']} tracked sessions"
     )
 
 

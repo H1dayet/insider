@@ -114,10 +114,10 @@ function renderTrackRecord() {
     <div class="track-kpi"><span>Ending value</span><strong>${fmtMoney(endValue)}</strong></div>
     <div class="track-kpi"><span>Northstar return</span><strong class="${cls(track.strategy_return)}">${fmtPct(track.strategy_return)}</strong></div>
     <div class="track-kpi"><span>SPY ending value</span><strong>${fmtMoney(benchmarkValue)}</strong></div>`;
-  $('#record-count').textContent = `${track.evaluations} evaluations · ${track.forward_evaluations} forward-recorded`;
-  $('#simulation-note').textContent = `Uses next-session opening prices, 0% cash return, and ${track.cost_bps_per_side} bps per transaction side. Taxes are excluded. Reconstructed periods use today’s universe and are not an unbiased backtest.`;
+  $('#record-count').textContent = `${track.days_tracked} completed session${track.days_tracked === 1 ? '' : 's'} · started ${track.started_at}`;
+  $('#simulation-note').textContent = `Forward tracking only. Daily recommendations trade at the next session’s open with ${track.cost_bps_per_side} bps per transaction side. Cash earns 0%; taxes are excluded.`;
   renderChart(track.equity_curve, amount);
-  renderCohorts(track.cohorts);
+  renderDailyRecords(track);
 }
 
 function renderChart(points, amount) {
@@ -125,7 +125,7 @@ function renderChart(points, amount) {
   $('#chart-empty').hidden = points.length > 0;
   svg.hidden = points.length === 0;
   if (!points.length) return;
-  const series = [{ date: points[0].date, strategy: 1, benchmark: 1 }, ...points];
+  const series = points;
   const values = series.flatMap(p => [p.strategy * amount, p.benchmark * amount]);
   let min = Math.min(...values), max = Math.max(...values);
   const padding = Math.max((max - min) * .18, amount * .03);
@@ -146,16 +146,20 @@ function renderChart(points, amount) {
   svg.innerHTML = `${grid}${labels}<path class="chart-line benchmark" d="${path('benchmark')}"/><path class="chart-line strategy" d="${path('strategy')}"/><circle class="chart-dot" cx="${x(series.length - 1)}" cy="${y(series.at(-1).strategy * amount)}" r="5"/>`;
 }
 
-function renderCohorts(cohorts) {
+function renderDailyRecords(track) {
   const container = $('#cohort-list');
-  if (!cohorts.length) {
-    container.innerHTML = '<div class="empty-state">No formal evaluations have been recorded yet.</div>';
+  if (!track.daily_records.length) {
+    const pending = track.next_recommendations.selected;
+    container.innerHTML = `<div class="empty-state">Tracking started on ${escapeHtml(track.started_at)}. ${pending.length
+      ? `The first recommendations are ${pending.map(item => escapeHtml(item.ticker)).join(', ')} and will be entered at the next available market open.`
+      : 'The model is holding cash because the market filter is inactive or no stocks qualify.'}</div>`;
     return;
   }
-  container.innerHTML = cohorts.map(cohort => `<article class="cohort">
-    <div><time datetime="${cohort.evaluation_session}">${new Date(`${cohort.evaluation_session}T00:00:00`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</time><span class="record-type">${escapeHtml(cohort.record_type)}</span></div>
-    <div class="cohort-meta">${cohort.selected.length ? cohort.selected.map(item => `<span class="holding-chip" title="${escapeHtml(item.name)}: ${fmtPct(item.current_return)}">${escapeHtml(item.ticker)} · ${fmtPct(item.current_return)}</span>`).join('') : '<span class="holding-chip">Cash · market filter inactive or no selections</span>'}</div>
-    <div class="cohort-summary"><strong class="${cls(cohort.cohort_return)}">${fmtPct(cohort.cohort_return)}</strong><small>${cohort.selected.length} selected</small></div>
+  const scale = state.investment / track.initial_capital;
+  container.innerHTML = track.daily_records.map(record => `<article class="cohort">
+    <div><time datetime="${record.date}">${new Date(`${record.date}T00:00:00`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</time><span class="record-type">daily close</span></div>
+    <div class="cohort-meta">${record.holdings.length ? record.holdings.map(item => `<span class="holding-chip" title="${escapeHtml(item.name)}: ${fmtPct(item.return)}">${escapeHtml(item.ticker)} · ${fmtPct(item.return)}</span>`).join('') : '<span class="holding-chip">Cash</span>'}${record.warnings.length ? `<span class="holding-chip">${record.warnings.length} data warning${record.warnings.length === 1 ? '' : 's'}</span>` : ''}</div>
+    <div class="cohort-summary"><strong class="${cls(record.daily_profit)}">${record.daily_profit >= 0 ? '+' : '−'}${fmtMoney(Math.abs(record.daily_profit * scale))}</strong><small>${fmtMoney(record.portfolio_value * scale)} total</small></div>
   </article>`).join('');
 }
 
