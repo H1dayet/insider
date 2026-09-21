@@ -1,0 +1,113 @@
+{
+  "evaluation_session": "2026-02-27",
+  "record_type": "reconstructed",
+  "created_at": "2026-09-21T15:02:22.275767+00:00",
+  "strategy_version": "2.0.0",
+  "data_version": "nasdaq-directory-yahoo-v2",
+  "market": {
+    "ticker": "SPY",
+    "close": 685.98999023,
+    "sma200": 654.18269958,
+    "m6": 0.06695408,
+    "active": true
+  },
+  "universe_size": 4758,
+  "qualified_count": 858,
+  "selected": [
+    {
+      "ticker": "AXTI",
+      "permanent_id": "sec-cik:0001051627",
+      "name": "AXT Inc - Common Stock",
+      "sector": "Technology",
+      "score": 100.0,
+      "signal_close": 37.90000153,
+      "weight": 0.1
+    },
+    {
+      "ticker": "SNDK",
+      "permanent_id": "sec-cik:0002023554",
+      "name": "Sandisk Corporation - Common Stock When-Issued",
+      "sector": "Technology",
+      "score": 99.83663944,
+      "signal_close": 635.35998535,
+      "weight": 0.1
+    },
+    {
+      "ticker": "HYMC",
+      "permanent_id": "sec-cik:0001718405",
+      "name": "Hycroft Mining Holding Corporation - Class A Common Stock",
+      "sector": "Basic Materials",
+      "score": 99.81330222,
+      "signal_close": 50.36999893,
+      "weight": 0.1
+    },
+    {
+      "ticker": "ERAS",
+      "permanent_id": "sec-cik:0001761918",
+      "name": "Erasca, Inc. - Common Stock",
+      "sector": "Health Care",
+      "score": 99.53325554,
+      "signal_close": 13.65999985,
+      "weight": 0.1
+    },
+    {
+      "ticker": "LITE",
+      "permanent_id": "sec-cik:0001633978",
+      "name": "Lumentum Holdings Inc. - Common Stock",
+      "sector": "Telecommunications",
+      "score": 99.27654609,
+      "signal_close": 700.90997314,
+      "weight": 0.1
+    },
+    {
+      "ticker": "ALMS",
+      "permanent_id": "sec-cik:0001847367",
+      "name": "Alumis Inc. - Common Stock",
+      "sector": "Health Care",
+      "score": 99.11318553,
+      "signal_close": 29.69000053,
+      "weight": 0.1
+    },
+    {
+      "ticker": "ALM",
+      "permanent_id": "sec-cik:0001670061",
+      "name": "Almonty Industries Inc. - Common Shares",
+      "sector": "Basic Materials",
+      "score": 98.80980163,
+      "signal_close": 18.38999939,
+      "weight": 0.1
+    },
+    {
+      "ticker": "BE",
+      "permanent_id": "sec-cik:0001664703",
+      "name": "Bloom Energy Corporation Class A Common Stock",
+      "sector": "Energy",
+      "score": 97.7596266,
+      "signal_close": 155.66999817,
+      "weight": 0.1
+    },
+    {
+      "ticker": "CIEN",
+      "permanent_id": "sec-cik:0000936395",
+      "name": "Ciena Corporation Common Stock",
+      "sector": "Utilities",
+      "score": 97.47957993,
+      "signal_close": 348.70001221,
+      "weight": 0.1
+    },
+    {
+      "ticker": "ARIS",
+      "permanent_id": "sec-cik:0001964504",
+      "name": "Aris Mining Corporation Common Shares",
+      "sector": "Unclassified",
+      "score": 97.38623104,
+      "signal_close": 22.68000031,
+      "weight": 0.1
+    }
+  ],
+  "disclosures": [
+    "Reconstructed results use the current curated universe and contain survivorship and selection bias.",
+    "SEC CIK identifies the issuer, not an individual share class.",
+    "Yahoo Finance data does not provide complete delisting returns or institutional point-in-time reference data."
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "evaluation_session": "2026-08-31",
+  "record_type": "reconstructed",
+  "created_at": "2026-09-21T15:03:05.801215+00:00",
+  "strategy_version": "2.0.0",
+  "data_version": "nasdaq-directory-yahoo-v2",
+  "market": {
+    "ticker": "SPY",
+    "close": 767.04998779,
+    "sma200": 710.26650024,
+    "m6": 0.12346854,
+    "active": true
+  },
+  "universe_size": 4758,
+  "qualified_count": 611,
+  "selected": [
+    {
+      "ticker": "ORKA",
+      "permanent_id": "sec-cik:0000907654",
+      "name": "Oruka Therapeutics, Inc. - Common Stock",
+      "sector": "Health Care",
+      "score": 98.62295082,
+      "signal_close": 92.62000275,
+      "weight": 0.1
+    },
+    {
+      "ticker": "TWST",
+      "permanent_id": "sec-cik:0001581280",
+      "name": "Twist Bioscience Corporation - Common Stock",
+      "sector": "Health Care",
+      "score": 98.59016393,
+      "signal_close": 139.0,
+      "weight": 0.1
+    },
+    {
+      "ticker": "SNDK",
+      "permanent_id": "sec-cik:0002023554",
+      "name": "Sandisk Corporation - Common Stock When-Issued",
+      "sector": "Technology",
+      "score": 98.2295082,
+      "signal_close": 1566.69995117,
+      "weight": 0.1
+    },
+    {
+      "ticker": "TXG",
+      "permanent_id": "sec-cik:0001770787",
+      "name": "10x Genomics, Inc. - Common Stock",
+      "sector": "Industrials",
+      "score": 97.86885246,
+      "signal_close": 62.45000076,
+      "weight": 0.1
+    },
+    {
+      "ticker": "MXL",
+      "permanent_id": "sec-cik:0001288469",
+      "name": "MaxLinear, Inc - Common Stock",
+      "sector": "Technology",
+      "score": 97.60655738,
+      "signal_close": 59.90999985,
+      "weight": 0.1
+    },
+    {
+      "ticker": "ATEX",
+      "permanent_id": "sec-cik:0001304492",
+      "name": "Anterix Inc. - Common Stock",
+      "sector": "Telecommunications",
+      "score": 96.42622951,
+      "signal_close": 90.88999939,
+      "weight": 0.1
+    },
+    {
+      "ticker": "FCEL",
+      "permanent_id": "sec-cik:0000886128",
+      "name": "FuelCell Energy, Inc. - Common Stock",
+      "sector": "Energy",
+      "score": 93.73770492,
+      "signal_close": 17.22999954,
+      "weight": 0.1
+    },
+    {
+      "ticker": "APPS",
+      "permanent_id": "sec-cik:0000317788",
+      "name": "Digital Turbine, Inc. - Common Stock",
+      "sector": "Miscellaneous",
+      "score": 93.54098361,
+      "signal_close": 10.76000023,
+      "weight": 0.1
+    },
+    {
+      "ticker": "TH",
+      "permanent_id": "sec-cik:0001712189",
+      "name": "Target Hospitality Corp. - Common Stock",
+      "sector": "Consumer Discretionary",
+      "score": 89.37704918,
+      "signal_close": 18.52000046,
+      "weight": 0.1
+    },
+    {
+      "ticker": "CLMT",
+      "permanent_id": "sec-cik:0002013745",
+      "name": "Calumet, Inc - Common Stock",
+      "sector": "Energy",
+      "score": 88.39344262,
+      "signal_close": 49.72999954,
+      "weight": 0.1
+    }
+  ],
+  "disclosures": [
+    "Reconstructed results use the current curated universe and contain survivorship and selection bias.",
+    "SEC CIK identifies the issuer, not an individual share class.",
+    "Yahoo Finance data does not provide complete delisting returns or institutional point-in-time reference data."
+  ]
+}

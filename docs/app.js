@@ -24,7 +24,6 @@ function statusClass(row) {
 function renderOverview() {
   const { meta, market, screen } = state.data;
   const qualified = screen.filter(row => row.qualified).length;
-  const selected = state.data.track_record.cohorts[0]?.selected.length ?? 0;
   $('#strategy-version').textContent = meta.strategy_version;
   $('#timestamp').textContent = `Latest completed session: ${meta.latest_completed_session}`;
   $('#data-pill').innerHTML = `<span></span> Data through ${escapeHtml(meta.latest_completed_session)}`;
@@ -33,9 +32,9 @@ function renderOverview() {
   $('#market-detail').textContent = `SPY ${fmtMoney(market.close)} · SMA200 ${fmtMoney(market.sma200)}`;
   $('#market-card').classList.toggle('inactive', !market.active);
   $('#overview-stats').innerHTML = [
-    [screen.length, 'Stocks evaluated'],
+    [meta.universe_count, 'Eligible listings'],
+    [meta.available_count, 'Evaluated successfully'],
     [qualified, 'Qualified today'],
-    [selected, 'Latest formal selections'],
     [market.active ? 'ON' : 'OFF', 'Market filter'],
   ].map(([value, label]) => `<div class="stat"><strong>${value}</strong><span>${label}</span></div>`).join('');
 }
@@ -57,8 +56,9 @@ function filteredRows() {
 
 function renderTable() {
   const rows = filteredRows();
+  const visibleRows = rows.slice(0, 250);
   $('#screen-empty').hidden = rows.length > 0;
-  $('#stock-table').innerHTML = rows.map(row => {
+  $('#stock-table').innerHTML = visibleRows.map(row => {
     const trendChecks = ['price_above_sma200', 'sma50_above_sma200', 'slope_positive'];
     return `<tr>
       <td><div class="company-cell"><div class="ticker-avatar">${escapeHtml(row.ticker.slice(0, 4))}</div><div><b>${escapeHtml(row.name)}</b><small>${escapeHtml(row.ticker)} · ${escapeHtml(row.sector)}</small></div></div></td>
@@ -71,6 +71,9 @@ function renderTable() {
       <td><button class="details-button" data-ticker="${escapeHtml(row.ticker)}" aria-label="View ${escapeHtml(row.ticker)} details">→</button></td>
     </tr>`;
   }).join('');
+  $('#results-note').textContent = rows.length > 250
+    ? `Showing 250 of ${rows.length.toLocaleString()} matching stocks. Search or filter to narrow the list. Score is a relative rank, not a probability of profit.`
+    : `Showing ${rows.length.toLocaleString()} matching stocks. Score is a relative rank, not a probability of profit.`;
   $$('.details-button', $('#stock-table')).forEach(button => button.addEventListener('click', () => openStock(button.dataset.ticker)));
 }
 
@@ -158,7 +161,7 @@ function renderCohorts(cohorts) {
 
 function renderMethod() {
   const { meta, thresholds, methodology } = state.data;
-  $('#universe-description').textContent = `${meta.universe_definition}. ${meta.available_count} had usable provider data in the latest run. Ordinary-share classification is curated; point-in-time membership is not yet available.`;
+  $('#universe-description').textContent = `${meta.universe_definition}. ${meta.available_count.toLocaleString()} of ${meta.universe_count.toLocaleString()} eligible listings had usable provider data in the latest run; ${(meta.failed_count ?? 0).toLocaleString()} failed. This is a current-listing universe, not a point-in-time historical reconstruction.`;
   $('#data-definitions').innerHTML = [
     ['Cₜ', 'Raw closing price'], ['Vₜ', 'Raw share volume'], ['Pₜ', 'Split-adjusted close, dividends excluded'], ['Tₜ', 'Total-return index with cash distributions'], ['Bₜ', 'SPY total-return index'], ['ID', 'SEC CIK issuer identifier'],
   ].map(([term, definition]) => `<div class="definition"><b>${term}</b><span>${definition}</span></div>`).join('');

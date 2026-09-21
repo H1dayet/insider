@@ -8,6 +8,7 @@ from northstar.calculations import (
     split_adjusted_close,
     total_return_index,
 )
+from northstar.pipeline import is_common_share, yahoo_symbol
 
 
 def test_split_adjustment_removes_split_jump_but_not_dividend():
@@ -41,6 +42,16 @@ def test_indicator_windows_use_only_available_history():
     assert result["sma50"] == close.tail(50).mean()
 
 
+def test_zero_total_return_denominator_returns_insufficient_value():
+    n = 253
+    close = pd.Series(np.arange(100.0, 100.0 + n))
+    total_return = close.copy()
+    total_return.iloc[0] = 0
+    frame = pd.DataFrame({"close": close, "volume": 1_000_000, "p": close, "t": total_return})
+    result = indicators_at(frame, n - 1)
+    assert np.isnan(result["m12"])
+
+
 def test_filter_explains_market_inactive_qualification():
     row = {
         "observations": 253,
@@ -56,4 +67,18 @@ def test_filter_explains_market_inactive_qualification():
     result = evaluate_filters(row, benchmark_m6=0.10, market_active=False)
     assert result["qualified"] is True
     assert result["status"] == "Qualified, market filter inactive"
+
+
+def test_listing_filter_keeps_common_shares_and_rejects_fund_instruments():
+    assert is_common_share("Example Corporation Common Stock")
+    assert is_common_share("Example Corporation Class A Ordinary Shares")
+    assert not is_common_share("Example Income ETF")
+    assert not is_common_share("Example Corp. Depositary Shares")
+    assert not is_common_share("Example Acquisition Warrants")
+    assert not is_common_share("Example Preferred Stock")
+    assert not is_common_share("Example Corporation Common Stock When-Issued")
+
+
+def test_yahoo_symbol_normalizes_exchange_class_separator():
+    assert yahoo_symbol("brk.b") == "BRK-B"
 

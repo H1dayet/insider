@@ -1,0 +1,113 @@
+{
+  "evaluation_session": "2025-12-31",
+  "record_type": "reconstructed",
+  "created_at": "2026-09-21T15:02:07.982389+00:00",
+  "strategy_version": "2.0.0",
+  "data_version": "nasdaq-directory-yahoo-v2",
+  "market": {
+    "ticker": "SPY",
+    "close": 681.91998291,
+    "sma200": 626.90910065,
+    "m6": 0.10537685,
+    "active": true
+  },
+  "universe_size": 4758,
+  "qualified_count": 654,
+  "selected": [
+    {
+      "ticker": "HYMC",
+      "permanent_id": "sec-cik:0001718405",
+      "name": "Hycroft Mining Holding Corporation - Class A Common Stock",
+      "sector": "Basic Materials",
+      "score": 99.81623277,
+      "signal_close": 23.77000046,
+      "weight": 0.1
+    },
+    {
+      "ticker": "AXTI",
+      "permanent_id": "sec-cik:0001051627",
+      "name": "AXT Inc - Common Stock",
+      "sector": "Technology",
+      "score": 99.81623277,
+      "signal_close": 16.35000038,
+      "weight": 0.1
+    },
+    {
+      "ticker": "CELC",
+      "permanent_id": "sec-cik:0001603454",
+      "name": "Celcuity Inc. - Common Stock",
+      "sector": "Health Care",
+      "score": 99.7856049,
+      "signal_close": 99.73999786,
+      "weight": 0.1
+    },
+    {
+      "ticker": "PVLA",
+      "permanent_id": "sec-cik:0001583648",
+      "name": "Palvella Therapeutics, Inc. - Common Stock",
+      "sector": "Health Care",
+      "score": 99.11179173,
+      "signal_close": 104.66999817,
+      "weight": 0.1
+    },
+    {
+      "ticker": "LITE",
+      "permanent_id": "sec-cik:0001633978",
+      "name": "Lumentum Holdings Inc. - Common Stock",
+      "sector": "Telecommunications",
+      "score": 98.46860643,
+      "signal_close": 368.58999634,
+      "weight": 0.1
+    },
+    {
+      "ticker": "ECHO",
+      "permanent_id": "sec-cik:0001415404",
+      "name": "EchoStar Corporation - Common stock",
+      "sector": "Consumer Discretionary",
+      "score": 98.37672282,
+      "signal_close": 108.69999695,
+      "weight": 0.1
+    },
+    {
+      "ticker": "PL",
+      "permanent_id": "sec-cik:0001836833",
+      "name": "Planet Labs PBC Class A Common Stock",
+      "sector": "Technology",
+      "score": 98.0704441,
+      "signal_close": 19.71999931,
+      "weight": 0.1
+    },
+    {
+      "ticker": "BE",
+      "permanent_id": "sec-cik:0001664703",
+      "name": "Bloom Energy Corporation Class A Common Stock",
+      "sector": "Energy",
+      "score": 97.856049,
+      "signal_close": 86.88999939,
+      "weight": 0.1
+    },
+    {
+      "ticker": "HL",
+      "permanent_id": "sec-cik:0000719413",
+      "name": "Hecla Mining Company Common Stock",
+      "sector": "Industrials",
+      "score": 97.61102603,
+      "signal_close": 19.19000053,
+      "weight": 0.1
+    },
+    {
+      "ticker": "ARIS",
+      "permanent_id": "sec-cik:0001964504",
+      "name": "Aris Mining Corporation Common Shares",
+      "sector": "Unclassified",
+      "score": 95.86523737,
+      "signal_close": 16.22999954,
+      "weight": 0.1
+    }
+  ],
+  "disclosures": [
+    "Reconstructed results use the current curated universe and contain survivorship and selection bias.",
+    "SEC CIK identifies the issuer, not an individual share class.",
+    "Yahoo Finance data does not provide complete delisting returns or institutional point-in-time reference data."
+  ]
+}

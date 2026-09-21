@@ -56,9 +56,17 @@ def indicators_at(frame: pd.DataFrame, position: int) -> dict[str, float | int |
     volume = view["volume"]
 
     def ratio_back(series: pd.Series, sessions: int) -> float:
-        if len(series) <= sessions or pd.isna(series.iloc[-sessions - 1]):
+        denominator = series.iloc[-sessions - 1] if len(series) > sessions else math.nan
+        numerator = series.iloc[-1] if len(series) else math.nan
+        if (
+            len(series) <= sessions
+            or not np.isfinite(denominator)
+            or not np.isfinite(numerator)
+            or denominator <= 0
+            or numerator <= 0
+        ):
             return math.nan
-        return float(series.iloc[-1] / series.iloc[-sessions - 1] - 1.0)
+        return float(numerator / denominator - 1.0)
 
     sma50 = float(p.tail(50).mean()) if len(p) >= 50 else math.nan
     sma200 = float(p.tail(200).mean()) if len(p) >= 200 else math.nan
@@ -79,7 +87,9 @@ def indicators_at(frame: pd.DataFrame, position: int) -> dict[str, float | int |
         "m12": ratio_back(t, 252),
         "adv20": float(dollar_volume.tail(20).mean()) if len(dollar_volume) >= 20 else math.nan,
         "vol63": float(returns.std(ddof=1) * math.sqrt(TRADING_DAYS)) if len(returns) == 63 else math.nan,
-        "drawdown252": float(t.iloc[-1] / peak - 1.0) if peak else math.nan,
+        "drawdown252": float(t.iloc[-1] / peak - 1.0)
+        if np.isfinite(peak) and np.isfinite(t.iloc[-1]) and peak > 0 and t.iloc[-1] > 0
+        else math.nan,
     }
 
 

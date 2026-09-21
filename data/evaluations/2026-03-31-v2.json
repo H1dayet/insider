@@ -1,0 +1,22 @@
+{
+  "evaluation_session": "2026-03-31",
+  "record_type": "reconstructed",
+  "created_at": "2026-09-21T15:02:28.908843+00:00",
+  "strategy_version": "2.0.0",
+  "data_version": "nasdaq-directory-yahoo-v2",
+  "market": {
+    "ticker": "SPY",
+    "close": 650.34002686,
+    "sma200": 662.0186496,
+    "m6": -0.01452061,
+    "active": false
+  },
+  "universe_size": 4758,
+  "qualified_count": 786,
+  "selected": [],
+  "disclosures": [
+    "Reconstructed results use the current curated universe and contain survivorship and selection bias.",
+    "SEC CIK identifies the issuer, not an individual share class.",
+    "Yahoo Finance data does not provide complete delisting returns or institutional point-in-time reference data."
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "evaluation_session": "2025-09-30",
+  "record_type": "reconstructed",
+  "created_at": "2026-09-21T15:01:47.498036+00:00",
+  "strategy_version": "2.0.0",
+  "data_version": "nasdaq-directory-yahoo-v2",
+  "market": {
+    "ticker": "SPY",
+    "close": 666.17999268,
+    "sma200": 600.45610077,
+    "m6": 0.19773668,
+    "active": true
+  },
+  "universe_size": 4758,
+  "qualified_count": 573,
+  "selected": [
+    {
+      "ticker": "DFDV",
+      "permanent_id": "sec-cik:0001805526",
+      "name": "DeFi Development Corp. - Common Stock",
+      "sector": "Finance",
+      "score": 99.79020979,
+      "signal_close": 15.31000042,
+      "weight": 0.1
+    },
+    {
+      "ticker": "QURE",
+      "permanent_id": "sec-cik:0001590560",
+      "name": "uniQure N.V. - Ordinary Shares",
+      "sector": "Health Care",
+      "score": 99.23076923,
+      "signal_close": 58.36999893,
+      "weight": 0.1
+    },
+    {
+      "ticker": "OKLO",
+      "permanent_id": "sec-cik:0001849056",
+      "name": "Oklo Inc. Class A common stock",
+      "sector": "Utilities",
+      "score": 99.09090909,
+      "signal_close": 111.62999725,
+      "weight": 0.1
+    },
+    {
+      "ticker": "IREN",
+      "permanent_id": "sec-cik:0001878848",
+      "name": "IREN Limited - Ordinary Shares",
+      "sector": "Finance",
+      "score": 98.6013986,
+      "signal_close": 46.93000031,
+      "weight": 0.1
+    },
+    {
+      "ticker": "BE",
+      "permanent_id": "sec-cik:0001664703",
+      "name": "Bloom Energy Corporation Class A Common Stock",
+      "sector": "Energy",
+      "score": 98.28671329,
+      "signal_close": 84.56999969,
+      "weight": 0.1
+    },
+    {
+      "ticker": "LEU",
+      "permanent_id": "sec-cik:0001065059",
+      "name": "Centrus Energy Corp. Class A Common Stock",
+      "sector": "Industrials",
+      "score": 98.18181818,
+      "signal_close": 310.07000732,
+      "weight": 0.1
+    },
+    {
+      "ticker": "AMPX",
+      "permanent_id": "sec-cik:0001899287",
+      "name": "Amprius Technologies, Inc. Common Stock",
+      "sector": "Miscellaneous",
+      "score": 97.9020979,
+      "signal_close": 10.52000046,
+      "weight": 0.1
+    },
+    {
+      "ticker": "RGTI",
+      "permanent_id": "sec-cik:0001838359",
+      "name": "Rigetti Computing, Inc.  - Common stock",
+      "sector": "Technology",
+      "score": 97.7972028,
+      "signal_close": 29.79000092,
+      "weight": 0.1
+    },
+    {
+      "ticker": "PL",
+      "permanent_id": "sec-cik:0001836833",
+      "name": "Planet Labs PBC Class A Common Stock",
+      "sector": "Technology",
+      "score": 97.2027972,
+      "signal_close": 12.97999954,
+      "weight": 0.1
+    },
+    {
+      "ticker": "NKTR",
+      "permanent_id": "sec-cik:0000906709",
+      "name": "Nektar Therapeutics - Common Stock",
+      "sector": "Health Care",
+      "score": 96.95804196,
+      "signal_close": 56.90000153,
+      "weight": 0.1
+    }
+  ],
+  "disclosures": [
+    "Reconstructed results use the current curated universe and contain survivorship and selection bias.",
+    "SEC CIK identifies the issuer, not an individual share class.",
+    "Yahoo Finance data does not provide complete delisting returns or institutional point-in-time reference data."
+  ]
+}

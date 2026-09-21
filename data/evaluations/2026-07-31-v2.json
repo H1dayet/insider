@@ -1,0 +1,113 @@
+{
+  "evaluation_session": "2026-07-31",
+  "record_type": "reconstructed",
+  "created_at": "2026-09-21T15:02:58.093972+00:00",
+  "strategy_version": "2.0.0",
+  "data_version": "nasdaq-directory-yahoo-v2",
+  "market": {
+    "ticker": "SPY",
+    "close": 747.0300293,
+    "sma200": 700.38610077,
+    "m6": 0.0820702,
+    "active": true
+  },
+  "universe_size": 4758,
+  "qualified_count": 779,
+  "selected": [
+    {
+      "ticker": "AXTI",
+      "permanent_id": "sec-cik:0001051627",
+      "name": "AXT Inc - Common Stock",
+      "sector": "Technology",
+      "score": 99.84575835,
+      "signal_close": 60.43000031,
+      "weight": 0.1
+    },
+    {
+      "ticker": "QTTB",
+      "permanent_id": "sec-cik:0001661998",
+      "name": "Q32 Bio Inc. - Common Stock",
+      "sector": "Health Care",
+      "score": 99.71722365,
+      "signal_close": 15.68000031,
+      "weight": 0.1
+    },
+    {
+      "ticker": "ORKA",
+      "permanent_id": "sec-cik:0000907654",
+      "name": "Oruka Therapeutics, Inc. - Common Stock",
+      "sector": "Health Care",
+      "score": 98.84318766,
+      "signal_close": 96.51000214,
+      "weight": 0.1
+    },
+    {
+      "ticker": "ATEX",
+      "permanent_id": "sec-cik:0001304492",
+      "name": "Anterix Inc. - Common Stock",
+      "sector": "Telecommunications",
+      "score": 98.32904884,
+      "signal_close": 93.01999664,
+      "weight": 0.1
+    },
+    {
+      "ticker": "AEHR",
+      "permanent_id": "sec-cik:0001040470",
+      "name": "Aehr Test Systems - Common Stock",
+      "sector": "Industrials",
+      "score": 98.22622108,
+      "signal_close": 79.98000336,
+      "weight": 0.1
+    },
+    {
+      "ticker": "MXL",
+      "permanent_id": "sec-cik:0001288469",
+      "name": "MaxLinear, Inc - Common Stock",
+      "sector": "Technology",
+      "score": 97.89203085,
+      "signal_close": 66.81999969,
+      "weight": 0.1
+    },
+    {
+      "ticker": "FCEL",
+      "permanent_id": "sec-cik:0000886128",
+      "name": "FuelCell Energy, Inc. - Common Stock",
+      "sector": "Energy",
+      "score": 97.6092545,
+      "signal_close": 21.61000061,
+      "weight": 0.1
+    },
+    {
+      "ticker": "TXG",
+      "permanent_id": "sec-cik:0001770787",
+      "name": "10x Genomics, Inc. - Common Stock",
+      "sector": "Industrials",
+      "score": 95.55269923,
+      "signal_close": 47.27000046,
+      "weight": 0.1
+    },
+    {
+      "ticker": "DK",
+      "permanent_id": "sec-cik:0001694426",
+      "name": "Delek US Holdings, Inc. Common Stock",
+      "sector": "Energy",
+      "score": 95.44987147,
+      "signal_close": 67.87000275,
+      "weight": 0.1
+    },
+    {
+      "ticker": "LITE",
+      "permanent_id": "sec-cik:0001633978",
+      "name": "Lumentum Holdings Inc. - Common Stock",
+      "sector": "Telecommunications",
+      "score": 95.01285347,
+      "signal_close": 713.94000244,
+      "weight": 0.1
+    }
+  ],
+  "disclosures": [
+    "Reconstructed results use the current curated universe and contain survivorship and selection bias.",
+    "SEC CIK identifies the issuer, not an individual share class.",
+    "Yahoo Finance data does not provide complete delisting returns or institutional point-in-time reference data."
+  ]
+}

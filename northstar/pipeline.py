@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 import argparse
+import io
 import json
 import math
 import os
+import re
 from dataclasses import dataclass
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -19,19 +21,28 @@ from .calculations import (
     evaluate_filters,
     indicators_at,
     percentile_rank,
-    split_adjusted_close,
-    total_return_index,
 )
 
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 EVALUATIONS = ROOT / "data" / "evaluations"
-INCEPTION = ROOT / "data" / "inception.json"
-STRATEGY_VERSION = "1.0.0"
-DATA_VERSION = "yahoo-v1"
+UNIVERSE_CACHE = ROOT / "data" / "universe.json"
+STRATEGY_VERSION = "2.0.0"
+INCEPTION = ROOT / "data" / "inception-v2.json"
+DATA_VERSION = "nasdaq-directory-yahoo-v2"
 BENCHMARK = "SPY"
 DEFAULT_COST_BPS = 10
+NASDAQ_LISTED_URL = "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt"
+OTHER_LISTED_URL = "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt"
+NASDAQ_SCREENER_URL = (
+    "https://api.nasdaq.com/api/screener/stocks?tableonly=true&limit=10000&offset=0&download=true"
+)
+EXCLUDED_SECURITY_PATTERN = re.compile(
+    r"\b(ETF|ETN|exchange.traded|warrants?|rights?|units?|preferred|preference|"
+    r"depositary|depository|ADS|ADR|fund|notes?|bonds?|debentures?|when[ -]issued)\b",
+    re.IGNORECASE,
+)
 
 
 @dataclass
@@ -40,6 +51,7 @@ class Security:
     name: str
     sector: str
     permanent_id: str
+    exchange: str = ""
 
 
 def clean_number(value: Any) -> float | int | None:
@@ -81,24 +93,116 @@ def sec_cik_map() -> dict[str, str]:
         return {}
 
 
-def load_universe() -> list[Security]:
+def yahoo_symbol(symbol: str) -> str:
+    return str(symbol).strip().upper().replace(".", "-")
+
+
+def is_common_share(name: str) -> bool:
+    """Conservative instrument-type filter for the official listing directories."""
+    return bool(name.strip()) and not bool(EXCLUDED_SECURITY_PATTERN.search(name))
+
+
+def _directory_table(url: str) -> tuple[pd.DataFrame, str | None]:
+    response = requests.get(url, timeout=45)
+    response.raise_for_status()
+    lines = response.text.splitlines()
+    timestamp = next((line.split("|")[0] for line in reversed(lines) if line.startswith("File Creation Time")), None)
+    content = "\n".join(line for line in lines if not line.startswith("File Creation Time"))
+    return pd.read_csv(io.StringIO(content), sep="|", dtype=str).fillna(""), timestamp
+
+
+def _screener_metadata() -> dict[str, dict[str, str]]:
+    headers = {
+        "User-Agent": "Mozilla/5.0 (compatible; Northstar personal research)",
+        "Accept": "application/json, text/plain, */*",
+        "Referer": "https://www.nasdaq.com/market-activity/stocks/screener",
+    }
+    response = requests.get(NASDAQ_SCREENER_URL, headers=headers, timeout=60)
+    response.raise_for_status()
+    rows = response.json().get("data", {}).get("rows", []) or []
+    return {
+        yahoo_symbol(row.get("symbol", "")): {
+            "sector": (row.get("sector") or "Unclassified").strip(),
+            "country": (row.get("country") or "Unknown").strip(),
+            "industry": (row.get("industry") or "Unclassified").strip(),
+        }
+        for row in rows
+        if row.get("symbol")
+    }
+
+
+def refresh_universe() -> tuple[list[Security], dict[str, Any]]:
+    nasdaq, nasdaq_timestamp = _directory_table(NASDAQ_LISTED_URL)
+    other, other_timestamp = _directory_table(OTHER_LISTED_URL)
+    metadata = _screener_metadata()
     ciks = sec_cik_map()
-    table = pd.read_csv(ROOT / "universe.csv").fillna("")
-    return [
+
+    nasdaq = nasdaq[
+        (nasdaq["Test Issue"] == "N")
+        & (nasdaq["ETF"] == "N")
+        & (nasdaq["Financial Status"] == "N")
+    ].copy()
+    nasdaq["ticker"] = nasdaq["Symbol"].map(yahoo_symbol)
+    nasdaq["name"] = nasdaq["Security Name"]
+    nasdaq["exchange"] = "Nasdaq"
+
+    # N is NYSE. NYSE American, NYSE Arca, Cboe and IEX are outside the
+    # explicitly requested initial exchange scope.
+    other = other[
+        (other["Test Issue"] == "N") & (other["ETF"] == "N") & (other["Exchange"] == "N")
+    ].copy()
+    other["ticker"] = other["ACT Symbol"].map(yahoo_symbol)
+    other["name"] = other["Security Name"]
+    other["exchange"] = "NYSE"
+
+    listings = pd.concat(
+        [nasdaq[["ticker", "name", "exchange"]], other[["ticker", "name", "exchange"]]],
+        ignore_index=True,
+    ).drop_duplicates("ticker", keep="first")
+    common_symbol = listings["ticker"].str.match(r"^[A-Z]{1,5}(-[A-Z])?$", na=False)
+    listings = listings[common_symbol & listings["name"].map(is_common_share)]
+
+    securities = [
         Security(
             ticker=row.ticker,
-            name=row.name,
-            sector=row.sector,
+            name=row.name.strip(),
+            sector=metadata.get(row.ticker, {}).get("sector", "Unclassified") or "Unclassified",
             permanent_id=ciks.get(row.ticker, f"issuer-unresolved:{row.ticker}"),
+            exchange=row.exchange,
         )
-        for row in table.itertuples(index=False)
+        for row in listings.itertuples(index=False)
     ]
-
-
-def download_history(ticker: str, period: str = "3y") -> pd.DataFrame:
-    frame = yf.Ticker(ticker).history(
-        period=period, interval="1d", auto_adjust=False, actions=True, repair=False
+    securities.sort(key=lambda item: item.ticker)
+    source = {
+        "source": "Nasdaq Trader Symbol Directory",
+        "nasdaq_file_timestamp": nasdaq_timestamp,
+        "other_listed_file_timestamp": other_timestamp,
+        "retrieved_at": datetime.now(timezone.utc).isoformat(),
+        "directory_rows": int(len(nasdaq) + len(other)),
+        "eligible_common_shares": len(securities),
+        "unclassified_sectors": sum(item.sector == "Unclassified" for item in securities),
+        "unresolved_issuer_ids": sum(item.permanent_id.startswith("issuer-unresolved:") for item in securities),
+    }
+    write_json(
+        UNIVERSE_CACHE,
+        {"meta": source, "securities": [item.__dict__ for item in securities]},
     )
+    return securities, source
+
+
+def load_universe() -> tuple[list[Security], dict[str, Any]]:
+    try:
+        return refresh_universe()
+    except (requests.RequestException, ValueError, KeyError, json.JSONDecodeError) as exc:
+        if not UNIVERSE_CACHE.exists():
+            raise RuntimeError(f"Unable to refresh listing universe: {exc}") from exc
+        cached = json.loads(UNIVERSE_CACHE.read_text(encoding="utf-8"))
+        securities = [Security(**item) for item in cached["securities"]]
+        metadata = {**cached["meta"], "cache_fallback": True, "refresh_error": str(exc)}
+        return securities, metadata
+
+
+def normalize_history(frame: pd.DataFrame) -> pd.DataFrame:
     if frame.empty:
         raise ValueError("provider returned no rows")
     frame.index = pd.DatetimeIndex(frame.index).tz_localize(None).normalize()
@@ -130,6 +234,72 @@ def download_history(ticker: str, period: str = "3y") -> pd.DataFrame:
     frame["p"] = yahoo_close.astype(float)
     frame["t"] = frame["adj_close"].astype(float) / float(frame["adj_close"].iloc[0]) * 100.0
     return frame
+
+
+def download_history(ticker: str, period: str = "3y") -> pd.DataFrame:
+    frame = yf.Ticker(ticker).history(
+        period=period, interval="1d", auto_adjust=False, actions=True, repair=False
+    )
+    return normalize_history(frame)
+
+
+def download_histories(
+    tickers: list[str], period: str = "3y", batch_size: int = 100
+) -> tuple[dict[str, pd.DataFrame], dict[str, str]]:
+    """Download a large universe in bounded concurrent batches.
+
+    Failed symbols are retried individually once so one malformed ticker cannot
+    discard an otherwise successful batch.
+    """
+    frames: dict[str, pd.DataFrame] = {}
+    failures: dict[str, str] = {}
+    total_batches = math.ceil(len(tickers) / batch_size)
+    for batch_number, start in enumerate(range(0, len(tickers), batch_size), 1):
+        batch = tickers[start : start + batch_size]
+        print(f"Downloading batch {batch_number}/{total_batches} ({len(batch)} symbols)", flush=True)
+        try:
+            downloaded = yf.download(
+                batch,
+                period=period,
+                interval="1d",
+                group_by="ticker",
+                auto_adjust=False,
+                actions=True,
+                repair=False,
+                threads=True,
+                progress=False,
+                timeout=30,
+            )
+        except Exception as exc:
+            downloaded = pd.DataFrame()
+            for ticker in batch:
+                failures[ticker] = f"batch error: {exc}"
+
+        for ticker in batch:
+            try:
+                if downloaded.empty:
+                    raise ValueError(failures.get(ticker, "empty batch response"))
+                if isinstance(downloaded.columns, pd.MultiIndex):
+                    if ticker not in downloaded.columns.get_level_values(0):
+                        raise ValueError("symbol absent from batch response")
+                    candidate = downloaded[ticker].dropna(how="all")
+                else:
+                    candidate = downloaded.dropna(how="all")
+                frames[ticker] = normalize_history(candidate)
+                failures.pop(ticker, None)
+            except Exception as exc:
+                failures[ticker] = str(exc)
+
+    retry = list(failures)
+    if retry:
+        print(f"Retrying {len(retry)} failed symbols individually", flush=True)
+    for ticker in retry:
+        try:
+            frames[ticker] = download_history(ticker, period=period)
+            failures.pop(ticker, None)
+        except Exception as exc:
+            failures[ticker] = str(exc)
+    return frames, failures
 
 
 def quality_warnings(frame: pd.DataFrame) -> list[str]:
@@ -184,6 +354,7 @@ def result_for_date(
             "ticker": security.ticker,
             "name": security.name,
             "sector": security.sector,
+            "exchange": security.exchange,
             "permanent_id": security.permanent_id,
             "status": "Insufficient data",
             "qualified": False,
@@ -197,16 +368,21 @@ def result_for_date(
         and benchmark.iloc[benchmark_position]["p"] > benchmark_values["sma200"]
     )
     evaluated = evaluate_filters(values, float(benchmark_values["m6"]), market_active)
+    warnings = quality_warnings(frame.loc[:session])
+    if warnings:
+        evaluated["qualified"] = False
+        evaluated["status"] = "Data quality exclusion"
     return {
         "ticker": security.ticker,
         "name": security.name,
         "sector": security.sector,
+        "exchange": security.exchange,
         "permanent_id": security.permanent_id,
         **{key: clean_number(value) for key, value in evaluated.items() if key not in {"checks", "qualified", "status"}},
         "checks": evaluated["checks"],
         "qualified": evaluated["qualified"],
         "status": evaluated["status"],
-        "warnings": quality_warnings(frame.loc[:session]),
+        "warnings": warnings,
     }
 
 
@@ -249,9 +425,10 @@ def select_portfolio(results: list[dict[str, Any]], market_active: bool) -> list
         if not row.get("qualified") or len(selected) == 10:
             continue
         sector = row["sector"]
-        if sectors.get(sector, 0) >= 2:
+        sector_key = sector if sector != "Unclassified" else f"unclassified:{row['ticker']}"
+        if sectors.get(sector_key, 0) >= 2:
             continue
-        sectors[sector] = sectors.get(sector, 0) + 1
+        sectors[sector_key] = sectors.get(sector_key, 0) + 1
         selected.append(
             {
                 "ticker": row["ticker"],
@@ -331,8 +508,9 @@ def save_evaluations(
 ) -> list[dict[str, Any]]:
     EVALUATIONS.mkdir(parents=True, exist_ok=True)
     sessions = month_end_sessions(frames[BENCHMARK], latest, max(bootstrap_months, 1))
+    version_tag = STRATEGY_VERSION.split(".")[0]
     for session in sessions:
-        path = EVALUATIONS / f"{session.date().isoformat()}.json"
+        path = EVALUATIONS / f"{session.date().isoformat()}-v{version_tag}.json"
         if path.exists():
             continue
         mode = "recorded-forward" if session.date().isoformat() >= inception else "reconstructed"
@@ -342,6 +520,7 @@ def save_evaluations(
         for path in sorted(EVALUATIONS.glob("*.json"))
         for payload in [json.loads(path.read_text(encoding="utf-8"))]
         if payload["evaluation_session"] <= latest.date().isoformat()
+        and payload.get("strategy_version") == STRATEGY_VERSION
     ]
 
 
@@ -475,18 +654,13 @@ def previous_statuses(evaluations: list[dict[str, Any]]) -> dict[str, str]:
 
 
 def run(bootstrap_months: int) -> dict[str, Any]:
-    universe = load_universe()
-    frames: dict[str, pd.DataFrame] = {}
-    failures: dict[str, str] = {}
-    for ticker in [BENCHMARK] + [item.ticker for item in universe]:
-        try:
-            frames[ticker] = download_history(ticker)
-        except Exception as exc:  # provider failures must be disclosed, not hidden
-            failures[ticker] = str(exc)
+    universe, universe_source = load_universe()
+    tickers = [BENCHMARK] + [item.ticker for item in universe if item.ticker != BENCHMARK]
+    frames, failures = download_histories(tickers)
     if BENCHMARK not in frames:
         raise RuntimeError(f"Benchmark download failed: {failures.get(BENCHMARK, 'unknown error')}")
     available = [security for security in universe if security.ticker in frames]
-    latest = common_session({ticker: frames[ticker] for ticker in [BENCHMARK] + [s.ticker for s in available]})
+    latest = common_session({BENCHMARK: frames[BENCHMARK]})
     inception = load_inception(latest.date().isoformat())
     evaluations = save_evaluations(available, frames, latest, bootstrap_months, inception)
     benchmark = benchmark_state(frames[BENCHMARK], latest)
@@ -506,14 +680,16 @@ def run(bootstrap_months: int) -> dict[str, Any]:
             "title": "Northstar",
             "generated_at": datetime.now(timezone.utc).isoformat(),
             "latest_completed_session": latest.date().isoformat(),
-            "provider": "Yahoo Finance via yfinance; SEC company_tickers for issuer IDs",
+            "provider": "Nasdaq Trader listing directories; Yahoo Finance via yfinance; SEC company_tickers for issuer IDs",
             "data_status": "final provider bars",
             "strategy_version": STRATEGY_VERSION,
             "data_version": DATA_VERSION,
-            "universe_definition": "Curated starting universe of 32 liquid U.S.-listed common stocks",
+            "universe_definition": "Current Nasdaq and NYSE common-share listings after instrument-type exclusions",
             "universe_count": len(universe),
             "available_count": len(available),
+            "failed_count": len(failures),
             "failed_downloads": failures,
+            "universe_source": universe_source,
             "adjustment_method": "Yahoo split-normalized OHLC is retained as P; contemporaneous raw OHLC is reconstructed from split factors; Yahoo Adj Close is normalized as T and includes distributions.",
             "research_status": "Unvalidated hypothesis",
         },
@@ -540,7 +716,7 @@ def run(bootstrap_months: int) -> dict[str, Any]:
                 "Score = 0.60 × percentile(M6) + 0.40 × percentile(M12)",
             ],
             "limitations": [
-                "The current universe is curated and not point-in-time complete; reconstructed results contain survivorship and selection bias.",
+                "The current listing universe is broad but not point-in-time complete; reconstructed results contain survivorship bias.",
                 "Delisted, acquired and bankrupt securities are not fully represented, and delisting returns are unavailable.",
                 "SEC CIK is a permanent issuer identifier, not a security-level identifier.",
                 "Provider bars are not independently cross-checked in this public-data version.",
