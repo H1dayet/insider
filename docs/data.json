@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Northstar",
-    "generated_at": "2026-09-21T14:20:27.982046+00:00",
+    "generated_at": "2026-09-21T14:24:19.658067+00:00",
     "latest_completed_session": "2026-09-18",
     "provider": "Yahoo Finance via yfinance; SEC company_tickers for issuer IDs",
     "data_status": "final provider bars",
@@ -18,7 +18,7 @@
     "ticker": "SPY",
     "close": 761.69000244,
     "sma200": 716.28154999,
-    "m6": 0.16344242,
+    "m6": 0.16344253,
     "active": true
   },
   "thresholds": {
@@ -33,7 +33,7 @@
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "sector": "Information Technology",
-      "permanent_id": "sec-cik:0000002488",
+      "permanent_id": "issuer-unresolved:AMD",
       "observations": 751.0,
       "close": 559.82000732,
       "sma50": 495.84700317,
@@ -46,7 +46,7 @@
       "adv20": 9481217018.10913,
       "vol63": 0.68667048,
       "drawdown252": -0.03630505,
-      "relative_m6": 1.56379486,
+      "relative_m6": 1.56379475,
       "checks": {
         "history": true,
         "price": true,
@@ -71,7 +71,7 @@
       "ticker": "CSCO",
       "name": "Cisco Systems",
       "sector": "Information Technology",
-      "permanent_id": "sec-cik:0000858877",
+      "permanent_id": "issuer-unresolved:CSCO",
       "observations": 751.0,
       "close": 109.51000214,
       "sma50": 113.26839966,
@@ -80,11 +80,11 @@
       "slope200": 0.03770114,
       "m3": -0.0804779,
       "m6": 0.40765875,
-      "m12": 0.65058404,
+      "m12": 0.65058423,
       "adv20": 1677361906.743927,
       "vol63": 0.34614182,
       "drawdown252": -0.15446404,
-      "relative_m6": 0.24421633,
+      "relative_m6": 0.24421622,
       "checks": {
         "history": true,
         "price": true,
@@ -109,7 +109,7 @@
       "ticker": "AAPL",
       "name": "Apple",
       "sector": "Information Technology",
-      "permanent_id": "sec-cik:0000320193",
+      "permanent_id": "issuer-unresolved:AAPL",
       "observations": 751.0,
       "close": 336.13000488,
       "sma50": 320.1421991,
@@ -122,7 +122,7 @@
       "adv20": 14066645514.43924,
       "vol63": 0.31469835,
       "drawdown252": -0.0107624,
-      "relative_m6": 0.18910347,
+      "relative_m6": 0.18910336,
       "checks": {
         "history": true,
         "price": true,
@@ -147,7 +147,7 @@
       "ticker": "LLY",
       "name": "Eli Lilly",
       "sector": "Health Care",
-      "permanent_id": "sec-cik:0000059478",
+      "permanent_id": "issuer-unresolved:LLY",
       "observations": 751.0,
       "close": 1152.93005371,
       "sma50": 1177.36,
@@ -156,11 +156,11 @@
       "slope200": 0.0144215,
       "m3": 0.05098654,
       "m6": 0.26056637,
-      "m12": 0.52631958,
+      "m12": 0.52631983,
       "adv20": 2763438772.625122,
       "vol63": 0.328234,
       "drawdown252": -0.09951256,
-      "relative_m6": 0.09712395,
+      "relative_m6": 0.09712384,
       "checks": {
         "history": true,
         "price": true,
@@ -185,7 +185,7 @@
       "ticker": "ABBV",
       "name": "AbbVie",
       "sector": "Health Care",
-      "permanent_id": "sec-cik:0001551152",
+      "permanent_id": "issuer-unresolved:ABBV",
       "observations": 751.0,
       "close": 263.95999146,
       "sma50": 255.35079956,
@@ -194,11 +194,11 @@
       "slope200": 0.01460101,
       "m3": 0.22794966,
       "m6": 0.29973465,
-      "m12": 0.23250211,
+      "m12": 0.23250202,
       "adv20": 1124110119.4308472,
       "vol63": 0.28248402,
       "drawdown252": -0.00755728,
-      "relative_m6": 0.13629223,
+      "relative_m6": 0.13629212,
       "checks": {
         "history": true,
         "price": true,
@@ -223,7 +223,7 @@
       "ticker": "NVDA",
       "name": "NVIDIA",
       "sector": "Information Technology",
-      "permanent_id": "sec-cik:0001045810",
+      "permanent_id": "issuer-unresolved:NVDA",
       "observations": 751.0,
       "close": 222.27000427,
       "sma50": 214.27259949,
@@ -232,11 +232,11 @@
       "slope200": 0.0160301,
       "m3": 0.05614273,
       "m6": 0.24763709,
-      "m12": 0.30837123,
+      "m12": 0.30837111,
       "adv20": 29564670876.872486,
       "vol63": 0.39838498,
       "drawdown252": -0.05498408,
-      "relative_m6": 0.08419467,
+      "relative_m6": 0.08419456,
       "checks": {
         "history": true,
         "price": true,
@@ -261,7 +261,7 @@
       "ticker": "BAC",
       "name": "Bank of America",
       "sector": "Financials",
-      "permanent_id": "sec-cik:0000070858",
+      "permanent_id": "issuer-unresolved:BAC",
       "observations": 751.0,
       "close": 57.72999954,
       "sma50": 61.93919975,
@@ -270,11 +270,11 @@
       "slope200": 0.01589614,
       "m3": 0.03246517,
       "m6": 0.24071532,
-      "m12": 0.14709276,
+      "m12": 0.14709267,
       "adv20": 2196985956.61211,
       "vol63": 0.20956488,
       "drawdown252": -0.10469766,
-      "relative_m6": 0.0772729,
+      "relative_m6": 0.07727279,
       "checks": {
         "history": true,
         "price": true,
@@ -299,7 +299,7 @@
       "ticker": "MSFT",
       "name": "Microsoft",
       "sector": "Information Technology",
-      "permanent_id": "sec-cik:0000789019",
+      "permanent_id": "issuer-unresolved:MSFT",
       "observations": 751.0,
       "close": 493.77999878,
       "sma50": 464.68059998,
@@ -308,11 +308,11 @@
       "slope200": 0.00028136,
       "m3": 0.3039261,
       "m6": 0.27443587,
-      "m12": -0.02387621,
+      "m12": -0.02387615,
       "adv20": 10491789876.004944,
       "vol63": 0.42409375,
-      "drawdown252": -0.08158973,
-      "relative_m6": 0.11099345,
+      "drawdown252": -0.08158962,
+      "relative_m6": 0.11099334,
       "checks": {
         "history": true,
         "price": true,
@@ -337,7 +337,7 @@
       "ticker": "CAT",
       "name": "Caterpillar",
       "sector": "Industrials",
-      "permanent_id": "sec-cik:0000018230",
+      "permanent_id": "issuer-unresolved:CAT",
       "observations": 751.0,
       "close": 808.98999023,
       "sma50": 840.13999878,
@@ -346,11 +346,11 @@
       "slope200": 0.03198074,
       "m3": -0.17785116,
       "m6": 0.17916757,
-      "m12": 0.81128168,
+      "m12": 0.81128155,
       "adv20": 1916142996.432495,
       "vol63": 0.42222682,
       "drawdown252": -0.2389044,
-      "relative_m6": 0.01572515,
+      "relative_m6": 0.01572504,
       "checks": {
         "history": true,
         "price": true,
@@ -375,7 +375,7 @@
       "ticker": "V",
       "name": "Visa",
       "sector": "Financials",
-      "permanent_id": "sec-cik:0001403161",
+      "permanent_id": "issuer-unresolved:V",
       "observations": 751.0,
       "close": 368.29000854,
       "sma50": 367.08040344,
@@ -384,11 +384,11 @@
       "slope200": 0.01276014,
       "m3": 0.12753398,
       "m6": 0.23365632,
-      "m12": 0.07231483,
+      "m12": 0.07231502,
       "adv20": 2349801584.517517,
       "vol63": 0.19768791,
       "drawdown252": -0.04126101,
-      "relative_m6": 0.0702139,
+      "relative_m6": 0.07021379,
       "checks": {
         "history": true,
         "price": true,
@@ -413,7 +413,7 @@
       "ticker": "KO",
       "name": "Coca-Cola",
       "sector": "Consumer Staples",
-      "permanent_id": "sec-cik:0000021344",
+      "permanent_id": "issuer-unresolved:KO",
       "observations": 751.0,
       "close": 88.25,
       "sma50": 87.05079971,
@@ -422,11 +422,11 @@
       "slope200": 0.02317579,
       "m3": 0.11823398,
       "m6": 0.18265743,
-      "m12": 0.35137266,
+      "m12": 0.35137282,
       "adv20": 1394044207.6392746,
       "vol63": 0.21623508,
       "drawdown252": -0.03493203,
-      "relative_m6": 0.01921501,
+      "relative_m6": 0.0192149,
       "checks": {
         "history": true,
         "price": true,
@@ -451,7 +451,7 @@
       "ticker": "JPM",
       "name": "JPMorgan Chase",
       "sector": "Financials",
-      "permanent_id": "sec-cik:0000019617",
+      "permanent_id": "issuer-unresolved:JPM",
       "observations": 751.0,
       "close": 349.67001343,
       "sma50": 353.19900024,
@@ -460,11 +460,11 @@
       "slope200": 0.01480741,
       "m3": 0.08002354,
       "m6": 0.22597095,
-      "m12": 0.1430938,
+      "m12": 0.14309368,
       "adv20": 2449780580.9114075,
       "vol63": 0.17979506,
       "drawdown252": -0.04247215,
-      "relative_m6": 0.06252853,
+      "relative_m6": 0.06252842,
       "checks": {
         "history": true,
         "price": true,
@@ -489,7 +489,7 @@
       "ticker": "CRM",
       "name": "Salesforce",
       "sector": "Information Technology",
-      "permanent_id": "sec-cik:0001108524",
+      "permanent_id": "issuer-unresolved:CRM",
       "observations": 751.0,
       "close": 237.91999817,
       "sma50": 206.92719971,
@@ -497,12 +497,12 @@
       "distance200": 0.18035252,
       "slope200": 0.00241046,
       "m3": 0.57028969,
-      "m6": 0.22853138,
+      "m6": 0.22853129,
       "m12": -0.00938026,
       "adv20": 4134563120.525055,
       "vol63": 0.61354406,
-      "drawdown252": -0.10020912,
-      "relative_m6": 0.06508896,
+      "drawdown252": -0.10020902,
+      "relative_m6": 0.06508876,
       "checks": {
         "history": true,
         "price": true,
@@ -527,7 +527,7 @@
       "ticker": "AMZN",
       "name": "Amazon",
       "sector": "Consumer Discretionary",
-      "permanent_id": "sec-cik:0001018724",
+      "permanent_id": "issuer-unresolved:AMZN",
       "observations": 751.0,
       "close": 253.71000671,
       "sma50": 255.8397998,
@@ -540,7 +540,7 @@
       "adv20": 8418934610.482788,
       "vol63": 0.42910221,
       "drawdown252": -0.10671778,
-      "relative_m6": 0.05187667,
+      "relative_m6": 0.05187656,
       "checks": {
         "history": true,
         "price": true,
@@ -565,7 +565,7 @@
       "ticker": "TSLA",
       "name": "Tesla",
       "sector": "Consumer Discretionary",
-      "permanent_id": "sec-cik:0001318605",
+      "permanent_id": "issuer-unresolved:TSLA",
       "observations": 751.0,
       "close": 364.26998901,
       "sma50": 350.24559875,
@@ -578,7 +578,7 @@
       "adv20": 14603675241.130371,
       "vol63": 0.56038907,
       "drawdown252": -0.25640976,
-      "relative_m6": -0.20559335,
+      "relative_m6": -0.20559346,
       "checks": {
         "history": true,
         "price": true,
@@ -603,7 +603,7 @@
       "ticker": "META",
       "name": "Meta Platforms",
       "sector": "Communication Services",
-      "permanent_id": "sec-cik:0001326801",
+      "permanent_id": "issuer-unresolved:META",
       "observations": 751.0,
       "close": 665.75,
       "sma50": 607.37899658,
@@ -616,7 +616,7 @@
       "adv20": 11583806046.94519,
       "vol63": 0.45021202,
       "drawdown252": -0.14395126,
-      "relative_m6": -0.06509562,
+      "relative_m6": -0.06509573,
       "checks": {
         "history": true,
         "price": true,
@@ -641,7 +641,7 @@
       "ticker": "AVGO",
       "name": "Broadcom",
       "sector": "Information Technology",
-      "permanent_id": "sec-cik:0001730168",
+      "permanent_id": "issuer-unresolved:AVGO",
       "observations": 751.0,
       "close": 357.60998535,
       "sma50": 379.75519897,
@@ -650,11 +650,11 @@
       "slope200": -0.00019409,
       "m3": -0.12926717,
       "m6": 0.12220893,
-      "m12": 0.04061651,
+      "m12": 0.04061642,
       "adv20": 9627409344.311676,
       "vol63": 0.41035207,
       "drawdown252": -0.25623283,
-      "relative_m6": -0.04123349,
+      "relative_m6": -0.0412336,
       "checks": {
         "history": true,
         "price": true,
@@ -679,7 +679,7 @@
       "ticker": "GOOGL",
       "name": "Alphabet",
       "sector": "Communication Services",
-      "permanent_id": "sec-cik:0001652044",
+      "permanent_id": "issuer-unresolved:GOOGL",
       "observations": 751.0,
       "close": 349.54000854,
       "sma50": 345.57719849,
@@ -692,7 +692,7 @@
       "adv20": 8690684901.53122,
       "vol63": 0.35950655,
       "drawdown252": -0.13075953,
-      "relative_m6": -0.02394576,
+      "relative_m6": -0.02394587,
       "checks": {
         "history": true,
         "price": true,
@@ -717,7 +717,7 @@
       "ticker": "ORCL",
       "name": "Oracle",
       "sector": "Information Technology",
-      "permanent_id": "sec-cik:0001341439",
+      "permanent_id": "issuer-unresolved:ORCL",
       "observations": 751.0,
       "close": 147.61000061,
       "sma50": 141.00240005,
@@ -726,11 +726,11 @@
       "slope200": -0.04250526,
       "m3": -0.19624756,
       "m6": -0.04423318,
-      "m12": -0.50468664,
+      "m12": -0.50468659,
       "adv20": 4543671047.005005,
       "vol63": 0.56626927,
       "drawdown252": -0.54504826,
-      "relative_m6": -0.2076756,
+      "relative_m6": -0.20767571,
       "checks": {
         "history": true,
         "price": true,
@@ -755,7 +755,7 @@
       "ticker": "WMT",
       "name": "Walmart",
       "sector": "Consumer Staples",
-      "permanent_id": "sec-cik:0000104169",
+      "permanent_id": "issuer-unresolved:WMT",
       "observations": 751.0,
       "close": 106.73000336,
       "sma50": 109.90759949,
@@ -764,11 +764,11 @@
       "slope200": 0.00158295,
       "m3": -0.08699849,
       "m6": -0.1129765,
-      "m12": 0.03221091,
+      "m12": 0.03221083,
       "adv20": 2686735060.8854294,
       "vol63": 0.2824012,
       "drawdown252": -0.20279046,
-      "relative_m6": -0.27641892,
+      "relative_m6": -0.27641903,
       "checks": {
         "history": true,
         "price": true,
@@ -793,7 +793,7 @@
       "ticker": "XOM",
       "name": "Exxon Mobil",
       "sector": "Energy",
-      "permanent_id": "sec-cik:0002115436",
+      "permanent_id": "issuer-unresolved:XOM",
       "observations": 751.0,
       "close": 163.53999329,
       "sma50": 157.78500061,
@@ -806,7 +806,7 @@
       "adv20": 2407705196.2797546,
       "vol63": 0.25048042,
       "drawdown252": -0.03413663,
-      "relative_m6": -0.11566717,
+      "relative_m6": -0.11566727,
       "checks": {
         "history": true,
         "price": true,
@@ -831,7 +831,7 @@
       "ticker": "NFLX",
       "name": "Netflix",
       "sector": "Communication Services",
-      "permanent_id": "sec-cik:0001065280",
+      "permanent_id": "issuer-unresolved:NFLX",
       "observations": 751.0,
       "close": 71.79000092,
       "sma50": 75.71719971,
@@ -844,7 +844,7 @@
       "adv20": 2403996747.3806,
       "vol63": 0.39184372,
       "drawdown252": -0.42167801,
-      "relative_m6": -0.38090479,
+      "relative_m6": -0.38090489,
       "checks": {
         "history": true,
         "price": true,
@@ -869,7 +869,7 @@
       "ticker": "BRK-B",
       "name": "Berkshire Hathaway",
       "sector": "Financials",
-      "permanent_id": "sec-cik:0001067983",
+      "permanent_id": "issuer-unresolved:BRK-B",
       "observations": 751.0,
       "close": 509.76998901,
       "sma50": 505.08619812,
@@ -882,7 +882,7 @@
       "adv20": 2334872210.172577,
       "vol63": 0.14947138,
       "drawdown252": -0.03711608,
-      "relative_m6": -0.10468613,
+      "relative_m6": -0.10468624,
       "checks": {
         "history": true,
         "price": true,
@@ -907,7 +907,7 @@
       "ticker": "CVX",
       "name": "Chevron",
       "sector": "Energy",
-      "permanent_id": "sec-cik:0000093410",
+      "permanent_id": "issuer-unresolved:CVX",
       "observations": 751.0,
       "close": 209.50999451,
       "sma50": 198.76680023,
@@ -916,11 +916,11 @@
       "slope200": 0.03122334,
       "m3": 0.21717692,
       "m6": 0.05874755,
-      "m12": 0.3602704,
+      "m12": 0.36027027,
       "adv20": 2047472090.389557,
       "vol63": 0.2437083,
       "drawdown252": -0.03792997,
-      "relative_m6": -0.10469487,
+      "relative_m6": -0.10469498,
       "checks": {
         "history": true,
         "price": true,
@@ -945,7 +945,7 @@
       "ticker": "COST",
       "name": "Costco Wholesale",
       "sector": "Consumer Staples",
-      "permanent_id": "sec-cik:0000909832",
+      "permanent_id": "issuer-unresolved:COST",
       "observations": 751.0,
       "close": 895.30999756,
       "sma50": 936.53939697,
@@ -958,7 +958,7 @@
       "adv20": 1931414250.2996826,
       "vol63": 0.20071359,
       "drawdown252": -0.18055645,
-      "relative_m6": -0.24217337,
+      "relative_m6": -0.24217348,
       "checks": {
         "history": true,
         "price": true,
@@ -983,7 +983,7 @@
       "ticker": "JNJ",
       "name": "Johnson & Johnson",
       "sector": "Health Care",
-      "permanent_id": "sec-cik:0000200406",
+      "permanent_id": "issuer-unresolved:JNJ",
       "observations": 751.0,
       "close": 269.98999023,
       "sma50": 263.28659943,
@@ -996,7 +996,7 @@
       "adv20": 1759346635.313263,
       "vol63": 0.24425952,
       "drawdown252": -0.03031284,
-      "relative_m6": -0.01494938,
+      "relative_m6": -0.01494948,
       "checks": {
         "history": true,
         "price": true,
@@ -1021,7 +1021,7 @@
       "ticker": "MA",
       "name": "Mastercard",
       "sector": "Financials",
-      "permanent_id": "sec-cik:0001141391",
+      "permanent_id": "issuer-unresolved:MA",
       "observations": 751.0,
       "close": 565.23999023,
       "sma50": 566.26319336,
@@ -1030,11 +1030,11 @@
       "slope200": 0.00655151,
       "m3": 0.15598012,
       "m6": 0.15478372,
-      "m12": -0.04989334,
+      "m12": -0.04989344,
       "adv20": 1529054021.4416504,
       "vol63": 0.2118884,
       "drawdown252": -0.05771346,
-      "relative_m6": -0.0086587,
+      "relative_m6": -0.00865881,
       "checks": {
         "history": true,
         "price": true,
@@ -1059,7 +1059,7 @@
       "ticker": "GE",
       "name": "GE Aerospace",
       "sector": "Industrials",
-      "permanent_id": "sec-cik:0000040545",
+      "permanent_id": "issuer-unresolved:GE",
       "observations": 751.0,
       "close": 314.26998901,
       "sma50": 348.08980042,
@@ -1068,11 +1068,11 @@
       "slope200": 0.00943134,
       "m3": -0.1201719,
       "m6": 0.0790499,
-      "m12": 0.09107419,
+      "m12": 0.09107407,
       "adv20": 1344462822.4586487,
       "vol63": 0.29034255,
       "drawdown252": -0.17562041,
-      "relative_m6": -0.08439253,
+      "relative_m6": -0.08439263,
       "checks": {
         "history": true,
         "price": true,
@@ -1097,7 +1097,7 @@
       "ticker": "PG",
       "name": "Procter & Gamble",
       "sector": "Consumer Staples",
-      "permanent_id": "sec-cik:0000080424",
+      "permanent_id": "issuer-unresolved:PG",
       "observations": 751.0,
       "close": 146.38999939,
       "sma50": 146.11940094,
@@ -1106,11 +1106,11 @@
       "slope200": -0.00131558,
       "m3": -0.01926586,
       "m6": 0.02591386,
-      "m12": -0.06009576,
+      "m12": -0.06009567,
       "adv20": 1249510266.2332916,
       "vol63": 0.18991171,
       "drawdown252": -0.11128371,
-      "relative_m6": -0.13752856,
+      "relative_m6": -0.13752867,
       "checks": {
         "history": true,
         "price": true,
@@ -1135,7 +1135,7 @@
       "ticker": "HD",
       "name": "Home Depot",
       "sector": "Consumer Discretionary",
-      "permanent_id": "sec-cik:0000354950",
+      "permanent_id": "issuer-unresolved:HD",
       "observations": 751.0,
       "close": 299.98001099,
       "sma50": 331.68079834,
@@ -1148,7 +1148,7 @@
       "adv20": 1242765834.6063232,
       "vol63": 0.26418002,
       "drawdown252": -0.26110215,
-      "relative_m6": -0.23581298,
+      "relative_m6": -0.23581309,
       "checks": {
         "history": true,
         "price": true,
@@ -1173,7 +1173,7 @@
       "ticker": "MCD",
       "name": "McDonald's",
       "sector": "Consumer Discretionary",
-      "permanent_id": "sec-cik:0000063908",
+      "permanent_id": "issuer-unresolved:MCD",
       "observations": 751.0,
       "close": 248.24000549,
       "sma50": 265.40440125,
@@ -1182,11 +1182,11 @@
       "slope200": -0.01544494,
       "m3": -0.1026723,
       "m6": -0.18696277,
-      "m12": -0.16508195,
+      "m12": -0.16508204,
       "adv20": 1232069218.9840698,
       "vol63": 0.22650037,
       "drawdown252": -0.25788391,
-      "relative_m6": -0.35040519,
+      "relative_m6": -0.3504053,
       "checks": {
         "history": true,
         "price": true,
@@ -1211,7 +1211,7 @@
       "ticker": "PEP",
       "name": "PepsiCo",
       "sector": "Consumer Staples",
-      "permanent_id": "sec-cik:0000077476",
+      "permanent_id": "issuer-unresolved:PEP",
       "observations": 751.0,
       "close": 129.75,
       "sma50": 138.61059998,
@@ -1220,11 +1220,11 @@
       "slope200": -0.00474765,
       "m3": -0.0766364,
       "m6": -0.13240943,
-      "m12": -0.04405996,
+      "m12": -0.04405985,
       "adv20": 1184176724.2965698,
       "vol63": 0.22447675,
       "drawdown252": -0.21579149,
-      "relative_m6": -0.29585185,
+      "relative_m6": -0.29585195,
       "checks": {
         "history": true,
         "price": true,
@@ -1248,73 +1248,73 @@
   ],
   "track_record": {
     "cost_bps_per_side": 10,
-    "strategy_return": 0.13852126,
-    "benchmark_return": 0.14554131,
-    "cagr": 0.14365841,
-    "annualized_volatility": 0.10663794,
-    "max_drawdown": -0.03912049,
+    "strategy_return": 0.13894443,
+    "benchmark_return": 0.14648216,
+    "cagr": 0.14409824,
+    "annualized_volatility": 0.10668089,
+    "max_drawdown": -0.0391205,
     "evaluations": 12,
     "forward_evaluations": 0,
     "equity_curve": [
       {
         "date": "2025-10-31",
-        "strategy": 1.0503537,
-        "benchmark": 1.03297787
+        "strategy": 1.05035369,
+        "benchmark": 1.03297797
       },
       {
         "date": "2025-11-28",
-        "strategy": 1.05402045,
-        "benchmark": 1.02573147
+        "strategy": 1.05402046,
+        "benchmark": 1.02573166
       },
       {
         "date": "2025-12-31",
         "strategy": 1.06505885,
-        "benchmark": 1.04138687
+        "benchmark": 1.04138706
       },
       {
         "date": "2026-01-30",
-        "strategy": 1.08475681,
-        "benchmark": 1.05062053
+        "strategy": 1.08475678,
+        "benchmark": 1.05062072
       },
       {
         "date": "2026-02-27",
-        "strategy": 1.09990423,
-        "benchmark": 1.04073259
+        "strategy": 1.09990422,
+        "benchmark": 1.04073269
       },
       {
         "date": "2026-03-31",
-        "strategy": 1.05793338,
-        "benchmark": 0.98243951
+        "strategy": 1.05793335,
+        "benchmark": 0.9824395
       },
       {
         "date": "2026-04-30",
-        "strategy": 1.05687544,
+        "strategy": 1.05687542,
         "benchmark": 1.07368212
       },
       {
         "date": "2026-05-29",
-        "strategy": 1.14059494,
-        "benchmark": 1.12526364
+        "strategy": 1.14059491,
+        "benchmark": 1.12526363
       },
       {
         "date": "2026-06-30",
-        "strategy": 1.13556378,
-        "benchmark": 1.10714846
+        "strategy": 1.13556375,
+        "benchmark": 1.10714837
       },
       {
         "date": "2026-07-31",
-        "strategy": 1.11003292,
-        "benchmark": 1.10667294
+        "strategy": 1.1100329,
+        "benchmark": 1.10667285
       },
       {
         "date": "2026-08-31",
-        "strategy": 1.11382422,
-        "benchmark": 1.1330905
+        "strategy": 1.11382419,
+        "benchmark": 1.13309041
       },
       {
         "date": "2026-09-18",
-        "strategy": 1.13852126,
-        "benchmark": 1.14554131
+        "strategy": 1.13894443,
+        "benchmark": 1.14648216
       }
     ],
     "cohorts": [
@@ -1334,7 +1334,7 @@
             "weight": 0.1,
             "entry_date": "2026-09-01",
             "entry_open": 459.91000366,
-            "current_return": 0.32351984
+            "current_return": 0.32396561
           },
           {
             "ticker": "CSCO",
@@ -1346,7 +1346,7 @@
             "weight": 0.1,
             "entry_date": "2026-09-01",
             "entry_open": 110.05000305,
-            "current_return": -0.00454339
+            "current_return": -0.0035984
           },
           {
             "ticker": "BAC",
@@ -1358,7 +1358,7 @@
             "weight": 0.1,
             "entry_date": "2026-09-01",
             "entry_open": 61.97000122,
-            "current_return": -0.06407271
+            "current_return": -0.06342399
           },
           {
             "ticker": "AMZN",
@@ -1370,7 +1370,7 @@
             "weight": 0.1,
             "entry_date": "2026-09-01",
             "entry_open": 254.83000183,
-            "current_return": 0.00616058
+            "current_return": 0.00610214
           },
           {
             "ticker": "JPM",
@@ -1382,7 +1382,7 @@
             "weight": 0.1,
             "entry_date": "2026-09-01",
             "entry_open": 355.73001099,
-            "current_return": -0.01141314
+            "current_return": -0.01051365
           },
           {
             "ticker": "LLY",
@@ -1394,10 +1394,10 @@
             "weight": 0.1,
             "entry_date": "2026-09-01",
             "entry_open": 1188.0,
-            "current_return": -0.02191922
+            "current_return": -0.02100031
           }
         ],
-        "cohort_return": 0.03795533,
+        "cohort_return": 0.03858857,
         "turnover": 0.6
       },
       {
@@ -1416,7 +1416,7 @@
             "weight": 0.1,
             "entry_date": "2026-08-03",
             "entry_open": 461.79000854,
-            "current_return": 0.31813162
+            "current_return": 0.31857558
           },
           {
             "ticker": "CSCO",
@@ -1428,7 +1428,7 @@
             "weight": 0.1,
             "entry_date": "2026-08-03",
             "entry_open": 114.59999847,
-            "current_return": -0.04406628
+            "current_return": -0.04315881
           },
           {
             "ticker": "CAT",
@@ -1440,7 +1440,7 @@
             "weight": 0.1,
             "entry_date": "2026-08-03",
             "entry_open": 811.58001709,
-            "current_return": 0.00337612
+            "current_return": 0.00667831
           },
           {
             "ticker": "GE",
@@ -1452,7 +1452,7 @@
             "weight": 0.1,
             "entry_date": "2026-08-03",
             "entry_open": 363.79000854,
-            "current_return": -0.13591634
+            "current_return": -0.13370355
           },
           {
             "ticker": "KO",
@@ -1464,7 +1464,7 @@
             "weight": 0.1,
             "entry_date": "2026-08-03",
             "entry_open": 88.48000336,
-            "current_return": -0.00130941
+            "current_return": -0.00125251
           },
           {
             "ticker": "JNJ",
@@ -1476,7 +1476,7 @@
             "weight": 0.1,
             "entry_date": "2026-08-03",
             "entry_open": 254.97000122,
-            "current_return": 0.07187612
+            "current_return": 0.07138345
           },
           {
             "ticker": "CVX",
@@ -1488,7 +1488,7 @@
             "weight": 0.1,
             "entry_date": "2026-08-03",
             "entry_open": 195.38000488,
-            "current_return": 0.06508071
+            "current_return": 0.06608641
           },
           {
             "ticker": "BAC",
@@ -1500,7 +1500,7 @@
             "weight": 0.1,
             "entry_date": "2026-08-03",
             "entry_open": 62.25999832,
-            "current_return": -0.06843211
+            "current_return": -0.06778641
           },
           {
             "ticker": "LLY",
@@ -1512,7 +1512,7 @@
             "weight": 0.1,
             "entry_date": "2026-08-03",
             "entry_open": 1152.0,
-            "current_return": 0.01009119
+            "current_return": 0.01104019
           },
           {
             "ticker": "JPM",
@@ -1524,10 +1524,10 @@
             "weight": 0.1,
             "entry_date": "2026-08-03",
             "entry_open": 353.75,
-            "current_return": -0.00587982
+            "current_return": -0.00497529
           }
         ],
-        "cohort_return": 0.02129518,
+        "cohort_return": 0.02228874,
         "turnover": 0.5
       },
       {
@@ -1546,7 +1546,7 @@
             "weight": 0.1,
             "entry_date": "2026-07-01",
             "entry_open": 557.5300293,
-            "current_return": 0.09177978
+            "current_return": 0.0921475
           },
           {
             "ticker": "CAT",
@@ -1558,7 +1558,7 @@
             "weight": 0.1,
             "entry_date": "2026-07-01",
             "entry_open": 1033.92004395,
-            "current_return": -0.21093449
+            "current_return": -0.20833761
           },
           {
             "ticker": "CSCO",
@@ -1570,7 +1570,7 @@
             "weight": 0.1,
             "entry_date": "2026-07-01",
             "entry_open": 116.54000092,
-            "current_return": -0.05646283
+            "current_return": -0.05556712
           },
           {
             "ticker": "JNJ",
@@ -1582,7 +1582,7 @@
             "weight": 0.1,
             "entry_date": "2026-07-01",
             "entry_open": 253.25,
-            "current_return": 0.07915595
+            "current_return": 0.07865994
           },
           {
             "ticker": "GE",
@@ -1594,7 +1594,7 @@
             "weight": 0.1,
             "entry_date": "2026-07-01",
             "entry_open": 375.02999878,
-            "current_return": -0.16076888
+            "current_return": -0.15861973
           },
           {
             "ticker": "GOOGL",
@@ -1606,7 +1606,7 @@
             "weight": 0.1,
             "entry_date": "2026-07-01",
             "entry_open": 358.36999512,
-            "current_return": -0.00457864
+            "current_return": -0.00183416
           },
           {
             "ticker": "KO",
@@ -1618,7 +1618,7 @@
             "weight": 0.1,
             "entry_date": "2026-07-01",
             "entry_open": 81.69999695,
-            "current_return": 0.0815686
+            "current_return": 0.08163023
           },
           {
             "ticker": "XOM",
@@ -1630,7 +1630,7 @@
             "weight": 0.1,
             "entry_date": "2026-07-01",
             "entry_open": 136.52999878,
-            "current_return": 0.17624824
+            "current_return": 0.17713282
           },
           {
             "ticker": "LLY",
@@ -1642,10 +1642,10 @@
             "weight": 0.1,
             "entry_date": "2026-07-01",
             "entry_open": 1217.51000977,
-            "current_return": -0.04425833
+            "current_return": -0.0433604
           }
         ],
-        "cohort_return": -0.00536118,
+        "cohort_return": -0.00423873,
         "turnover": 0.6
       },
       {
@@ -1664,7 +1664,7 @@
             "weight": 0.1,
             "entry_date": "2026-06-01",
             "entry_open": 500.16000366,
-            "current_return": 0.21701057
+            "current_return": 0.21742048
           },
           {
             "ticker": "CAT",
@@ -1676,7 +1676,7 @@
             "weight": 0.1,
             "entry_date": "2026-06-01",
             "entry_open": 860.15997314,
-            "current_return": -0.05153614
+            "current_return": -0.04841467
           },
           {
             "ticker": "CSCO",
@@ -1688,7 +1688,7 @@
             "weight": 0.1,
             "entry_date": "2026-06-01",
             "entry_open": 119.80000305,
-            "current_return": -0.08213836
+            "current_return": -0.08126703
           },
           {
             "ticker": "XOM",
@@ -1700,7 +1700,7 @@
             "weight": 0.1,
             "entry_date": "2026-06-01",
             "entry_open": 147.02000427,
-            "current_return": 0.09232187
+            "current_return": 0.09314334
           },
           {
             "ticker": "GOOGL",
@@ -1712,7 +1712,7 @@
             "weight": 0.1,
             "entry_date": "2026-06-01",
             "entry_open": 376.51998901,
-            "current_return": -0.05199665
+            "current_return": -0.0493829
           },
           {
             "ticker": "CVX",
@@ -1724,7 +1724,7 @@
             "weight": 0.1,
             "entry_date": "2026-06-01",
             "entry_open": 184.38000488,
-            "current_return": 0.12862282
+            "current_return": 0.12968852
           },
           {
             "ticker": "AMZN",
@@ -1736,10 +1736,10 @@
             "weight": 0.1,
             "entry_date": "2026-06-01",
             "entry_open": 266.29000854,
-            "current_return": -0.03714036
+            "current_return": -0.03719628
           }
         ],
-        "cohort_return": 0.03073482,
+        "cohort_return": 0.03199878,
         "turnover": 0.5
       },
       {
@@ -1758,7 +1758,7 @@
             "weight": 0.1,
             "entry_date": "2026-05-01",
             "entry_open": 896.84002686,
-            "current_return": -0.09032753
+            "current_return": -0.08733373
           },
           {
             "ticker": "AMD",
@@ -1770,7 +1770,7 @@
             "weight": 0.1,
             "entry_date": "2026-05-01",
             "entry_open": 351.86999512,
-            "current_return": 0.72990031
+            "current_return": 0.73048296
           },
           {
             "ticker": "GOOGL",
@@ -1782,7 +1782,7 @@
             "weight": 0.1,
             "entry_date": "2026-05-01",
             "entry_open": 381.63000488,
-            "current_return": -0.06469042
+            "current_return": -0.06211167
           },
           {
             "ticker": "XOM",
@@ -1794,7 +1794,7 @@
             "weight": 0.1,
             "entry_date": "2026-05-01",
             "entry_open": 152.61000061,
-            "current_return": 0.05945338
+            "current_return": 0.06025013
           },
           {
             "ticker": "CSCO",
@@ -1806,7 +1806,7 @@
             "weight": 0.1,
             "entry_date": "2026-05-01",
             "entry_open": 91.75,
-            "current_return": 0.19847217
+            "current_return": 0.19960988
           },
           {
             "ticker": "WMT",
@@ -1818,7 +1818,7 @@
             "weight": 0.1,
             "entry_date": "2026-05-01",
             "entry_open": 131.91999817,
-            "current_return": -0.18419081
+            "current_return": -0.18327729
           },
           {
             "ticker": "CVX",
@@ -1830,7 +1830,7 @@
             "weight": 0.1,
             "entry_date": "2026-05-01",
             "entry_open": 191.30000305,
-            "current_return": 0.09775979
+            "current_return": 0.09879634
           },
           {
             "ticker": "JNJ",
@@ -1842,7 +1842,7 @@
             "weight": 0.1,
             "entry_date": "2026-05-01",
             "entry_open": 229.05999756,
-            "current_return": 0.19998256
+            "current_return": 0.199431
           },
           {
             "ticker": "LLY",
@@ -1854,7 +1854,7 @@
             "weight": 0.1,
             "entry_date": "2026-05-01",
             "entry_open": 948.95001221,
-            "current_return": 0.22833461
+            "current_return": 0.22948864
           },
           {
             "ticker": "KO",
@@ -1866,10 +1866,10 @@
             "weight": 0.1,
             "entry_date": "2026-05-01",
             "entry_open": 79.29000092,
-            "current_return": 0.12163773
+            "current_return": 0.12170163
           }
         ],
-        "cohort_return": 0.12963318,
+        "cohort_return": 0.13070379,
         "turnover": 1.0
       },
       {
@@ -1897,7 +1897,7 @@
             "weight": 0.1,
             "entry_date": "2026-03-02",
             "entry_open": 733.48999023,
-            "current_return": 0.11437626
+            "current_return": 0.11804377
           },
           {
             "ticker": "GOOGL",
@@ -1909,7 +1909,7 @@
             "weight": 0.1,
             "entry_date": "2026-03-02",
             "entry_open": 303.23001099,
-            "current_return": 0.17796226
+            "current_return": 0.18120991
           },
           {
             "ticker": "JNJ",
@@ -1921,7 +1921,7 @@
             "weight": 0.1,
             "entry_date": "2026-03-02",
             "entry_open": 249.19000244,
-            "current_return": 0.10304584
+            "current_return": 0.10253884
           },
           {
             "ticker": "XOM",
@@ -1933,7 +1933,7 @@
             "weight": 0.1,
             "entry_date": "2026-03-02",
             "entry_open": 159.3500061,
-            "current_return": 0.01464191
+            "current_return": 0.01540496
           },
           {
             "ticker": "GE",
@@ -1945,7 +1945,7 @@
             "weight": 0.1,
             "entry_date": "2026-03-02",
             "entry_open": 341.45001221,
-            "current_return": -0.07689179
+            "current_return": -0.07452784
           },
           {
             "ticker": "AMD",
@@ -1957,7 +1957,7 @@
             "weight": 0.1,
             "entry_date": "2026-03-02",
             "entry_open": 193.8500061,
-            "current_return": 2.14005671
+            "current_return": 2.14111432
           },
           {
             "ticker": "WMT",
@@ -1969,7 +1969,7 @@
             "weight": 0.1,
             "entry_date": "2026-03-02",
             "entry_open": 127.45999908,
-            "current_return": -0.15391171
+            "current_return": -0.15296428
           },
           {
             "ticker": "LLY",
@@ -1981,7 +1981,7 @@
             "weight": 0.1,
             "entry_date": "2026-03-02",
             "entry_open": 1044.61999512,
-            "current_return": 0.11583938
+            "current_return": 0.11688772
           },
           {
             "ticker": "KO",
@@ -1993,7 +1993,7 @@
             "weight": 0.1,
             "entry_date": "2026-03-02",
             "entry_open": 81.25,
-            "current_return": 0.10210665
+            "current_return": 0.10216945
           },
           {
             "ticker": "CVX",
@@ -2005,10 +2005,10 @@
             "weight": 0.1,
             "entry_date": "2026-03-02",
             "entry_open": 190.33000183,
-            "current_return": 0.10335455
+            "current_return": 0.10439639
           }
         ],
-        "cohort_return": 0.26405801,
+        "cohort_return": 0.26542732,
         "turnover": 0.4
       },
       {
@@ -2027,7 +2027,7 @@
             "weight": 0.1,
             "entry_date": "2026-02-02",
             "entry_open": 336.22000122,
-            "current_return": 0.06238023
+            "current_return": 0.06530943
           },
           {
             "ticker": "CAT",
@@ -2039,7 +2039,7 @@
             "weight": 0.1,
             "entry_date": "2026-02-02",
             "entry_open": 659.82000732,
-            "current_return": 0.23879823
+            "current_return": 0.24287522
           },
           {
             "ticker": "AMD",
@@ -2051,7 +2051,7 @@
             "weight": 0.1,
             "entry_date": "2026-02-02",
             "entry_open": 235.77000427,
-            "current_return": 1.58175341
+            "current_return": 1.58262297
           },
           {
             "ticker": "JNJ",
@@ -2063,7 +2063,7 @@
             "weight": 0.1,
             "entry_date": "2026-02-02",
             "entry_open": 228.32000732,
-            "current_return": 0.2102716
+            "current_return": 0.20971532
           },
           {
             "ticker": "LLY",
@@ -2075,7 +2075,7 @@
             "weight": 0.1,
             "entry_date": "2026-02-02",
             "entry_open": 1037.56994629,
-            "current_return": 0.12529616
+            "current_return": 0.12635339
           },
           {
             "ticker": "XOM",
@@ -2087,7 +2087,7 @@
             "weight": 0.1,
             "entry_date": "2026-02-02",
             "entry_open": 139.83000183,
-            "current_return": 0.16399102
+            "current_return": 0.16486652
           },
           {
             "ticker": "TSLA",
@@ -2099,7 +2099,7 @@
             "weight": 0.1,
             "entry_date": "2026-02-02",
             "entry_open": 421.29000854,
-            "current_return": -0.10781175
+            "current_return": -0.1077049
           },
           {
             "ticker": "WMT",
@@ -2111,7 +2111,7 @@
             "weight": 0.1,
             "entry_date": "2026-02-02",
             "entry_open": 119.5,
-            "current_return": -0.09755301
+            "current_return": -0.09654253
           },
           {
             "ticker": "GE",
@@ -2123,7 +2123,7 @@
             "weight": 0.1,
             "entry_date": "2026-02-02",
             "entry_open": 305.6000061,
-            "current_return": 0.03139818
+            "current_return": 0.03403955
           },
           {
             "ticker": "CSCO",
@@ -2135,10 +2135,10 @@
             "weight": 0.1,
             "entry_date": "2026-02-02",
             "entry_open": 78.12000275,
-            "current_return": 0.41520303
+            "current_return": 0.41654635
           }
         ],
-        "cohort_return": 0.26237271,
+        "cohort_return": 0.26380813,
         "turnover": 0.4
       },
       {
@@ -2157,7 +2157,7 @@
             "weight": 0.1,
             "entry_date": "2026-01-02",
             "entry_open": 316.8999939,
-            "current_return": 0.12714899
+            "current_return": 0.13025666
           },
           {
             "ticker": "AMD",
@@ -2169,7 +2169,7 @@
             "weight": 0.1,
             "entry_date": "2026-01-02",
             "entry_open": 218.8999939,
-            "current_return": 1.78072192
+            "current_return": 1.7816585
           },
           {
             "ticker": "CAT",
@@ -2181,7 +2181,7 @@
             "weight": 0.1,
             "entry_date": "2026-01-02",
             "entry_open": 577.59002686,
-            "current_return": 0.41847373
+            "current_return": 0.42314204
           },
           {
             "ticker": "JNJ",
@@ -2193,7 +2193,7 @@
             "weight": 0.1,
             "entry_date": "2026-01-02",
             "entry_open": 206.82000732,
-            "current_return": 0.33608561
+            "current_return": 0.3354715
           },
           {
             "ticker": "LLY",
@@ -2205,7 +2205,7 @@
             "weight": 0.1,
             "entry_date": "2026-01-02",
             "entry_open": 1076.40002441,
-            "current_return": 0.08470233
+            "current_return": 0.08572142
           },
           {
             "ticker": "GE",
@@ -2217,7 +2217,7 @@
             "weight": 0.1,
             "entry_date": "2026-01-02",
             "entry_open": 309.75,
-            "current_return": 0.0175797
+            "current_return": 0.02018557
           },
           {
             "ticker": "AVGO",
@@ -2229,7 +2229,7 @@
             "weight": 0.1,
             "entry_date": "2026-01-02",
             "entry_open": 352.77999878,
-            "current_return": 0.01600287
+            "current_return": 0.01692756
           },
           {
             "ticker": "TSLA",
@@ -2241,7 +2241,7 @@
             "weight": 0.1,
             "entry_date": "2026-01-02",
             "entry_open": 457.79998779,
-            "current_return": -0.1789646
+            "current_return": -0.17886628
           },
           {
             "ticker": "JPM",
@@ -2253,7 +2253,7 @@
             "weight": 0.1,
             "entry_date": "2026-01-02",
             "entry_open": 322.5,
-            "current_return": 0.10593402
+            "current_return": 0.10694028
           },
           {
             "ticker": "WMT",
@@ -2265,10 +2265,10 @@
             "weight": 0.1,
             "entry_date": "2026-01-02",
             "entry_open": 111.43000031,
-            "current_return": -0.03219591
+            "current_return": -0.03111219
           }
         ],
-        "cohort_return": 0.26754887,
+        "cohort_return": 0.26903251,
         "turnover": 0.2
       },
       {
@@ -2287,7 +2287,7 @@
             "weight": 0.1,
             "entry_date": "2025-12-01",
             "entry_open": 317.70001221,
-            "current_return": 0.12504604
+            "current_return": 0.12814781
           },
           {
             "ticker": "AMD",
@@ -2299,7 +2299,7 @@
             "weight": 0.1,
             "entry_date": "2025-12-01",
             "entry_open": 213.88000488,
-            "current_return": 1.8459884
+            "current_return": 1.84694696
           },
           {
             "ticker": "AVGO",
@@ -2311,7 +2311,7 @@
             "weight": 0.1,
             "entry_date": "2025-12-01",
             "entry_open": 394.8500061,
-            "current_return": -0.09051218
+            "current_return": -0.08968444
           },
           {
             "ticker": "CAT",
@@ -2323,7 +2323,7 @@
             "weight": 0.1,
             "entry_date": "2025-12-01",
             "entry_open": 570.40997314,
-            "current_return": 0.43632885
+            "current_return": 0.44105592
           },
           {
             "ticker": "LLY",
@@ -2335,7 +2335,7 @@
             "weight": 0.1,
             "entry_date": "2025-12-01",
             "entry_open": 1074.38000488,
-            "current_return": 0.08674176
+            "current_return": 0.08776277
           },
           {
             "ticker": "JNJ",
@@ -2347,7 +2347,7 @@
             "weight": 0.1,
             "entry_date": "2025-12-01",
             "entry_open": 206.5,
-            "current_return": 0.33815602
+            "current_return": 0.33754086
           },
           {
             "ticker": "GE",
@@ -2359,7 +2359,7 @@
             "weight": 0.1,
             "entry_date": "2025-12-01",
             "entry_open": 295.75,
-            "current_return": 0.066968
+            "current_return": 0.06970036
           },
           {
             "ticker": "TSLA",
@@ -2371,7 +2371,7 @@
             "weight": 0.1,
             "entry_date": "2025-12-01",
             "entry_open": 425.32000732,
-            "current_return": -0.11626543
+            "current_return": -0.11615959
           },
           {
             "ticker": "JPM",
@@ -2383,7 +2383,7 @@
             "weight": 0.1,
             "entry_date": "2025-12-01",
             "entry_open": 312.95001221,
-            "current_return": 0.13968278
+            "current_return": 0.14071964
           },
           {
             "ticker": "BAC",
@@ -2395,10 +2395,10 @@
             "weight": 0.1,
             "entry_date": "2025-12-01",
             "entry_open": 53.5,
-            "current_return": 0.10158951
+            "current_return": 0.10235306
           }
         ],
-        "cohort_return": 0.29337238,
+        "cohort_return": 0.29483833,
         "turnover": 0.1
       },
       {
@@ -2417,7 +2417,7 @@
             "weight": 0.1,
             "entry_date": "2025-11-03",
             "entry_open": 372.0,
-            "current_return": -0.03464713
+            "current_return": -0.03376854
           },
           {
             "ticker": "AMD",
@@ -2429,7 +2429,7 @@
             "weight": 0.1,
             "entry_date": "2025-11-03",
             "entry_open": 259.32998657,
-            "current_return": 1.34720257
+            "current_return": 1.34799314
           },
           {
             "ticker": "CAT",
@@ -2441,7 +2441,7 @@
             "weight": 0.1,
             "entry_date": "2025-11-03",
             "entry_open": 575.92999268,
-            "current_return": 0.42256234
+            "current_return": 0.42724411
           },
           {
             "ticker": "GOOGL",
@@ -2453,7 +2453,7 @@
             "weight": 0.1,
             "entry_date": "2025-11-03",
             "entry_open": 282.17999268,
-            "current_return": 0.26666357
+            "current_return": 0.27015591
           },
           {
             "ticker": "TSLA",
@@ -2465,7 +2465,7 @@
             "weight": 0.1,
             "entry_date": "2025-11-03",
             "entry_open": 455.98999023,
-            "current_return": -0.1757056
+            "current_return": -0.17560688
           },
           {
             "ticker": "GE",
@@ -2477,7 +2477,7 @@
             "weight": 0.1,
             "entry_date": "2025-11-03",
             "entry_open": 309.1000061,
-            "current_return": 0.02088574
+            "current_return": 0.02350008
           },
           {
             "ticker": "BAC",
@@ -2489,7 +2489,7 @@
             "weight": 0.1,
             "entry_date": "2025-11-03",
             "entry_open": 53.25999832,
-            "current_return": 0.10655354
+            "current_return": 0.10732061
           },
           {
             "ticker": "JPM",
@@ -2501,7 +2501,7 @@
             "weight": 0.1,
             "entry_date": "2025-11-03",
             "entry_open": 311.0,
-            "current_return": 0.1468286
+            "current_return": 0.14787219
           },
           {
             "ticker": "JNJ",
@@ -2513,10 +2513,10 @@
             "weight": 0.1,
             "entry_date": "2025-11-03",
             "entry_open": 189.0,
-            "current_return": 0.47134228
+            "current_return": 0.470666
           }
         ],
-        "cohort_return": 0.28574288,
+        "cohort_return": 0.28726407,
         "turnover": 0.4
       },
       {
@@ -2535,7 +2535,7 @@
             "weight": 0.1,
             "entry_date": "2025-10-01",
             "entry_open": 328.1499939,
-            "current_return": 0.09435098
+            "current_return": 0.09534697
           },
           {
             "ticker": "ORCL",
@@ -2547,7 +2547,7 @@
             "weight": 0.1,
             "entry_date": "2025-10-01",
             "entry_open": 278.79998779,
-            "current_return": -0.46078135
+            "current_return": -0.46226871
           },
           {
             "ticker": "TSLA",
@@ -2559,7 +2559,7 @@
             "weight": 0.1,
             "entry_date": "2025-10-01",
             "entry_open": 443.79998779,
-            "current_return": -0.15306443
+            "current_return": -0.152963
           },
           {
             "ticker": "GOOGL",
@@ -2571,7 +2571,7 @@
             "weight": 0.1,
             "entry_date": "2025-10-01",
             "entry_open": 240.75,
-            "current_return": 0.48464026
+            "current_return": 0.48873367
           },
           {
             "ticker": "GE",
@@ -2583,7 +2583,7 @@
             "weight": 0.1,
             "entry_date": "2025-10-01",
             "entry_open": 296.38000488,
-            "current_return": 0.0647
+            "current_return": 0.06742644
           },
           {
             "ticker": "NFLX",
@@ -2595,7 +2595,7 @@
             "weight": 0.1,
             "entry_date": "2025-10-01",
             "entry_open": 1175.49003601,
-            "current_return": -0.38093906
+            "current_return": -0.3789824
           },
           {
             "ticker": "JPM",
@@ -2607,7 +2607,7 @@
             "weight": 0.1,
             "entry_date": "2025-10-01",
             "entry_open": 313.97000122,
-            "current_return": 0.14150303
+            "current_return": 0.14254166
           },
           {
             "ticker": "CAT",
@@ -2619,7 +2619,7 @@
             "weight": 0.1,
             "entry_date": "2025-10-01",
             "entry_open": 474.01000977,
-            "current_return": 0.73340255
+            "current_return": 0.73910743
           },
           {
             "ticker": "BAC",
@@ -2631,10 +2631,10 @@
             "weight": 0.1,
             "entry_date": "2025-10-01",
             "entry_open": 51.29999924,
-            "current_return": 0.14883121
+            "current_return": 0.1496275
           }
         ],
-        "cohort_return": 0.07473813,
+        "cohort_return": 0.07650773,
         "turnover": 0.9
       }
     ]
