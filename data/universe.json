@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 0921202618:01",
-    "other_listed_file_timestamp": "File Creation Time: 0921202618:01",
-    "retrieved_at": "2026-09-22T01:00:05.254121+00:00",
-    "directory_rows": 6832,
-    "eligible_common_shares": 4757,
-    "unclassified_sectors": 173,
-    "unresolved_issuer_ids": 4757
+    "nasdaq_file_timestamp": "File Creation Time: 0922202603:03",
+    "other_listed_file_timestamp": "File Creation Time: 0922202603:03",
+    "retrieved_at": "2026-09-22T08:28:11.804469+00:00",
+    "directory_rows": 6831,
+    "eligible_common_shares": 4758,
+    "unclassified_sectors": 174,
+    "unresolved_issuer_ids": 4758
   },
   "securities": [
     {
@@ -3595,6 +3595,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "BCDA",
+      "name": "BioCardia, Inc. - Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:BCDA",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "BCE",
       "name": "BCE, Inc. Common Stock",
       "sector": "Telecommunications",
@@ -4867,13 +4874,6 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:BROS",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "BRR",
-      "name": "ProCap Financial, Inc. - Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:BRR",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "BRSL",
@@ -6686,6 +6686,13 @@
       "name": "Clearfield, Inc. - Common Stock",
       "sector": "Utilities",
       "permanent_id": "issuer-unresolved:CLFD",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "CLGN",
+      "name": "CollPlant Biotechnologies Ltd. - Ordinary Shares",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:CLGN",
       "exchange": "Nasdaq"
     },
     {
@@ -10483,6 +10490,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "ESYN",
+      "name": "EnerSyn Global Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:ESYN",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "ETD",
       "name": "Ethan Allen Interiors Inc. Common Stock",
       "sector": "Consumer Discretionary",
@@ -11187,13 +11201,6 @@
       "name": "Ferrovial N.V. - Ordinary Shares",
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:FER",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "FERA",
-      "name": "Fifth Era Acquisition Corp I - Class A Ordinary Shares",
-      "sector": "Unclassified",
-      "permanent_id": "issuer-unresolved:FERA",
       "exchange": "Nasdaq"
     },
     {
@@ -14736,13 +14743,6 @@
       "name": "Hancock Whitney Corporation - Common Stock",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:HWC",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "HWH",
-      "name": "HWH International Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:HWH",
       "exchange": "Nasdaq"
     },
     {
@@ -20696,13 +20696,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "NHIC",
-      "name": "NewHold Investment Corp III - Class A Ordinary shares",
-      "sector": "Unclassified",
-      "permanent_id": "issuer-unresolved:NHIC",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "NHIV",
       "name": "NewHold Investment Corp IV - Class A Ordinary Shares",
       "sector": "Finance",
@@ -22975,6 +22968,13 @@
       "name": "Puma Biotechnology Inc - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:PBYI",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "PC",
+      "name": "Premium Catering (Holdings) Limited - Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:PC",
       "exchange": "Nasdaq"
     },
     {
@@ -28522,6 +28522,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "SVIA",
+      "name": "Silvia, Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:SVIA",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "SVIV",
       "name": "Spring Valley Acquisition Corp. IV - Class A Ordinary Shares",
       "sector": "Finance",
@@ -28751,6 +28758,13 @@
       "sector": "Energy",
       "permanent_id": "issuer-unresolved:TALO",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "TANH",
+      "name": "Tantech Holdings Ltd. - Class A Common Shares",
+      "sector": "Industrials",
+      "permanent_id": "issuer-unresolved:TANH",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "TAOP",
@@ -31837,13 +31851,6 @@
       "name": "WEBTOON Entertainment Inc. - Common stock",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:WBTN",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "WBUY",
-      "name": "WEBUY GLOBAL LTD. - Class A Ordinary Shares",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:WBUY",
       "exchange": "Nasdaq"
     },
     {
