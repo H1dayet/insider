@@ -23,7 +23,7 @@ def test_total_return_accounts_for_split_and_dividend():
     splits = pd.Series([0.0, 2.0, 0.0])
     result = total_return_index(close, dividends, splits)
     assert result.iloc[1] == 102.0
-    assert result.iloc[2] == 104.04
+    assert np.isclose(result.iloc[2], 104.04)
 
 
 def test_percentile_rank_uses_average_ties_and_singleton_neutral():
