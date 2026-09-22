@@ -85,6 +85,8 @@ def indicators_at(frame: pd.DataFrame, position: int) -> dict[str, float | int |
         "m3": ratio_back(t, 63),
         "m6": ratio_back(t, 126),
         "m12": ratio_back(t, 252),
+        "m12_skip": float(t.iloc[-22] / t.iloc[-253] - 1.0)
+        if len(t) >= 253 and t.iloc[-253] > 0 else math.nan,
         "adv20": float(dollar_volume.tail(20).mean()) if len(dollar_volume) >= 20 else math.nan,
         "vol63": float(returns.std(ddof=1) * math.sqrt(TRADING_DAYS)) if len(returns) == 63 else math.nan,
         "drawdown252": float(t.iloc[-1] / peak - 1.0)
