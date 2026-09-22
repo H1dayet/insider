@@ -1,12 +1,12 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 0921202611:01",
-    "other_listed_file_timestamp": "File Creation Time: 0921202611:01",
-    "retrieved_at": "2026-09-21T15:31:15.780025+00:00",
+    "nasdaq_file_timestamp": "File Creation Time: 0921202618:01",
+    "other_listed_file_timestamp": "File Creation Time: 0921202618:01",
+    "retrieved_at": "2026-09-22T01:00:05.254121+00:00",
     "directory_rows": 6832,
     "eligible_common_shares": 4757,
-    "unclassified_sectors": 174,
+    "unclassified_sectors": 173,
     "unresolved_issuer_ids": 4757
   },
   "securities": [
@@ -12872,7 +12872,7 @@
     {
       "ticker": "GJT",
       "name": "Synthetic Fixed-Income Securities, Inc. Floating Rate Structured Repackaged Asset-Backed Trust Securities Certificates, Series 2006-3",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJT",
       "exchange": "NYSE"
     },
