@@ -29,7 +29,8 @@ def total_return_index(
     closes = raw_close.astype(float)
     divs = dividends.fillna(0).astype(float)
     split_factor = splits.replace(0, 1).astype(float)
-    gross = (closes * split_factor + divs) / closes.shift(1)
+    # Cash distributions are quoted per post-split share for the session.
+    gross = (closes + divs) * split_factor / closes.shift(1)
     gross = gross.replace([np.inf, -np.inf], np.nan)
     if len(gross):
         gross.iloc[0] = 1.0

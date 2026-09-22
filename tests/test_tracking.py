@@ -66,6 +66,14 @@ def test_missing_close_uses_entry_price_instead_of_zero():
     assert state["daily_snapshots"][0]["portfolio_value"] == pytest.approx(9999.)
 
 
+def test_stale_feed_does_not_backfill_before_inception():
+    state, frames, dates, target = fixture()
+    state["started_at"] = "2026-09-22"
+    state["pending"] = observed_signal(pd.Timestamp("2026-09-18"), [target], {"active": True}, "2026-09-22T08:00Z")
+    advance_observed(state, frames, dates[1], [], {"active": False}, "2026-09-22T22:00Z")
+    assert [r["date"] for r in state["daily_snapshots"]] == ["2026-09-22"]
+
+
 def test_buffer_retains_rank_15_but_rejects_unqualified_and_rank_21():
     rows = [{"ticker": str(i), "permanent_id": str(i), "name": str(i), "sector": "Unclassified",
              "qualified": True, "score": 100-i, "adv20": 1e8, "close": 100., "m12_skip": i/100} for i in range(1, 26)]
