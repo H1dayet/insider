@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 0922202603:03",
-    "other_listed_file_timestamp": "File Creation Time: 0922202603:03",
-    "retrieved_at": "2026-09-22T08:28:11.804469+00:00",
-    "directory_rows": 6831,
-    "eligible_common_shares": 4758,
-    "unclassified_sectors": 174,
-    "unresolved_issuer_ids": 4758
+    "nasdaq_file_timestamp": "File Creation Time: 0922202618:01",
+    "other_listed_file_timestamp": "File Creation Time: 0922202618:01",
+    "retrieved_at": "2026-09-23T00:49:39.122287+00:00",
+    "directory_rows": 6833,
+    "eligible_common_shares": 4759,
+    "unclassified_sectors": 176,
+    "unresolved_issuer_ids": 4759
   },
   "securities": [
     {
@@ -16113,7 +16113,7 @@
     {
       "ticker": "JBK",
       "name": "Lehman ABS 3.50 3.50% Adjustable Corp Backed Tr Certs GS Cap I",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:JBK",
       "exchange": "NYSE"
     },
@@ -21491,6 +21491,13 @@
       "name": "Northwest Bancshares, Inc. - Common Stock",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:NWBI",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "NWCL",
+      "name": "newcleo plc - Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:NWCL",
       "exchange": "Nasdaq"
     },
     {
