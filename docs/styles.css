@@ -82,6 +82,7 @@ main { min-width: 0; }
 .sort-field { display: flex; align-items: center; gap: 7px; color: var(--faint); font-size: 10px; }
 .sort-field select { border: 0; outline: 0; background: transparent; color: var(--ink); font-size: 11px; font-weight: 600; }
 .table-wrap { overflow-x: auto; }
+#data-status { background: var(--yellow-bg); color: var(--yellow); border: 1px solid currentColor; border-radius: 6px; }
 #experiment-results table { min-width: 640px; }
 #experiment-results caption { padding: 12px 14px; text-align: left; color: var(--muted); font-size: 12px; }
 #experiment-results tbody th { color: var(--ink); font: 500 12px var(--sans); text-transform: none; letter-spacing: 0; }

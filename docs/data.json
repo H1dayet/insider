@@ -4,7 +4,7 @@
     "generated_at": "2026-09-23T00:54:09.513036+00:00",
     "latest_completed_session": "2026-09-21",
     "provider": "Nasdaq Trader listing directories; Yahoo Finance via yfinance; SEC company_tickers for issuer IDs",
-    "data_status": "final provider bars",
+    "data_status": "provider data delayed",
     "strategy_version": "3.0.0",
     "data_version": "nasdaq-directory-yahoo-v2",
     "universe_definition": "Current Nasdaq and NYSE common-share listings after instrument-type exclusions",
@@ -23,7 +23,13 @@
       "unresolved_issuer_ids": 4759
     },
     "adjustment_method": "Yahoo split-normalized OHLC is retained as P; contemporaneous raw OHLC is reconstructed from split factors; Yahoo Adj Close is normalized as T and includes distributions.",
-    "research_status": "Unvalidated hypothesis"
+    "research_status": "Unvalidated hypothesis",
+    "freshness": {
+      "expected_session": "2026-09-22",
+      "delayed": true,
+      "last_attempt_at": "2026-09-23T06:52:57.453720+00:00",
+      "message": "Price data delayed: waiting for complete SPY prices for 2026-09-22. Track record remains through 2026-09-21; profit has not been recalculated. Automatic retries will catch up using the saved recommendations when prices arrive."
+    }
   },
   "market": {
     "ticker": "SPY",

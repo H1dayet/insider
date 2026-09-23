@@ -334,6 +334,37 @@ def common_session(frames: dict[str, pd.DataFrame]) -> pd.Timestamp:
     return max(eligible)
 
 
+def feed_freshness(latest: pd.Timestamp, now=None) -> dict[str, Any]:
+    now = pd.Timestamp(now or datetime.now(timezone.utc))
+    schedule = mcal.get_calendar("NYSE").schedule(
+        start_date=(now - pd.Timedelta(days=21)).date(), end_date=now.date()
+    )
+    # Allow the provider time to finalize daily bars after the exchange closes.
+    completed = schedule[schedule["market_close"] + pd.Timedelta(minutes=30) <= now]
+    expected = completed.index[-1]
+    delayed = latest < expected
+    return {
+        "expected_session": expected.date().isoformat(),
+        "delayed": bool(delayed),
+        "last_attempt_at": now.isoformat(),
+        "message": (
+            f"Price data delayed: waiting for complete SPY prices for {expected.date().isoformat()}. "
+            f"Track record remains through {latest.date().isoformat()}; profit has not been recalculated. "
+            "Automatic retries will catch up using the saved recommendations when prices arrive."
+        ) if delayed else "",
+    }
+
+
+def publish_delayed_feed(freshness: dict[str, Any]) -> dict[str, Any]:
+    path = DOCS / "data.json"
+    if not path.exists():
+        raise RuntimeError(freshness["message"])
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    payload["meta"].update(freshness=freshness, data_status="provider data delayed")
+    write_json(path, payload)
+    return payload
+
+
 def result_for_date(
     security: Security,
     frame: pd.DataFrame,
@@ -793,6 +824,13 @@ def update_experiments(frames, latest, screen, market):
 
 
 def run() -> dict[str, Any]:
+    # Check the benchmark first: an incomplete session must not look like a
+    # successful daily refresh or require downloading thousands of symbols.
+    benchmark_frame = download_history(BENCHMARK)
+    benchmark_latest = common_session({BENCHMARK: benchmark_frame})
+    freshness = feed_freshness(benchmark_latest)
+    if freshness["delayed"]:
+        return publish_delayed_feed(freshness)
     universe, universe_source = load_universe()
     tickers = [BENCHMARK] + [item.ticker for item in universe if item.ticker != BENCHMARK]
     for path in (PAPER_PORTFOLIO, EXPERIMENTS):
@@ -805,6 +843,8 @@ def run() -> dict[str, Any]:
                 tickers.extend(portfolio.get("stock_ledger", {}))
     tickers = list(dict.fromkeys(tickers))
     frames, failures = download_histories(tickers)
+    frames[BENCHMARK] = benchmark_frame
+    failures.pop(BENCHMARK, None)
     if BENCHMARK not in frames:
         raise RuntimeError(f"Benchmark download failed: {failures.get(BENCHMARK, 'unknown error')}")
     available = [security for security in universe if security.ticker in frames]
@@ -825,7 +865,8 @@ def run() -> dict[str, Any]:
             "generated_at": datetime.now(timezone.utc).isoformat(),
             "latest_completed_session": latest.date().isoformat(),
             "provider": "Nasdaq Trader listing directories; Yahoo Finance via yfinance; SEC company_tickers for issuer IDs",
-            "data_status": "final provider bars",
+            "data_status": "complete provider bars",
+            "freshness": freshness,
             "strategy_version": STRATEGY_VERSION,
             "data_version": DATA_VERSION,
             "universe_definition": "Current Nasdaq and NYSE common-share listings after instrument-type exclusions",
@@ -877,6 +918,9 @@ def run() -> dict[str, Any]:
 def main() -> None:
     argparse.ArgumentParser(description="Build the Northstar research dataset").parse_args()
     payload = run()
+    if payload["meta"].get("freshness", {}).get("delayed"):
+        print(f"::warning::{payload['meta']['freshness']['message']}")
+        return
     print(
         f"Built {len(payload['screen'])} securities through "
         f"{payload['meta']['latest_completed_session']} with "

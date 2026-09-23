@@ -3,6 +3,7 @@ name: Refresh Northstar research
 on:
   schedule:
     - cron: "30 22 * * 1-5"
+    - cron: "17 4,7 * * 2-6"
   workflow_dispatch: {}
 
 permissions:

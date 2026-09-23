@@ -27,7 +27,12 @@ function renderOverview() {
   $('#strategy-version').textContent = meta.strategy_version;
   $('#timestamp').textContent = `Latest completed session: ${meta.latest_completed_session}`;
   $('#data-pill').innerHTML = `<span></span> Data through ${escapeHtml(meta.latest_completed_session)}`;
+  const freshness = meta.freshness;
+  $('#data-status').hidden = !freshness?.delayed;
+  $('#data-status').textContent = freshness?.message || '';
+  if (freshness?.delayed) $('#data-pill').textContent = `Prices delayed · through ${meta.latest_completed_session}`;
   $('#footer-provider').textContent = `${meta.provider}. Retrieved ${new Date(meta.generated_at).toLocaleString()}.`;
+  if (freshness?.last_attempt_at) $('#footer-provider').textContent += ` Last checked ${new Date(freshness.last_attempt_at).toLocaleString()}.`;
   $('#market-state').textContent = market.active ? 'Risk-on' : 'Filter inactive';
   $('#market-detail').textContent = `SPY ${fmtMoney(market.close)} · SMA200 ${fmtMoney(market.sma200)}`;
   $('#market-card').classList.toggle('inactive', !market.active);

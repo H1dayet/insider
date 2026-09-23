@@ -74,6 +74,17 @@ def test_stale_feed_does_not_backfill_before_inception():
     assert [r["date"] for r in state["daily_snapshots"]] == ["2026-09-22"]
 
 
+def test_delayed_prices_execute_saved_signal_when_session_arrives():
+    state, frames, dates, target = fixture()
+    state["last_processed_session"] = "2026-09-21"
+    state["started_at"] = "2026-09-22"
+    state["pending"] = observed_signal(dates[0], [target], {"active": True}, "2026-09-22T08:00Z")
+    advance_observed(state, frames, dates[2], [], {"active": False}, "2026-09-24T08:00Z")
+    assert [r["executed_signal"] for r in state["daily_snapshots"]] == [True, False]
+    assert state["positions"][0]["entry_session"] == "2026-09-22"
+    assert state["daily_snapshots"][0]["signal_session"] == "2026-09-21"
+
+
 def test_buffer_retains_rank_15_but_rejects_unqualified_and_rank_21():
     rows = [{"ticker": str(i), "permanent_id": str(i), "name": str(i), "sector": "Unclassified",
              "qualified": True, "score": 100-i, "adv20": 1e8, "close": 100., "m12_skip": i/100} for i in range(1, 26)]
