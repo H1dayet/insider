@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 0922202618:01",
-    "other_listed_file_timestamp": "File Creation Time: 0922202618:01",
-    "retrieved_at": "2026-09-23T00:49:39.122287+00:00",
-    "directory_rows": 6833,
-    "eligible_common_shares": 4759,
-    "unclassified_sectors": 176,
-    "unresolved_issuer_ids": 4759
+    "nasdaq_file_timestamp": "File Creation Time: 0924202603:02",
+    "other_listed_file_timestamp": "File Creation Time: 0924202603:02",
+    "retrieved_at": "2026-09-24T09:20:16.861239+00:00",
+    "directory_rows": 6834,
+    "eligible_common_shares": 4761,
+    "unclassified_sectors": 173,
+    "unresolved_issuer_ids": 4761
   },
   "securities": [
     {
@@ -1492,6 +1492,13 @@
       "name": "REalloys Inc. - Common Stock",
       "sector": "Basic Materials",
       "permanent_id": "issuer-unresolved:ALOY",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "ALP",
+      "name": "Alpha Compute Corp  - Ordinary Shares",
+      "sector": "Finance",
+      "permanent_id": "issuer-unresolved:ALP",
       "exchange": "Nasdaq"
     },
     {
@@ -9090,13 +9097,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "DOMO",
-      "name": "Domo, Inc. - Class B Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:DOMO",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "DOO",
       "name": "BRP Inc. - Common Subordinate Voting Shares",
       "sector": "Consumer Discretionary",
@@ -10492,7 +10492,7 @@
     {
       "ticker": "ESYN",
       "name": "EnerSyn Global Inc. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:ESYN",
       "exchange": "Nasdaq"
     },
@@ -11278,13 +11278,6 @@
       "name": "FG Imperii Acquisition Corp. - Class A Ordinary Shares",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:FGII",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "FGL",
-      "name": "Founder Group Limited - Class A Ordinary Shares",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:FGL",
       "exchange": "Nasdaq"
     },
     {
@@ -13528,6 +13521,20 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "GTBP",
+      "name": "GT Biopharma, Inc. - Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:GTBP",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "GTEC",
+      "name": "Greenland Technologies Holding Corporation - Class A Ordinary Shares",
+      "sector": "Industrials",
+      "permanent_id": "issuer-unresolved:GTEC",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "GTEN",
       "name": "Gores Holdings X, Inc. - Class A ordinary shares",
       "sector": "Unclassified",
@@ -14655,6 +14662,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "HUCK",
+      "name": "Huckleberry.ai, Inc. - Class B Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:HUCK",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "HUHU",
       "name": "HUHUTECH International Group Inc. - Ordinary Shares",
       "sector": "Telecommunications",
@@ -14701,13 +14715,6 @@
       "name": "Hut 8 Corp. - Common Stock",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:HUT",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "HVII",
-      "name": "Hennessy Capital Investment Corp. VII - Ordinary Shares",
-      "sector": "Unclassified",
-      "permanent_id": "issuer-unresolved:HVII",
       "exchange": "Nasdaq"
     },
     {
@@ -15229,6 +15236,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "IMCC",
+      "name": "IM Cannabis Corp. - Common Shares",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:IMCC",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "IMDX",
       "name": "Insight Molecular Diagnostics Inc. - Common Stock",
       "sector": "Health Care",
@@ -15460,13 +15474,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "INM",
-      "name": "InMed Pharmaceuticals Inc. - Common Shares",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:INM",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "INMB",
       "name": "INmune Bio Inc. - Common stock",
       "sector": "Health Care",
@@ -15615,7 +15622,7 @@
     },
     {
       "ticker": "INVE",
-      "name": "Identiv, Inc. - Common Stock",
+      "name": "INVE Technologies, Inc. - Common Stock",
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:INVE",
       "exchange": "Nasdaq"
@@ -16113,7 +16120,7 @@
     {
       "ticker": "JBK",
       "name": "Lehman ABS 3.50 3.50% Adjustable Corp Backed Tr Certs GS Cap I",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:JBK",
       "exchange": "NYSE"
     },
@@ -17821,14 +17828,14 @@
     {
       "ticker": "LLYVA",
       "name": "Liberty Live Holdings, Inc. - Series A Liberty Live Group Common Stock",
-      "sector": "Consumer Discretionary",
+      "sector": "Industrials",
       "permanent_id": "issuer-unresolved:LLYVA",
       "exchange": "Nasdaq"
     },
     {
       "ticker": "LLYVK",
       "name": "Liberty Live Holdings, Inc. - Series C Liberty Live Group Common Stock",
-      "sector": "Consumer Discretionary",
+      "sector": "Industrials",
       "permanent_id": "issuer-unresolved:LLYVK",
       "exchange": "Nasdaq"
     },
@@ -18677,13 +18684,6 @@
       "name": "Microbot Medical Inc.  - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:MBOT",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "MBRX",
-      "name": "Moleculin Biotech, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:MBRX",
       "exchange": "Nasdaq"
     },
     {
@@ -21496,7 +21496,7 @@
     {
       "ticker": "NWCL",
       "name": "newcleo plc - Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Industrials",
       "permanent_id": "issuer-unresolved:NWCL",
       "exchange": "Nasdaq"
     },
@@ -22163,6 +22163,13 @@
       "name": "OneConstruction Group Limited - Ordinary Shares",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:ONEG",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "ONEN",
+      "name": "ONE Nuclear Energy Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:ONEN",
       "exchange": "Nasdaq"
     },
     {
@@ -25138,13 +25145,6 @@
       "name": "Real REMAX Group Inc. - Common Stock",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:REAX",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "REBN",
-      "name": "Reborn Coffee, Inc. - Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:REBN",
       "exchange": "Nasdaq"
     },
     {
@@ -28531,7 +28531,7 @@
     {
       "ticker": "SVIA",
       "name": "Silvia, Inc. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:SVIA",
       "exchange": "Nasdaq"
     },
@@ -28886,13 +28886,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "TBPH",
-      "name": "Theravance Biopharma, Inc. - Ordinary Shares",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:TBPH",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "TCBI",
       "name": "Texas Capital Bancshares, Inc. - Common Stock",
       "sector": "Finance",
@@ -29003,6 +28996,13 @@
       "sector": "Telecommunications",
       "permanent_id": "issuer-unresolved:TDS",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "TDTH",
+      "name": "Trident Digital Tech Holdings Ltd - Class B Ordinary Shares",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:TDTH",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "TDUP",
@@ -33072,6 +33072,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "YTRA",
+      "name": "Yatra Online, Inc. - Ordinary Shares",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:YTRA",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "YUM",
       "name": "Yum! Brands, Inc.",
       "sector": "Consumer Discretionary",
@@ -33084,6 +33091,13 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:YUMC",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "YYAI",
+      "name": "AiRWA Inc. - Common Stock",
+      "sector": "Technology",
+      "permanent_id": "issuer-unresolved:YYAI",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "Z",

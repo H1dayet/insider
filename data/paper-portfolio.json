@@ -2,17 +2,46 @@
   "strategy_version": "3.0.0",
   "started_at": "2026-09-21",
   "initial_capital": 10000.0,
-  "cash": 10000.0,
-  "positions": [],
+  "cash": 7998.0,
+  "positions": [
+    {
+      "ticker": "MRNA",
+      "permanent_id": "issuer-unresolved:MRNA",
+      "name": "Moderna, Inc. - Common Stock",
+      "sector": "Health Care",
+      "score": 98.87043189,
+      "signal_close": 172.94000244,
+      "weight": 0.1,
+      "shares": 5.9347181008902075,
+      "cost_basis": 1001.0,
+      "cost_basis_per_share": 168.6685,
+      "entry_session": "2026-09-22",
+      "last_price": 182.11000061035156
+    },
+    {
+      "ticker": "DELL",
+      "permanent_id": "issuer-unresolved:DELL",
+      "name": "Dell Technologies Inc. Class C Common Stock",
+      "sector": "Technology",
+      "score": 98.27242525,
+      "signal_close": 575.30999756,
+      "weight": 0.1,
+      "shares": 1.7550017925997925,
+      "cost_basis": 1001.0,
+      "cost_basis_per_share": 570.3697877807617,
+      "entry_session": "2026-09-22",
+      "last_price": 549.8300170898438
+    }
+  ],
   "benchmark": {
-    "cash": 10000.0,
-    "shares": 0.0
+    "cash": 0.0,
+    "shares": 12.90648891114065
   },
-  "last_processed_session": "2026-09-21",
+  "last_processed_session": "2026-09-23",
   "pending": {
-    "signal_session": "2026-09-21",
-    "generated_at": "2026-09-22T08:34:08.281972+00:00",
-    "execute_on": "2026-09-22",
+    "signal_session": "2026-09-23",
+    "generated_at": "2026-09-24T09:28:37.229397+00:00",
+    "execute_on": "2026-09-24",
     "market_active": true,
     "selected": [
       {
@@ -20,26 +49,8 @@
         "permanent_id": "issuer-unresolved:TXG",
         "name": "10x Genomics, Inc. - Common Stock",
         "sector": "Industrials",
-        "score": 99.16943522,
-        "signal_close": 79.09999847,
-        "weight": 0.1
-      },
-      {
-        "ticker": "TWST",
-        "permanent_id": "issuer-unresolved:TWST",
-        "name": "Twist Bioscience Corporation - Common Stock",
-        "sector": "Health Care",
-        "score": 99.00332226,
-        "signal_close": 165.83000183,
-        "weight": 0.1
-      },
-      {
-        "ticker": "MXL",
-        "permanent_id": "issuer-unresolved:MXL",
-        "name": "MaxLinear, Inc - Common Stock",
-        "sector": "Technology",
-        "score": 99.00332226,
-        "signal_close": 85.98000336,
+        "score": 99.40559441,
+        "signal_close": 75.62000275,
         "weight": 0.1
       },
       {
@@ -47,8 +58,26 @@
         "permanent_id": "issuer-unresolved:MRNA",
         "name": "Moderna, Inc. - Common Stock",
         "sector": "Health Care",
-        "score": 98.87043189,
-        "signal_close": 172.94000244,
+        "score": 99.05594406,
+        "signal_close": 182.11000061,
+        "weight": 0.1
+      },
+      {
+        "ticker": "MXL",
+        "permanent_id": "issuer-unresolved:MXL",
+        "name": "MaxLinear, Inc - Common Stock",
+        "sector": "Technology",
+        "score": 99.02097902,
+        "signal_close": 84.31999969,
+        "weight": 0.1
+      },
+      {
+        "ticker": "TWST",
+        "permanent_id": "issuer-unresolved:TWST",
+        "name": "Twist Bioscience Corporation - Common Stock",
+        "sector": "Health Care",
+        "score": 98.67132867,
+        "signal_close": 158.5,
         "weight": 0.1
       },
       {
@@ -56,26 +85,8 @@
         "permanent_id": "issuer-unresolved:DELL",
         "name": "Dell Technologies Inc. Class C Common Stock",
         "sector": "Technology",
-        "score": 98.27242525,
-        "signal_close": 575.30999756,
-        "weight": 0.1
-      },
-      {
-        "ticker": "AEHR",
-        "permanent_id": "issuer-unresolved:AEHR",
-        "name": "Aehr Test Systems - Common Stock",
-        "sector": "Industrials",
-        "score": 95.14950166,
-        "signal_close": 96.93000031,
-        "weight": 0.1
-      },
-      {
-        "ticker": "APPS",
-        "permanent_id": "issuer-unresolved:APPS",
-        "name": "Digital Turbine, Inc. - Common Stock",
-        "sector": "Miscellaneous",
-        "score": 92.79069767,
-        "signal_close": 12.05000019,
+        "score": 97.51748252,
+        "signal_close": 549.83001709,
         "weight": 0.1
       },
       {
@@ -83,8 +94,17 @@
         "permanent_id": "issuer-unresolved:XHLD",
         "name": "TEN Holdings, Inc. - Common Stock",
         "sector": "Consumer Discretionary",
-        "score": 91.56146179,
-        "signal_close": 10.46000004,
+        "score": 95.59440559,
+        "signal_close": 12.07999992,
+        "weight": 0.1
+      },
+      {
+        "ticker": "AEHR",
+        "permanent_id": "issuer-unresolved:AEHR",
+        "name": "Aehr Test Systems - Common Stock",
+        "sector": "Industrials",
+        "score": 94.65034965,
+        "signal_close": 97.37999725,
         "weight": 0.1
       },
       {
@@ -92,8 +112,8 @@
         "permanent_id": "issuer-unresolved:ATEX",
         "name": "Anterix Inc. - Common Stock",
         "sector": "Telecommunications",
-        "score": 91.39534884,
-        "signal_close": 83.62000275,
+        "score": 92.65734266,
+        "signal_close": 83.98000336,
         "weight": 0.1
       },
       {
@@ -101,8 +121,17 @@
         "permanent_id": "issuer-unresolved:TH",
         "name": "Target Hospitality Corp. - Common Stock",
         "sector": "Consumer Discretionary",
-        "score": 90.83056478,
-        "signal_close": 21.28000069,
+        "score": 90.62937063,
+        "signal_close": 21.20000076,
+        "weight": 0.1
+      },
+      {
+        "ticker": "APPS",
+        "permanent_id": "issuer-unresolved:APPS",
+        "name": "Digital Turbine, Inc. - Common Stock",
+        "sector": "Miscellaneous",
+        "score": 90.59440559,
+        "signal_close": 11.53999996,
         "weight": 0.1
       }
     ]
@@ -120,6 +149,117 @@
       "cash": 10000.0,
       "holdings": [],
       "stock_records": [],
+      "executed_signal": false,
+      "warnings": []
+    },
+    {
+      "date": "2026-09-22",
+      "signal_session": "2026-09-21",
+      "portfolio_value": 10044.79767601,
+      "benchmark_value": 9981.62045712,
+      "profit": 44.79767601,
+      "daily_profit": 44.79767601,
+      "daily_return": 0.00447977,
+      "transaction_cost": 2.0,
+      "cash": 7998.0,
+      "holdings": [
+        {
+          "ticker": "MRNA",
+          "name": "Moderna, Inc. - Common Stock",
+          "sector": "Health Care",
+          "shares": 5.9347181,
+          "close": 182.55999756,
+          "market_value": 1083.44212201,
+          "return": 0.08235976
+        },
+        {
+          "ticker": "DELL",
+          "name": "Dell Technologies Inc. Class C Common Stock",
+          "sector": "Technology",
+          "shares": 1.75500179,
+          "close": 548.91998291,
+          "market_value": 963.355554,
+          "return": -0.03760684
+        }
+      ],
+      "stock_records": [
+        {
+          "ticker": "MRNA",
+          "profit": 82.44212201,
+          "growth": 1.08344212,
+          "benchmark_growth": 0.99916021,
+          "entry_session": "2026-09-22",
+          "complete": true
+        },
+        {
+          "ticker": "DELL",
+          "profit": -37.644446,
+          "growth": 0.96335555,
+          "benchmark_growth": 0.99916021,
+          "entry_session": "2026-09-22",
+          "complete": true
+        }
+      ],
+      "executed_signal": true,
+      "warnings": [
+        "AEHR: unavailable at rebalance open",
+        "APPS: unavailable at rebalance open",
+        "ATEX: unavailable at rebalance open",
+        "MXL: unavailable at rebalance open",
+        "TH: unavailable at rebalance open",
+        "TWST: unavailable at rebalance open",
+        "TXG: unavailable at rebalance open",
+        "XHLD: unavailable at rebalance open"
+      ]
+    },
+    {
+      "date": "2026-09-23",
+      "signal_session": "2026-09-21",
+      "portfolio_value": 10043.72418259,
+      "benchmark_value": 9909.73121935,
+      "profit": 43.72418259,
+      "daily_profit": -1.07349342,
+      "daily_return": -0.00010687,
+      "transaction_cost": 0.0,
+      "cash": 7998.0,
+      "holdings": [
+        {
+          "ticker": "MRNA",
+          "name": "Moderna, Inc. - Common Stock",
+          "sector": "Health Care",
+          "shares": 5.9347181,
+          "close": 182.11000061,
+          "market_value": 1080.77151698,
+          "return": 0.07969183
+        },
+        {
+          "ticker": "DELL",
+          "name": "Dell Technologies Inc. Class C Common Stock",
+          "sector": "Technology",
+          "shares": 1.75500179,
+          "close": 549.83001709,
+          "market_value": 964.95266562,
+          "return": -0.03601132
+        }
+      ],
+      "stock_records": [
+        {
+          "ticker": "MRNA",
+          "profit": 79.77151698,
+          "growth": 1.08077152,
+          "benchmark_growth": 0.9919641,
+          "entry_session": "2026-09-22",
+          "complete": true
+        },
+        {
+          "ticker": "DELL",
+          "profit": -36.04733438,
+          "growth": 0.96495267,
+          "benchmark_growth": 0.9919641,
+          "entry_session": "2026-09-22",
+          "complete": true
+        }
+      ],
       "executed_signal": false,
       "warnings": []
     }
@@ -222,7 +362,130 @@
           "weight": 0.1
         }
       ]
+    },
+    {
+      "signal_session": "2026-09-23",
+      "generated_at": "2026-09-24T09:28:37.229397+00:00",
+      "execute_on": "2026-09-24",
+      "market_active": true,
+      "selected": [
+        {
+          "ticker": "TXG",
+          "permanent_id": "issuer-unresolved:TXG",
+          "name": "10x Genomics, Inc. - Common Stock",
+          "sector": "Industrials",
+          "score": 99.40559441,
+          "signal_close": 75.62000275,
+          "weight": 0.1
+        },
+        {
+          "ticker": "MRNA",
+          "permanent_id": "issuer-unresolved:MRNA",
+          "name": "Moderna, Inc. - Common Stock",
+          "sector": "Health Care",
+          "score": 99.05594406,
+          "signal_close": 182.11000061,
+          "weight": 0.1
+        },
+        {
+          "ticker": "MXL",
+          "permanent_id": "issuer-unresolved:MXL",
+          "name": "MaxLinear, Inc - Common Stock",
+          "sector": "Technology",
+          "score": 99.02097902,
+          "signal_close": 84.31999969,
+          "weight": 0.1
+        },
+        {
+          "ticker": "TWST",
+          "permanent_id": "issuer-unresolved:TWST",
+          "name": "Twist Bioscience Corporation - Common Stock",
+          "sector": "Health Care",
+          "score": 98.67132867,
+          "signal_close": 158.5,
+          "weight": 0.1
+        },
+        {
+          "ticker": "DELL",
+          "permanent_id": "issuer-unresolved:DELL",
+          "name": "Dell Technologies Inc. Class C Common Stock",
+          "sector": "Technology",
+          "score": 97.51748252,
+          "signal_close": 549.83001709,
+          "weight": 0.1
+        },
+        {
+          "ticker": "XHLD",
+          "permanent_id": "issuer-unresolved:XHLD",
+          "name": "TEN Holdings, Inc. - Common Stock",
+          "sector": "Consumer Discretionary",
+          "score": 95.59440559,
+          "signal_close": 12.07999992,
+          "weight": 0.1
+        },
+        {
+          "ticker": "AEHR",
+          "permanent_id": "issuer-unresolved:AEHR",
+          "name": "Aehr Test Systems - Common Stock",
+          "sector": "Industrials",
+          "score": 94.65034965,
+          "signal_close": 97.37999725,
+          "weight": 0.1
+        },
+        {
+          "ticker": "ATEX",
+          "permanent_id": "issuer-unresolved:ATEX",
+          "name": "Anterix Inc. - Common Stock",
+          "sector": "Telecommunications",
+          "score": 92.65734266,
+          "signal_close": 83.98000336,
+          "weight": 0.1
+        },
+        {
+          "ticker": "TH",
+          "permanent_id": "issuer-unresolved:TH",
+          "name": "Target Hospitality Corp. - Common Stock",
+          "sector": "Consumer Discretionary",
+          "score": 90.62937063,
+          "signal_close": 21.20000076,
+          "weight": 0.1
+        },
+        {
+          "ticker": "APPS",
+          "permanent_id": "issuer-unresolved:APPS",
+          "name": "Digital Turbine, Inc. - Common Stock",
+          "sector": "Miscellaneous",
+          "score": 90.59440559,
+          "signal_close": 11.53999996,
+          "weight": 0.1
+        }
+      ]
     }
   ],
-  "stock_ledger": {}
+  "stock_ledger": {
+    "MRNA": {
+      "purchases": 1000.0,
+      "sales": 0.0,
+      "dividends": 0.0,
+      "fees": 1.0,
+      "complete": true,
+      "reference_price": 182.11000061035156,
+      "growth": 1.0807715169753802,
+      "entry_session": "2026-09-22",
+      "benchmark_growth": 0.9919640950572273,
+      "benchmark_price": 767.8099975585938
+    },
+    "DELL": {
+      "purchases": 1000.0,
+      "sales": 0.0,
+      "dividends": 0.0,
+      "fees": 1.0,
+      "complete": true,
+      "reference_price": 549.8300170898438,
+      "growth": 0.9649526656178503,
+      "entry_session": "2026-09-22",
+      "benchmark_growth": 0.9919640950572273,
+      "benchmark_price": 767.8099975585938
+    }
+  }
 }
