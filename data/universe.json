@@ -1,12 +1,12 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 0924202603:02",
-    "other_listed_file_timestamp": "File Creation Time: 0924202603:02",
-    "retrieved_at": "2026-09-24T09:20:16.861239+00:00",
-    "directory_rows": 6834,
+    "nasdaq_file_timestamp": "File Creation Time: 0925202603:03",
+    "other_listed_file_timestamp": "File Creation Time: 0925202603:03",
+    "retrieved_at": "2026-09-25T09:38:30.795583+00:00",
+    "directory_rows": 6836,
     "eligible_common_shares": 4761,
-    "unclassified_sectors": 173,
+    "unclassified_sectors": 175,
     "unresolved_issuer_ids": 4761
   },
   "securities": [
@@ -5349,13 +5349,6 @@
       "name": "Byrna Technologies, Inc. - Common Stock",
       "sector": "Miscellaneous",
       "permanent_id": "issuer-unresolved:BYRN",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "BYSI",
-      "name": "BeyondSpring, Inc. - Ordinary Shares",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:BYSI",
       "exchange": "Nasdaq"
     },
     {
@@ -11456,6 +11449,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "FJDI",
+      "name": "ARC Group Securities Acquisition I - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:FJDI",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "FKWL",
       "name": "Franklin Wireless Corp. - common stock",
       "sector": "Utilities",
@@ -11488,13 +11488,6 @@
       "name": "Full House Resorts, Inc. - Common Stock",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:FLL",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "FLNA",
-      "name": "Filana Therapeutics, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:FLNA",
       "exchange": "Nasdaq"
     },
     {
@@ -14809,13 +14802,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "HYPR",
-      "name": "Hyperfine, Inc.  - Class A Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:HYPR",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "HZO",
       "name": "MarineMax, Inc.  (FL) Common Stock",
       "sector": "Consumer Discretionary",
@@ -17728,6 +17714,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "LIMN",
+      "name": "Liminatus Pharma, Inc. - Class A Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:LIMN",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "LIN",
       "name": "Linde plc - Ordinary Shares",
       "sector": "Basic Materials",
@@ -17828,14 +17821,14 @@
     {
       "ticker": "LLYVA",
       "name": "Liberty Live Holdings, Inc. - Series A Liberty Live Group Common Stock",
-      "sector": "Industrials",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:LLYVA",
       "exchange": "Nasdaq"
     },
     {
       "ticker": "LLYVK",
       "name": "Liberty Live Holdings, Inc. - Series C Liberty Live Group Common Stock",
-      "sector": "Industrials",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:LLYVK",
       "exchange": "Nasdaq"
     },
@@ -23790,6 +23783,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "PNAQ",
+      "name": "Pinnacle Acquisition Corporation Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:PNAQ",
+      "exchange": "NYSE"
+    },
+    {
       "ticker": "PNBK",
       "name": "Patriot National Bancorp Inc. - Common Stock",
       "sector": "Finance",
@@ -28216,7 +28216,7 @@
     {
       "ticker": "STEX",
       "name": "Streamex Corp. - Common Stock",
-      "sector": "Health Care",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:STEX",
       "exchange": "Nasdaq"
     },
