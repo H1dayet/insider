@@ -4,12 +4,12 @@
     "generated_at": "2026-09-24T09:28:37.401293+00:00",
     "latest_completed_session": "2026-09-23",
     "provider": "Nasdaq Trader listing directories; Yahoo Finance via yfinance; SEC company_tickers for issuer IDs",
-    "data_status": "complete provider bars",
+    "data_status": "provider data delayed",
     "freshness": {
-      "expected_session": "2026-09-23",
-      "delayed": false,
-      "last_attempt_at": "2026-09-24T09:20:12.645936+00:00",
-      "message": ""
+      "expected_session": "2026-09-24",
+      "delayed": true,
+      "last_attempt_at": "2026-09-25T00:40:12.047009+00:00",
+      "message": "Price data delayed: waiting for complete SPY prices for 2026-09-24. Track record remains through 2026-09-23; profit has not been recalculated. Automatic retries will catch up using the saved recommendations when prices arrive."
     },
     "strategy_version": "3.0.0",
     "data_version": "nasdaq-directory-yahoo-v2",
