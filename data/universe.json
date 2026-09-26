@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 0925202603:03",
-    "other_listed_file_timestamp": "File Creation Time: 0925202603:03",
-    "retrieved_at": "2026-09-25T09:38:30.795583+00:00",
-    "directory_rows": 6836,
-    "eligible_common_shares": 4761,
-    "unclassified_sectors": 175,
-    "unresolved_issuer_ids": 4761
+    "nasdaq_file_timestamp": "File Creation Time: 0925202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 0925202621:31",
+    "retrieved_at": "2026-09-26T09:22:56.598864+00:00",
+    "directory_rows": 6839,
+    "eligible_common_shares": 4763,
+    "unclassified_sectors": 176,
+    "unresolved_issuer_ids": 4763
   },
   "securities": [
     {
@@ -603,6 +603,13 @@
       "name": "Adaptive Biotechnologies Corporation - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:ADPT",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "ADRX",
+      "name": "ADARx Pharmaceuticals, Inc. - Common stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:ADRX",
       "exchange": "Nasdaq"
     },
     {
@@ -12865,7 +12872,7 @@
     {
       "ticker": "GJT",
       "name": "Synthetic Fixed-Income Securities, Inc. Floating Rate Structured Repackaged Asset-Backed Trust Securities Certificates, Series 2006-3",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJT",
       "exchange": "NYSE"
     },
@@ -13183,6 +13190,13 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:GOOS",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "GOSS",
+      "name": "Gossamer Bio, Inc. - Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:GOSS",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "GP",
@@ -14657,7 +14671,7 @@
     {
       "ticker": "HUCK",
       "name": "Huckleberry.ai, Inc. - Class B Common Stock",
-      "sector": "Unclassified",
+      "sector": "Technology",
       "permanent_id": "issuer-unresolved:HUCK",
       "exchange": "Nasdaq"
     },
