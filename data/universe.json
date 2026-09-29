@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 0928202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 0928202621:31",
-    "retrieved_at": "2026-09-29T02:10:02.841769+00:00",
-    "directory_rows": 6837,
-    "eligible_common_shares": 4768,
-    "unclassified_sectors": 175,
-    "unresolved_issuer_ids": 4768
+    "nasdaq_file_timestamp": "File Creation Time: 0929202606:00",
+    "other_listed_file_timestamp": "File Creation Time: 0929202606:00",
+    "retrieved_at": "2026-09-29T10:43:14.468751+00:00",
+    "directory_rows": 6834,
+    "eligible_common_shares": 4767,
+    "unclassified_sectors": 171,
+    "unresolved_issuer_ids": 4767
   },
   "securities": [
     {
@@ -12242,7 +12242,7 @@
     {
       "ticker": "FWAC",
       "name": "Futurewave Acquisition Corporation - Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:FWAC",
       "exchange": "Nasdaq"
     },
@@ -12406,13 +12406,6 @@
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:GBLI",
       "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "GBTG",
-      "name": "Global Business Travel Group, Inc. Class A Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:GBTG",
-      "exchange": "NYSE"
     },
     {
       "ticker": "GBX",
@@ -13208,7 +13201,7 @@
     {
       "ticker": "GOW",
       "name": "GOWell Energy Technology - Ordinary shares",
-      "sector": "Unclassified",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:GOW",
       "exchange": "Nasdaq"
     },
@@ -13803,7 +13796,7 @@
     {
       "ticker": "HAVA",
       "name": "Harvard Ave Acquisition Corporation - Class A Ordinary Share",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:HAVA",
       "exchange": "Nasdaq"
     },
@@ -22189,7 +22182,7 @@
     {
       "ticker": "ONEN",
       "name": "ONE Nuclear Energy Inc. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Utilities",
       "permanent_id": "issuer-unresolved:ONEN",
       "exchange": "Nasdaq"
     },
@@ -29664,7 +29657,7 @@
     },
     {
       "ticker": "TORO",
-      "name": "Toro Corp. - Common stock",
+      "name": "Toro Corp. - Common Shares",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:TORO",
       "exchange": "Nasdaq"
