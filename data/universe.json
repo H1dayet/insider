@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 0925202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 0925202621:31",
-    "retrieved_at": "2026-09-26T09:22:56.598864+00:00",
-    "directory_rows": 6839,
-    "eligible_common_shares": 4763,
-    "unclassified_sectors": 176,
-    "unresolved_issuer_ids": 4763
+    "nasdaq_file_timestamp": "File Creation Time: 0928202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 0928202621:31",
+    "retrieved_at": "2026-09-29T02:10:02.841769+00:00",
+    "directory_rows": 6837,
+    "eligible_common_shares": 4768,
+    "unclassified_sectors": 175,
+    "unresolved_issuer_ids": 4768
   },
   "securities": [
     {
@@ -608,7 +608,7 @@
     {
       "ticker": "ADRX",
       "name": "ADARx Pharmaceuticals, Inc. - Common stock",
-      "sector": "Unclassified",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:ADRX",
       "exchange": "Nasdaq"
     },
@@ -7466,6 +7466,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "CPOP",
+      "name": "Pop Culture Group Co., Ltd - Class A Ordinary Shares",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:CPOP",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "CPRI",
       "name": "Capri Holdings Limited Ordinary Shares",
       "sector": "Consumer Discretionary",
@@ -11267,6 +11274,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "FGC",
+      "name": "FG Communities Holdings Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:FGC",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "FGI",
       "name": "FGI Industries Ltd. - Ordinary Shares",
       "sector": "Industrials",
@@ -11278,13 +11292,6 @@
       "name": "FG Imperii Acquisition Corp. - Class A Ordinary Shares",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:FGII",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "FGNX",
-      "name": "FG Nexus Inc. - Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:FGNX",
       "exchange": "Nasdaq"
     },
     {
@@ -12872,7 +12879,7 @@
     {
       "ticker": "GJT",
       "name": "Synthetic Fixed-Income Securities, Inc. Floating Rate Structured Repackaged Asset-Backed Trust Securities Certificates, Series 2006-3",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJT",
       "exchange": "NYSE"
     },
@@ -13196,6 +13203,13 @@
       "name": "Gossamer Bio, Inc. - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:GOSS",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "GOW",
+      "name": "GOWell Energy Technology - Ordinary shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:GOW",
       "exchange": "Nasdaq"
     },
     {
@@ -15705,10 +15719,10 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "IPEX",
-      "name": "Inflection Point Acquisition Corp. - Class A Ordinary Shares",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:IPEX",
+      "ticker": "IPDN",
+      "name": "Professional Diversity Network, Inc. - Common Stock",
+      "sector": "Technology",
+      "permanent_id": "issuer-unresolved:IPDN",
       "exchange": "Nasdaq"
     },
     {
@@ -22390,6 +22404,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "ORIO",
+      "name": "Orion Digital Corp. - Common Shares",
+      "sector": "Finance",
+      "permanent_id": "issuer-unresolved:ORIO",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "ORIQ",
       "name": "Origin Investment Corp I - Ordinary Shares",
       "sector": "Unclassified",
@@ -24270,6 +24291,13 @@
       "name": "Performance Shipping Inc. - Common Shares",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:PSHG",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "PSIG",
+      "name": "PS International Group Ltd. - Ordinary Shares",
+      "sector": "Industrials",
+      "permanent_id": "issuer-unresolved:PSIG",
       "exchange": "Nasdaq"
     },
     {
@@ -26394,13 +26422,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "SBXD",
-      "name": "SilverBox Corp IV Class A Ordinary Shares",
-      "sector": "Unclassified",
-      "permanent_id": "issuer-unresolved:SBXD",
-      "exchange": "NYSE"
-    },
-    {
       "ticker": "SBXE",
       "name": "SilverBox Corp V Class A Ordinary Shares",
       "sector": "Unclassified",
@@ -26958,6 +26979,13 @@
       "name": "RMG ML Sports Holdings - Class A Ordinary Shares",
       "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:SHOT",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "SHPH",
+      "name": "Shuttle Pharmaceuticals Holdings, Inc. - common stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:SHPH",
       "exchange": "Nasdaq"
     },
     {
@@ -30193,6 +30221,13 @@
       "sector": "Utilities",
       "permanent_id": "issuer-unresolved:TVE",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "TVGN",
+      "name": "Tevogen Inc. - Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:TVGN",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "TVIV",
