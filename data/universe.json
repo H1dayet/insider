@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 0929202618:01",
-    "other_listed_file_timestamp": "File Creation Time: 0929202618:01",
-    "retrieved_at": "2026-09-30T01:24:34.578911+00:00",
-    "directory_rows": 6835,
-    "eligible_common_shares": 4768,
-    "unclassified_sectors": 172,
-    "unresolved_issuer_ids": 4768
+    "nasdaq_file_timestamp": "File Creation Time: 0930202606:00",
+    "other_listed_file_timestamp": "File Creation Time: 0930202606:00",
+    "retrieved_at": "2026-09-30T10:31:24.462046+00:00",
+    "directory_rows": 6829,
+    "eligible_common_shares": 4764,
+    "unclassified_sectors": 173,
+    "unresolved_issuer_ids": 4764
   },
   "securities": [
     {
@@ -1206,13 +1206,6 @@
       "sector": "Real Estate",
       "permanent_id": "issuer-unresolved:AIV",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "AIXC",
-      "name": "AIxCrypto Holdings, Inc. - Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:AIXC",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "AIZ",
@@ -4548,7 +4541,7 @@
     },
     {
       "ticker": "BNC",
-      "name": "CEA Industries Inc. - Common Stock",
+      "name": "BNB Standard Corporation - Common Stock",
       "sector": "Consumer Staples",
       "permanent_id": "issuer-unresolved:BNC",
       "exchange": "Nasdaq"
@@ -8544,13 +8537,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "DBRG",
-      "name": "DigitalBridge Group, Inc.",
-      "sector": "Real Estate",
-      "permanent_id": "issuer-unresolved:DBRG",
-      "exchange": "NYSE"
-    },
-    {
       "ticker": "DBX",
       "name": "Dropbox, Inc. - Class A Common Stock",
       "sector": "Technology",
@@ -11260,6 +11246,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "FFR",
+      "name": "FF EAI Robotics Ecosystem Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:FFR",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "FG",
       "name": "F&G Annuities & Life, Inc. Common Stock",
       "sector": "Finance",
@@ -11593,13 +11586,6 @@
       "name": "Flywire Corporation - Voting Common Stock",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:FLYW",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "FMAC",
-      "name": "Future Money Acquisition Corporation - Ordinary Shares",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:FMAC",
       "exchange": "Nasdaq"
     },
     {
@@ -12616,13 +12602,6 @@
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:GERN",
       "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "GETY",
-      "name": "Getty Images Holdings, Inc. Class A Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:GETY",
-      "exchange": "NYSE"
     },
     {
       "ticker": "GEV",
@@ -14886,13 +14865,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "IBG",
-      "name": "Innovation Beverage Group Limited - Ordinary Shares",
-      "sector": "Consumer Staples",
-      "permanent_id": "issuer-unresolved:IBG",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "IBIO",
       "name": "iBio, Inc. - Common Stock",
       "sector": "Health Care",
@@ -15982,6 +15954,13 @@
       "name": "Illinois Tool Works Inc. Common Stock",
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:ITW",
+      "exchange": "NYSE"
+    },
+    {
+      "ticker": "IVAI",
+      "name": "Ives Ultra AI Opportunities Inc. Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:IVAI",
       "exchange": "NYSE"
     },
     {
@@ -23003,13 +22982,6 @@
       "name": "Puma Biotechnology Inc - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:PBYI",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "PC",
-      "name": "Premium Catering (Holdings) Limited - Ordinary Shares",
-      "sector": "Unclassified",
-      "permanent_id": "issuer-unresolved:PC",
       "exchange": "Nasdaq"
     },
     {
