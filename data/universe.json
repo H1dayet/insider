@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 0929202606:00",
-    "other_listed_file_timestamp": "File Creation Time: 0929202606:00",
-    "retrieved_at": "2026-09-29T10:43:14.468751+00:00",
-    "directory_rows": 6834,
-    "eligible_common_shares": 4767,
-    "unclassified_sectors": 171,
-    "unresolved_issuer_ids": 4767
+    "nasdaq_file_timestamp": "File Creation Time: 0929202618:01",
+    "other_listed_file_timestamp": "File Creation Time: 0929202618:01",
+    "retrieved_at": "2026-09-30T01:24:34.578911+00:00",
+    "directory_rows": 6835,
+    "eligible_common_shares": 4768,
+    "unclassified_sectors": 172,
+    "unresolved_issuer_ids": 4768
   },
   "securities": [
     {
@@ -26147,6 +26147,13 @@
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:RYZ",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "RZAI",
+      "name": "Roze AI Inc. - Common Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:RZAI",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "RZLT",
