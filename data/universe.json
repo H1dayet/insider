@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 0930202606:00",
-    "other_listed_file_timestamp": "File Creation Time: 0930202606:00",
-    "retrieved_at": "2026-09-30T10:31:24.462046+00:00",
-    "directory_rows": 6829,
-    "eligible_common_shares": 4764,
-    "unclassified_sectors": 173,
-    "unresolved_issuer_ids": 4764
+    "nasdaq_file_timestamp": "File Creation Time: 1001202606:00",
+    "other_listed_file_timestamp": "File Creation Time: 1001202606:00",
+    "retrieved_at": "2026-10-01T10:59:16.625183+00:00",
+    "directory_rows": 6827,
+    "eligible_common_shares": 4765,
+    "unclassified_sectors": 170,
+    "unresolved_issuer_ids": 4765
   },
   "securities": [
     {
@@ -289,6 +289,13 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:ACCO",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "ACCV",
+      "name": "Accelevation Holdings Corp. - Class A ordinary shares",
+      "sector": "Energy",
+      "permanent_id": "issuer-unresolved:ACCV",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "ACDC",
@@ -3751,7 +3758,7 @@
     {
       "ticker": "BEAG",
       "name": "Bold Eagle Acquisition Corp. - Class A Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:BEAG",
       "exchange": "Nasdaq"
     },
@@ -11248,7 +11255,7 @@
     {
       "ticker": "FFR",
       "name": "FF EAI Robotics Ecosystem Inc. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:FFR",
       "exchange": "Nasdaq"
     },
@@ -11269,7 +11276,7 @@
     {
       "ticker": "FGC",
       "name": "FG Communities Holdings Inc. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:FGC",
       "exchange": "Nasdaq"
     },
@@ -13998,7 +14005,7 @@
     },
     {
       "ticker": "HELP",
-      "name": "Cybin Inc. - Common Stock",
+      "name": "Helus Pharma Inc.  - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:HELP",
       "exchange": "Nasdaq"
@@ -14639,13 +14646,6 @@
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:HUBB",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "HUBC",
-      "name": "Hub Cyber Security Ltd. - Ordinary Shares",
-      "sector": "Telecommunications",
-      "permanent_id": "issuer-unresolved:HUBC",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "HUBS",
@@ -20633,6 +20633,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "NFE",
+      "name": "New Fortress Energy Inc. - Class A Common Stock",
+      "sector": "Utilities",
+      "permanent_id": "issuer-unresolved:NFE",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "NFG",
       "name": "National Fuel Gas Company Common Stock",
       "sector": "Utilities",
@@ -26123,7 +26130,7 @@
     {
       "ticker": "RZAI",
       "name": "Roze AI Inc. - Common Shares",
-      "sector": "Unclassified",
+      "sector": "Technology",
       "permanent_id": "issuer-unresolved:RZAI",
       "exchange": "Nasdaq"
     },
@@ -27602,13 +27609,6 @@
       "name": "Sentage Holdings Inc. - Class A Ordinary Shares",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:SNTG",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "SNWV",
-      "name": "SANUWAVE Health, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:SNWV",
       "exchange": "Nasdaq"
     },
     {
@@ -31761,6 +31761,13 @@
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:VYGR",
       "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "VYLR",
+      "name": "Vylor Inc. Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:VYLR",
+      "exchange": "NYSE"
     },
     {
       "ticker": "VYX",
