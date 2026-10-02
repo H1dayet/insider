@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1001202606:00",
-    "other_listed_file_timestamp": "File Creation Time: 1001202606:00",
-    "retrieved_at": "2026-10-01T10:59:16.625183+00:00",
-    "directory_rows": 6827,
-    "eligible_common_shares": 4765,
-    "unclassified_sectors": 170,
-    "unresolved_issuer_ids": 4765
+    "nasdaq_file_timestamp": "File Creation Time: 1001202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1001202621:31",
+    "retrieved_at": "2026-10-02T01:45:58.854620+00:00",
+    "directory_rows": 6837,
+    "eligible_common_shares": 4772,
+    "unclassified_sectors": 171,
+    "unresolved_issuer_ids": 4772
   },
   "securities": [
     {
@@ -1745,6 +1745,13 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:AMN",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "AMOD",
+      "name": "Alpha Modus Holdings, Inc. - Class A Common Stock",
+      "sector": "Miscellaneous",
+      "permanent_id": "issuer-unresolved:AMOD",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "AMP",
@@ -7270,6 +7277,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "COLA",
+      "name": "Columbus Acquisition Corp - Ordinary Shares",
+      "sector": "Finance",
+      "permanent_id": "issuer-unresolved:COLA",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "COLB",
       "name": "Columbia Banking System, Inc. - Common Stock",
       "sector": "Finance",
@@ -8367,6 +8381,13 @@
       "sector": "Real Estate",
       "permanent_id": "issuer-unresolved:CXW",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "CYCU",
+      "name": "Cycurion, Inc. - Common Stock",
+      "sector": "Technology",
+      "permanent_id": "issuer-unresolved:CYCU",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "CYD",
@@ -9879,6 +9900,13 @@
       "sector": "Utilities",
       "permanent_id": "issuer-unresolved:EIX",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "EJH",
+      "name": "E-Home Household Service Holdings Limited - Ordinary shares",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:EJH",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "EL",
@@ -13609,6 +13637,13 @@
       "name": "Berto Acquisition Corp. II - Ordinary Shares",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:GUAC",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "GURE",
+      "name": "Gulf Resources, Inc. - Common Stock",
+      "sector": "Industrials",
+      "permanent_id": "issuer-unresolved:GURE",
       "exchange": "Nasdaq"
     },
     {
@@ -19107,6 +19142,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "MGN",
+      "name": "Megan Holdings Limited - Class A Ordinary Shares",
+      "sector": "Consumer Staples",
+      "permanent_id": "issuer-unresolved:MGN",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "MGNI",
       "name": "Magnite, Inc. - Common Stock",
       "sector": "Technology",
@@ -22283,6 +22325,13 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:OPLN",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "OPNW",
+      "name": "OpenWorld, Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:OPNW",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "OPRT",
