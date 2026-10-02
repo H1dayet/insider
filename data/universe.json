@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1001202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1001202621:31",
-    "retrieved_at": "2026-10-02T01:45:58.854620+00:00",
-    "directory_rows": 6837,
-    "eligible_common_shares": 4772,
+    "nasdaq_file_timestamp": "File Creation Time: 1002202606:00",
+    "other_listed_file_timestamp": "File Creation Time: 1002202606:00",
+    "retrieved_at": "2026-10-02T10:32:18.010203+00:00",
+    "directory_rows": 6828,
+    "eligible_common_shares": 4768,
     "unclassified_sectors": 171,
-    "unresolved_issuer_ids": 4772
+    "unresolved_issuer_ids": 4768
   },
   "securities": [
     {
@@ -7277,13 +7277,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "COLA",
-      "name": "Columbus Acquisition Corp - Ordinary Shares",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:COLA",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "COLB",
       "name": "Columbia Banking System, Inc. - Common Stock",
       "sector": "Finance",
@@ -11986,13 +11979,6 @@
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:FSCO",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "FSEA",
-      "name": "First Seacoast Bancorp, Inc. - Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:FSEA",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "FSHP",
@@ -21214,13 +21200,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "NSTS",
-      "name": "NSTS Bancorp, Inc. - Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:NSTS",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "NSYS",
       "name": "Nortech Systems Incorporated - Common Stock",
       "sector": "Technology",
@@ -24512,7 +24491,7 @@
     },
     {
       "ticker": "PUSA",
-      "name": "Aureus Greenway Holdings Inc. - Common Stock",
+      "name": "Powerus Corporation - Common Stock",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:PUSA",
       "exchange": "Nasdaq"
@@ -30997,13 +30976,6 @@
       "name": "Marriott Vacations Worldwide Corporation Common Stock",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:VAC",
-      "exchange": "NYSE"
-    },
-    {
-      "ticker": "VACI",
-      "name": "Viking Acquisition Corp. I Class A Ordinary Shares",
-      "sector": "Telecommunications",
-      "permanent_id": "issuer-unresolved:VACI",
       "exchange": "NYSE"
     },
     {
