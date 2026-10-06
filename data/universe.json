@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1002202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1002202621:31",
-    "retrieved_at": "2026-10-03T09:54:20.422051+00:00",
-    "directory_rows": 6826,
-    "eligible_common_shares": 4766,
+    "nasdaq_file_timestamp": "File Creation Time: 1005202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1005202621:31",
+    "retrieved_at": "2026-10-06T02:24:09.221263+00:00",
+    "directory_rows": 6816,
+    "eligible_common_shares": 4764,
     "unclassified_sectors": 172,
-    "unresolved_issuer_ids": 4766
+    "unresolved_issuer_ids": 4764
   },
   "securities": [
     {
@@ -5366,13 +5366,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "BZAI",
-      "name": "Blaize Holdings, Inc. - Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:BZAI",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "BZFD",
       "name": "BuzzFeed, Inc. - Class A Common Stock",
       "sector": "Consumer Discretionary",
@@ -5693,6 +5686,13 @@
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:CBAN",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "CBAT",
+      "name": "CBAK Energy Technology Limited - Ordinary Shares",
+      "sector": "Miscellaneous",
+      "permanent_id": "issuer-unresolved:CBAT",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "CBC",
@@ -8642,20 +8642,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "DDS",
-      "name": "Dillard's, Inc. Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:DDS",
-      "exchange": "NYSE"
-    },
-    {
-      "ticker": "DDT",
-      "name": "Dillard's Capital Trust I",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:DDT",
-      "exchange": "NYSE"
-    },
-    {
       "ticker": "DE",
       "name": "Deere & Company Common Stock",
       "sector": "Industrials",
@@ -9178,13 +9164,6 @@
       "name": "Domino's Pizza Inc - Common Stock",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:DPZ",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "DRCT",
-      "name": "Direct Digital Holdings, Inc. - Class A Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:DRCT",
       "exchange": "Nasdaq"
     },
     {
@@ -10271,6 +10250,13 @@
       "sector": "Utilities",
       "permanent_id": "issuer-unresolved:EPD",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "EPOW",
+      "name": "E-Power Inc. - Class A Ordinary Shares",
+      "sector": "Miscellaneous",
+      "permanent_id": "issuer-unresolved:EPOW",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "EPR",
@@ -12851,7 +12837,7 @@
     {
       "ticker": "GJP",
       "name": "Synthetic Fixed-Income Securities, Inc. on behalf of STRATS (SM) Trust for Dominion Resources, Inc. Securities, Series 2005-6, Floating Rate Structured Repackaged Asset-Backed Trust Securities (STRATS) Certificates",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJP",
       "exchange": "NYSE"
     },
@@ -12872,7 +12858,7 @@
     {
       "ticker": "GJT",
       "name": "Synthetic Fixed-Income Securities, Inc. Floating Rate Structured Repackaged Asset-Backed Trust Securities Certificates, Series 2006-3",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJT",
       "exchange": "NYSE"
     },
@@ -13661,13 +13647,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "GWH",
-      "name": "ESS Tech, Inc. Common Stock",
-      "sector": "Miscellaneous",
-      "permanent_id": "issuer-unresolved:GWH",
-      "exchange": "NYSE"
-    },
-    {
       "ticker": "GWRE",
       "name": "Guidewire Software, Inc. Common Stock",
       "sector": "Technology",
@@ -13687,13 +13666,6 @@
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:GWW",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "GXAI",
-      "name": "Gaxos.ai Inc. - Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:GXAI",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "GXO",
@@ -13887,7 +13859,7 @@
     {
       "ticker": "HCAC",
       "name": "Hall Chadwick Acquisition Corp. - Class A Ordinary Shares",
-      "sector": "Consumer Discretionary",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:HCAC",
       "exchange": "Nasdaq"
     },
@@ -15726,6 +15698,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "IPHX",
+      "name": "Inflection Point Acquisition Corp. VIII - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:IPHX",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "IPI",
       "name": "Intrepid Potash, Inc Common Stock",
       "sector": "Industrials",
@@ -17516,6 +17495,13 @@
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:LEO",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "LESL",
+      "name": "Leslie's, Inc. - Common Stock",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:LESL",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "LEU",
@@ -20931,13 +20917,6 @@
       "name": "Anbio Biotechnology - Class A Ordinary Shares",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:NNNN",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "NNOX",
-      "name": "NANO-X IMAGING LTD - Ordinary Shares",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:NNOX",
       "exchange": "Nasdaq"
     },
     {
@@ -26256,7 +26235,7 @@
     {
       "ticker": "SAIQ",
       "name": "WISeSat.Space Holdings Corp. - Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:SAIQ",
       "exchange": "Nasdaq"
     },
@@ -28890,6 +28869,13 @@
       "name": "Turtle Beach Corporation - Common Stock",
       "sector": "Telecommunications",
       "permanent_id": "issuer-unresolved:TBCH",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "TBCV",
+      "name": "Thunder Bridge Capital Partners V, Ltd. - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:TBCV",
       "exchange": "Nasdaq"
     },
     {
@@ -31833,13 +31819,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "WALD",
-      "name": "Waldencast plc - Class A Ordinary Share",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:WALD",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "WASH",
       "name": "Washington Trust Bancorp, Inc. - Common Stock",
       "sector": "Finance",
@@ -32376,6 +32355,13 @@
       "name": "Westport Fuel Systems Inc - Common Shares",
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:WPRT",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "WQEY",
+      "name": "WISeQey Corp - Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:WQEY",
       "exchange": "Nasdaq"
     },
     {
