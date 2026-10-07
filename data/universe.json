@@ -1,10 +1,10 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1006202607:00",
-    "other_listed_file_timestamp": "File Creation Time: 1006202607:00",
-    "retrieved_at": "2026-10-06T11:18:33.352646+00:00",
-    "directory_rows": 6809,
+    "nasdaq_file_timestamp": "File Creation Time: 1006202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1006202621:31",
+    "retrieved_at": "2026-10-07T01:43:41.335444+00:00",
+    "directory_rows": 6813,
     "eligible_common_shares": 4761,
     "unclassified_sectors": 172,
     "unresolved_issuer_ids": 4761
@@ -3488,13 +3488,6 @@
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:BBDC",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "BBGI",
-      "name": "Beasley Broadcast Group, Inc. - Class A Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:BBGI",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "BBIO",
@@ -15173,6 +15166,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "ILLR",
+      "name": "Triller Group Inc. - Common Stock",
+      "sector": "Finance",
+      "permanent_id": "issuer-unresolved:ILLR",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "ILLU",
       "name": "Illumination Acquisition Corp I - Class A Ordinary Shares",
       "sector": "Finance",
@@ -18208,6 +18208,13 @@
       "name": "lululemon athletica inc. - Common Stock",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:LULU",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "LUMN",
+      "name": "Lumen Technologies, Inc.  - Common Stock",
+      "sector": "Telecommunications",
+      "permanent_id": "issuer-unresolved:LUMN",
       "exchange": "Nasdaq"
     },
     {
@@ -27311,13 +27318,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "SLSN",
-      "name": "Solesence, Inc. - Common stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:SLSN",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "SLVM",
       "name": "Sylvamo Corporation Common Stock",
       "sector": "Basic Materials",
@@ -27806,6 +27806,13 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:SPIR",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "SPKL",
+      "name": "Spark I Acquisition Corp. - Class A Ordinary Share",
+      "sector": "Miscellaneous",
+      "permanent_id": "issuer-unresolved:SPKL",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "SPMC",
@@ -32663,13 +32670,6 @@
       "name": "Xcel Energy Inc. - Common Stock",
       "sector": "Utilities",
       "permanent_id": "issuer-unresolved:XEL",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "XELB",
-      "name": "Xcel Brands, Inc - Common Stock",
-      "sector": "Miscellaneous",
-      "permanent_id": "issuer-unresolved:XELB",
       "exchange": "Nasdaq"
     },
     {
