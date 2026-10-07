@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1006202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1006202621:31",
-    "retrieved_at": "2026-10-07T01:43:41.335444+00:00",
-    "directory_rows": 6813,
-    "eligible_common_shares": 4761,
-    "unclassified_sectors": 172,
-    "unresolved_issuer_ids": 4761
+    "nasdaq_file_timestamp": "File Creation Time: 1007202607:00",
+    "other_listed_file_timestamp": "File Creation Time: 1007202607:00",
+    "retrieved_at": "2026-10-07T11:06:40.898876+00:00",
+    "directory_rows": 6802,
+    "eligible_common_shares": 4756,
+    "unclassified_sectors": 173,
+    "unresolved_issuer_ids": 4756
   },
   "securities": [
     {
@@ -4300,13 +4300,6 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:BLDR",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "BLFS",
-      "name": "BioLife Solutions, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:BLFS",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "BLIN",
@@ -12837,7 +12830,7 @@
     {
       "ticker": "GJR",
       "name": "Synthetic Fixed-Income Securities, Inc. STRATS Trust for Procter&Gamble Securities, Series 2006-1",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJR",
       "exchange": "NYSE"
     },
@@ -12851,7 +12844,7 @@
     {
       "ticker": "GJT",
       "name": "Synthetic Fixed-Income Securities, Inc. Floating Rate Structured Repackaged Asset-Backed Trust Securities Certificates, Series 2006-3",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJT",
       "exchange": "NYSE"
     },
@@ -15163,13 +15156,6 @@
       "name": "Intelligent Living Application Group Inc. - Ordinary Shares",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:ILAG",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "ILLR",
-      "name": "Triller Group Inc. - Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:ILLR",
       "exchange": "Nasdaq"
     },
     {
@@ -27159,7 +27145,7 @@
     {
       "ticker": "SKYD",
       "name": "Skydance Corporation Class B Common Stock",
-      "sector": "Unclassified",
+      "sector": "Industrials",
       "permanent_id": "issuer-unresolved:SKYD",
       "exchange": "NYSE"
     },
@@ -27294,13 +27280,6 @@
       "name": "Soluna Holdings, Inc. - Common Stock",
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:SLNH",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "SLP",
-      "name": "Simulations Plus, Inc. - Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:SLP",
       "exchange": "Nasdaq"
     },
     {
@@ -27806,13 +27785,6 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:SPIR",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "SPKL",
-      "name": "Spark I Acquisition Corp. - Class A Ordinary Share",
-      "sector": "Miscellaneous",
-      "permanent_id": "issuer-unresolved:SPKL",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "SPMC",
@@ -31837,13 +31809,6 @@
       "name": "Waystar Holding Corp. - Common Stock",
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:WAY",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "WBD",
-      "name": "Warner Bros. Discovery, Inc. - Series A Common Stock",
-      "sector": "Telecommunications",
-      "permanent_id": "issuer-unresolved:WBD",
       "exchange": "Nasdaq"
     },
     {
