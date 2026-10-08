@@ -1,12 +1,12 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1007202607:00",
-    "other_listed_file_timestamp": "File Creation Time: 1007202607:00",
-    "retrieved_at": "2026-10-07T11:06:40.898876+00:00",
-    "directory_rows": 6802,
+    "nasdaq_file_timestamp": "File Creation Time: 1007202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1007202621:31",
+    "retrieved_at": "2026-10-08T02:11:53.235231+00:00",
+    "directory_rows": 6803,
     "eligible_common_shares": 4756,
-    "unclassified_sectors": 173,
+    "unclassified_sectors": 175,
     "unresolved_issuer_ids": 4756
   },
   "securities": [
@@ -3014,6 +3014,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "AVAT",
+      "name": "Avalanche Treasury Corporation - Class A Common Stock",
+      "sector": "Finance",
+      "permanent_id": "issuer-unresolved:AVAT",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "AVAV",
       "name": "AeroVironment, Inc. - Common Stock",
       "sector": "Industrials",
@@ -3474,6 +3481,13 @@
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:BBAI",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "BBCI",
+      "name": "Bradbury Capital Inc. - Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:BBCI",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "BBCP",
@@ -24133,13 +24147,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "PRPL",
-      "name": "Purple Innovation, Inc. - Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:PRPL",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "PRPO",
       "name": "Precipio, Inc. - Common Stock",
       "sector": "Industrials",
@@ -27168,13 +27175,6 @@
       "name": "SkyWest, Inc. - Common Stock",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:SKYW",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "SKYX",
-      "name": "SKYX Platforms Corp. - Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:SKYX",
       "exchange": "Nasdaq"
     },
     {
@@ -31616,13 +31616,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "VTIX",
-      "name": "Virtuix Holdings Inc. - Class A Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:VTIX",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "VTN",
       "name": "Invesco Trust for Investment Grade New York Municipals Common Stock",
       "sector": "Finance",
@@ -32279,6 +32272,13 @@
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:WOR",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "WORX",
+      "name": "SCWorx Corp. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:WORX",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "WPAC",
