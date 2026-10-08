@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1007202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1007202621:31",
-    "retrieved_at": "2026-10-08T02:11:53.235231+00:00",
-    "directory_rows": 6803,
-    "eligible_common_shares": 4756,
-    "unclassified_sectors": 175,
-    "unresolved_issuer_ids": 4756
+    "nasdaq_file_timestamp": "File Creation Time: 1008202607:00",
+    "other_listed_file_timestamp": "File Creation Time: 1008202607:00",
+    "retrieved_at": "2026-10-08T11:24:11.249351+00:00",
+    "directory_rows": 6801,
+    "eligible_common_shares": 4755,
+    "unclassified_sectors": 172,
+    "unresolved_issuer_ids": 4755
   },
   "securities": [
     {
@@ -3485,7 +3485,7 @@
     {
       "ticker": "BBCI",
       "name": "Bradbury Capital Inc. - Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:BBCI",
       "exchange": "Nasdaq"
     },
@@ -12844,7 +12844,7 @@
     {
       "ticker": "GJR",
       "name": "Synthetic Fixed-Income Securities, Inc. STRATS Trust for Procter&Gamble Securities, Series 2006-1",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJR",
       "exchange": "NYSE"
     },
@@ -28858,13 +28858,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "TCBI",
-      "name": "Texas Capital Bancshares, Inc. - Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:TCBI",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "TCBK",
       "name": "TriCo Bancshares - Common Stock",
       "sector": "Finance",
@@ -32276,7 +32269,7 @@
     {
       "ticker": "WORX",
       "name": "SCWorx Corp. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:WORX",
       "exchange": "Nasdaq"
     },
