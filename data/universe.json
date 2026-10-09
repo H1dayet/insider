@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1008202607:00",
-    "other_listed_file_timestamp": "File Creation Time: 1008202607:00",
-    "retrieved_at": "2026-10-08T11:24:11.249351+00:00",
-    "directory_rows": 6801,
-    "eligible_common_shares": 4755,
-    "unclassified_sectors": 172,
-    "unresolved_issuer_ids": 4755
+    "nasdaq_file_timestamp": "File Creation Time: 1008202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1008202621:31",
+    "retrieved_at": "2026-10-09T02:24:14.952671+00:00",
+    "directory_rows": 6807,
+    "eligible_common_shares": 4758,
+    "unclassified_sectors": 174,
+    "unresolved_issuer_ids": 4758
   },
   "securities": [
     {
@@ -13927,13 +13927,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "HCTI",
-      "name": "Healthcare Triangle, Inc. - Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:HCTI",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "HCWB",
       "name": "HCW Biologics Inc. - Common Stock",
       "sector": "Health Care",
@@ -18477,6 +18470,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "MAMK",
+      "name": "MaxsMaking Inc. - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:MAMK",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "MAMO",
       "name": "Massimo Group - Common Stock",
       "sector": "Consumer Discretionary",
@@ -21403,6 +21403,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "NVNI",
+      "name": "Nvni Group Limited - Ordinary Shares",
+      "sector": "Technology",
+      "permanent_id": "issuer-unresolved:NVNI",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "NVNO",
       "name": "enVVeno Medical Corporation - Common Stock",
       "sector": "Health Care",
@@ -22332,6 +22339,13 @@
       "sector": "Utilities",
       "permanent_id": "issuer-unresolved:ORA",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "ORBS",
+      "name": "Eightco Holdings Inc. - Common Stock",
+      "sector": "Finance",
+      "permanent_id": "issuer-unresolved:ORBS",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "ORC",
@@ -26371,6 +26385,13 @@
       "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:SBXE",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "SCAT",
+      "name": "Southern Cross Acquisition II Corp. - Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:SCAT",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "SCCO",
