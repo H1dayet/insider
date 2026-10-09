@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1008202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1008202621:31",
-    "retrieved_at": "2026-10-09T02:24:14.952671+00:00",
-    "directory_rows": 6807,
-    "eligible_common_shares": 4758,
-    "unclassified_sectors": 174,
-    "unresolved_issuer_ids": 4758
+    "nasdaq_file_timestamp": "File Creation Time: 1009202607:00",
+    "other_listed_file_timestamp": "File Creation Time: 1009202607:00",
+    "retrieved_at": "2026-10-09T11:21:33.239996+00:00",
+    "directory_rows": 6804,
+    "eligible_common_shares": 4756,
+    "unclassified_sectors": 175,
+    "unresolved_issuer_ids": 4756
   },
   "securities": [
     {
@@ -3705,6 +3705,13 @@
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:BCX",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "BDAI",
+      "name": "Biddance AI Systems, Inc. - Class A Ordinary Share",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:BDAI",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "BDC",
@@ -9154,7 +9161,7 @@
     },
     {
       "ticker": "DPU",
-      "name": "Top KingWin Ltd - Class A Ordinary Shares",
+      "name": "Nexpu Ltd. - Class A Ordinary Shares",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:DPU",
       "exchange": "Nasdaq"
@@ -12844,7 +12851,7 @@
     {
       "ticker": "GJR",
       "name": "Synthetic Fixed-Income Securities, Inc. STRATS Trust for Procter&Gamble Securities, Series 2006-1",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJR",
       "exchange": "NYSE"
     },
@@ -14135,13 +14142,6 @@
       "sector": "Real Estate",
       "permanent_id": "issuer-unresolved:HIW",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "HKIT",
-      "name": "Hitek Global Inc. - Class A Ordinary Share",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:HKIT",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "HL",
@@ -16099,7 +16099,7 @@
     {
       "ticker": "JBK",
       "name": "Lehman ABS 3.50 3.50% Adjustable Corp Backed Tr Certs GS Cap I",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:JBK",
       "exchange": "NYSE"
     },
@@ -18467,13 +18467,6 @@
       "name": "Mama's Creations, Inc. - Common Stock",
       "sector": "Consumer Staples",
       "permanent_id": "issuer-unresolved:MAMA",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "MAMK",
-      "name": "MaxsMaking Inc. - Class A Ordinary Shares",
-      "sector": "Unclassified",
-      "permanent_id": "issuer-unresolved:MAMK",
       "exchange": "Nasdaq"
     },
     {
@@ -21400,13 +21393,6 @@
       "name": "Nova Ltd. - Ordinary Shares",
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:NVMI",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "NVNI",
-      "name": "Nvni Group Limited - Ordinary Shares",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:NVNI",
       "exchange": "Nasdaq"
     },
     {
@@ -26389,7 +26375,7 @@
     {
       "ticker": "SCAT",
       "name": "Southern Cross Acquisition II Corp. - Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:SCAT",
       "exchange": "Nasdaq"
     },
