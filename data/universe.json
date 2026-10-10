@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1009202607:00",
-    "other_listed_file_timestamp": "File Creation Time: 1009202607:00",
-    "retrieved_at": "2026-10-09T11:21:33.239996+00:00",
-    "directory_rows": 6804,
-    "eligible_common_shares": 4756,
-    "unclassified_sectors": 175,
-    "unresolved_issuer_ids": 4756
+    "nasdaq_file_timestamp": "File Creation Time: 1009202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1009202621:31",
+    "retrieved_at": "2026-10-10T01:51:54.548443+00:00",
+    "directory_rows": 6808,
+    "eligible_common_shares": 4759,
+    "unclassified_sectors": 178,
+    "unresolved_issuer_ids": 4759
   },
   "securities": [
     {
@@ -1122,6 +1122,13 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:AIN",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "AIOK",
+      "name": "AI OKTO CORP. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:AIOK",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "AIOS",
@@ -25897,6 +25904,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "RTSN",
+      "name": "Retension Pharmaceuticals, Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:RTSN",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "RTX",
       "name": "RTX Corporation Common Stock",
       "sector": "Industrials",
@@ -29929,6 +29943,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "TRXB",
+      "name": "TRex Bio, Inc. - Common stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:TRXB",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "TSAT",
       "name": "Telesat Corporation - Class A Common Shares and Class B Variable Voting Shares",
       "sector": "Industrials",
@@ -30199,13 +30220,6 @@
       "name": "TWFG, Inc. - Common Stock",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:TWFG",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "TWG",
-      "name": "Top Wealth Group Holding Limited - Class A Ordinary Shares",
-      "sector": "Consumer Staples",
-      "permanent_id": "issuer-unresolved:TWG",
       "exchange": "Nasdaq"
     },
     {
@@ -31004,6 +31018,13 @@
       "name": "Veeco Instruments Inc. - Common Stock",
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:VECO",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "VEEA",
+      "name": "Veea Inc. - Common Stock",
+      "sector": "Technology",
+      "permanent_id": "issuer-unresolved:VEEA",
       "exchange": "Nasdaq"
     },
     {
