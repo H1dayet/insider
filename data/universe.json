@@ -1,12 +1,12 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1009202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1009202621:31",
-    "retrieved_at": "2026-10-10T10:38:20.962306+00:00",
+    "nasdaq_file_timestamp": "File Creation Time: 1012202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1012202621:31",
+    "retrieved_at": "2026-10-13T03:06:50.887642+00:00",
     "directory_rows": 6808,
     "eligible_common_shares": 4759,
-    "unclassified_sectors": 178,
+    "unclassified_sectors": 172,
     "unresolved_issuer_ids": 4759
   },
   "securities": [
@@ -1126,7 +1126,7 @@
     {
       "ticker": "AIOK",
       "name": "AI OKTO CORP. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:AIOK",
       "exchange": "Nasdaq"
     },
@@ -3716,7 +3716,7 @@
     {
       "ticker": "BDAI",
       "name": "Biddance AI Systems, Inc. - Class A Ordinary Share",
-      "sector": "Unclassified",
+      "sector": "Technology",
       "permanent_id": "issuer-unresolved:BDAI",
       "exchange": "Nasdaq"
     },
@@ -5091,6 +5091,13 @@
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:BTGO",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "BTLN",
+      "name": "Brightline Interactive, Inc. - Common Stock",
+      "sector": "Technology",
+      "permanent_id": "issuer-unresolved:BTLN",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "BTMD",
@@ -10959,6 +10966,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "FBGL",
+      "name": "FBS Global Limited - Ordinary Shares",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:FBGL",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "FBIN",
       "name": "Fortune Brands Innovations, Inc. Common Stock",
       "sector": "Basic Materials",
@@ -12844,14 +12858,14 @@
     {
       "ticker": "GJO",
       "name": "Synthetic Fixed-Income Securities, Inc. on behalf of STRATS(SM) Trust for Wal-Mart Stores, Inc. Securities, Series 2004-5",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJO",
       "exchange": "NYSE"
     },
     {
       "ticker": "GJP",
       "name": "Synthetic Fixed-Income Securities, Inc. on behalf of STRATS (SM) Trust for Dominion Resources, Inc. Securities, Series 2005-6, Floating Rate Structured Repackaged Asset-Backed Trust Securities (STRATS) Certificates",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJP",
       "exchange": "NYSE"
     },
@@ -12872,7 +12886,7 @@
     {
       "ticker": "GJT",
       "name": "Synthetic Fixed-Income Securities, Inc. Floating Rate Structured Repackaged Asset-Backed Trust Securities Certificates, Series 2006-3",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJT",
       "exchange": "NYSE"
     },
@@ -14837,13 +14851,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "IBAC",
-      "name": "IB Acquisition Corp. - Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:IBAC",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "IBCP",
       "name": "Independent Bank Corporation - Common Stock",
       "sector": "Finance",
@@ -16106,7 +16113,7 @@
     {
       "ticker": "JBK",
       "name": "Lehman ABS 3.50 3.50% Adjustable Corp Backed Tr Certs GS Cap I",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:JBK",
       "exchange": "NYSE"
     },
@@ -24693,13 +24700,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "QTEX",
-      "name": "QTREX Quantum Ltd. - Ordinary Shares",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:QTEX",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "QTI",
       "name": "QT Imaging Holdings, Inc. - Common Stock",
       "sector": "Health Care",
@@ -25906,7 +25906,7 @@
     {
       "ticker": "RTSN",
       "name": "Retension Pharmaceuticals, Inc. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:RTSN",
       "exchange": "Nasdaq"
     },
@@ -29945,7 +29945,7 @@
     {
       "ticker": "TRXB",
       "name": "TRex Bio, Inc. - Common stock",
-      "sector": "Unclassified",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:TRXB",
       "exchange": "Nasdaq"
     },
@@ -31778,7 +31778,7 @@
     },
     {
       "ticker": "WAFU",
-      "name": "Wah Fu Education Group Limited - Ordinary Shares",
+      "name": "Wah Fu Education & Technology Group Ltd. - Ordinary Shares",
       "sector": "Real Estate",
       "permanent_id": "issuer-unresolved:WAFU",
       "exchange": "Nasdaq"
@@ -32835,7 +32835,7 @@
     },
     {
       "ticker": "XRPN",
-      "name": "Armada Acquisition Corp. II - Class A Ordinary Shares",
+      "name": "Evernorth Holdings Inc. - Class A Ordinary Shares",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:XRPN",
       "exchange": "Nasdaq"
