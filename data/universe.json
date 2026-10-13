@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1012202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1012202621:31",
-    "retrieved_at": "2026-10-13T03:06:50.887642+00:00",
-    "directory_rows": 6808,
-    "eligible_common_shares": 4759,
-    "unclassified_sectors": 172,
-    "unresolved_issuer_ids": 4759
+    "nasdaq_file_timestamp": "File Creation Time: 1013202607:00",
+    "other_listed_file_timestamp": "File Creation Time: 1013202607:00",
+    "retrieved_at": "2026-10-13T11:50:50.853242+00:00",
+    "directory_rows": 6806,
+    "eligible_common_shares": 4758,
+    "unclassified_sectors": 175,
+    "unresolved_issuer_ids": 4758
   },
   "securities": [
     {
@@ -3221,6 +3221,13 @@
       "name": "Axiom Intelligence Acquisition Corp 1 - Class A Ordinary Shares",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:AXIN",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "AXNX",
+      "name": "Axonex AI Group Limited - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:AXNX",
       "exchange": "Nasdaq"
     },
     {
@@ -19219,13 +19226,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "MIMI",
-      "name": "Mint Incorporation Limited - Class A Ordinary Shares",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:MIMI",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "MIND",
       "name": "MIND Technology, Inc. - Common Stock",
       "sector": "Industrials",
@@ -21702,13 +21702,6 @@
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:OBIO",
       "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "OBK",
-      "name": "Origin Bancorp, Inc. Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:OBK",
-      "exchange": "NYSE"
     },
     {
       "ticker": "OBT",
@@ -24527,7 +24520,7 @@
     {
       "ticker": "PYT",
       "name": "PPlus Tr GSC-2 Tr Ctf Fltg Rate",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:PYT",
       "exchange": "NYSE"
     },
@@ -25657,6 +25650,13 @@
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:RNST",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "RNTZ",
+      "name": "Rantizo - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:RNTZ",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "RNW",
@@ -27127,13 +27127,6 @@
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:SKIL",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "SKK",
-      "name": "SKK Holdings Limited - Class A Ordinary Shares",
-      "sector": "Industrials",
-      "permanent_id": "issuer-unresolved:SKK",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "SKM",
