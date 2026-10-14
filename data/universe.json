@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1013202607:00",
-    "other_listed_file_timestamp": "File Creation Time: 1013202607:00",
-    "retrieved_at": "2026-10-13T11:50:50.853242+00:00",
-    "directory_rows": 6806,
-    "eligible_common_shares": 4758,
+    "nasdaq_file_timestamp": "File Creation Time: 1014202603:02",
+    "other_listed_file_timestamp": "File Creation Time: 1014202603:02",
+    "retrieved_at": "2026-10-14T09:33:03.652717+00:00",
+    "directory_rows": 6799,
+    "eligible_common_shares": 4757,
     "unclassified_sectors": 175,
-    "unresolved_issuer_ids": 4758
+    "unresolved_issuer_ids": 4757
   },
   "securities": [
     {
@@ -5968,13 +5968,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "CCO",
-      "name": "Clear Channel Outdoor Holdings, Inc. Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:CCO",
-      "exchange": "NYSE"
-    },
-    {
       "ticker": "CCOI",
       "name": "Cogent Communications Holdings, Inc. - Common Stock",
       "sector": "Consumer Discretionary",
@@ -8990,6 +8983,13 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:DLX",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "DLXY",
+      "name": "Delixy Holdings Limited - Class A Ordinary Shares",
+      "sector": "Energy",
+      "permanent_id": "issuer-unresolved:DLXY",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "DMAA",
@@ -12531,13 +12531,6 @@
       "name": "GoodRx Holdings, Inc. - Class A Common Stock",
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:GDRX",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "GDTC",
-      "name": "CytoMed Therapeutics Limited - Ordinary Shares",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:GDTC",
       "exchange": "Nasdaq"
     },
     {
@@ -17330,7 +17323,7 @@
     },
     {
       "ticker": "LB",
-      "name": "LandBridge Company LLC Class A Shares Representing Limited Liability Company Interests",
+      "name": "LandBridge Corporation Class A Common Stock",
       "sector": "Energy",
       "permanent_id": "issuer-unresolved:LB",
       "exchange": "NYSE"
@@ -21550,13 +21543,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "NXDR",
-      "name": "Nextdoor Holdings, Inc. Class A Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:NXDR",
-      "exchange": "NYSE"
-    },
-    {
       "ticker": "NXDT",
       "name": "NexPoint Diversified Real Estate Trust Common Stock",
       "sector": "Real Estate",
@@ -22171,6 +22157,13 @@
       "sector": "Real Estate",
       "permanent_id": "issuer-unresolved:ONL",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "ONMD",
+      "name": "OneMedNet Corp - Class A Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:ONMD",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "ONON",
