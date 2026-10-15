@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1014202603:02",
-    "other_listed_file_timestamp": "File Creation Time: 1014202603:02",
-    "retrieved_at": "2026-10-14T09:33:03.652717+00:00",
-    "directory_rows": 6799,
-    "eligible_common_shares": 4757,
-    "unclassified_sectors": 175,
-    "unresolved_issuer_ids": 4757
+    "nasdaq_file_timestamp": "File Creation Time: 1014202618:01",
+    "other_listed_file_timestamp": "File Creation Time: 1014202618:01",
+    "retrieved_at": "2026-10-15T00:43:24.201938+00:00",
+    "directory_rows": 6801,
+    "eligible_common_shares": 4759,
+    "unclassified_sectors": 174,
+    "unresolved_issuer_ids": 4759
   },
   "securities": [
     {
@@ -3226,7 +3226,7 @@
     {
       "ticker": "AXNX",
       "name": "Axonex AI Group Limited - Class A Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:AXNX",
       "exchange": "Nasdaq"
     },
@@ -11596,6 +11596,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "FLSC",
+      "name": "Frazier Life Sciences Acquisition Corp. II - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:FLSC",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "FLUT",
       "name": "Flutter Entertainment plc Ordinary Shares",
       "sector": "Technology",
@@ -12872,7 +12879,7 @@
     {
       "ticker": "GJR",
       "name": "Synthetic Fixed-Income Securities, Inc. STRATS Trust for Procter&Gamble Securities, Series 2006-1",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJR",
       "exchange": "NYSE"
     },
@@ -12886,7 +12893,7 @@
     {
       "ticker": "GJT",
       "name": "Synthetic Fixed-Income Securities, Inc. Floating Rate Structured Repackaged Asset-Backed Trust Securities Certificates, Series 2006-3",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJT",
       "exchange": "NYSE"
     },
@@ -18619,7 +18626,7 @@
     {
       "ticker": "MBAI",
       "name": "MBody AI Ltd. - Ordinary Share",
-      "sector": "Health Care",
+      "sector": "Technology",
       "permanent_id": "issuer-unresolved:MBAI",
       "exchange": "Nasdaq"
     },
@@ -21540,6 +21547,13 @@
       "name": "Nexus Advanced Technologies Inc. - Ordinary Shares",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:NXAT",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "NXDR",
+      "name": "Nextdoor Holdings, Inc. - Common Stock",
+      "sector": "Technology",
+      "permanent_id": "issuer-unresolved:NXDR",
       "exchange": "Nasdaq"
     },
     {
@@ -25647,7 +25661,7 @@
     {
       "ticker": "RNTZ",
       "name": "Rantizo - Class A Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Industrials",
       "permanent_id": "issuer-unresolved:RNTZ",
       "exchange": "Nasdaq"
     },
