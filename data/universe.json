@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1014202618:01",
-    "other_listed_file_timestamp": "File Creation Time: 1014202618:01",
-    "retrieved_at": "2026-10-15T00:43:24.201938+00:00",
-    "directory_rows": 6801,
-    "eligible_common_shares": 4759,
-    "unclassified_sectors": 174,
-    "unresolved_issuer_ids": 4759
+    "nasdaq_file_timestamp": "File Creation Time: 1015202603:03",
+    "other_listed_file_timestamp": "File Creation Time: 1015202603:03",
+    "retrieved_at": "2026-10-15T09:11:03.379129+00:00",
+    "directory_rows": 6796,
+    "eligible_common_shares": 4756,
+    "unclassified_sectors": 173,
+    "unresolved_issuer_ids": 4756
   },
   "securities": [
     {
@@ -23594,13 +23594,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "PLMK",
-      "name": "Plum Acquisition Corp. IV - Class A Ordinary Shares",
-      "sector": "Unclassified",
-      "permanent_id": "issuer-unresolved:PLMK",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "PLMR",
       "name": "Palomar Holdings, Inc. - Common stock",
       "sector": "Finance",
@@ -24690,6 +24683,13 @@
       "name": "Quartzsea Acquisition Corporation - Ordinary Shares",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:QSEA",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "QSI",
+      "name": "Quantum-Si Incorporated - Class A Common Stock",
+      "sector": "Industrials",
+      "permanent_id": "issuer-unresolved:QSI",
       "exchange": "Nasdaq"
     },
     {
@@ -26063,13 +26063,6 @@
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:RYAN",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "RYET",
-      "name": "Ruanyun Edai Technology Inc. - Ordinary shares",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:RYET",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "RYM",
@@ -28197,13 +28190,6 @@
       "name": "StepStone Group Inc. - Class A Common Stock",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:STEP",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "STEX",
-      "name": "Streamex Corp. - Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:STEX",
       "exchange": "Nasdaq"
     },
     {
@@ -32874,13 +32860,6 @@
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:XTND",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "XWEL",
-      "name": "XWELL, Inc. - Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:XWEL",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "XXI",
