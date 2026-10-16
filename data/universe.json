@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1015202603:03",
-    "other_listed_file_timestamp": "File Creation Time: 1015202603:03",
-    "retrieved_at": "2026-10-15T09:11:03.379129+00:00",
-    "directory_rows": 6796,
-    "eligible_common_shares": 4756,
-    "unclassified_sectors": 173,
-    "unresolved_issuer_ids": 4756
+    "nasdaq_file_timestamp": "File Creation Time: 1015202618:01",
+    "other_listed_file_timestamp": "File Creation Time: 1015202618:01",
+    "retrieved_at": "2026-10-16T00:33:39.788040+00:00",
+    "directory_rows": 6799,
+    "eligible_common_shares": 4759,
+    "unclassified_sectors": 178,
+    "unresolved_issuer_ids": 4759
   },
   "securities": [
     {
@@ -1815,6 +1815,13 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:AMRC",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "AMRO",
+      "name": "Amaero Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:AMRO",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "AMRX",
@@ -4502,6 +4509,13 @@
       "name": "Blue Moon Metals Inc. - Common Shares",
       "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:BMM",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "BMMX",
+      "name": "Black Mammoth Metals Corporation - Common Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:BMMX",
       "exchange": "Nasdaq"
     },
     {
@@ -12872,14 +12886,14 @@
     {
       "ticker": "GJP",
       "name": "Synthetic Fixed-Income Securities, Inc. on behalf of STRATS (SM) Trust for Dominion Resources, Inc. Securities, Series 2005-6, Floating Rate Structured Repackaged Asset-Backed Trust Securities (STRATS) Certificates",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJP",
       "exchange": "NYSE"
     },
     {
       "ticker": "GJR",
       "name": "Synthetic Fixed-Income Securities, Inc. STRATS Trust for Procter&Gamble Securities, Series 2006-1",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJR",
       "exchange": "NYSE"
     },
@@ -12893,7 +12907,7 @@
     {
       "ticker": "GJT",
       "name": "Synthetic Fixed-Income Securities, Inc. Floating Rate Structured Repackaged Asset-Backed Trust Securities Certificates, Series 2006-3",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJT",
       "exchange": "NYSE"
     },
@@ -14851,6 +14865,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "IAM",
+      "name": "Iambic Therapeutics, Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:IAM",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "IART",
       "name": "Integra LifeSciences Holdings Corporation - Common Stock",
       "sector": "Health Care",
@@ -16120,7 +16141,7 @@
     {
       "ticker": "JBK",
       "name": "Lehman ABS 3.50 3.50% Adjustable Corp Backed Tr Certs GS Cap I",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:JBK",
       "exchange": "NYSE"
     },
