@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1015202618:01",
-    "other_listed_file_timestamp": "File Creation Time: 1015202618:01",
-    "retrieved_at": "2026-10-16T00:33:39.788040+00:00",
-    "directory_rows": 6799,
-    "eligible_common_shares": 4759,
+    "nasdaq_file_timestamp": "File Creation Time: 1016202603:03",
+    "other_listed_file_timestamp": "File Creation Time: 1016202603:03",
+    "retrieved_at": "2026-10-16T09:03:29.361270+00:00",
+    "directory_rows": 6802,
+    "eligible_common_shares": 4762,
     "unclassified_sectors": 178,
-    "unresolved_issuer_ids": 4759
+    "unresolved_issuer_ids": 4762
   },
   "securities": [
     {
@@ -3977,6 +3977,13 @@
       "name": "BioNexus Gene Lab Corp - Common stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:BGLC",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "BGM",
+      "name": "BGM Group Ltd. - Class A Ordinary Shares",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:BGM",
       "exchange": "Nasdaq"
     },
     {
@@ -11348,6 +11355,13 @@
       "name": "FG Imperii Acquisition Corp. - Class A Ordinary Shares",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:FGII",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "FGL",
+      "name": "Founder Group Limited - Class A Ordinary Shares",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:FGL",
       "exchange": "Nasdaq"
     },
     {
@@ -20210,6 +20224,13 @@
       "name": "Myriad Genetics, Inc. - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:MYGN",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "MYPS",
+      "name": "PLAYSTUDIOS, Inc.  - Class A Common Stock",
+      "sector": "Technology",
+      "permanent_id": "issuer-unresolved:MYPS",
       "exchange": "Nasdaq"
     },
     {
