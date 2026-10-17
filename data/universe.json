@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1016202603:03",
-    "other_listed_file_timestamp": "File Creation Time: 1016202603:03",
-    "retrieved_at": "2026-10-16T09:03:29.361270+00:00",
-    "directory_rows": 6802,
-    "eligible_common_shares": 4762,
-    "unclassified_sectors": 178,
-    "unresolved_issuer_ids": 4762
+    "nasdaq_file_timestamp": "File Creation Time: 1016202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1016202621:31",
+    "retrieved_at": "2026-10-17T08:36:04.717740+00:00",
+    "directory_rows": 6807,
+    "eligible_common_shares": 4766,
+    "unclassified_sectors": 176,
+    "unresolved_issuer_ids": 4766
   },
   "securities": [
     {
@@ -942,13 +942,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "AGMH",
-      "name": "AGM Group Holdings Inc. - Class A Ordinary Shares",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:AGMH",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "AGNC",
       "name": "AGNC Investment Corp. - Common Stock",
       "sector": "Real Estate",
@@ -1819,7 +1812,7 @@
     {
       "ticker": "AMRO",
       "name": "Amaero Inc. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Industrials",
       "permanent_id": "issuer-unresolved:AMRO",
       "exchange": "Nasdaq"
     },
@@ -8124,6 +8117,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "CTY",
+      "name": "City Therapeutics, Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:CTY",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "CUB",
       "name": "Lionheart Holdings - Class A Ordinary Shares",
       "sector": "Industrials",
@@ -12893,21 +12893,21 @@
     {
       "ticker": "GJO",
       "name": "Synthetic Fixed-Income Securities, Inc. on behalf of STRATS(SM) Trust for Wal-Mart Stores, Inc. Securities, Series 2004-5",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJO",
       "exchange": "NYSE"
     },
     {
       "ticker": "GJP",
       "name": "Synthetic Fixed-Income Securities, Inc. on behalf of STRATS (SM) Trust for Dominion Resources, Inc. Securities, Series 2005-6, Floating Rate Structured Repackaged Asset-Backed Trust Securities (STRATS) Certificates",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJP",
       "exchange": "NYSE"
     },
     {
       "ticker": "GJR",
       "name": "Synthetic Fixed-Income Securities, Inc. STRATS Trust for Procter&Gamble Securities, Series 2006-1",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJR",
       "exchange": "NYSE"
     },
@@ -14881,7 +14881,7 @@
     {
       "ticker": "IAM",
       "name": "Iambic Therapeutics, Inc. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:IAM",
       "exchange": "Nasdaq"
     },
@@ -18246,13 +18246,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "LUCY",
-      "name": "Innovative Eyewear, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:LUCY",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "LULU",
       "name": "lululemon athletica inc. - Common Stock",
       "sector": "Consumer Discretionary",
@@ -18985,6 +18978,13 @@
       "name": "Medpace Holdings, Inc. - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:MEDP",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "MEDS",
+      "name": "DataMeds AI, Inc. - Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:MEDS",
       "exchange": "Nasdaq"
     },
     {
@@ -20014,6 +20014,13 @@
       "name": "Mingteng International Corporation Inc. - Class A Ordinary Shares",
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:MTEN",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "MTEX",
+      "name": "Mannatech, Incorporated - Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:MTEX",
       "exchange": "Nasdaq"
     },
     {
@@ -24562,7 +24569,7 @@
     {
       "ticker": "PYT",
       "name": "PPlus Tr GSC-2 Tr Ctf Fltg Rate",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:PYT",
       "exchange": "NYSE"
     },
@@ -24740,6 +24747,13 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:QSR",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "QTEX",
+      "name": "QTREX Quantum Ltd. - Ordinary Shares",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:QTEX",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "QTI",
@@ -28956,6 +28970,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "TCXB",
+      "name": "TCGX Acquisition Corp. II - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:TCXB",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "TD",
       "name": "Toronto Dominion Bank (The) Common Stock",
       "sector": "Finance",
@@ -29364,7 +29385,7 @@
     {
       "ticker": "TJGC",
       "name": "TJGC Group Limited - Class A Ordinary Shares",
-      "sector": "Consumer Discretionary",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:TJGC",
       "exchange": "Nasdaq"
     },
@@ -30445,6 +30466,13 @@
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:UCB",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "UCFI",
+      "name": "CN Healthy Food Tech Group Corp. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:UCFI",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "UCTT",
