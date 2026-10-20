@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1016202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1016202621:31",
-    "retrieved_at": "2026-10-17T08:36:04.717740+00:00",
-    "directory_rows": 6807,
-    "eligible_common_shares": 4766,
+    "nasdaq_file_timestamp": "File Creation Time: 1020202603:02",
+    "other_listed_file_timestamp": "File Creation Time: 1020202603:02",
+    "retrieved_at": "2026-10-20T09:27:38.215992+00:00",
+    "directory_rows": 6802,
+    "eligible_common_shares": 4763,
     "unclassified_sectors": 176,
-    "unresolved_issuer_ids": 4766
+    "unresolved_issuer_ids": 4763
   },
   "securities": [
     {
@@ -492,13 +492,6 @@
       "sector": "Miscellaneous",
       "permanent_id": "issuer-unresolved:ACTG",
       "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "ACVA",
-      "name": "ACV Auctions Inc. Class A Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:ACVA",
-      "exchange": "NYSE"
     },
     {
       "ticker": "ACXP",
@@ -2776,13 +2769,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "ATHR",
-      "name": "Aether Holdings, Inc. - Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:ATHR",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "ATI",
       "name": "ATI Inc. Common Stock",
       "sector": "Industrials",
@@ -2795,13 +2781,6 @@
       "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:ATII",
       "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "ATKR",
-      "name": "Atkore Inc. Common Stock",
-      "sector": "Miscellaneous",
-      "permanent_id": "issuer-unresolved:ATKR",
-      "exchange": "NYSE"
     },
     {
       "ticker": "ATLC",
@@ -4869,6 +4848,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "BREZ",
+      "name": "Breeze Acquisition Corp. II - Ordinary Shares",
+      "sector": "Finance",
+      "permanent_id": "issuer-unresolved:BREZ",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "BRID",
       "name": "Bridgford Foods Corporation - Common Stock",
       "sector": "Consumer Staples",
@@ -5413,13 +5399,6 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:BZFD",
       "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "BZH",
-      "name": "Beazer Homes USA, Inc. Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:BZH",
-      "exchange": "NYSE"
     },
     {
       "ticker": "C",
@@ -6134,13 +6113,6 @@
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:CE",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "CECO",
-      "name": "CECO Environmental Corp. - Common Stock",
-      "sector": "Industrials",
-      "permanent_id": "issuer-unresolved:CECO",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "CELC",
@@ -8119,7 +8091,7 @@
     {
       "ticker": "CTY",
       "name": "City Therapeutics, Inc. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:CTY",
       "exchange": "Nasdaq"
     },
@@ -9791,7 +9763,7 @@
     },
     {
       "ticker": "EFTY",
-      "name": "Etoiles Capital Group Co., Ltd. - Class A Ordinary Shares",
+      "name": "Etoiles Capital Group Co., Ltd. - Common Stock",
       "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:EFTY",
       "exchange": "Nasdaq"
@@ -14172,13 +14144,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "HIT",
-      "name": "Health In Tech, Inc. - Class A Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:HIT",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "HITI",
       "name": "High Tide Inc. - Common Shares",
       "sector": "Consumer Discretionary",
@@ -14933,13 +14898,6 @@
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:IBN",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "IBOC",
-      "name": "International Bancshares Corporation - Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:IBOC",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "IBP",
@@ -15863,6 +15821,13 @@
       "name": "Iron Horse Acquisitions II Corp. - Common Stock",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:IRHO",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "IRLA",
+      "name": "IRulya Therapeutics Inc. - Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:IRLA",
       "exchange": "Nasdaq"
     },
     {
@@ -17455,6 +17420,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "LCU",
+      "name": "Lion Copper Corp. - Common Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:LCU",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "LCUT",
       "name": "Lifetime Brands, Inc. - Common Stock",
       "sector": "Consumer Discretionary",
@@ -18229,13 +18201,6 @@
       "name": "Lantronix, Inc. - Common Stock",
       "sector": "Telecommunications",
       "permanent_id": "issuer-unresolved:LTRX",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "LUCD",
-      "name": "Lucid Diagnostics Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:LUCD",
       "exchange": "Nasdaq"
     },
     {
@@ -20753,7 +20718,7 @@
     },
     {
       "ticker": "NHP",
-      "name": "National Healthcare Properties, Inc. - Class A Common Stock",
+      "name": "National Healthcare Properties, Inc. - Common Stock",
       "sector": "Real Estate",
       "permanent_id": "issuer-unresolved:NHP",
       "exchange": "Nasdaq"
@@ -26506,6 +26471,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "SCNX",
+      "name": "Scienture Holdings, Inc. - Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:SCNX",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "SCOR",
       "name": "comScore, Inc. - Common Stock",
       "sector": "Consumer Discretionary",
@@ -30955,6 +30927,13 @@
       "name": "UY Scuti Acquisition Corp. - Ordinary Shares",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:UYSC",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "UZX",
+      "name": "Linkage Global Inc - Class A Ordinary Shares",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:UZX",
       "exchange": "Nasdaq"
     },
     {
