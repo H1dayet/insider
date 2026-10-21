@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1020202603:02",
-    "other_listed_file_timestamp": "File Creation Time: 1020202603:02",
-    "retrieved_at": "2026-10-20T09:27:38.215992+00:00",
+    "nasdaq_file_timestamp": "File Creation Time: 1021202603:03",
+    "other_listed_file_timestamp": "File Creation Time: 1021202603:03",
+    "retrieved_at": "2026-10-21T09:23:34.677129+00:00",
     "directory_rows": 6802,
-    "eligible_common_shares": 4763,
-    "unclassified_sectors": 176,
-    "unresolved_issuer_ids": 4763
+    "eligible_common_shares": 4761,
+    "unclassified_sectors": 177,
+    "unresolved_issuer_ids": 4761
   },
   "securities": [
     {
@@ -3205,7 +3205,7 @@
     {
       "ticker": "AXNX",
       "name": "Axonex AI Group Limited - Class A Ordinary Shares",
-      "sector": "Health Care",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:AXNX",
       "exchange": "Nasdaq"
     },
@@ -3845,13 +3845,6 @@
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:BETA",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "BETR",
-      "name": "Better Home & Finance Holding Company - Class A Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:BETR",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "BF-A",
@@ -11974,13 +11967,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "FRTT",
-      "name": "Fort Technology Inc. - Common Shares",
-      "sector": "Industrials",
-      "permanent_id": "issuer-unresolved:FRTT",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "FRVO",
       "name": "Fervo Energy Company - Class A common stock",
       "sector": "Utilities",
@@ -12858,7 +12844,7 @@
     {
       "ticker": "GJH",
       "name": "Synthetic Fixed-Income Securities Inc 6.375% (STRATS) Cl A-1",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJH",
       "exchange": "NYSE"
     },
@@ -12893,7 +12879,7 @@
     {
       "ticker": "GJT",
       "name": "Synthetic Fixed-Income Securities, Inc. Floating Rate Structured Repackaged Asset-Backed Trust Securities Certificates, Series 2006-3",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJT",
       "exchange": "NYSE"
     },
@@ -15943,6 +15929,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "ITOC",
+      "name": "iTonic Holdings Ltd - Class A Ordinary Shares",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:ITOC",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "ITRI",
       "name": "Itron, Inc. - Common Stock",
       "sector": "Industrials",
@@ -17422,7 +17415,7 @@
     {
       "ticker": "LCU",
       "name": "Lion Copper Corp. - Common Shares",
-      "sector": "Unclassified",
+      "sector": "Basic Materials",
       "permanent_id": "issuer-unresolved:LCU",
       "exchange": "Nasdaq"
     },
@@ -24534,7 +24527,7 @@
     {
       "ticker": "PYT",
       "name": "PPlus Tr GSC-2 Tr Ctf Fltg Rate",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:PYT",
       "exchange": "NYSE"
     },
@@ -28774,13 +28767,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "TAOP",
-      "name": "Taoping Inc. - Ordinary Shares",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:TAOP",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "TAOX",
       "name": "Tao Synergies Inc. - Common Stock",
       "sector": "Finance",
@@ -28916,7 +28902,7 @@
     {
       "ticker": "TCGX",
       "name": "TCGX Acquisition Corp. - Class A Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:TCGX",
       "exchange": "Nasdaq"
     },
