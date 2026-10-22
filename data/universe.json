@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1021202603:03",
-    "other_listed_file_timestamp": "File Creation Time: 1021202603:03",
-    "retrieved_at": "2026-10-21T09:23:34.677129+00:00",
-    "directory_rows": 6802,
-    "eligible_common_shares": 4761,
-    "unclassified_sectors": 177,
-    "unresolved_issuer_ids": 4761
+    "nasdaq_file_timestamp": "File Creation Time: 1022202603:03",
+    "other_listed_file_timestamp": "File Creation Time: 1022202603:03",
+    "retrieved_at": "2026-10-22T09:26:39.705876+00:00",
+    "directory_rows": 6797,
+    "eligible_common_shares": 4759,
+    "unclassified_sectors": 174,
+    "unresolved_issuer_ids": 4759
   },
   "securities": [
     {
@@ -2776,13 +2776,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "ATII",
-      "name": "Archimedes Tech SPAC Partners II Co. - Ordinary Shares",
-      "sector": "Unclassified",
-      "permanent_id": "issuer-unresolved:ATII",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "ATLC",
       "name": "Atlanticus Holdings Corporation - Common Stock",
       "sector": "Finance",
@@ -4314,13 +4307,6 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:BLDR",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "BLIN",
-      "name": "Bridgeline Digital, Inc. - Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:BLIN",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "BLIV",
@@ -6122,6 +6108,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "CELU",
+      "name": "Celularity Inc. - Class A Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:CELU",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "CELZ",
       "name": "Creative Medical Technology Holdings, Inc. - Common Stock",
       "sector": "Health Care",
@@ -6281,13 +6274,6 @@
       "sector": "Basic Materials",
       "permanent_id": "issuer-unresolved:CGAU",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "CGC",
-      "name": "Canopy Growth Corporation - Common Shares",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:CGC",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "CGCF",
@@ -8404,13 +8390,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "CYN",
-      "name": "Cyngn Inc. - Common stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:CYN",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "CYPH",
       "name": "Cypherpunk Technologies Inc. - Common Stock",
       "sector": "Health Care",
@@ -9850,13 +9829,6 @@
       "name": "Euroholdings Ltd. - Common Stock",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:EHLD",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "EHTH",
-      "name": "eHealth, Inc. - Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:EHTH",
       "exchange": "Nasdaq"
     },
     {
@@ -12844,7 +12816,7 @@
     {
       "ticker": "GJH",
       "name": "Synthetic Fixed-Income Securities Inc 6.375% (STRATS) Cl A-1",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJH",
       "exchange": "NYSE"
     },
@@ -12858,7 +12830,7 @@
     {
       "ticker": "GJP",
       "name": "Synthetic Fixed-Income Securities, Inc. on behalf of STRATS (SM) Trust for Dominion Resources, Inc. Securities, Series 2005-6, Floating Rate Structured Repackaged Asset-Backed Trust Securities (STRATS) Certificates",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJP",
       "exchange": "NYSE"
     },
@@ -16113,7 +16085,7 @@
     {
       "ticker": "JBK",
       "name": "Lehman ABS 3.50 3.50% Adjustable Corp Backed Tr Certs GS Cap I",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:JBK",
       "exchange": "NYSE"
     },
@@ -24527,7 +24499,7 @@
     {
       "ticker": "PYT",
       "name": "PPlus Tr GSC-2 Tr Ctf Fltg Rate",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:PYT",
       "exchange": "NYSE"
     },
@@ -31231,6 +31203,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "VIP",
+      "name": "Vulcan Infrastructure and Power Inc. - Class A Common Stock",
+      "sector": "Finance",
+      "permanent_id": "issuer-unresolved:VIP",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "VIR",
       "name": "Vir Biotechnology, Inc. - Common Stock",
       "sector": "Health Care",
@@ -32887,6 +32866,13 @@
       "name": "Karman Line Acquisition Corp. - Class A Ordinary Shares",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:XTER",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "XTIA",
+      "name": "XTI Aerospace, Inc. Common Stock  - Common Stock",
+      "sector": "Technology",
+      "permanent_id": "issuer-unresolved:XTIA",
       "exchange": "Nasdaq"
     },
     {
