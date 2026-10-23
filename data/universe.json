@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1022202603:03",
-    "other_listed_file_timestamp": "File Creation Time: 1022202603:03",
-    "retrieved_at": "2026-10-22T09:26:39.705876+00:00",
+    "nasdaq_file_timestamp": "File Creation Time: 1023202603:03",
+    "other_listed_file_timestamp": "File Creation Time: 1023202603:03",
+    "retrieved_at": "2026-10-23T09:22:51.073663+00:00",
     "directory_rows": 6797,
-    "eligible_common_shares": 4759,
-    "unclassified_sectors": 174,
-    "unresolved_issuer_ids": 4759
+    "eligible_common_shares": 4760,
+    "unclassified_sectors": 177,
+    "unresolved_issuer_ids": 4760
   },
   "securities": [
     {
@@ -8509,6 +8509,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "DAVI",
+      "name": "Davion Healthcare Plc - Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:DAVI",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "DB",
       "name": "Deutsche Bank AG Common Stock",
       "sector": "Finance",
@@ -13182,13 +13189,6 @@
       "name": "GOWell Energy Technology - Ordinary shares",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:GOW",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "GP",
-      "name": "GreenPower Motor Company Inc. - Common Shares",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:GP",
       "exchange": "Nasdaq"
     },
     {
@@ -20248,6 +20248,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "NANO",
+      "name": "Forge Nano Holdings Inc. - Common stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:NANO",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "NAT",
       "name": "Nordic American Tankers Limited Common Stock",
       "sector": "Consumer Discretionary",
@@ -23181,13 +23188,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "PERF",
-      "name": "Perfect Corp. Class A Ordinary Share",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:PERF",
-      "exchange": "NYSE"
-    },
-    {
       "ticker": "PERI",
       "name": "Perion Network Ltd - Ordinary Shares",
       "sector": "Technology",
@@ -24499,7 +24499,7 @@
     {
       "ticker": "PYT",
       "name": "PPlus Tr GSC-2 Tr Ctf Fltg Rate",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:PYT",
       "exchange": "NYSE"
     },
@@ -28890,6 +28890,13 @@
       "name": "Tactile Systems Technology, Inc. - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:TCMD",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "TCRT",
+      "name": "Alaunos Therapeutics, Inc. - Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:TCRT",
       "exchange": "Nasdaq"
     },
     {
