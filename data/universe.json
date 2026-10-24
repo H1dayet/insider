@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1023202603:03",
-    "other_listed_file_timestamp": "File Creation Time: 1023202603:03",
-    "retrieved_at": "2026-10-23T09:22:51.073663+00:00",
-    "directory_rows": 6797,
-    "eligible_common_shares": 4760,
-    "unclassified_sectors": 177,
-    "unresolved_issuer_ids": 4760
+    "nasdaq_file_timestamp": "File Creation Time: 1023202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1023202621:31",
+    "retrieved_at": "2026-10-24T08:54:18.011266+00:00",
+    "directory_rows": 6796,
+    "eligible_common_shares": 4761,
+    "unclassified_sectors": 176,
+    "unresolved_issuer_ids": 4761
   },
   "securities": [
     {
@@ -8511,7 +8511,7 @@
     {
       "ticker": "DAVI",
       "name": "Davion Healthcare Plc - Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:DAVI",
       "exchange": "Nasdaq"
     },
@@ -12844,7 +12844,7 @@
     {
       "ticker": "GJR",
       "name": "Synthetic Fixed-Income Securities, Inc. STRATS Trust for Procter&Gamble Securities, Series 2006-1",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJR",
       "exchange": "NYSE"
     },
@@ -12858,7 +12858,7 @@
     {
       "ticker": "GJT",
       "name": "Synthetic Fixed-Income Securities, Inc. Floating Rate Structured Repackaged Asset-Backed Trust Securities Certificates, Series 2006-3",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJT",
       "exchange": "NYSE"
     },
@@ -13532,13 +13532,6 @@
       "name": "Gores Holdings X, Inc. - Class A ordinary shares",
       "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GTEN",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "GTERA",
-      "name": "Globa Terra Acquisition Corporation - Class A Ordinary Shares",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:GTERA",
       "exchange": "Nasdaq"
     },
     {
@@ -18309,6 +18302,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "LYCA",
+      "name": "Lycia Therapeutics, Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:LYCA",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "LYEL",
       "name": "Lyell Immunopharma, Inc. - Common Stock",
       "sector": "Health Care",
@@ -20250,7 +20250,7 @@
     {
       "ticker": "NANO",
       "name": "Forge Nano Holdings Inc. - Common stock",
-      "sector": "Unclassified",
+      "sector": "Technology",
       "permanent_id": "issuer-unresolved:NANO",
       "exchange": "Nasdaq"
     },
@@ -22852,6 +22852,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "PAXG",
+      "name": "Pine Tree Acquisition Corp. - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:PAXG",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "PAY",
       "name": "Paymentus Holdings, Inc. Class A Common Stock",
       "sector": "Consumer Discretionary",
@@ -24499,7 +24506,7 @@
     {
       "ticker": "PYT",
       "name": "PPlus Tr GSC-2 Tr Ctf Fltg Rate",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:PYT",
       "exchange": "NYSE"
     },
