@@ -1,12 +1,12 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1026202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1026202621:31",
-    "retrieved_at": "2026-10-27T01:34:39.793419+00:00",
-    "directory_rows": 6793,
+    "nasdaq_file_timestamp": "File Creation Time: 1027202603:03",
+    "other_listed_file_timestamp": "File Creation Time: 1027202603:03",
+    "retrieved_at": "2026-10-27T09:50:44.745424+00:00",
+    "directory_rows": 6791,
     "eligible_common_shares": 4758,
-    "unclassified_sectors": 176,
+    "unclassified_sectors": 178,
     "unresolved_issuer_ids": 4758
   },
   "securities": [
@@ -19821,6 +19821,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "MSGK",
+      "name": "MSG Knickerbockers Corp. Class A Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:MSGK",
+      "exchange": "NYSE"
+    },
+    {
       "ticker": "MSGM",
       "name": "Motorsport Games Inc. - Class A Common Stock",
       "sector": "Technology",
@@ -19828,10 +19835,10 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "MSGS",
-      "name": "Madison Square Garden Sports Corp. Class A Common Stock (New)",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:MSGS",
+      "ticker": "MSGR",
+      "name": "MSG Rangers Corp. Class A Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:MSGR",
       "exchange": "NYSE"
     },
     {
@@ -20253,13 +20260,6 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:NAT",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "NATH",
-      "name": "Nathan's Famous, Inc. - Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:NATH",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "NATL",
@@ -22790,7 +22790,7 @@
     },
     {
       "ticker": "PARA",
-      "name": "Banzai International, Inc. - Class A Common Stock",
+      "name": "Parabolic Technologies, Inc. - Class A Common Stock",
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:PARA",
       "exchange": "Nasdaq"
