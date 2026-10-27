@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1023202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1023202621:31",
-    "retrieved_at": "2026-10-24T08:54:18.011266+00:00",
-    "directory_rows": 6796,
-    "eligible_common_shares": 4761,
+    "nasdaq_file_timestamp": "File Creation Time: 1026202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1026202621:31",
+    "retrieved_at": "2026-10-27T01:34:39.793419+00:00",
+    "directory_rows": 6793,
+    "eligible_common_shares": 4758,
     "unclassified_sectors": 176,
-    "unresolved_issuer_ids": 4761
+    "unresolved_issuer_ids": 4758
   },
   "securities": [
     {
@@ -246,13 +246,6 @@
       "name": "Abacus Global Management, Inc. Class A Common Stock",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:ABX",
-      "exchange": "NYSE"
-    },
-    {
-      "ticker": "ACA",
-      "name": "Arcosa, Inc. Common Stock",
-      "sector": "Industrials",
-      "permanent_id": "issuer-unresolved:ACA",
       "exchange": "NYSE"
     },
     {
@@ -792,6 +785,13 @@
       "name": "Aeon Acquisition I Corp. - Class A Ordinary Shares",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:AESP",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "AETR",
+      "name": "Aetherion Technologies Inc. - Common Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:AETR",
       "exchange": "Nasdaq"
     },
     {
@@ -7130,13 +7130,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "CNTY",
-      "name": "Century Casinos, Inc. - Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:CNTY",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "CNVS",
       "name": "Cineverse Corp. - Class A Common Stock",
       "sector": "Consumer Discretionary",
@@ -9076,13 +9069,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "DOGZ",
-      "name": "Dogness (International) Corporation - Class A Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:DOGZ",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "DOLE",
       "name": "Dole plc Ordinary Shares",
       "sector": "Consumer Staples",
@@ -9913,13 +9899,6 @@
       "name": "e.l.f. Beauty, Inc. Common Stock",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:ELF",
-      "exchange": "NYSE"
-    },
-    {
-      "ticker": "ELME",
-      "name": "Elme Communities Common Stock",
-      "sector": "Real Estate",
-      "permanent_id": "issuer-unresolved:ELME",
       "exchange": "NYSE"
     },
     {
@@ -11050,6 +11029,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "FCDH",
+      "name": "Forcendra Holding Limited - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:FCDH",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "FCEL",
       "name": "FuelCell Energy, Inc. - Common Stock",
       "sector": "Energy",
@@ -11645,13 +11631,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "FMST",
-      "name": "Foremost Clean Energy Ltd. - Common Shares",
-      "sector": "Basic Materials",
-      "permanent_id": "issuer-unresolved:FMST",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "FMX",
       "name": "Fomento Economico Mexicano S.A.B. de C.V. Common Stock",
       "sector": "Consumer Staples",
@@ -11705,6 +11684,13 @@
       "name": "First Northern Community Bancorp - Common stock",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:FNRN",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "FNUC",
+      "name": "Frontier Nuclear and Minerals Inc. - Common Shares",
+      "sector": "Basic Materials",
+      "permanent_id": "issuer-unresolved:FNUC",
       "exchange": "Nasdaq"
     },
     {
@@ -12844,7 +12830,7 @@
     {
       "ticker": "GJR",
       "name": "Synthetic Fixed-Income Securities, Inc. STRATS Trust for Procter&Gamble Securities, Series 2006-1",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJR",
       "exchange": "NYSE"
     },
@@ -15684,6 +15670,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "IPST",
+      "name": "IP Strategy Holdings, Inc. - Common Stock",
+      "sector": "Consumer Staples",
+      "permanent_id": "issuer-unresolved:IPST",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "IPVV",
       "name": "InterPrivate Investment Partners V, Inc. - Class A Ordinary Shares",
       "sector": "Finance",
@@ -18304,7 +18297,7 @@
     {
       "ticker": "LYCA",
       "name": "Lycia Therapeutics, Inc. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:LYCA",
       "exchange": "Nasdaq"
     },
@@ -21557,6 +21550,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "NXGL",
+      "name": "NexGel, Inc - Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:NXGL",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "NXH",
       "name": "Neighborhood Intelligence, Inc.  - Common Stock",
       "sector": "Consumer Discretionary",
@@ -22854,7 +22854,7 @@
     {
       "ticker": "PAXG",
       "name": "Pine Tree Acquisition Corp. - Class A Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:PAXG",
       "exchange": "Nasdaq"
     },
@@ -28622,7 +28622,7 @@
     {
       "ticker": "SXTC",
       "name": "China SXT Pharmaceuticals, Inc. - Class A Ordinary Shares",
-      "sector": "Health Care",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:SXTC",
       "exchange": "Nasdaq"
     },
@@ -31602,13 +31602,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "VSME",
-      "name": "VS Media Holdings Limited - Class A Ordinary Shares",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:VSME",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "VSNT",
       "name": "Versant Media Group, Inc. - Class A Common Stock",
       "sector": "Industrials",
@@ -31915,13 +31908,6 @@
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:WDFC",
       "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "WEAV",
-      "name": "Weave Communications, Inc. Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:WEAV",
-      "exchange": "NYSE"
     },
     {
       "ticker": "WEC",
@@ -32335,13 +32321,6 @@
       "sector": "Basic Materials",
       "permanent_id": "issuer-unresolved:WPM",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "WPRT",
-      "name": "Westport Fuel Systems Inc - Common Shares",
-      "sector": "Industrials",
-      "permanent_id": "issuer-unresolved:WPRT",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "WQEY",
