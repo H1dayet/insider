@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1027202603:03",
-    "other_listed_file_timestamp": "File Creation Time: 1027202603:03",
-    "retrieved_at": "2026-10-27T09:50:44.745424+00:00",
-    "directory_rows": 6791,
-    "eligible_common_shares": 4758,
+    "nasdaq_file_timestamp": "File Creation Time: 1028202606:00",
+    "other_listed_file_timestamp": "File Creation Time: 1028202606:00",
+    "retrieved_at": "2026-10-28T10:37:06.586352+00:00",
+    "directory_rows": 6789,
+    "eligible_common_shares": 4756,
     "unclassified_sectors": 178,
-    "unresolved_issuer_ids": 4758
+    "unresolved_issuer_ids": 4756
   },
   "securities": [
     {
@@ -790,7 +790,7 @@
     {
       "ticker": "AETR",
       "name": "Aetherion Technologies Inc. - Common Shares",
-      "sector": "Unclassified",
+      "sector": "Industrials",
       "permanent_id": "issuer-unresolved:AETR",
       "exchange": "Nasdaq"
     },
@@ -11031,7 +11031,7 @@
     {
       "ticker": "FCDH",
       "name": "Forcendra Holding Limited - Class A Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:FCDH",
       "exchange": "Nasdaq"
     },
@@ -11250,6 +11250,13 @@
       "name": "FF EAI Robotics Ecosystem Inc. - Common Stock",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:FFR",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "FFTT",
+      "name": "Masonglory Limited - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:FFTT",
       "exchange": "Nasdaq"
     },
     {
@@ -16071,7 +16078,7 @@
     {
       "ticker": "JBK",
       "name": "Lehman ABS 3.50 3.50% Adjustable Corp Backed Tr Certs GS Cap I",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:JBK",
       "exchange": "NYSE"
     },
@@ -17235,13 +17242,6 @@
       "name": "Landmark Bancorp Inc. - Common Stock",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:LARK",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "LASE",
-      "name": "Laser Photonics Corporation - Common Stock",
-      "sector": "Miscellaneous",
-      "permanent_id": "issuer-unresolved:LASE",
       "exchange": "Nasdaq"
     },
     {
@@ -19840,13 +19840,6 @@
       "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:MSGR",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "MSGY",
-      "name": "Masonglory Limited - Class A Ordinary Shares",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:MSGY",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "MSI",
@@ -27511,13 +27504,6 @@
       "name": "Syndax Pharmaceuticals, Inc. - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:SNDX",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "SNES",
-      "name": "SenesTech, Inc. - Common Stock",
-      "sector": "Industrials",
-      "permanent_id": "issuer-unresolved:SNES",
       "exchange": "Nasdaq"
     },
     {
