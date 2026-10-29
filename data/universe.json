@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1028202606:00",
-    "other_listed_file_timestamp": "File Creation Time: 1028202606:00",
-    "retrieved_at": "2026-10-28T10:37:06.586352+00:00",
-    "directory_rows": 6789,
-    "eligible_common_shares": 4756,
-    "unclassified_sectors": 178,
-    "unresolved_issuer_ids": 4756
+    "nasdaq_file_timestamp": "File Creation Time: 1028202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1028202621:31",
+    "retrieved_at": "2026-10-29T01:55:18.432242+00:00",
+    "directory_rows": 6786,
+    "eligible_common_shares": 4754,
+    "unclassified_sectors": 179,
+    "unresolved_issuer_ids": 4754
   },
   "securities": [
     {
@@ -519,13 +519,6 @@
       "name": "Adobe Inc. - Common Stock",
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:ADBE",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "ADBT",
-      "name": "Advasa Holdings, Inc. - Common stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:ADBT",
       "exchange": "Nasdaq"
     },
     {
@@ -1233,13 +1226,6 @@
       "name": "Akamai Technologies, Inc. - Common Stock",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:AKAM",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "AKBA",
-      "name": "Akebia Therapeutics, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:AKBA",
       "exchange": "Nasdaq"
     },
     {
@@ -12816,14 +12802,14 @@
     {
       "ticker": "GJH",
       "name": "Synthetic Fixed-Income Securities Inc 6.375% (STRATS) Cl A-1",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJH",
       "exchange": "NYSE"
     },
     {
       "ticker": "GJO",
       "name": "Synthetic Fixed-Income Securities, Inc. on behalf of STRATS(SM) Trust for Wal-Mart Stores, Inc. Securities, Series 2004-5",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJO",
       "exchange": "NYSE"
     },
@@ -12837,7 +12823,7 @@
     {
       "ticker": "GJR",
       "name": "Synthetic Fixed-Income Securities, Inc. STRATS Trust for Procter&Gamble Securities, Series 2006-1",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJR",
       "exchange": "NYSE"
     },
@@ -17840,13 +17826,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "LNAI",
-      "name": "Lunai Bioworks Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:LNAI",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "LNC",
       "name": "Lincoln National Corporation Common Stock",
       "sector": "Finance",
@@ -19823,7 +19802,7 @@
     {
       "ticker": "MSGK",
       "name": "MSG Knickerbockers Corp. Class A Common Stock",
-      "sector": "Unclassified",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:MSGK",
       "exchange": "NYSE"
     },
@@ -19837,7 +19816,7 @@
     {
       "ticker": "MSGR",
       "name": "MSG Rangers Corp. Class A Common Stock",
-      "sector": "Unclassified",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:MSGR",
       "exchange": "NYSE"
     },
@@ -27120,6 +27099,13 @@
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:SKIL",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "SKIN",
+      "name": "SkinHealth Systems Inc. - Class A Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:SKIN",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "SKM",
