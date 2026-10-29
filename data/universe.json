@@ -1,12 +1,12 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1028202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1028202621:31",
-    "retrieved_at": "2026-10-29T01:55:18.432242+00:00",
+    "nasdaq_file_timestamp": "File Creation Time: 1029202606:00",
+    "other_listed_file_timestamp": "File Creation Time: 1029202606:00",
+    "retrieved_at": "2026-10-29T10:55:24.808620+00:00",
     "directory_rows": 6786,
     "eligible_common_shares": 4754,
-    "unclassified_sectors": 179,
+    "unclassified_sectors": 177,
     "unresolved_issuer_ids": 4754
   },
   "securities": [
@@ -11241,7 +11241,7 @@
     {
       "ticker": "FFTT",
       "name": "Masonglory Limited - Class A Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:FFTT",
       "exchange": "Nasdaq"
     },
@@ -12802,7 +12802,7 @@
     {
       "ticker": "GJH",
       "name": "Synthetic Fixed-Income Securities Inc 6.375% (STRATS) Cl A-1",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJH",
       "exchange": "NYSE"
     },
@@ -12823,7 +12823,7 @@
     {
       "ticker": "GJR",
       "name": "Synthetic Fixed-Income Securities, Inc. STRATS Trust for Procter&Gamble Securities, Series 2006-1",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJR",
       "exchange": "NYSE"
     },
@@ -12837,7 +12837,7 @@
     {
       "ticker": "GJT",
       "name": "Synthetic Fixed-Income Securities, Inc. Floating Rate Structured Repackaged Asset-Backed Trust Securities Certificates, Series 2006-3",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJT",
       "exchange": "NYSE"
     },
@@ -16064,7 +16064,7 @@
     {
       "ticker": "JBK",
       "name": "Lehman ABS 3.50 3.50% Adjustable Corp Backed Tr Certs GS Cap I",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:JBK",
       "exchange": "NYSE"
     },
@@ -20256,7 +20256,7 @@
     },
     {
       "ticker": "NAVI",
-      "name": "Navient Corporation - Common Stock",
+      "name": "Navient Holdings, Inc. - Common Stock",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:NAVI",
       "exchange": "Nasdaq"
@@ -24478,7 +24478,7 @@
     {
       "ticker": "PYT",
       "name": "PPlus Tr GSC-2 Tr Ctf Fltg Rate",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:PYT",
       "exchange": "NYSE"
     },
@@ -27256,7 +27256,7 @@
     },
     {
       "ticker": "SLMT",
-      "name": "Brera Holdings PLC - Class B Ordinary Shares",
+      "name": "Solmate Infrastructure Public Limited Company - Class B Ordinary Shares",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:SLMT",
       "exchange": "Nasdaq"
