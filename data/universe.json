@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1029202606:00",
-    "other_listed_file_timestamp": "File Creation Time: 1029202606:00",
-    "retrieved_at": "2026-10-29T10:55:24.808620+00:00",
-    "directory_rows": 6786,
-    "eligible_common_shares": 4754,
-    "unclassified_sectors": 177,
-    "unresolved_issuer_ids": 4754
+    "nasdaq_file_timestamp": "File Creation Time: 1029202621:32",
+    "other_listed_file_timestamp": "File Creation Time: 1029202621:32",
+    "retrieved_at": "2026-10-30T02:05:24.969212+00:00",
+    "directory_rows": 6795,
+    "eligible_common_shares": 4761,
+    "unclassified_sectors": 180,
+    "unresolved_issuer_ids": 4761
   },
   "securities": [
     {
@@ -3287,6 +3287,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "AZR",
+      "name": "Azora Therapeutics, Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:AZR",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "AZTA",
       "name": "Azenta, Inc. - Common Stock",
       "sector": "Technology",
@@ -5076,6 +5083,13 @@
       "name": "Biote Corp. - Class A common stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:BTMD",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "BTOC",
+      "name": "Armlogi Holding Corp. - common stock",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:BTOC",
       "exchange": "Nasdaq"
     },
     {
@@ -8696,6 +8710,13 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:DFIN",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "DFNS",
+      "name": "T3 Defense Inc. - Common Stock",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:DFNS",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "DFSC",
@@ -12366,6 +12387,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "GBC",
+      "name": "Georgia Banking Company, Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:GBC",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "GBCI",
       "name": "Glacier Bancorp, Inc. Common Stock",
       "sector": "Finance",
@@ -12426,6 +12454,13 @@
       "name": "GigaCloud Technology Inc - Class A Ordinary Shares",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:GCT",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "GCTK",
+      "name": "GlucoTrack, Inc. - Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:GCTK",
       "exchange": "Nasdaq"
     },
     {
@@ -17824,6 +17859,13 @@
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:LMT",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "LNAI",
+      "name": "Lunai Bioworks Inc. - Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:LNAI",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "LNC",
@@ -32964,6 +33006,13 @@
       "name": "Yunhong Green CTI Ltd. - Common Stock",
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:YHGJ",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "YHNA",
+      "name": "YHN Acquisition I Limited - Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:YHNA",
       "exchange": "Nasdaq"
     },
     {
