@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1029202621:32",
-    "other_listed_file_timestamp": "File Creation Time: 1029202621:32",
-    "retrieved_at": "2026-10-30T02:05:24.969212+00:00",
-    "directory_rows": 6795,
-    "eligible_common_shares": 4761,
-    "unclassified_sectors": 180,
-    "unresolved_issuer_ids": 4761
+    "nasdaq_file_timestamp": "File Creation Time: 1030202606:00",
+    "other_listed_file_timestamp": "File Creation Time: 1030202606:00",
+    "retrieved_at": "2026-10-30T10:53:56.035032+00:00",
+    "directory_rows": 6786,
+    "eligible_common_shares": 4757,
+    "unclassified_sectors": 179,
+    "unresolved_issuer_ids": 4757
   },
   "securities": [
     {
@@ -9454,13 +9454,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "DYNC",
-      "name": "Dynamix Corporation - Class A Ordinary Share",
-      "sector": "Unclassified",
-      "permanent_id": "issuer-unresolved:DYNC",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "DYOR",
       "name": "Insight Digital Partners II - Class A Ordinary Shares",
       "sector": "Finance",
@@ -12389,7 +12382,7 @@
     {
       "ticker": "GBC",
       "name": "Georgia Banking Company, Inc. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GBC",
       "exchange": "Nasdaq"
     },
@@ -12454,13 +12447,6 @@
       "name": "GigaCloud Technology Inc - Class A Ordinary Shares",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:GCT",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "GCTK",
-      "name": "GlucoTrack, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:GCTK",
       "exchange": "Nasdaq"
     },
     {
@@ -12844,7 +12830,7 @@
     {
       "ticker": "GJO",
       "name": "Synthetic Fixed-Income Securities, Inc. on behalf of STRATS(SM) Trust for Wal-Mart Stores, Inc. Securities, Series 2004-5",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJO",
       "exchange": "NYSE"
     },
@@ -12858,21 +12844,21 @@
     {
       "ticker": "GJR",
       "name": "Synthetic Fixed-Income Securities, Inc. STRATS Trust for Procter&Gamble Securities, Series 2006-1",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJR",
       "exchange": "NYSE"
     },
     {
       "ticker": "GJS",
       "name": "Goldman Sachs Group Securities STRATS Trust for Goldman Sachs Group Securities, Series 2006-2",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJS",
       "exchange": "NYSE"
     },
     {
       "ticker": "GJT",
       "name": "Synthetic Fixed-Income Securities, Inc. Floating Rate Structured Repackaged Asset-Backed Trust Securities Certificates, Series 2006-3",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJT",
       "exchange": "NYSE"
     },
@@ -16099,7 +16085,7 @@
     {
       "ticker": "JBK",
       "name": "Lehman ABS 3.50 3.50% Adjustable Corp Backed Tr Certs GS Cap I",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:JBK",
       "exchange": "NYSE"
     },
@@ -17859,13 +17845,6 @@
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:LMT",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "LNAI",
-      "name": "Lunai Bioworks Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:LNAI",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "LNC",
@@ -25934,7 +25913,7 @@
     {
       "ticker": "RUBI",
       "name": "Rubico Inc. - Common Stock",
-      "sector": "Consumer Discretionary",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:RUBI",
       "exchange": "Nasdaq"
     },
@@ -33006,13 +32985,6 @@
       "name": "Yunhong Green CTI Ltd. - Common Stock",
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:YHGJ",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "YHNA",
-      "name": "YHN Acquisition I Limited - Ordinary Shares",
-      "sector": "Unclassified",
-      "permanent_id": "issuer-unresolved:YHNA",
       "exchange": "Nasdaq"
     },
     {
