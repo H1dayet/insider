@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1030202606:00",
-    "other_listed_file_timestamp": "File Creation Time: 1030202606:00",
-    "retrieved_at": "2026-10-30T10:53:56.035032+00:00",
-    "directory_rows": 6786,
-    "eligible_common_shares": 4757,
-    "unclassified_sectors": 179,
-    "unresolved_issuer_ids": 4757
+    "nasdaq_file_timestamp": "File Creation Time: 1030202618:01",
+    "other_listed_file_timestamp": "File Creation Time: 1030202618:01",
+    "retrieved_at": "2026-10-31T01:44:28.776156+00:00",
+    "directory_rows": 6790,
+    "eligible_common_shares": 4760,
+    "unclassified_sectors": 181,
+    "unresolved_issuer_ids": 4760
   },
   "securities": [
     {
@@ -2622,6 +2622,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "ASPE",
+      "name": "Aspen Neuroscience, Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:ASPE",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "ASPI",
       "name": "ASP Isotopes Inc. - Common Stock",
       "sector": "Industrials",
@@ -3516,6 +3523,13 @@
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:BBT",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "BBTX",
+      "name": "Bambusa Therapeutics, Inc. - Common stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:BBTX",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "BBUC",
@@ -20939,6 +20953,13 @@
       "sector": "Consumer Staples",
       "permanent_id": "issuer-unresolved:NOMD",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "NORD",
+      "name": "Nordicus Partners Corporation - Common Stock",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:NORD",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "NOV",
