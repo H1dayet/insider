@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1030202618:01",
-    "other_listed_file_timestamp": "File Creation Time: 1030202618:01",
-    "retrieved_at": "2026-10-31T10:25:24.918082+00:00",
-    "directory_rows": 6790,
-    "eligible_common_shares": 4760,
-    "unclassified_sectors": 181,
-    "unresolved_issuer_ids": 4760
+    "nasdaq_file_timestamp": "File Creation Time: 1102202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1102202621:31",
+    "retrieved_at": "2026-11-03T03:35:22.179614+00:00",
+    "directory_rows": 6788,
+    "eligible_common_shares": 4757,
+    "unclassified_sectors": 182,
+    "unresolved_issuer_ids": 4757
   },
   "securities": [
     {
@@ -1355,6 +1355,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "ALIS",
+      "name": "Calisa Acquisition Corp - Ordinary shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:ALIS",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "ALIT",
       "name": "Alight, Inc. Class A Common Stock",
       "sector": "Consumer Discretionary",
@@ -2624,7 +2631,7 @@
     {
       "ticker": "ASPE",
       "name": "Aspen Neuroscience, Inc. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:ASPE",
       "exchange": "Nasdaq"
     },
@@ -3296,7 +3303,7 @@
     {
       "ticker": "AZR",
       "name": "Azora Therapeutics, Inc. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:AZR",
       "exchange": "Nasdaq"
     },
@@ -3527,7 +3534,7 @@
     {
       "ticker": "BBTX",
       "name": "Bambusa Therapeutics, Inc. - Common stock",
-      "sector": "Unclassified",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:BBTX",
       "exchange": "Nasdaq"
     },
@@ -5569,6 +5576,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "CAPS",
+      "name": "Capstone Holding Corp. - Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:CAPS",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "CAQ",
       "name": "Cambridge Acquisition Corp. - Class A Ordinary Shares",
       "sector": "Unclassified",
@@ -5629,6 +5643,13 @@
       "name": "Pathward Financial, Inc. - Common Stock",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:CASH",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "CASK",
+      "name": "Sempreon, Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:CASK",
       "exchange": "Nasdaq"
     },
     {
@@ -5812,13 +5833,6 @@
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:CBUS",
       "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "CBZ",
-      "name": "CBIZ, Inc. Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:CBZ",
-      "exchange": "NYSE"
     },
     {
       "ticker": "CC",
@@ -8803,6 +8817,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "DH",
+      "name": "Definitive Healthcare Corp. - Class A Common Stock",
+      "sector": "Technology",
+      "permanent_id": "issuer-unresolved:DH",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "DHC",
       "name": "Diversified Healthcare Trust  - Common Shares of Beneficial Interest",
       "sector": "Real Estate",
@@ -10088,13 +10109,6 @@
       "name": "Enlight Renewable Energy Ltd. - Ordinary Shares",
       "sector": "Utilities",
       "permanent_id": "issuer-unresolved:ENLT",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "ENLV",
-      "name": "Enlivex Ltd. - Ordinary Shares",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:ENLV",
       "exchange": "Nasdaq"
     },
     {
@@ -12837,14 +12851,14 @@
     {
       "ticker": "GJH",
       "name": "Synthetic Fixed-Income Securities Inc 6.375% (STRATS) Cl A-1",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJH",
       "exchange": "NYSE"
     },
     {
       "ticker": "GJO",
       "name": "Synthetic Fixed-Income Securities, Inc. on behalf of STRATS(SM) Trust for Wal-Mart Stores, Inc. Securities, Series 2004-5",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJO",
       "exchange": "NYSE"
     },
@@ -12865,14 +12879,14 @@
     {
       "ticker": "GJS",
       "name": "Goldman Sachs Group Securities STRATS Trust for Goldman Sachs Group Securities, Series 2006-2",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJS",
       "exchange": "NYSE"
     },
     {
       "ticker": "GJT",
       "name": "Synthetic Fixed-Income Securities, Inc. Floating Rate Structured Repackaged Asset-Backed Trust Securities Certificates, Series 2006-3",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJT",
       "exchange": "NYSE"
     },
@@ -12909,6 +12923,13 @@
       "name": "Globus Maritime Limited - Common Stock",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:GLBS",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "GLE",
+      "name": "Global Engine Group Holding Limited - Class A Ordinary Shares",
+      "sector": "Technology",
+      "permanent_id": "issuer-unresolved:GLE",
       "exchange": "Nasdaq"
     },
     {
@@ -14277,6 +14298,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "HODO",
+      "name": "House of Doge Inc. - Common Stock",
+      "sector": "Finance",
+      "permanent_id": "issuer-unresolved:HODO",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "HOFT",
       "name": "Hooker Furnishings Corporation - Common Stock",
       "sector": "Consumer Discretionary",
@@ -15551,13 +15579,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "INV",
-      "name": "Innventure, Inc. - Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:INV",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "INVA",
       "name": "Innoviva, Inc. - Common Stock",
       "sector": "Health Care",
@@ -16063,7 +16084,7 @@
     },
     {
       "ticker": "JBDI",
-      "name": "JBDI Holdings Limited - Ordinary Shares",
+      "name": "JBDI Holdings Limited - Class A Ordinary Shares",
       "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:JBDI",
       "exchange": "Nasdaq"
@@ -16099,7 +16120,7 @@
     {
       "ticker": "JBK",
       "name": "Lehman ABS 3.50 3.50% Adjustable Corp Backed Tr Certs GS Cap I",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:JBK",
       "exchange": "NYSE"
     },
@@ -16797,6 +16818,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "KNDI",
+      "name": "Kandi Technologies Group, Inc. - Ordinary Shares",
+      "sector": "Industrials",
+      "permanent_id": "issuer-unresolved:KNDI",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "KNF",
       "name": "Knife Riv Holding Co. Common Stock",
       "sector": "Industrials",
@@ -17117,13 +17145,6 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:KVHI",
       "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "KVUE",
-      "name": "Kenvue Inc. Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:KVUE",
-      "exchange": "NYSE"
     },
     {
       "ticker": "KVYO",
@@ -18281,13 +18302,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "LXP",
-      "name": "LXP Industrial Trust Common Stock (Maryland REIT)",
-      "sector": "Real Estate",
-      "permanent_id": "issuer-unresolved:LXP",
-      "exchange": "NYSE"
-    },
-    {
       "ticker": "LXRX",
       "name": "Lexicon Pharmaceuticals, Inc. - Common Stock",
       "sector": "Health Care",
@@ -19100,13 +19114,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "MGPI",
-      "name": "MGP Ingredients, Inc. - Common Stock",
-      "sector": "Consumer Staples",
-      "permanent_id": "issuer-unresolved:MGPI",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "MGRC",
       "name": "McGrath RentCorp - Common Stock",
       "sector": "Consumer Discretionary",
@@ -19216,13 +19223,6 @@
       "name": "Mirum Pharmaceuticals, Inc. - common stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:MIRM",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "MIST",
-      "name": "Milestone Pharmaceuticals Inc. - Common Shares",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:MIST",
       "exchange": "Nasdaq"
     },
     {
@@ -20262,6 +20262,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "NARA",
+      "name": "Narragansett Bancorp, Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:NARA",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "NAT",
       "name": "Nordic American Tankers Limited Common Stock",
       "sector": "Consumer Discretionary",
@@ -20840,13 +20847,6 @@
       "name": "NMP Acquisition Corp. - Class A Ordinary Shares",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:NMP",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "NMRA",
-      "name": "Neumora Therapeutics, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:NMRA",
       "exchange": "Nasdaq"
     },
     {
@@ -22269,13 +22269,6 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:OPLN",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "OPNW",
-      "name": "OpenWorld, Inc. - Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:OPNW",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "OPRT",
@@ -23930,13 +23923,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "PPCB",
-      "name": "Propanc Biopharma, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:PPCB",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "PPG",
       "name": "PPG Industries, Inc. Common Stock",
       "sector": "Consumer Discretionary",
@@ -24844,13 +24830,6 @@
       "name": "Ralliant Corporation Common Stock",
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:RAL",
-      "exchange": "NYSE"
-    },
-    {
-      "ticker": "RAMP",
-      "name": "LiveRamp Holdings, Inc. Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:RAMP",
       "exchange": "NYSE"
     },
     {
