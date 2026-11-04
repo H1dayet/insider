@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1103202618:01",
-    "other_listed_file_timestamp": "File Creation Time: 1103202618:01",
-    "retrieved_at": "2026-11-04T02:32:41.175815+00:00",
-    "directory_rows": 6782,
-    "eligible_common_shares": 4754,
-    "unclassified_sectors": 176,
-    "unresolved_issuer_ids": 4754
+    "nasdaq_file_timestamp": "File Creation Time: 1104202607:00",
+    "other_listed_file_timestamp": "File Creation Time: 1104202607:00",
+    "retrieved_at": "2026-11-04T12:11:40.682614+00:00",
+    "directory_rows": 6781,
+    "eligible_common_shares": 4753,
+    "unclassified_sectors": 175,
+    "unresolved_issuer_ids": 4753
   },
   "securities": [
     {
@@ -3287,6 +3287,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "AZIO",
+      "name": "Azio AI Holdings, Inc. - Common stock",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:AZIO",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "AZN",
       "name": "AstraZeneca PLC Ordinary Shares",
       "sector": "Health Care",
@@ -5578,7 +5585,7 @@
     {
       "ticker": "CAPS",
       "name": "Capstone Holding Corp. - Common Stock",
-      "sector": "Consumer Discretionary",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:CAPS",
       "exchange": "Nasdaq"
     },
@@ -12872,14 +12879,14 @@
     {
       "ticker": "GJR",
       "name": "Synthetic Fixed-Income Securities, Inc. STRATS Trust for Procter&Gamble Securities, Series 2006-1",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJR",
       "exchange": "NYSE"
     },
     {
       "ticker": "GJS",
       "name": "Goldman Sachs Group Securities STRATS Trust for Goldman Sachs Group Securities, Series 2006-2",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJS",
       "exchange": "NYSE"
     },
@@ -13694,13 +13701,6 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:GXO",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "GYGY",
-      "name": "Game Your Game, Inc. - Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:GYGY",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "GYRE",
@@ -16106,7 +16106,7 @@
     {
       "ticker": "JBK",
       "name": "Lehman ABS 3.50 3.50% Adjustable Corp Backed Tr Certs GS Cap I",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:JBK",
       "exchange": "NYSE"
     },
@@ -18510,13 +18510,6 @@
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:MAS",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "MASK",
-      "name": "3 E Network Technology Group Ltd - Class A Ordinary Shares",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:MASK",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "MASS",
@@ -22775,13 +22768,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "PARA",
-      "name": "Parabolic Technologies, Inc. - Class A Common Stock",
-      "sector": "Industrials",
-      "permanent_id": "issuer-unresolved:PARA",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "PARK",
       "name": "Park Dental Partners, Inc. - Common Stock",
       "sector": "Health Care",
@@ -23839,6 +23825,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "POLA",
+      "name": "Polar Power, Inc. - Common Stock",
+      "sector": "Miscellaneous",
+      "permanent_id": "issuer-unresolved:POLA",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "POLE",
       "name": "Andretti Acquisition Corp. II - Class A Ordinary Shares",
       "sector": "Unclassified",
@@ -24078,7 +24071,7 @@
     },
     {
       "ticker": "PRM",
-      "name": "Perimeter Solutions, SA Common Stock",
+      "name": "Perimeter Group Inc. Common Stock",
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:PRM",
       "exchange": "NYSE"
@@ -24485,7 +24478,7 @@
     {
       "ticker": "PYT",
       "name": "PPlus Tr GSC-2 Tr Ctf Fltg Rate",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:PYT",
       "exchange": "NYSE"
     },
@@ -26534,13 +26527,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "SEED",
-      "name": "Origin Agritech Limited - Ordinary Shares",
-      "sector": "Consumer Staples",
-      "permanent_id": "issuer-unresolved:SEED",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "SEER",
       "name": "Seer, Inc. - Class A Common Stock",
       "sector": "Industrials",
@@ -27612,6 +27598,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "SONM",
+      "name": "DNA X, Inc. - Common Stock",
+      "sector": "Utilities",
+      "permanent_id": "issuer-unresolved:SONM",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "SONO",
       "name": "Sonos, Inc. - Common Stock",
       "sector": "Consumer Staples",
@@ -28426,7 +28419,7 @@
     {
       "ticker": "SUPN",
       "name": "Supernus, Inc. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:SUPN",
       "exchange": "Nasdaq"
     },
