@@ -1,9 +1,9 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1103202606:00",
-    "other_listed_file_timestamp": "File Creation Time: 1103202606:00",
-    "retrieved_at": "2026-11-03T11:57:54.898774+00:00",
+    "nasdaq_file_timestamp": "File Creation Time: 1103202618:01",
+    "other_listed_file_timestamp": "File Creation Time: 1103202618:01",
+    "retrieved_at": "2026-11-04T02:32:41.175815+00:00",
     "directory_rows": 6782,
     "eligible_common_shares": 4754,
     "unclassified_sectors": 176,
