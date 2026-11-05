@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1104202607:00",
-    "other_listed_file_timestamp": "File Creation Time: 1104202607:00",
-    "retrieved_at": "2026-11-04T12:11:40.682614+00:00",
-    "directory_rows": 6781,
-    "eligible_common_shares": 4753,
+    "nasdaq_file_timestamp": "File Creation Time: 1104202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1104202621:31",
+    "retrieved_at": "2026-11-05T02:40:23.391540+00:00",
+    "directory_rows": 6777,
+    "eligible_common_shares": 4751,
     "unclassified_sectors": 175,
-    "unresolved_issuer_ids": 4753
+    "unresolved_issuer_ids": 4751
   },
   "securities": [
     {
@@ -694,13 +694,6 @@
       "name": "Aehr Test Systems - Common Stock",
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:AEHR",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "AEI",
-      "name": "Alset Inc. - Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:AEI",
       "exchange": "Nasdaq"
     },
     {
@@ -3354,13 +3347,6 @@
       "name": "Blue Acquisition Corp. - Class A Ordinary Shares",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:BACC",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "BAER",
-      "name": "Bridger Aerospace Group Holdings, Inc. - Common Stock",
-      "sector": "Industrials",
-      "permanent_id": "issuer-unresolved:BAER",
       "exchange": "Nasdaq"
     },
     {
@@ -12958,13 +12944,6 @@
       "name": "Liberty Capital Corporation - Series C GCI Group Common Stock",
       "sector": "Telecommunications",
       "permanent_id": "issuer-unresolved:GLIBK",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "GLND",
-      "name": "Greenland Energy Company - Common Stock",
-      "sector": "Energy",
-      "permanent_id": "issuer-unresolved:GLND",
       "exchange": "Nasdaq"
     },
     {
@@ -26539,6 +26518,13 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:SEG",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "SEGG",
+      "name": "Sports Entertainment Gaming Global Corporation  - Common Stock",
+      "sector": "Technology",
+      "permanent_id": "issuer-unresolved:SEGG",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "SEI",
