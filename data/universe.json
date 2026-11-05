@@ -1,10 +1,10 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1104202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1104202621:31",
-    "retrieved_at": "2026-11-05T02:40:23.391540+00:00",
-    "directory_rows": 6777,
+    "nasdaq_file_timestamp": "File Creation Time: 1105202607:00",
+    "other_listed_file_timestamp": "File Creation Time: 1105202607:00",
+    "retrieved_at": "2026-11-05T12:25:09.707470+00:00",
+    "directory_rows": 6776,
     "eligible_common_shares": 4751,
     "unclassified_sectors": 175,
     "unresolved_issuer_ids": 4751
@@ -898,6 +898,13 @@
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:AGL",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "AGLT",
+      "name": "Agility Robotics, Inc. - Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:AGLT",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "AGM",
@@ -5989,13 +5996,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "CCXI",
-      "name": "Churchill Capital Corp XI - Class A Ordinary Shares",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:CCXI",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "CCZ",
       "name": "Comcast Holdings ZONES",
       "sector": "Telecommunications",
@@ -6022,6 +6022,13 @@
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:CDIO",
       "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "CDLR",
+      "name": "Cadeler plc Ordinary Shares",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:CDLR",
+      "exchange": "NYSE"
     },
     {
       "ticker": "CDLX",
@@ -10582,7 +10589,7 @@
     },
     {
       "ticker": "EUDA",
-      "name": "Euda Health Holdings Limited - Ordinary Shares",
+      "name": "Euda Health Holdings Limited - Class A Ordinary Shares",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:EUDA",
       "exchange": "Nasdaq"
@@ -12851,7 +12858,7 @@
     {
       "ticker": "GJO",
       "name": "Synthetic Fixed-Income Securities, Inc. on behalf of STRATS(SM) Trust for Wal-Mart Stores, Inc. Securities, Series 2004-5",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GJO",
       "exchange": "NYSE"
     },
@@ -12872,7 +12879,7 @@
     {
       "ticker": "GJS",
       "name": "Goldman Sachs Group Securities STRATS Trust for Goldman Sachs Group Securities, Series 2006-2",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJS",
       "exchange": "NYSE"
     },
@@ -14191,13 +14198,6 @@
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:HLP",
       "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "HLT",
-      "name": "Hilton Worldwide Holdings Inc. Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:HLT",
-      "exchange": "NYSE"
     },
     {
       "ticker": "HMC",
@@ -16085,7 +16085,7 @@
     {
       "ticker": "JBK",
       "name": "Lehman ABS 3.50 3.50% Adjustable Corp Backed Tr Certs GS Cap I",
-      "sector": "Finance",
+      "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:JBK",
       "exchange": "NYSE"
     },
@@ -24457,7 +24457,7 @@
     {
       "ticker": "PYT",
       "name": "PPlus Tr GSC-2 Tr Ctf Fltg Rate",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:PYT",
       "exchange": "NYSE"
     },
@@ -25864,7 +25864,7 @@
     {
       "ticker": "RUBI",
       "name": "Rubico Inc. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:RUBI",
       "exchange": "Nasdaq"
     },
@@ -32807,7 +32807,7 @@
     },
     {
       "ticker": "XTER",
-      "name": "Karman Line Acquisition Corp. - Class A Ordinary Shares",
+      "name": "Xterax Corporation II - Class A Ordinary Shares",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:XTER",
       "exchange": "Nasdaq"
