@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1105202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1105202621:31",
-    "retrieved_at": "2026-11-06T02:43:11.967860+00:00",
-    "directory_rows": 6778,
-    "eligible_common_shares": 4753,
-    "unclassified_sectors": 176,
-    "unresolved_issuer_ids": 4753
+    "nasdaq_file_timestamp": "File Creation Time: 1106202607:00",
+    "other_listed_file_timestamp": "File Creation Time: 1106202607:00",
+    "retrieved_at": "2026-11-06T12:09:26.414717+00:00",
+    "directory_rows": 6775,
+    "eligible_common_shares": 4752,
+    "unclassified_sectors": 170,
+    "unresolved_issuer_ids": 4752
   },
   "securities": [
     {
@@ -902,7 +902,7 @@
     {
       "ticker": "AGLT",
       "name": "Agility Robotics, Inc. - Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Industrials",
       "permanent_id": "issuer-unresolved:AGLT",
       "exchange": "Nasdaq"
     },
@@ -1282,13 +1282,6 @@
       "name": "Alico, Inc. - Common Stock",
       "sector": "Consumer Staples",
       "permanent_id": "issuer-unresolved:ALCO",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "ALDF",
-      "name": "Aldel Financial II Inc. - Class A Ordinary Shares",
-      "sector": "Unclassified",
-      "permanent_id": "issuer-unresolved:ALDF",
       "exchange": "Nasdaq"
     },
     {
@@ -3891,7 +3884,7 @@
     {
       "ticker": "BFH",
       "name": "Bread Financial Holdings, Inc. Common Stock",
-      "sector": "Consumer Discretionary",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:BFH",
       "exchange": "NYSE"
     },
@@ -5578,7 +5571,7 @@
     {
       "ticker": "CAPS",
       "name": "Capstone Holding Corp. - Common Stock",
-      "sector": "Health Care",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:CAPS",
       "exchange": "Nasdaq"
     },
@@ -17471,7 +17464,7 @@
     {
       "ticker": "LEN-B",
       "name": "Lennar Corporation Class B",
-      "sector": "Unclassified",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:LEN-B",
       "exchange": "NYSE"
     },
@@ -19214,7 +19207,7 @@
     {
       "ticker": "MKC-V",
       "name": "McCormick & Company, Incorporated Common Stock",
-      "sector": "Unclassified",
+      "sector": "Consumer Staples",
       "permanent_id": "issuer-unresolved:MKC-V",
       "exchange": "NYSE"
     },
@@ -19522,7 +19515,7 @@
     {
       "ticker": "MOG-B",
       "name": "Moog Inc. Class B Common Stock",
-      "sector": "Unclassified",
+      "sector": "Industrials",
       "permanent_id": "issuer-unresolved:MOG-B",
       "exchange": "NYSE"
     },
@@ -30456,7 +30449,7 @@
     {
       "ticker": "UHAL-B",
       "name": "U-Haul Holding Company Series N Non-Voting Common Stock",
-      "sector": "Unclassified",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:UHAL-B",
       "exchange": "NYSE"
     },
