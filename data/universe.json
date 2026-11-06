@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1105202607:00",
-    "other_listed_file_timestamp": "File Creation Time: 1105202607:00",
-    "retrieved_at": "2026-11-05T12:25:09.707470+00:00",
-    "directory_rows": 6776,
-    "eligible_common_shares": 4751,
-    "unclassified_sectors": 175,
-    "unresolved_issuer_ids": 4751
+    "nasdaq_file_timestamp": "File Creation Time: 1105202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1105202621:31",
+    "retrieved_at": "2026-11-06T02:43:11.967860+00:00",
+    "directory_rows": 6778,
+    "eligible_common_shares": 4753,
+    "unclassified_sectors": 176,
+    "unresolved_issuer_ids": 4753
   },
   "securities": [
     {
@@ -1282,6 +1282,13 @@
       "name": "Alico, Inc. - Common Stock",
       "sector": "Consumer Staples",
       "permanent_id": "issuer-unresolved:ALCO",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "ALDF",
+      "name": "Aldel Financial II Inc. - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:ALDF",
       "exchange": "Nasdaq"
     },
     {
@@ -3956,13 +3963,6 @@
       "name": "BGM Group Ltd. - Class A Ordinary Shares",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:BGM",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "BGMS",
-      "name": "Bio Green Med Solution, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:BGMS",
       "exchange": "Nasdaq"
     },
     {
@@ -12247,6 +12247,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "FVN",
+      "name": "Future Vision II Acquisition Corporation - Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:FVN",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "FVR",
       "name": "FrontView REIT, Inc. Common Stock",
       "sector": "Real Estate",
@@ -14197,6 +14204,13 @@
       "name": "Hongli Group Inc. - Class A Ordinary Shares",
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:HLP",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "HLT",
+      "name": "Hilton Worldwide Holdings Inc. - Common Stock",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:HLT",
       "exchange": "Nasdaq"
     },
     {
@@ -18755,13 +18769,6 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:MCS",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "MCTA",
-      "name": "Charming Medical Limited - Class A Ordinary Shares",
-      "sector": "Unclassified",
-      "permanent_id": "issuer-unresolved:MCTA",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "MCY",
@@ -30746,6 +30753,13 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:USFD",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "USGO",
+      "name": "U.S. GoldMining Inc. - Common stock",
+      "sector": "Basic Materials",
+      "permanent_id": "issuer-unresolved:USGO",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "USIO",
