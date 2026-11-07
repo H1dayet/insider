@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1106202618:01",
-    "other_listed_file_timestamp": "File Creation Time: 1106202618:01",
-    "retrieved_at": "2026-11-07T02:10:22.193354+00:00",
-    "directory_rows": 6777,
-    "eligible_common_shares": 4753,
+    "nasdaq_file_timestamp": "File Creation Time: 1106202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1106202621:31",
+    "retrieved_at": "2026-11-07T11:06:25.839650+00:00",
+    "directory_rows": 6774,
+    "eligible_common_shares": 4752,
     "unclassified_sectors": 171,
-    "unresolved_issuer_ids": 4753
+    "unresolved_issuer_ids": 4752
   },
   "securities": [
     {
@@ -18771,6 +18771,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "MCTA",
+      "name": "Charming Medical Limited - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:MCTA",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "MCY",
       "name": "Mercury General Corporation Common Stock",
       "sector": "Finance",
@@ -25328,13 +25335,6 @@
       "sector": "Real Estate",
       "permanent_id": "issuer-unresolved:RHP",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "RIBB",
-      "name": "Ribbon Acquisition Corp - Class A Ordinary Shares",
-      "sector": "Unclassified",
-      "permanent_id": "issuer-unresolved:RIBB",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "RICK",
@@ -32047,13 +32047,6 @@
       "name": "Whitehawk Therapeutics, Inc. - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:WHWK",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "WIMI",
-      "name": "WiMi Hologram Cloud Inc. - Class B Ordinary Shares",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:WIMI",
       "exchange": "Nasdaq"
     },
     {
