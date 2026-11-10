@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1106202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1106202621:31",
-    "retrieved_at": "2026-11-07T11:06:25.839650+00:00",
-    "directory_rows": 6774,
-    "eligible_common_shares": 4752,
+    "nasdaq_file_timestamp": "File Creation Time: 1109202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1109202621:31",
+    "retrieved_at": "2026-11-10T04:14:27.649446+00:00",
+    "directory_rows": 6772,
+    "eligible_common_shares": 4749,
     "unclassified_sectors": 171,
-    "unresolved_issuer_ids": 4752
+    "unresolved_issuer_ids": 4749
   },
   "securities": [
     {
@@ -2356,13 +2356,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "ARI",
-      "name": "Apollo Commercial Real Estate Finance, Inc",
-      "sector": "Real Estate",
-      "permanent_id": "issuer-unresolved:ARI",
-      "exchange": "NYSE"
-    },
-    {
       "ticker": "ARIS",
       "name": "Aris Mining Corporation Common Shares",
       "sector": "Unclassified",
@@ -3733,13 +3726,6 @@
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:BDJ",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "BDMD",
-      "name": "Baird Medical Investment Holdings Ltd - Ordinary Share",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:BDMD",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "BDN",
@@ -5280,13 +5266,6 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:BWLP",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "BWMN",
-      "name": "Bowman Consulting Group Ltd. - Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:BWMN",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "BWMX",
@@ -7193,6 +7172,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "COCH",
+      "name": "Envoy Medical, Inc. - Class A Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:COCH",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "COCO",
       "name": "The Vita Coco Company, Inc. - Common Stock",
       "sector": "Consumer Staples",
@@ -7674,13 +7660,6 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:CRI",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "CRIS",
-      "name": "Curis, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:CRIS",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "CRK",
@@ -14753,6 +14732,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "HYAC",
+      "name": "Haymaker Acquisition Corp V Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:HYAC",
+      "exchange": "NYSE"
+    },
+    {
       "ticker": "HYFT",
       "name": "MindWalk Holdings Corp. - Common Stock",
       "sector": "Health Care",
@@ -18769,13 +18755,6 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:MCS",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "MCTA",
-      "name": "Charming Medical Limited - Class A Ordinary Shares",
-      "sector": "Unclassified",
-      "permanent_id": "issuer-unresolved:MCTA",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "MCY",
@@ -25659,13 +25638,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "ROKU",
-      "name": "Roku, Inc. - Class A Common Stock",
-      "sector": "Telecommunications",
-      "permanent_id": "issuer-unresolved:ROKU",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "ROL",
       "name": "Rollins, Inc. Common Stock",
       "sector": "Consumer Discretionary",
@@ -30171,6 +30143,13 @@
       "name": "TWFG, Inc. - Common Stock",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:TWFG",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "TWG",
+      "name": "Top Wealth Group Holding Limited - Class A Ordinary Shares",
+      "sector": "Consumer Staples",
+      "permanent_id": "issuer-unresolved:TWG",
       "exchange": "Nasdaq"
     },
     {
