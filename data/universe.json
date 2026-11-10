@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1109202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1109202621:31",
-    "retrieved_at": "2026-11-10T04:14:27.649446+00:00",
-    "directory_rows": 6772,
-    "eligible_common_shares": 4749,
-    "unclassified_sectors": 171,
-    "unresolved_issuer_ids": 4749
+    "nasdaq_file_timestamp": "File Creation Time: 1110202607:00",
+    "other_listed_file_timestamp": "File Creation Time: 1110202607:00",
+    "retrieved_at": "2026-11-10T12:41:59.283799+00:00",
+    "directory_rows": 6769,
+    "eligible_common_shares": 4748,
+    "unclassified_sectors": 172,
+    "unresolved_issuer_ids": 4748
   },
   "securities": [
     {
@@ -352,13 +352,6 @@
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:ACHR",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "ACHV",
-      "name": "Achieve Life Sciences, Inc.  - Common Shares",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:ACHV",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "ACI",
@@ -5550,7 +5543,7 @@
     {
       "ticker": "CAPS",
       "name": "Capstone Holding Corp. - Common Stock",
-      "sector": "Consumer Discretionary",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:CAPS",
       "exchange": "Nasdaq"
     },
@@ -10833,13 +10826,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "EZRA",
-      "name": "Reliance Global Group, Inc. - Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:EZRA",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "F",
       "name": "Ford Motor Company Common Stock",
       "sector": "Industrials",
@@ -12423,7 +12409,7 @@
     },
     {
       "ticker": "GCBC",
-      "name": "Greene County Bancorp, Inc. - Common Stock",
+      "name": "Greene Bancorp, Inc. - Common Stock",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:GCBC",
       "exchange": "Nasdaq"
@@ -12837,7 +12823,7 @@
     {
       "ticker": "GJO",
       "name": "Synthetic Fixed-Income Securities, Inc. on behalf of STRATS(SM) Trust for Wal-Mart Stores, Inc. Securities, Series 2004-5",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:GJO",
       "exchange": "NYSE"
     },
@@ -24217,13 +24203,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "PSQH",
-      "name": "PSQ Holdings, Inc. Class A Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:PSQH",
-      "exchange": "NYSE"
-    },
-    {
       "ticker": "PSQL",
       "name": "Pasqal Holding SA - Ordinary Shares",
       "sector": "Technology",
@@ -24690,6 +24669,13 @@
       "name": "QuickLogic Corporation - Common Stock",
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:QUIK",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "QUIT",
+      "name": "Achieve Life Sciences, Inc.  - Common Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:QUIT",
       "exchange": "Nasdaq"
     },
     {
@@ -32628,6 +32614,13 @@
       "name": "Exagen Inc. - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:XGN",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "XGPU",
+      "name": "Reliance Global Group, Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:XGPU",
       "exchange": "Nasdaq"
     },
     {
