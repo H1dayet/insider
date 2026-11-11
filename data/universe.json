@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1110202618:01",
-    "other_listed_file_timestamp": "File Creation Time: 1110202618:01",
-    "retrieved_at": "2026-11-11T02:04:30.717687+00:00",
-    "directory_rows": 6772,
-    "eligible_common_shares": 4749,
-    "unclassified_sectors": 173,
-    "unresolved_issuer_ids": 4749
+    "nasdaq_file_timestamp": "File Creation Time: 1111202606:00",
+    "other_listed_file_timestamp": "File Creation Time: 1111202606:00",
+    "retrieved_at": "2026-11-11T11:54:15.938275+00:00",
+    "directory_rows": 6770,
+    "eligible_common_shares": 4747,
+    "unclassified_sectors": 172,
+    "unresolved_issuer_ids": 4747
   },
   "securities": [
     {
@@ -6315,13 +6315,6 @@
       "name": "Creative Global Technology Holdings Limited - Class A Ordinary Shares",
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:CGTL",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "CGTX",
-      "name": "Cognition Therapeutics, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:CGTX",
       "exchange": "Nasdaq"
     },
     {
@@ -16881,13 +16874,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "KPTI",
-      "name": "Karyopharm Therapeutics Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:KPTI",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "KR",
       "name": "Kroger Company (The) Common Stock",
       "sector": "Consumer Staples",
@@ -24674,7 +24660,7 @@
     {
       "ticker": "QUIT",
       "name": "Achieve Life Sciences, Inc.  - Common Shares",
-      "sector": "Unclassified",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:QUIT",
       "exchange": "Nasdaq"
     },
