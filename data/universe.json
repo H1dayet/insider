@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1110202607:00",
-    "other_listed_file_timestamp": "File Creation Time: 1110202607:00",
-    "retrieved_at": "2026-11-10T12:41:59.283799+00:00",
-    "directory_rows": 6769,
-    "eligible_common_shares": 4748,
-    "unclassified_sectors": 172,
-    "unresolved_issuer_ids": 4748
+    "nasdaq_file_timestamp": "File Creation Time: 1110202618:01",
+    "other_listed_file_timestamp": "File Creation Time: 1110202618:01",
+    "retrieved_at": "2026-11-11T02:04:30.717687+00:00",
+    "directory_rows": 6772,
+    "eligible_common_shares": 4749,
+    "unclassified_sectors": 173,
+    "unresolved_issuer_ids": 4749
   },
   "securities": [
     {
@@ -26370,6 +26370,13 @@
       "name": "Social Commerce Partners Corporation - Class A Ordinary Shares",
       "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:SCPQ",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "SCQC",
+      "name": "SPACCircle Acquisition Corp. - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:SCQC",
       "exchange": "Nasdaq"
     },
     {
