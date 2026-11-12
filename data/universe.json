@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1111202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1111202621:31",
-    "retrieved_at": "2026-11-12T03:14:27.244514+00:00",
-    "directory_rows": 6769,
-    "eligible_common_shares": 4746,
-    "unclassified_sectors": 172,
-    "unresolved_issuer_ids": 4746
+    "nasdaq_file_timestamp": "File Creation Time: 1112202607:00",
+    "other_listed_file_timestamp": "File Creation Time: 1112202607:00",
+    "retrieved_at": "2026-11-12T12:46:33.130213+00:00",
+    "directory_rows": 6766,
+    "eligible_common_shares": 4744,
+    "unclassified_sectors": 173,
+    "unresolved_issuer_ids": 4744
   },
   "securities": [
     {
@@ -5543,7 +5543,7 @@
     {
       "ticker": "CAPS",
       "name": "Capstone Holding Corp. - Common Stock",
-      "sector": "Health Care",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:CAPS",
       "exchange": "Nasdaq"
     },
@@ -6245,13 +6245,6 @@
       "name": "Citizens Financial Group, Inc. Common Stock",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:CFG",
-      "exchange": "NYSE"
-    },
-    {
-      "ticker": "CFR",
-      "name": "Cullen/Frost Bankers, Inc. Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:CFR",
       "exchange": "NYSE"
     },
     {
@@ -7680,6 +7673,13 @@
       "name": "Critical Metals Corp. - Ordinary Shares",
       "sector": "Basic Materials",
       "permanent_id": "issuer-unresolved:CRML",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "CRMN",
+      "name": "Skyline Builders Group Holding Limited - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:CRMN",
       "exchange": "Nasdaq"
     },
     {
@@ -16384,13 +16384,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "KAZR",
-      "name": "Skyline Builders Group Holding Limited - Class A Ordinary Shares",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:KAZR",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "KB",
       "name": "KB Financial Group Inc",
       "sector": "Finance",
@@ -21540,13 +21533,6 @@
       "name": "Next Technology Holding Inc. - Ordinary Shares",
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:NXTT",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "NXXT",
-      "name": "NextNRG, Inc. - Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:NXXT",
       "exchange": "Nasdaq"
     },
     {
