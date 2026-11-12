@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1111202606:00",
-    "other_listed_file_timestamp": "File Creation Time: 1111202606:00",
-    "retrieved_at": "2026-11-11T11:54:15.938275+00:00",
-    "directory_rows": 6770,
-    "eligible_common_shares": 4747,
+    "nasdaq_file_timestamp": "File Creation Time: 1111202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1111202621:31",
+    "retrieved_at": "2026-11-12T03:14:27.244514+00:00",
+    "directory_rows": 6769,
+    "eligible_common_shares": 4746,
     "unclassified_sectors": 172,
-    "unresolved_issuer_ids": 4747
+    "unresolved_issuer_ids": 4746
   },
   "securities": [
     {
@@ -16993,13 +16993,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "KSCP",
-      "name": "Knightscope, Inc. - Class A Common Stock",
-      "sector": "Telecommunications",
-      "permanent_id": "issuer-unresolved:KSCP",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "KSS",
       "name": "Kohl's Corporation Common Stock",
       "sector": "Consumer Discretionary",
@@ -21550,6 +21543,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "NXXT",
+      "name": "NextNRG, Inc. - Common Stock",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:NXXT",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "NYAX",
       "name": "Nayax Ltd. - Ordinary Shares",
       "sector": "Technology",
@@ -25075,13 +25075,6 @@
       "name": "Remitly Global, Inc. - Common stock",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:RELY",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "RENT",
-      "name": "Rent the Runway, Inc. - Class A Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:RENT",
       "exchange": "Nasdaq"
     },
     {
