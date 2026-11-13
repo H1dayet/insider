@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1112202607:00",
-    "other_listed_file_timestamp": "File Creation Time: 1112202607:00",
-    "retrieved_at": "2026-11-12T12:46:33.130213+00:00",
+    "nasdaq_file_timestamp": "File Creation Time: 1112202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1112202621:31",
+    "retrieved_at": "2026-11-13T02:46:31.746982+00:00",
     "directory_rows": 6766,
-    "eligible_common_shares": 4744,
+    "eligible_common_shares": 4745,
     "unclassified_sectors": 173,
-    "unresolved_issuer_ids": 4744
+    "unresolved_issuer_ids": 4745
   },
   "securities": [
     {
@@ -3810,13 +3810,6 @@
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:BEN",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "BENF",
-      "name": "Beneficient - Class A Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:BENF",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "BEPC",
@@ -21984,6 +21977,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "OMEX",
+      "name": "Odyssey Marine Exploration, Inc. - Common Stock",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:OMEX",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "OMF",
       "name": "OneMain Holdings, Inc. Common Stock",
       "sector": "Finance",
@@ -29472,6 +29472,13 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:TOL",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "TOMZ",
+      "name": "TOMI Environmental Solutions, Inc. - Common Stock",
+      "sector": "Industrials",
+      "permanent_id": "issuer-unresolved:TOMZ",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "TONX",
