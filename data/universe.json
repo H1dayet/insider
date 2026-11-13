@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1112202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1112202621:31",
-    "retrieved_at": "2026-11-13T02:46:31.746982+00:00",
-    "directory_rows": 6766,
-    "eligible_common_shares": 4745,
-    "unclassified_sectors": 173,
-    "unresolved_issuer_ids": 4745
+    "nasdaq_file_timestamp": "File Creation Time: 1113202607:00",
+    "other_listed_file_timestamp": "File Creation Time: 1113202607:00",
+    "retrieved_at": "2026-11-13T12:16:39.484223+00:00",
+    "directory_rows": 6768,
+    "eligible_common_shares": 4746,
+    "unclassified_sectors": 175,
+    "unresolved_issuer_ids": 4746
   },
   "securities": [
     {
@@ -5536,7 +5536,7 @@
     {
       "ticker": "CAPS",
       "name": "Capstone Holding Corp. - Common Stock",
-      "sector": "Consumer Discretionary",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:CAPS",
       "exchange": "Nasdaq"
     },
@@ -6661,13 +6661,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "CLGN",
-      "name": "CollPlant Biotechnologies Ltd. - Ordinary Shares",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:CLGN",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "CLH",
       "name": "Clean Harbors, Inc. Common Stock",
       "sector": "Industrials",
@@ -7671,7 +7664,7 @@
     {
       "ticker": "CRMN",
       "name": "Skyline Builders Group Holding Limited - Class A Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:CRMN",
       "exchange": "Nasdaq"
     },
@@ -21915,7 +21908,7 @@
     },
     {
       "ticker": "OLMA",
-      "name": "Olema Pharmaceuticals, Inc. - Common Stock",
+      "name": "Olema Oncology, Inc. - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:OLMA",
       "exchange": "Nasdaq"
@@ -22150,6 +22143,13 @@
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:OPFI",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "OPHI",
+      "name": "CollPlant Biotechnologies Ltd. - Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:OPHI",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "OPI",
@@ -24235,13 +24235,6 @@
       "name": "Protagonist Therapeutics, Inc. - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:PTGX",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "PTLE",
-      "name": "PTL LTD - Class A Ordinary Shares",
-      "sector": "Energy",
-      "permanent_id": "issuer-unresolved:PTLE",
       "exchange": "Nasdaq"
     },
     {
@@ -31623,6 +31616,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "VVVV",
+      "name": "vVARDIS Holding AG Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:VVVV",
+      "exchange": "NYSE"
+    },
+    {
       "ticker": "VVX",
       "name": "V2X, Inc. Common Stock",
       "sector": "Consumer Discretionary",
@@ -31925,7 +31925,7 @@
     },
     {
       "ticker": "WFRD",
-      "name": "Weatherford International plc - Ordinary shares",
+      "name": "Weatherford International Corp - Common Stock",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:WFRD",
       "exchange": "Nasdaq"
@@ -33223,6 +33223,13 @@
       "name": "Zymeworks Inc. - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:ZYME",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "ZYN",
+      "name": "PTL LTD - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:ZYN",
       "exchange": "Nasdaq"
     }
   ]
