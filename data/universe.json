@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1113202607:00",
-    "other_listed_file_timestamp": "File Creation Time: 1113202607:00",
-    "retrieved_at": "2026-11-13T12:16:39.484223+00:00",
+    "nasdaq_file_timestamp": "File Creation Time: 1113202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1113202621:31",
+    "retrieved_at": "2026-11-14T02:36:41.976167+00:00",
     "directory_rows": 6768,
-    "eligible_common_shares": 4746,
-    "unclassified_sectors": 175,
-    "unresolved_issuer_ids": 4746
+    "eligible_common_shares": 4747,
+    "unclassified_sectors": 176,
+    "unresolved_issuer_ids": 4747
   },
   "securities": [
     {
@@ -2888,6 +2888,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "ATYR",
+      "name": "aTyr Pharma, Inc. - Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:ATYR",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "AU",
       "name": "AngloGold Ashanti PLC Ordinary Shares",
       "sector": "Basic Materials",
@@ -4328,13 +4335,6 @@
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:BLND",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "BLNE",
-      "name": "Beeline Holdings, Inc. - Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:BLNE",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "BLRK",
@@ -14081,6 +14081,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "HKPD",
+      "name": "Cellyan Biotechnology Co., Ltd  - Class A Ordinary Shares",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:HKPD",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "HL",
       "name": "Hecla Mining Company Common Stock",
       "sector": "Industrials",
@@ -17910,18 +17917,18 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "LOVI",
+      "name": "Live Oak Acquisition Corp. VI - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:LOVI",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "LOW",
       "name": "Lowe's Companies, Inc. Common Stock",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:LOW",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "LPAA",
-      "name": "Launch One Acquisition Corp. - Class A Ordinary Shares",
-      "sector": "Unclassified",
-      "permanent_id": "issuer-unresolved:LPAA",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "LPBB",
@@ -24431,13 +24438,6 @@
       "name": "D-Wave Quantum Inc. - Common Stock",
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:QBTS",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "QCLS",
-      "name": "Q/C Technologies, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:QCLS",
       "exchange": "Nasdaq"
     },
     {
@@ -32460,6 +32460,13 @@
       "name": "WW International, Inc.  - Common Stock",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:WW",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "WWB",
+      "name": "Windward Bio Group AG - Common shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:WWB",
       "exchange": "Nasdaq"
     },
     {
