@@ -1,12 +1,12 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1113202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1113202621:31",
-    "retrieved_at": "2026-11-14T11:31:34.339446+00:00",
-    "directory_rows": 6768,
+    "nasdaq_file_timestamp": "File Creation Time: 1116202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1116202621:31",
+    "retrieved_at": "2026-11-17T04:42:03.568891+00:00",
+    "directory_rows": 6765,
     "eligible_common_shares": 4747,
-    "unclassified_sectors": 176,
+    "unclassified_sectors": 173,
     "unresolved_issuer_ids": 4747
   },
   "securities": [
@@ -4190,13 +4190,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "BKH",
-      "name": "Black Hills Corporation Common Stock",
-      "sector": "Utilities",
-      "permanent_id": "issuer-unresolved:BKH",
-      "exchange": "NYSE"
-    },
-    {
       "ticker": "BKHA",
       "name": "Black Hawk Acquisition Corporation - Class A Ordinary Shares",
       "sector": "Health Care",
@@ -4876,6 +4869,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "BRRK",
+      "name": "Bluerock Acquisition Corp. II - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:BRRK",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "BRSL",
       "name": "Brightstar Lottery PLC Trading under the Legal Name to begin at the market open on July 21, 2025. Ordinary Shares",
       "sector": "Consumer Discretionary",
@@ -5536,7 +5536,7 @@
     {
       "ticker": "CAPS",
       "name": "Capstone Holding Corp. - Common Stock",
-      "sector": "Health Care",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:CAPS",
       "exchange": "Nasdaq"
     },
@@ -9356,6 +9356,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "DVLT",
+      "name": "Datavault AI Inc. - Common Stock",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:DVLT",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "DVN",
       "name": "Devon Energy Corporation Common Stock",
       "sector": "Energy",
@@ -11695,7 +11702,7 @@
     },
     {
       "ticker": "FOFO",
-      "name": "Hang Feng Technology Innovation Co., Ltd. - Ordinary Shares",
+      "name": "Hang Feng Technology Innovation Co., Ltd. - Class A Ordinary Shares",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:FOFO",
       "exchange": "Nasdaq"
@@ -14739,6 +14746,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "HZN",
+      "name": "Bright Horizon Energy Corporation Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:HZN",
+      "exchange": "NYSE"
+    },
+    {
       "ticker": "HZO",
       "name": "MarineMax, Inc.  (FL) Common Stock",
       "sector": "Consumer Discretionary",
@@ -15845,13 +15859,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "ITGR",
-      "name": "Integer Holdings Corporation Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:ITGR",
-      "exchange": "NYSE"
-    },
-    {
       "ticker": "ITHA",
       "name": "ITHAX Acquisition Corp III - Class A Ordinary Shares",
       "sector": "Unclassified",
@@ -16050,7 +16057,7 @@
     {
       "ticker": "JBK",
       "name": "Lehman ABS 3.50 3.50% Adjustable Corp Backed Tr Certs GS Cap I",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:JBK",
       "exchange": "NYSE"
     },
@@ -17007,13 +17014,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "KTF",
-      "name": "DWS Municipal Income Trust",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:KTF",
-      "exchange": "NYSE"
-    },
-    {
       "ticker": "KTN",
       "name": "Structured Products Corp 8.205% CorTS 8.205% Corporate Backed Trust Securities (CorTS)",
       "sector": "Finance",
@@ -17919,7 +17919,7 @@
     {
       "ticker": "LOVI",
       "name": "Live Oak Acquisition Corp. VI - Class A Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:LOVI",
       "exchange": "Nasdaq"
     },
@@ -18440,6 +18440,13 @@
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:MAS",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "MASK",
+      "name": "3 E Network Technology Group Ltd - Class A Ordinary Shares",
+      "sector": "Technology",
+      "permanent_id": "issuer-unresolved:MASK",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "MASS",
@@ -19833,13 +19840,6 @@
       "sector": "Energy",
       "permanent_id": "issuer-unresolved:MTDR",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "MTEK",
-      "name": "Maris-Tech Ltd. - ordinary shares",
-      "sector": "Telecommunications",
-      "permanent_id": "issuer-unresolved:MTEK",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "MTEN",
@@ -21375,13 +21375,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "NWE",
-      "name": "NorthWestern Energy Group, Inc.  - Common Stock",
-      "sector": "Utilities",
-      "permanent_id": "issuer-unresolved:NWE",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "NWFL",
       "name": "Norwood Financial Corp. - Common Stock",
       "sector": "Finance",
@@ -22726,6 +22719,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "PASW",
+      "name": "Ping An Biomedical Co., Ltd. - Class A Ordinary Shares",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:PASW",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "PATH",
       "name": "UiPath, Inc. Class A Common Stock",
       "sector": "Technology",
@@ -23461,13 +23461,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "PLCE",
-      "name": "Children's Place, Inc. (The) - Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:PLCE",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "PLCI",
       "name": "Pelican Acquisition II Corporation - Ordinary Shares",
       "sector": "Finance",
@@ -23797,6 +23790,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "PORT",
+      "name": "Southport Acquisition Corp. II Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:PORT",
+      "exchange": "NYSE"
+    },
+    {
       "ticker": "POST",
       "name": "Post Holdings, Inc. Common Stock",
       "sector": "Consumer Staples",
@@ -23829,6 +23829,13 @@
       "name": "Pilgrim's Pride Corporation - Common Stock",
       "sector": "Consumer Staples",
       "permanent_id": "issuer-unresolved:PPC",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "PPCB",
+      "name": "Propanc Biopharma, Inc. - Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:PPCB",
       "exchange": "Nasdaq"
     },
     {
@@ -23934,13 +23941,6 @@
       "name": "Prenetics Global Limited - Class A Ordinary Share",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:PRE",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "PRFX",
-      "name": "PRF Technologies Ltd. - Ordinary Shares",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:PRFX",
       "exchange": "Nasdaq"
     },
     {
@@ -29446,6 +29446,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "TNMG",
+      "name": "TNL Mediagene - Ordinary Shares",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:TNMG",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "TNON",
       "name": "Tenon Medical, Inc. - Common Stock",
       "sector": "Health Care",
@@ -30305,13 +30312,6 @@
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:UCB",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "UCFI",
-      "name": "CN Healthy Food Tech Group Corp. - Common Stock",
-      "sector": "Unclassified",
-      "permanent_id": "issuer-unresolved:UCFI",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "UCTT",
@@ -31618,7 +31618,7 @@
     {
       "ticker": "VVVV",
       "name": "vVARDIS Holding AG Class A Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:VVVV",
       "exchange": "NYSE"
     },
@@ -32465,7 +32465,7 @@
     {
       "ticker": "WWB",
       "name": "Windward Bio Group AG - Common shares",
-      "sector": "Unclassified",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:WWB",
       "exchange": "Nasdaq"
     },
@@ -33235,7 +33235,7 @@
     {
       "ticker": "ZYN",
       "name": "PTL LTD - Class A Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Energy",
       "permanent_id": "issuer-unresolved:ZYN",
       "exchange": "Nasdaq"
     }
