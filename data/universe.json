@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1116202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1116202621:31",
-    "retrieved_at": "2026-11-17T04:42:03.568891+00:00",
-    "directory_rows": 6765,
-    "eligible_common_shares": 4747,
-    "unclassified_sectors": 173,
-    "unresolved_issuer_ids": 4747
+    "nasdaq_file_timestamp": "File Creation Time: 1117202608:16",
+    "other_listed_file_timestamp": "File Creation Time: 1117202608:16",
+    "retrieved_at": "2026-11-17T13:29:45.413709+00:00",
+    "directory_rows": 6764,
+    "eligible_common_shares": 4746,
+    "unclassified_sectors": 174,
+    "unresolved_issuer_ids": 4746
   },
   "securities": [
     {
@@ -331,13 +331,6 @@
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:ACGL",
       "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "ACH",
-      "name": "Accendra Health, Inc. Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:ACH",
-      "exchange": "NYSE"
     },
     {
       "ticker": "ACHC",
@@ -5536,7 +5529,7 @@
     {
       "ticker": "CAPS",
       "name": "Capstone Holding Corp. - Common Stock",
-      "sector": "Consumer Discretionary",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:CAPS",
       "exchange": "Nasdaq"
     },
@@ -9356,13 +9349,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "DVLT",
-      "name": "Datavault AI Inc. - Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:DVLT",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "DVN",
       "name": "Devon Energy Corporation Common Stock",
       "sector": "Energy",
@@ -12976,10 +12962,10 @@
     },
     {
       "ticker": "GM",
-      "name": "General Motors Company Common Stock",
+      "name": "General Motors Company - Common Stock",
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:GM",
-      "exchange": "NYSE"
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "GME",
@@ -14741,14 +14727,14 @@
     {
       "ticker": "HYPD",
       "name": "Hyperion DeFi, Inc. - Common Stock",
-      "sector": "Health Care",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:HYPD",
       "exchange": "Nasdaq"
     },
     {
       "ticker": "HZN",
       "name": "Bright Horizon Energy Corporation Common Stock",
-      "sector": "Unclassified",
+      "sector": "Utilities",
       "permanent_id": "issuer-unresolved:HZN",
       "exchange": "NYSE"
     },
@@ -19444,7 +19430,7 @@
     },
     {
       "ticker": "MOD",
-      "name": "Modine Manufacturing Company Common Stock",
+      "name": "Modexus Solutions, Inc. Common Stock",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:MOD",
       "exchange": "NYSE"
@@ -30181,6 +30167,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "TXR",
+      "name": "Torex Resources Inc. Common Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:TXR",
+      "exchange": "NYSE"
+    },
+    {
       "ticker": "TXRH",
       "name": "Texas Roadhouse, Inc. - Common Stock",
       "sector": "Consumer Discretionary",
@@ -30867,13 +30860,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "VBNK",
-      "name": "VersaBank - Common Shares",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:VBNK",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "VC",
       "name": "Visteon Corporation - Common Stock",
       "sector": "Consumer Discretionary",
@@ -31431,6 +31417,13 @@
       "name": "Verra Mobility Corporation - Class A Common Stock",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:VRRM",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "VRSA",
+      "name": "Versa Bancorp - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:VRSA",
       "exchange": "Nasdaq"
     },
     {
