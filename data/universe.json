@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1117202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1117202621:31",
-    "retrieved_at": "2026-11-18T03:46:58.628065+00:00",
-    "directory_rows": 6757,
-    "eligible_common_shares": 4739,
-    "unclassified_sectors": 173,
-    "unresolved_issuer_ids": 4739
+    "nasdaq_file_timestamp": "File Creation Time: 1118202608:01",
+    "other_listed_file_timestamp": "File Creation Time: 1118202608:01",
+    "retrieved_at": "2026-11-18T13:06:12.233886+00:00",
+    "directory_rows": 6754,
+    "eligible_common_shares": 4737,
+    "unclassified_sectors": 172,
+    "unresolved_issuer_ids": 4737
   },
   "securities": [
     {
@@ -22866,13 +22866,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "PCRX",
-      "name": "Pacira BioSciences, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:PCRX",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "PCSA",
       "name": "Processa Pharmaceuticals, Inc. - Common Stock",
       "sector": "Health Care",
@@ -26685,13 +26678,6 @@
       "name": "Shenandoah Telecommunications Co - Common Stock",
       "sector": "Telecommunications",
       "permanent_id": "issuer-unresolved:SHEN",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "SHFS",
-      "name": "SHF Holdings, Inc. - Class A Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:SHFS",
       "exchange": "Nasdaq"
     },
     {
@@ -31380,7 +31366,7 @@
     {
       "ticker": "VRSA",
       "name": "Versa Bancorp - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:VRSA",
       "exchange": "Nasdaq"
     },
