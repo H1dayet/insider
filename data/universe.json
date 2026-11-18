@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1117202608:16",
-    "other_listed_file_timestamp": "File Creation Time: 1117202608:16",
-    "retrieved_at": "2026-11-17T13:29:45.413709+00:00",
-    "directory_rows": 6764,
-    "eligible_common_shares": 4746,
-    "unclassified_sectors": 174,
-    "unresolved_issuer_ids": 4746
+    "nasdaq_file_timestamp": "File Creation Time: 1117202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1117202621:31",
+    "retrieved_at": "2026-11-18T03:46:58.628065+00:00",
+    "directory_rows": 6757,
+    "eligible_common_shares": 4739,
+    "unclassified_sectors": 173,
+    "unresolved_issuer_ids": 4739
   },
   "securities": [
     {
@@ -6094,13 +6094,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "CELZ",
-      "name": "Creative Medical Technology Holdings, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:CELZ",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "CENN",
       "name": "Cenntro Inc. - Common Stock",
       "sector": "Industrials",
@@ -7589,13 +7582,6 @@
       "name": "Creative Realities, Inc. - Common Stock",
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:CREX",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "CRGO",
-      "name": "Freightos Limited - Ordinary shares",
-      "sector": "Industrials",
-      "permanent_id": "issuer-unresolved:CRGO",
       "exchange": "Nasdaq"
     },
     {
@@ -12366,13 +12352,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "GBLI",
-      "name": "Global Indemnity Group, LLC - Class A Common Shares",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:GBLI",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "GBX",
       "name": "Greenbrier Companies, Inc. (The) Common Stock",
       "sector": "Industrials",
@@ -13483,13 +13462,6 @@
       "name": "GT Biopharma, Inc. - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:GTBP",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "GTEC",
-      "name": "Greenland Technologies Holding Corporation - Class A Ordinary Shares",
-      "sector": "Industrials",
-      "permanent_id": "issuer-unresolved:GTEC",
       "exchange": "Nasdaq"
     },
     {
@@ -17096,13 +17068,6 @@
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:L",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "LABT",
-      "name": "Lakewood-Amedex Biotherapeutics Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:LABT",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "LAC",
@@ -21200,13 +21165,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "NUR",
-      "name": "Nuran Wireless Inc. - Common Shares",
-      "sector": "Unclassified",
-      "permanent_id": "issuer-unresolved:NUR",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "NUS",
       "name": "Nu Skin Enterprises, Inc. Common Stock",
       "sector": "Health Care",
@@ -23655,13 +23613,6 @@
       "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:PNAQ",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "PNBK",
-      "name": "Patriot National Bancorp Inc. - Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:PNBK",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "PNC",
@@ -26660,13 +26611,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "SGLY",
-      "name": "Singularity Future Technology Ltd. - Common Stock",
-      "sector": "Industrials",
-      "permanent_id": "issuer-unresolved:SGLY",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "SGML",
       "name": "Sigma Lithium Corporation - common shares",
       "sector": "Basic Materials",
@@ -26741,6 +26685,13 @@
       "name": "Shenandoah Telecommunications Co - Common Stock",
       "sector": "Telecommunications",
       "permanent_id": "issuer-unresolved:SHEN",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "SHFS",
+      "name": "SHF Holdings, Inc. - Class A Common Stock",
+      "sector": "Finance",
+      "permanent_id": "issuer-unresolved:SHFS",
       "exchange": "Nasdaq"
     },
     {
@@ -30342,6 +30293,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "UFG",
+      "name": "Uni-Fuels Holdings Limited - Class A Ordinary Shares",
+      "sector": "Energy",
+      "permanent_id": "issuer-unresolved:UFG",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "UFI",
       "name": "Unifi, Inc. New Common Stock",
       "sector": "Consumer Discretionary",
@@ -32957,13 +32915,6 @@
       "name": "YSX Tech. Co., Ltd  - Class A Ordinary Shares",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:YSXT",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "YTRA",
-      "name": "Yatra Online, Inc. - Ordinary Shares",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:YTRA",
       "exchange": "Nasdaq"
     },
     {
