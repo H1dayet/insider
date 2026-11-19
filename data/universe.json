@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1118202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1118202621:31",
-    "retrieved_at": "2026-11-19T03:44:45.214464+00:00",
-    "directory_rows": 6753,
-    "eligible_common_shares": 4736,
-    "unclassified_sectors": 173,
-    "unresolved_issuer_ids": 4736
+    "nasdaq_file_timestamp": "File Creation Time: 1119202608:01",
+    "other_listed_file_timestamp": "File Creation Time: 1119202608:01",
+    "retrieved_at": "2026-11-19T13:14:24.576914+00:00",
+    "directory_rows": 6750,
+    "eligible_common_shares": 4733,
+    "unclassified_sectors": 170,
+    "unresolved_issuer_ids": 4733
   },
   "securities": [
     {
@@ -489,7 +489,7 @@
     {
       "ticker": "ADAC",
       "name": "American Drive Acquisition Company - Class A Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:ADAC",
       "exchange": "Nasdaq"
     },
@@ -5522,7 +5522,7 @@
     {
       "ticker": "CAPS",
       "name": "Capstone Holding Corp. - Common Stock",
-      "sector": "Health Care",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:CAPS",
       "exchange": "Nasdaq"
     },
@@ -11043,6 +11043,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "FDGX",
+      "name": "First Digital Acquisition Corp Ltd. - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:FDGX",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "FDMM",
       "name": "Freedom Metals Acquisition Corp. - Class A Ordinary Shares",
       "sector": "Finance",
@@ -13530,7 +13537,7 @@
     {
       "ticker": "GUER",
       "name": "Guerrilla RF, Inc. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Technology",
       "permanent_id": "issuer-unresolved:GUER",
       "exchange": "Nasdaq"
     },
@@ -16797,13 +16804,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "KOYN",
-      "name": "CSLM Digital Asset Acquisition Corp III - Class A Ordinary Shares",
-      "sector": "Unclassified",
-      "permanent_id": "issuer-unresolved:KOYN",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "KPET",
       "name": "KPET Ultra Paceline Corporation Class A Ordinary Shares",
       "sector": "Unclassified",
@@ -18160,13 +18160,6 @@
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:LXEO",
       "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "LXFR",
-      "name": "Luxfer Holdings PLC Ordinary Shares",
-      "sector": "Basic Materials",
-      "permanent_id": "issuer-unresolved:LXFR",
-      "exchange": "NYSE"
     },
     {
       "ticker": "LXRX",
@@ -22084,7 +22077,7 @@
     {
       "ticker": "OPHI",
       "name": "CollPlant Biotechnologies Ltd. - Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:OPHI",
       "exchange": "Nasdaq"
     },
@@ -26212,13 +26205,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "SCKT",
-      "name": "Socket Mobile, Inc. - Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:SCKT",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "SCL",
       "name": "Stepan Company Common Stock",
       "sector": "Consumer Discretionary",
@@ -27904,13 +27890,6 @@
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:SST",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "SSTI",
-      "name": "SoundThinking, Inc. - Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:SSTI",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "SSTK",
