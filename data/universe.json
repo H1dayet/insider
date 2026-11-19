@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1118202608:01",
-    "other_listed_file_timestamp": "File Creation Time: 1118202608:01",
-    "retrieved_at": "2026-11-18T13:06:12.233886+00:00",
-    "directory_rows": 6754,
-    "eligible_common_shares": 4737,
-    "unclassified_sectors": 172,
-    "unresolved_issuer_ids": 4737
+    "nasdaq_file_timestamp": "File Creation Time: 1118202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1118202621:31",
+    "retrieved_at": "2026-11-19T03:44:45.214464+00:00",
+    "directory_rows": 6753,
+    "eligible_common_shares": 4736,
+    "unclassified_sectors": 173,
+    "unresolved_issuer_ids": 4736
   },
   "securities": [
     {
@@ -1814,13 +1814,6 @@
       "name": "AMERISAFE, Inc. - Common Stock",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:AMSF",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "AMST",
-      "name": "Amesite Inc. - Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:AMST",
       "exchange": "Nasdaq"
     },
     {
@@ -13535,6 +13528,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "GUER",
+      "name": "Guerrilla RF, Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:GUER",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "GURE",
       "name": "Gulf Resources, Inc. - Common Stock",
       "sector": "Industrials",
@@ -18708,6 +18708,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "MDCX",
+      "name": "Medicus Pharma Ltd. - Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:MDCX",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "MDGL",
       "name": "Madrigal Pharmaceuticals, Inc. - Common Stock",
       "sector": "Health Care",
@@ -21368,13 +21375,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "NXAT",
-      "name": "Nexus Advanced Technologies Inc. - Ordinary Shares",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:NXAT",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "NXDR",
       "name": "Nextdoor Holdings, Inc. - Common Stock",
       "sector": "Technology",
@@ -21716,13 +21716,6 @@
       "sector": "Basic Materials",
       "permanent_id": "issuer-unresolved:OGG",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "OGI",
-      "name": "Organigram Global Inc. - Common Shares",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:OGI",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "OGN",
@@ -26216,6 +26209,13 @@
       "name": "SC II Acquisition Corp. - Class A ordinary share",
       "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:SCII",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "SCKT",
+      "name": "Socket Mobile, Inc. - Common Stock",
+      "sector": "Technology",
+      "permanent_id": "issuer-unresolved:SCKT",
       "exchange": "Nasdaq"
     },
     {
@@ -33097,13 +33097,6 @@
       "name": "ZeroStack Corp. - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:ZSTK",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "ZTG",
-      "name": "Zenta Group Company Limited - Class A Ordinary Shares",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:ZTG",
       "exchange": "Nasdaq"
     },
     {
