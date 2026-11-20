@@ -1,12 +1,12 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1119202608:01",
-    "other_listed_file_timestamp": "File Creation Time: 1119202608:01",
-    "retrieved_at": "2026-11-19T13:14:24.576914+00:00",
-    "directory_rows": 6750,
+    "nasdaq_file_timestamp": "File Creation Time: 1119202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1119202621:31",
+    "retrieved_at": "2026-11-20T03:39:09.795279+00:00",
+    "directory_rows": 6751,
     "eligible_common_shares": 4733,
-    "unclassified_sectors": 170,
+    "unclassified_sectors": 171,
     "unresolved_issuer_ids": 4733
   },
   "securities": [
@@ -1976,6 +1976,13 @@
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:ANRO",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "ANT",
+      "name": "Anthropic, PBC - Class A Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:ANT",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "ANTA",
@@ -7057,13 +7064,6 @@
       "name": "Cerenome, Inc. - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:CNSY",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "CNTB",
-      "name": "Connect Biopharma Holdings Limited - Ordinary Shares",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:CNTB",
       "exchange": "Nasdaq"
     },
     {
@@ -18834,6 +18834,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "MERC",
+      "name": "Mercer International Inc. - Common Stock",
+      "sector": "Basic Materials",
+      "permanent_id": "issuer-unresolved:MERC",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "MESH",
       "name": "Meshflow Acquisition Corp. - Class A Ordinary Shares",
       "sector": "Unclassified",
@@ -22640,13 +22647,6 @@
       "sector": "Energy",
       "permanent_id": "issuer-unresolved:PARR",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "PASG",
-      "name": "Passage Bio, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:PASG",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "PASW",
