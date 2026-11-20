@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1119202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1119202621:31",
-    "retrieved_at": "2026-11-20T03:39:09.795279+00:00",
-    "directory_rows": 6751,
-    "eligible_common_shares": 4733,
-    "unclassified_sectors": 171,
-    "unresolved_issuer_ids": 4733
+    "nasdaq_file_timestamp": "File Creation Time: 1120202607:00",
+    "other_listed_file_timestamp": "File Creation Time: 1120202607:00",
+    "retrieved_at": "2026-11-20T12:56:58.436507+00:00",
+    "directory_rows": 6745,
+    "eligible_common_shares": 4731,
+    "unclassified_sectors": 170,
+    "unresolved_issuer_ids": 4731
   },
   "securities": [
     {
@@ -1980,7 +1980,7 @@
     {
       "ticker": "ANT",
       "name": "Anthropic, PBC - Class A Common Stock",
-      "sector": "Unclassified",
+      "sector": "Technology",
       "permanent_id": "issuer-unresolved:ANT",
       "exchange": "Nasdaq"
     },
@@ -5529,7 +5529,7 @@
     {
       "ticker": "CAPS",
       "name": "Capstone Holding Corp. - Common Stock",
-      "sector": "Consumer Discretionary",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:CAPS",
       "exchange": "Nasdaq"
     },
@@ -18834,13 +18834,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "MERC",
-      "name": "Mercer International Inc. - Common Stock",
-      "sector": "Basic Materials",
-      "permanent_id": "issuer-unresolved:MERC",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "MESH",
       "name": "Meshflow Acquisition Corp. - Class A Ordinary Shares",
       "sector": "Unclassified",
@@ -30678,13 +30671,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "UTZ",
-      "name": "Utz Brands Inc Class A Common Stock",
-      "sector": "Consumer Staples",
-      "permanent_id": "issuer-unresolved:UTZ",
-      "exchange": "NYSE"
-    },
-    {
       "ticker": "UVE",
       "name": "UNIVERSAL INSURANCE HOLDINGS INC Common Stock",
       "sector": "Finance",
@@ -33074,7 +33060,7 @@
     {
       "ticker": "ZSTK",
       "name": "ZeroStack Corp. - Common Stock",
-      "sector": "Health Care",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:ZSTK",
       "exchange": "Nasdaq"
     },
