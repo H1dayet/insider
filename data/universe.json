@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1120202607:00",
-    "other_listed_file_timestamp": "File Creation Time: 1120202607:00",
-    "retrieved_at": "2026-11-20T12:56:58.436507+00:00",
-    "directory_rows": 6745,
-    "eligible_common_shares": 4731,
-    "unclassified_sectors": 170,
-    "unresolved_issuer_ids": 4731
+    "nasdaq_file_timestamp": "File Creation Time: 1120202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1120202621:31",
+    "retrieved_at": "2026-11-21T03:21:09.093172+00:00",
+    "directory_rows": 6749,
+    "eligible_common_shares": 4735,
+    "unclassified_sectors": 171,
+    "unresolved_issuer_ids": 4735
   },
   "securities": [
     {
@@ -1478,6 +1478,13 @@
       "name": "Alpha Compute Corp  - Ordinary Shares",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:ALP",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "ALPS",
+      "name": "ALPS Group Inc - Ordinary Share",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:ALPS",
       "exchange": "Nasdaq"
     },
     {
@@ -8376,6 +8383,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "CZZL",
+      "name": "Cizzle Brands Corporation - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:CZZL",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "D",
       "name": "Dominion Energy, Inc. Common Stock",
       "sector": "Utilities",
@@ -14781,6 +14795,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "IBG",
+      "name": "Innovation Beverage Group Limited - Ordinary Shares",
+      "sector": "Consumer Staples",
+      "permanent_id": "issuer-unresolved:IBG",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "IBIO",
       "name": "iBio, Inc. - Common Stock",
       "sector": "Health Care",
@@ -20035,6 +20056,13 @@
       "name": "Myseum.AI, Inc. - Common Stock",
       "sector": "Telecommunications",
       "permanent_id": "issuer-unresolved:MYSE",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "MYSZ",
+      "name": "My Size, Inc. - Common Stock",
+      "sector": "Technology",
+      "permanent_id": "issuer-unresolved:MYSZ",
       "exchange": "Nasdaq"
     },
     {
