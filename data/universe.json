@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1120202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1120202621:31",
-    "retrieved_at": "2026-11-21T03:21:09.093172+00:00",
-    "directory_rows": 6749,
-    "eligible_common_shares": 4735,
-    "unclassified_sectors": 171,
-    "unresolved_issuer_ids": 4735
+    "nasdaq_file_timestamp": "File Creation Time: 1123202621:31",
+    "other_listed_file_timestamp": "File Creation Time: 1123202621:31",
+    "retrieved_at": "2026-11-24T06:15:29.371996+00:00",
+    "directory_rows": 6740,
+    "eligible_common_shares": 4730,
+    "unclassified_sectors": 174,
+    "unresolved_issuer_ids": 4730
   },
   "securities": [
     {
@@ -3133,6 +3133,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "AVZO",
+      "name": "Avenzo Therapeutics, Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:AVZO",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "AWI",
       "name": "Armstrong World Industries Inc Common Stock",
       "sector": "Industrials",
@@ -3875,13 +3882,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "BFRI",
-      "name": "Biofrontera Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:BFRI",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "BFS",
       "name": "Saul Centers, Inc. Common Stock",
       "sector": "Real Estate",
@@ -4106,10 +4106,10 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "BIPC",
-      "name": "Brookfield Infrastructure Corporation Brookfield Infrastructure Corporation",
+      "ticker": "BIP",
+      "name": "Brookfield Infrastructure Partners Inc. Class A Subordinate Voting Shares",
       "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:BIPC",
+      "permanent_id": "issuer-unresolved:BIP",
       "exchange": "NYSE"
     },
     {
@@ -4188,13 +4188,6 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:BKE",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "BKHA",
-      "name": "Black Hawk Acquisition Corporation - Class A Ordinary Shares",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:BKHA",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "BKKT",
@@ -5536,7 +5529,7 @@
     {
       "ticker": "CAPS",
       "name": "Capstone Holding Corp. - Common Stock",
-      "sector": "Health Care",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:CAPS",
       "exchange": "Nasdaq"
     },
@@ -6785,6 +6778,13 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:CLX",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "CLYD",
+      "name": "Clywedog Therapeutics Holdings, Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:CLYD",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "CLYM",
@@ -10623,6 +10623,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "EVRL",
+      "name": "Everli Global Holdings - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:EVRL",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "EVTC",
       "name": "Evertec, Inc. Common Stock",
       "sector": "Technology",
@@ -12384,6 +12391,13 @@
       "name": "General Catalyst Global Resilience Merger Corp. - Class A Ordinary Shares",
       "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:GCGR",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "GCL",
+      "name": "GCL Global Holdings Ltd - Ordinary Shares",
+      "sector": "Technology",
+      "permanent_id": "issuer-unresolved:GCL",
       "exchange": "Nasdaq"
     },
     {
@@ -18309,13 +18323,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "MACI",
-      "name": "Melar Acquisition Corp. I - Class A Ordinary Shares",
-      "sector": "Unclassified",
-      "permanent_id": "issuer-unresolved:MACI",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "MAGN",
       "name": "Magnera Corporation Common Stock",
       "sector": "Basic Materials",
@@ -18817,13 +18824,6 @@
       "name": "DataMeds AI, Inc. - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:MEDS",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "MEGL",
-      "name": "Magic Empire Global Limited - Class A Ordinary Shares",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:MEGL",
       "exchange": "Nasdaq"
     },
     {
@@ -20577,13 +20577,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "NHTC",
-      "name": "Natural Health Trends Corp. - Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:NHTC",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "NI",
       "name": "NiSource Inc Common Stock",
       "sector": "Utilities",
@@ -21470,13 +21463,6 @@
       "name": "Nextpower Inc. - Common Stock",
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:NXT",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "NXTC",
-      "name": "NextCure, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:NXTC",
       "exchange": "Nasdaq"
     },
     {
@@ -23221,13 +23207,6 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:PHIN",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "PHIO",
-      "name": "Phio Pharmaceuticals Corp. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:PHIO",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "PHM",
@@ -25316,13 +25295,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "RLYB",
-      "name": "Rallybio Corporation - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:RLYB",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "RM",
       "name": "Regional Management Corp. Common Stock",
       "sector": "Finance",
@@ -25579,13 +25551,6 @@
       "name": "Republic Power Group Limited - Class A Ordinary Shares",
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:RPGL",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "RPID",
-      "name": "Rapid Micro Biosystems, Inc. - Class A Common Stock",
-      "sector": "Industrials",
-      "permanent_id": "issuer-unresolved:RPID",
       "exchange": "Nasdaq"
     },
     {
@@ -30895,13 +30860,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "VERI",
-      "name": "Veritone, Inc. - Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:VERI",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "VERU",
       "name": "Veru Inc. - Common Stock",
       "sector": "Health Care",
@@ -30913,6 +30871,13 @@
       "name": "Vertex, Inc. - Class A Common Stock",
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:VERX",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "VESI",
+      "name": "Vesicor Therapeutics Holdings, Inc. - Class A Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:VESI",
       "exchange": "Nasdaq"
     },
     {
