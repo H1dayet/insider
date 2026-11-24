@@ -1,12 +1,12 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1123202621:31",
-    "other_listed_file_timestamp": "File Creation Time: 1123202621:31",
-    "retrieved_at": "2026-11-24T06:15:29.371996+00:00",
-    "directory_rows": 6740,
+    "nasdaq_file_timestamp": "File Creation Time: 1124202609:46",
+    "other_listed_file_timestamp": "File Creation Time: 1124202609:46",
+    "retrieved_at": "2026-11-24T14:54:40.545932+00:00",
+    "directory_rows": 6738,
     "eligible_common_shares": 4730,
-    "unclassified_sectors": 174,
+    "unclassified_sectors": 173,
     "unresolved_issuer_ids": 4730
   },
   "securities": [
@@ -3135,7 +3135,7 @@
     {
       "ticker": "AVZO",
       "name": "Avenzo Therapeutics, Inc. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:AVZO",
       "exchange": "Nasdaq"
     },
@@ -5529,7 +5529,7 @@
     {
       "ticker": "CAPS",
       "name": "Capstone Holding Corp. - Common Stock",
-      "sector": "Consumer Discretionary",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:CAPS",
       "exchange": "Nasdaq"
     },
@@ -9475,13 +9475,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "EBMT",
-      "name": "Eagle Bancorp Montana, Inc. - Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:EBMT",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "EBON",
       "name": "Ebang International Holdings Inc. - Class A Ordinary Shares",
       "sector": "Finance",
@@ -10625,7 +10618,7 @@
     {
       "ticker": "EVRL",
       "name": "Everli Global Holdings - Class A Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:EVRL",
       "exchange": "Nasdaq"
     },
@@ -15618,13 +15611,6 @@
       "name": "Professional Diversity Network, Inc. - Common Stock",
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:IPDN",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "IPFX",
-      "name": "Inflection Point Acquisition Corp. VI - Class A Ordinary Shares",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:IPFX",
       "exchange": "Nasdaq"
     },
     {
@@ -21543,6 +21529,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "OBMT",
+      "name": "Opportunity Bancorp, Inc. - Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:OBMT",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "OBT",
       "name": "Orange County Bancorp, Inc. - Common Stock",
       "sector": "Finance",
@@ -24481,6 +24474,13 @@
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:QSI",
       "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "QSPC",
+      "name": "Quantum Space, Inc. Class A-1 Common Stock",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:QSPC",
+      "exchange": "NYSE"
     },
     {
       "ticker": "QSR",
@@ -30876,7 +30876,7 @@
     {
       "ticker": "VESI",
       "name": "Vesicor Therapeutics Holdings, Inc. - Class A Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:VESI",
       "exchange": "Nasdaq"
     },
