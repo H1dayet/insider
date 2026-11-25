@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1124202621:32",
-    "other_listed_file_timestamp": "File Creation Time: 1124202621:32",
-    "retrieved_at": "2026-11-25T04:58:41.968759+00:00",
-    "directory_rows": 6737,
-    "eligible_common_shares": 4731,
-    "unclassified_sectors": 173,
-    "unresolved_issuer_ids": 4731
+    "nasdaq_file_timestamp": "File Creation Time: 1125202609:16",
+    "other_listed_file_timestamp": "File Creation Time: 1125202609:16",
+    "retrieved_at": "2026-11-25T14:26:45.600288+00:00",
+    "directory_rows": 6736,
+    "eligible_common_shares": 4730,
+    "unclassified_sectors": 171,
+    "unresolved_issuer_ids": 4730
   },
   "securities": [
     {
@@ -5529,7 +5529,7 @@
     {
       "ticker": "CAPS",
       "name": "Capstone Holding Corp. - Common Stock",
-      "sector": "Health Care",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:CAPS",
       "exchange": "Nasdaq"
     },
@@ -24492,7 +24492,7 @@
     {
       "ticker": "QSPC",
       "name": "Quantum Space, Inc. Class A-1 Common Stock",
-      "sector": "Unclassified",
+      "sector": "Industrials",
       "permanent_id": "issuer-unresolved:QSPC",
       "exchange": "NYSE"
     },
@@ -25950,13 +25950,6 @@
       "name": "Safety Insurance Group, Inc. - Common Stock",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:SAFT",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "SAFX",
-      "name": "XCF Global, Inc. - Class A Common Stock",
-      "sector": "Industrials",
-      "permanent_id": "issuer-unresolved:SAFX",
       "exchange": "Nasdaq"
     },
     {
@@ -32500,7 +32493,7 @@
     {
       "ticker": "XGPU",
       "name": "Reliance Global Group, Inc. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:XGPU",
       "exchange": "Nasdaq"
     },
