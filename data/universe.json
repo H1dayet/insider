@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1124202609:46",
-    "other_listed_file_timestamp": "File Creation Time: 1124202609:46",
-    "retrieved_at": "2026-11-24T14:54:40.545932+00:00",
-    "directory_rows": 6738,
-    "eligible_common_shares": 4730,
+    "nasdaq_file_timestamp": "File Creation Time: 1124202621:32",
+    "other_listed_file_timestamp": "File Creation Time: 1124202621:32",
+    "retrieved_at": "2026-11-25T04:58:41.968759+00:00",
+    "directory_rows": 6737,
+    "eligible_common_shares": 4731,
     "unclassified_sectors": 173,
-    "unresolved_issuer_ids": 4730
+    "unresolved_issuer_ids": 4731
   },
   "securities": [
     {
@@ -1271,13 +1271,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "ALDX",
-      "name": "Aldeyra Therapeutics, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:ALDX",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "ALEC",
       "name": "Alector, Inc. - Common Stock",
       "sector": "Health Care",
@@ -2270,6 +2263,13 @@
       "sector": "Energy",
       "permanent_id": "issuer-unresolved:AR",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "ARAY",
+      "name": "Accuray Incorporated - Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:ARAY",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "ARBB",
@@ -8677,13 +8677,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "DFSC",
-      "name": "DEFSEC Technologies Inc. - common stock, no R/S concurrent with offering",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:DFSC",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "DFTX",
       "name": "Definium Therapeutics, Inc.  - Common Shares",
       "sector": "Health Care",
@@ -10032,6 +10025,13 @@
       "name": "Enlight Renewable Energy Ltd. - Ordinary Shares",
       "sector": "Utilities",
       "permanent_id": "issuer-unresolved:ENLT",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "ENLV",
+      "name": "Enlivex Ltd. - Ordinary Shares",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:ENLV",
       "exchange": "Nasdaq"
     },
     {
@@ -12462,13 +12462,6 @@
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:GDOT",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "GDRX",
-      "name": "GoodRx Holdings, Inc. - Class A Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:GDRX",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "GDV",
@@ -18533,6 +18526,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "MBRX",
+      "name": "Moleculin Biotech, Inc. - Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:MBRX",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "MBUU",
       "name": "Malibu Boats, Inc. - Common Stock",
       "sector": "Industrials",
@@ -19849,6 +19849,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "MTRI",
+      "name": "Mentari Therapeutics, Inc. - Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:MTRI",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "MTRN",
       "name": "Materion Corporation",
       "sector": "Industrials",
@@ -19875,13 +19882,6 @@
       "sector": "Industrials",
       "permanent_id": "issuer-unresolved:MTUS",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "MTVA",
-      "name": "MetaVia Inc.  - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:MTVA",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "MTW",
@@ -21452,6 +21452,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "NXTS",
+      "name": "Nexentis Technologies Inc. - Common Stock",
+      "sector": "Industrials",
+      "permanent_id": "issuer-unresolved:NXTS",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "NXTT",
       "name": "Next Technology Holding Inc. - Ordinary Shares",
       "sector": "Technology",
@@ -21666,6 +21673,13 @@
       "name": "Orion Energy Systems, Inc. - Common Stock",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:OESX",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "OFAL",
+      "name": "OFA Group - Class A Ordinary Shares",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:OFAL",
       "exchange": "Nasdaq"
     },
     {
@@ -25939,6 +25953,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "SAFX",
+      "name": "XCF Global, Inc. - Class A Common Stock",
+      "sector": "Industrials",
+      "permanent_id": "issuer-unresolved:SAFX",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "SAGU",
       "name": "Shreya Acquisition Group Class A Ordinary Shares",
       "sector": "Finance",
@@ -26196,13 +26217,6 @@
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:SCL",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "SCLX",
-      "name": "Scilex Holding Company - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:SCLX",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "SCM",
@@ -30454,20 +30468,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "UONE",
-      "name": "Urban One, Inc.  - Class A Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:UONE",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "UONEK",
-      "name": "Urban One, Inc.  - Class D Common Stock",
-      "sector": "Consumer Discretionary",
-      "permanent_id": "issuer-unresolved:UONEK",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "UP",
       "name": "Wheels Up Experience Inc. Class A Common Stock",
       "sector": "Consumer Discretionary",
@@ -32537,6 +32537,13 @@
       "name": "Xilio Therapeutics, Inc. - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:XLO",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "XMAX",
+      "name": "XMAX, Inc. - Common Stock",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:XMAX",
       "exchange": "Nasdaq"
     },
     {
