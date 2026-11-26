@@ -3,7 +3,7 @@
     "source": "Nasdaq Trader Symbol Directory",
     "nasdaq_file_timestamp": "File Creation Time: 1125202621:32",
     "other_listed_file_timestamp": "File Creation Time: 1125202621:32",
-    "retrieved_at": "2026-11-26T04:16:19.649156+00:00",
+    "retrieved_at": "2026-11-26T13:56:26.052432+00:00",
     "directory_rows": 6736,
     "eligible_common_shares": 4729,
     "unclassified_sectors": 171,
@@ -5515,7 +5515,7 @@
     {
       "ticker": "CAPS",
       "name": "Capstone Holding Corp. - Common Stock",
-      "sector": "Consumer Discretionary",
+      "sector": "Health Care",
       "permanent_id": "issuer-unresolved:CAPS",
       "exchange": "Nasdaq"
     },
