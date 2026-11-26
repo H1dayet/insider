@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1125202609:16",
-    "other_listed_file_timestamp": "File Creation Time: 1125202609:16",
-    "retrieved_at": "2026-11-25T14:26:45.600288+00:00",
+    "nasdaq_file_timestamp": "File Creation Time: 1125202621:32",
+    "other_listed_file_timestamp": "File Creation Time: 1125202621:32",
+    "retrieved_at": "2026-11-26T04:16:19.649156+00:00",
     "directory_rows": 6736,
-    "eligible_common_shares": 4730,
+    "eligible_common_shares": 4729,
     "unclassified_sectors": 171,
-    "unresolved_issuer_ids": 4730
+    "unresolved_issuer_ids": 4729
   },
   "securities": [
     {
@@ -1072,13 +1072,6 @@
       "name": "Air Global PLC - Ordinary shares",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:AIIR",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "AIMD",
-      "name": "Ainos, Inc. - Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:AIMD",
       "exchange": "Nasdaq"
     },
     {
@@ -4699,13 +4692,6 @@
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:BOX",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "BOXL",
-      "name": "Boxlight Corporation - Class A Common Stock",
-      "sector": "Real Estate",
-      "permanent_id": "issuer-unresolved:BOXL",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "BP",
@@ -11568,6 +11554,13 @@
       "exchange": "Nasdaq"
     },
     {
+      "ticker": "FMAC",
+      "name": "Future Money Acquisition Corporation - Ordinary Shares",
+      "sector": "Finance",
+      "permanent_id": "issuer-unresolved:FMAC",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "FMAO",
       "name": "Farmers & Merchants Bancorp, Inc. - Common Stock",
       "sector": "Finance",
@@ -11649,13 +11642,6 @@
       "name": "First Northern Community Bancorp - Common stock",
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:FNRN",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "FNUC",
-      "name": "Frontier Nuclear and Minerals Inc. - Common Shares",
-      "sector": "Basic Materials",
-      "permanent_id": "issuer-unresolved:FNUC",
       "exchange": "Nasdaq"
     },
     {
@@ -13861,6 +13847,13 @@
       "name": "Healthcare Services Group, Inc. - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:HCSG",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "HCTI",
+      "name": "Healthcare Triangle, Inc. - Common Stock",
+      "sector": "Technology",
+      "permanent_id": "issuer-unresolved:HCTI",
       "exchange": "Nasdaq"
     },
     {
@@ -27689,13 +27682,6 @@
       "exchange": "NYSE"
     },
     {
-      "ticker": "SQFT",
-      "name": "Presidio Property Trust, Inc. - Class A Common Stock",
-      "sector": "Real Estate",
-      "permanent_id": "issuer-unresolved:SQFT",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "SQM",
       "name": "Sociedad Quimica y Minera S.A. Common Stock",
       "sector": "Industrials",
@@ -31487,6 +31473,13 @@
       "name": "Vuzix Corporation  - Common Stock",
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:VUZI",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "VVOS",
+      "name": "Vivos Therapeutics, Inc. - Common Stock",
+      "sector": "Health Care",
+      "permanent_id": "issuer-unresolved:VVOS",
       "exchange": "Nasdaq"
     },
     {

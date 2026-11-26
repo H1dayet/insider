@@ -8,11 +8,11 @@
     "cash": 0.0,
     "shares": 12.90648891114065
   },
-  "last_processed_session": "2026-11-24",
+  "last_processed_session": "2026-11-25",
   "pending": {
-    "signal_session": "2026-11-24",
-    "generated_at": "2026-11-25T05:04:32.054327+00:00",
-    "execute_on": "2026-11-25",
+    "signal_session": "2026-11-25",
+    "generated_at": "2026-11-26T04:20:57.596513+00:00",
+    "execute_on": "2026-11-27",
     "market_active": false,
     "selected": []
   },
@@ -16052,6 +16052,446 @@
       ],
       "executed_signal": true,
       "warnings": []
+    },
+    {
+      "date": "2026-11-25",
+      "signal_session": "2026-11-24",
+      "portfolio_value": 5966.77951964,
+      "benchmark_value": 9250.08076016,
+      "profit": -4033.22048036,
+      "daily_profit": -0.0,
+      "daily_return": -0.0,
+      "transaction_cost": 0.0,
+      "cash": 5966.77951964,
+      "holdings": [],
+      "stock_records": [
+        {
+          "ticker": "MRNA",
+          "profit": 345.02361176,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-09-22",
+          "complete": true
+        },
+        {
+          "ticker": "DELL",
+          "profit": -139.02775385,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-09-22",
+          "complete": true
+        },
+        {
+          "ticker": "TXG",
+          "profit": -107.71957835,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-09-24",
+          "complete": true
+        },
+        {
+          "ticker": "MXL",
+          "profit": -128.78421705,
+          "growth": 0.51193084,
+          "benchmark_growth": 0.93800307,
+          "entry_session": "2026-09-24",
+          "complete": true
+        },
+        {
+          "ticker": "TWST",
+          "profit": 164.9351547,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-09-24",
+          "complete": true
+        },
+        {
+          "ticker": "XHLD",
+          "profit": -943.07992488,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-09-24",
+          "complete": true
+        },
+        {
+          "ticker": "AEHR",
+          "profit": 127.68398218,
+          "growth": 0.43713077,
+          "benchmark_growth": 0.93800307,
+          "entry_session": "2026-09-24",
+          "complete": true
+        },
+        {
+          "ticker": "ATEX",
+          "profit": -18.3824839,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-09-24",
+          "complete": true
+        },
+        {
+          "ticker": "TH",
+          "profit": -8.76823656,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-09-24",
+          "complete": true
+        },
+        {
+          "ticker": "APPS",
+          "profit": -103.43711821,
+          "growth": 0.52691967,
+          "benchmark_growth": 0.93800307,
+          "entry_session": "2026-09-24",
+          "complete": true
+        },
+        {
+          "ticker": "MU",
+          "profit": -20.62553473,
+          "growth": 0.54876092,
+          "benchmark_growth": 0.93225628,
+          "entry_session": "2026-09-25",
+          "complete": true
+        },
+        {
+          "ticker": "BE",
+          "profit": -19.62022472,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-09-28",
+          "complete": true
+        },
+        {
+          "ticker": "VSXY",
+          "profit": -38.45873122,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-09-29",
+          "complete": true
+        },
+        {
+          "ticker": "IOVA",
+          "profit": -311.99093019,
+          "growth": 0.48668944,
+          "benchmark_growth": 0.93509035,
+          "entry_session": "2026-09-30",
+          "complete": true
+        },
+        {
+          "ticker": "FCEL",
+          "profit": 60.04699459,
+          "growth": 0.45145633,
+          "benchmark_growth": 0.93764722,
+          "entry_session": "2026-10-01",
+          "complete": true
+        },
+        {
+          "ticker": "ECO",
+          "profit": 74.44127676,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-10-02",
+          "complete": true
+        },
+        {
+          "ticker": "BAND",
+          "profit": -95.17780546,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-10-05",
+          "complete": true
+        },
+        {
+          "ticker": "XRPN",
+          "profit": -878.48370891,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-10-05",
+          "complete": true
+        },
+        {
+          "ticker": "COHU",
+          "profit": -109.82610429,
+          "growth": 0.50507751,
+          "benchmark_growth": 0.92103064,
+          "entry_session": "2026-10-06",
+          "complete": true
+        },
+        {
+          "ticker": "XMTR",
+          "profit": -21.71800329,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-10-06",
+          "complete": true
+        },
+        {
+          "ticker": "LIND",
+          "profit": -122.43138251,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-10-07",
+          "complete": true
+        },
+        {
+          "ticker": "PBF",
+          "profit": -168.31398528,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-10-09",
+          "complete": true
+        },
+        {
+          "ticker": "WFF",
+          "profit": -842.07029338,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-10-12",
+          "complete": true
+        },
+        {
+          "ticker": "DINO",
+          "profit": -21.59778616,
+          "growth": 0.69956797,
+          "benchmark_growth": 0.92028556,
+          "entry_session": "2026-10-12",
+          "complete": true
+        },
+        {
+          "ticker": "PENG",
+          "profit": -165.80409818,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-10-13",
+          "complete": true
+        },
+        {
+          "ticker": "SLS",
+          "profit": -78.6436557,
+          "growth": 1.11043482,
+          "benchmark_growth": 0.93533444,
+          "entry_session": "2026-10-15",
+          "complete": true
+        },
+        {
+          "ticker": "MPC",
+          "profit": -67.60777207,
+          "growth": 0.72260008,
+          "benchmark_growth": 0.92687913,
+          "entry_session": "2026-10-16",
+          "complete": true
+        },
+        {
+          "ticker": "CAKE",
+          "profit": -14.70258471,
+          "growth": 0.94017079,
+          "benchmark_growth": 0.92687913,
+          "entry_session": "2026-10-16",
+          "complete": true
+        },
+        {
+          "ticker": "FRO",
+          "profit": -8.98658651,
+          "growth": 0.88849526,
+          "benchmark_growth": 0.92687913,
+          "entry_session": "2026-10-16",
+          "complete": true
+        },
+        {
+          "ticker": "MTRN",
+          "profit": -0.14797882,
+          "growth": 0.7460342,
+          "benchmark_growth": 0.92687913,
+          "entry_session": "2026-10-16",
+          "complete": true
+        },
+        {
+          "ticker": "AMN",
+          "profit": -113.79602898,
+          "growth": 0.85398234,
+          "benchmark_growth": 0.93413974,
+          "entry_session": "2026-10-19",
+          "complete": true
+        },
+        {
+          "ticker": "OKTA",
+          "profit": -108.18267184,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-10-23",
+          "complete": true
+        },
+        {
+          "ticker": "HNGE",
+          "profit": -73.01203916,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-10-26",
+          "complete": true
+        },
+        {
+          "ticker": "CDNA",
+          "profit": -64.52865873,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-10-30",
+          "complete": true
+        },
+        {
+          "ticker": "CBRL",
+          "profit": 80.56477243,
+          "growth": 1.08464081,
+          "benchmark_growth": 0.95213427,
+          "entry_session": "2026-11-03",
+          "complete": true
+        },
+        {
+          "ticker": "TBBB",
+          "profit": 10.611772,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-11-04",
+          "complete": true
+        },
+        {
+          "ticker": "SEZL",
+          "profit": -55.05735274,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-11-05",
+          "complete": true
+        },
+        {
+          "ticker": "HAE",
+          "profit": -18.21148558,
+          "growth": 0.99405743,
+          "benchmark_growth": 0.96596806,
+          "entry_session": "2026-11-09",
+          "complete": true
+        },
+        {
+          "ticker": "ANF",
+          "profit": -1.14494586,
+          "growth": 1.17355272,
+          "benchmark_growth": 0.96596806,
+          "entry_session": "2026-11-09",
+          "complete": true
+        },
+        {
+          "ticker": "STGW",
+          "profit": -15.76171316,
+          "growth": 0.93861898,
+          "benchmark_growth": 0.96596806,
+          "entry_session": "2026-11-09",
+          "complete": true
+        },
+        {
+          "ticker": "CRL",
+          "profit": -11.41824915,
+          "growth": 0.96692285,
+          "benchmark_growth": 0.96596806,
+          "entry_session": "2026-11-09",
+          "complete": true
+        },
+        {
+          "ticker": "OSPN",
+          "profit": 15.16708053,
+          "growth": 1.08466076,
+          "benchmark_growth": 0.96596806,
+          "entry_session": "2026-11-09",
+          "complete": true
+        },
+        {
+          "ticker": "VLO",
+          "profit": 1.6280364,
+          "growth": 0.9410561,
+          "benchmark_growth": 0.96596806,
+          "entry_session": "2026-11-09",
+          "complete": true
+        },
+        {
+          "ticker": "QMCO",
+          "profit": 118.86623045,
+          "growth": 0.8141414,
+          "benchmark_growth": 0.96596806,
+          "entry_session": "2026-11-09",
+          "complete": true
+        },
+        {
+          "ticker": "RVTY",
+          "profit": 14.98415644,
+          "growth": 0.95795227,
+          "benchmark_growth": 0.96596806,
+          "entry_session": "2026-11-09",
+          "complete": true
+        },
+        {
+          "ticker": "PEB",
+          "profit": -7.6426029,
+          "growth": 0.98335651,
+          "benchmark_growth": 0.96596806,
+          "entry_session": "2026-11-09",
+          "complete": true
+        },
+        {
+          "ticker": "VAC",
+          "profit": 6.0631303,
+          "growth": 0.93295456,
+          "benchmark_growth": 0.95823196,
+          "entry_session": "2026-11-10",
+          "complete": true
+        },
+        {
+          "ticker": "ORKA",
+          "profit": -42.43504735,
+          "growth": 0.94415749,
+          "benchmark_growth": 0.94701377,
+          "entry_session": "2026-11-11",
+          "complete": true
+        },
+        {
+          "ticker": "CXW",
+          "profit": 9.61775846,
+          "growth": 0.94695541,
+          "benchmark_growth": 0.94701377,
+          "entry_session": "2026-11-11",
+          "complete": true
+        },
+        {
+          "ticker": "SN",
+          "profit": -8.58693425,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-11-16",
+          "complete": true
+        },
+        {
+          "ticker": "RNG",
+          "profit": -5.95446983,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-11-17",
+          "complete": true
+        },
+        {
+          "ticker": "CHYM",
+          "profit": -65.20652382,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-11-17",
+          "complete": true
+        },
+        {
+          "ticker": "PRCH",
+          "profit": -36.50923508,
+          "growth": null,
+          "benchmark_growth": null,
+          "entry_session": "2026-11-18",
+          "complete": true
+        }
+      ],
+      "executed_signal": true,
+      "warnings": []
     }
   ],
   "signal_log": [
@@ -20107,6 +20547,13 @@
       "execute_on": "2026-11-25",
       "market_active": false,
       "selected": []
+    },
+    {
+      "signal_session": "2026-11-25",
+      "generated_at": "2026-11-26T04:20:57.596513+00:00",
+      "execute_on": "2026-11-27",
+      "market_active": false,
+      "selected": []
     }
   ],
   "stock_ledger": {
@@ -20116,11 +20563,11 @@
       "dividends": 0.0,
       "fees": 7.772114302928661,
       "complete": true,
-      "reference_price": 227.3800048828125,
-      "growth": 1.3494362307585308,
+      "reference_price": 220.83999633789062,
+      "growth": 1.3106231236670063,
       "entry_session": "2026-09-22",
-      "benchmark_growth": 0.9286203404147136,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.925933084092458,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "DELL": {
@@ -20129,11 +20576,11 @@
       "dividends": 0.9870483613709683,
       "fees": 6.971328646365453,
       "complete": true,
-      "reference_price": 295.2799987792969,
-      "growth": 0.5189242602769901,
+      "reference_price": 297.05999755859375,
+      "growth": 0.5220524252514521,
       "entry_session": "2026-09-22",
-      "benchmark_growth": 0.9286203404147136,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.925933084092458,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "TXG": {
@@ -20142,11 +20589,11 @@
       "dividends": 0.0,
       "fees": 5.609728423738082,
       "complete": true,
-      "reference_price": 57.27000045776367,
-      "growth": 0.7585430524207111,
+      "reference_price": 55.68000030517578,
+      "growth": 0.7374834477506728,
       "entry_session": "2026-09-24",
-      "benchmark_growth": 0.9407253555391473,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9380030695314449,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "MXL": {
@@ -20155,11 +20602,11 @@
       "dividends": 0.0,
       "fees": 2.4612217413002604,
       "complete": true,
-      "reference_price": 41.88999938964844,
-      "growth": 0.509982952287769,
+      "reference_price": 42.04999923706055,
+      "growth": 0.5119308442843724,
       "entry_session": "2026-09-24",
-      "benchmark_growth": 0.9407253555391473,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.9380030695314449,
+      "benchmark_price": 716.7000122070312
     },
     "TWST": {
       "purchases": 1975.3164994997196,
@@ -20167,11 +20614,11 @@
       "dividends": 0.0,
       "fees": 4.119687841537576,
       "complete": true,
-      "reference_price": 108.87999725341797,
-      "growth": 0.6903372838620409,
+      "reference_price": 108.06999969482422,
+      "growth": 0.6852016158914308,
       "entry_session": "2026-09-24",
-      "benchmark_growth": 0.9407253555391473,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9380030695314449,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "XHLD": {
@@ -20180,11 +20627,11 @@
       "dividends": 0.0,
       "fees": 1.0685038735433883,
       "complete": true,
-      "reference_price": 0.6359999775886536,
-      "growth": 0.05238879403644059,
+      "reference_price": 0.6299999952316284,
+      "growth": 0.05189456156631341,
       "entry_session": "2026-09-24",
-      "benchmark_growth": 0.9407253555391473,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9380030695314449,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "AEHR": {
@@ -20193,11 +20640,11 @@
       "dividends": 0.0,
       "fees": 2.1980552429198377,
       "complete": true,
-      "reference_price": 41.88999938964844,
-      "growth": 0.44187761646777385,
+      "reference_price": 41.439998626708984,
+      "growth": 0.43713077312965953,
       "entry_session": "2026-09-24",
-      "benchmark_growth": 0.9407253555391473,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.9380030695314449,
+      "benchmark_price": 716.7000122070312
     },
     "ATEX": {
       "purchases": 1982.6450856569145,
@@ -20205,11 +20652,11 @@
       "dividends": 0.0,
       "fees": 3.9508585459559784,
       "complete": true,
-      "reference_price": 75.11000061035156,
-      "growth": 0.9052669580003542,
+      "reference_price": 75.66999816894531,
+      "growth": 0.9120163559798015,
       "entry_session": "2026-09-24",
-      "benchmark_growth": 0.9407253555391473,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9380030695314449,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "TH": {
@@ -20218,11 +20665,11 @@
       "dividends": 0.0,
       "fees": 2.019411228667059,
       "complete": true,
-      "reference_price": 11.960000038146973,
-      "growth": 0.5727969597153885,
+      "reference_price": 12.020000457763672,
+      "growth": 0.575670543145863,
       "entry_session": "2026-09-24",
-      "benchmark_growth": 0.9407253555391473,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9380030695314449,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "APPS": {
@@ -20231,11 +20678,11 @@
       "dividends": 0.0,
       "fees": 4.890409425607956,
       "complete": true,
-      "reference_price": 6.059999942779541,
-      "growth": 0.5348631936086817,
+      "reference_price": 5.96999979019165,
+      "growth": 0.5269196672897114,
       "entry_session": "2026-09-24",
-      "benchmark_growth": 0.9407253555391473,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.9380030695314449,
+      "benchmark_price": 716.7000122070312
     },
     "MU": {
       "purchases": 1846.617240201357,
@@ -20243,11 +20690,11 @@
       "dividends": 0.0,
       "fees": 3.676285230900182,
       "complete": true,
-      "reference_price": 629.7899780273438,
-      "growth": 0.5748093644139711,
+      "reference_price": 601.25,
+      "growth": 0.5487609241360378,
       "entry_session": "2026-09-25",
-      "benchmark_growth": 0.9349618901446618,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.932256282544857,
+      "benchmark_price": 716.7000122070312
     },
     "BE": {
       "purchases": 1100.6590833582252,
@@ -20255,11 +20702,11 @@
       "dividends": 0.0,
       "fees": 2.1838818238211957,
       "complete": true,
-      "reference_price": 156.41000366210938,
-      "growth": 0.5536441126169995,
+      "reference_price": 152.88999938964844,
+      "growth": 0.5411843619859291,
       "entry_session": "2026-09-28",
-      "benchmark_growth": 0.9354851983287159,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9327780763713585,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "VSXY": {
@@ -20268,11 +20715,11 @@
       "dividends": 0.0,
       "fees": 4.628856635100749,
       "complete": true,
-      "reference_price": 93.37999725341797,
-      "growth": 1.040098000925249,
+      "reference_price": 91.54000091552734,
+      "growth": 1.0196034992221044,
       "entry_session": "2026-09-29",
-      "benchmark_growth": 0.9373394536962427,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9346269658651879,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "IOVA": {
@@ -20281,11 +20728,11 @@
       "dividends": 0.0,
       "fees": 2.4079580450093707,
       "complete": true,
-      "reference_price": 7.329999923706055,
-      "growth": 0.5003413047488815,
+      "reference_price": 7.130000114440918,
+      "growth": 0.4866894402797409,
       "entry_session": "2026-09-30",
-      "benchmark_growth": 0.9378041853337726,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.9350903526549078,
+      "benchmark_price": 716.7000122070312
     },
     "FCEL": {
       "purchases": 1848.6112726973188,
@@ -20293,11 +20740,11 @@
       "dividends": 0.0,
       "fees": 3.7610305705510827,
       "complete": true,
-      "reference_price": 7.099999904632568,
-      "growth": 0.43082524889858725,
+      "reference_price": 7.440000057220459,
+      "growth": 0.4514563266917941,
       "entry_session": "2026-10-01",
-      "benchmark_growth": 0.9403684691399387,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.937647215895779,
+      "benchmark_price": 716.7000122070312
     },
     "ECO": {
       "purchases": 2681.0061640109916,
@@ -20305,11 +20752,11 @@
       "dividends": 0.0,
       "fees": 5.441895500281828,
       "complete": true,
-      "reference_price": 80.20999908447266,
-      "growth": 1.0245282101677309,
+      "reference_price": 81.58999633789062,
+      "growth": 1.042155016453961,
       "entry_session": "2026-10-02",
-      "benchmark_growth": 0.9327779248823556,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9300786372759897,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "BAND": {
@@ -20318,11 +20765,11 @@
       "dividends": 0.0,
       "fees": 1.9159955048116002,
       "complete": true,
-      "reference_price": 37.34000015258789,
-      "growth": 0.5947754201757266,
+      "reference_price": 36.369998931884766,
+      "growth": 0.5793246199278138,
       "entry_session": "2026-10-05",
-      "benchmark_growth": 0.9338565227779382,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9311541139078138,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "XRPN": {
@@ -20331,11 +20778,11 @@
       "dividends": 0.0,
       "fees": 3.9996663700711643,
       "complete": true,
-      "reference_price": 6.800000190734863,
-      "growth": 0.1545454588803378,
+      "reference_price": 7.190000057220459,
+      "growth": 0.1634090922095559,
       "entry_session": "2026-10-05",
-      "benchmark_growth": 0.9338565227779382,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9311541139078138,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "COHU": {
@@ -20344,11 +20791,11 @@
       "dividends": 0.0,
       "fees": 1.8601461474443357,
       "complete": true,
-      "reference_price": 37.84000015258789,
-      "growth": 0.5056119989870969,
+      "reference_price": 37.79999923706055,
+      "growth": 0.5050775131842549,
       "entry_session": "2026-10-06",
-      "benchmark_growth": 0.9237036647760917,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.9210306364080594,
+      "benchmark_price": 716.7000122070312
     },
     "XMTR": {
       "purchases": 974.6080863853766,
@@ -20356,11 +20803,11 @@
       "dividends": 0.0,
       "fees": 1.92942759708014,
       "complete": true,
-      "reference_price": 103.72000122070312,
-      "growth": 0.9443685649778081,
+      "reference_price": 107.25,
+      "growth": 0.9765091342252425,
       "entry_session": "2026-10-06",
-      "benchmark_growth": 0.9237036647760917,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9210306364080594,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "LIND": {
@@ -20369,11 +20816,11 @@
       "dividends": 0.0,
       "fees": 4.654459513372615,
       "complete": true,
-      "reference_price": 32.84000015258789,
-      "growth": 0.931895533156419,
+      "reference_price": 31.760000228881836,
+      "growth": 0.9012485447266204,
       "entry_session": "2026-10-07",
-      "benchmark_growth": 0.9265375191106113,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9238562900897984,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "PBF": {
@@ -20382,11 +20829,11 @@
       "dividends": 0.0,
       "fees": 6.119118487424275,
       "complete": true,
-      "reference_price": 57.810001373291016,
-      "growth": 0.6577729435697994,
+      "reference_price": 56.33000183105469,
+      "growth": 0.6409332336190483,
       "entry_session": "2026-10-09",
-      "benchmark_growth": 0.9259765515041927,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9232969458203684,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "WFF": {
@@ -20395,11 +20842,11 @@
       "dividends": 0.0,
       "fees": 0.9249783232171478,
       "complete": true,
-      "reference_price": 1.0299999713897705,
-      "growth": 0.06983050653489967,
+      "reference_price": 1.059999942779541,
+      "growth": 0.07186440290030784,
       "entry_session": "2026-10-12",
-      "benchmark_growth": 0.9229564219126529,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9202855559279131,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "DINO": {
@@ -20408,11 +20855,11 @@
       "dividends": 0.0,
       "fees": 4.716964915559688,
       "complete": true,
-      "reference_price": 86.31999969482422,
-      "growth": 0.7041360211854015,
+      "reference_price": 85.76000213623047,
+      "growth": 0.6995679668043102,
       "entry_session": "2026-10-12",
-      "benchmark_growth": 0.9229564219126529,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.9202855559279131,
+      "benchmark_price": 716.7000122070312
     },
     "PENG": {
       "purchases": 856.3951309409014,
@@ -20420,11 +20867,11 @@
       "dividends": 0.0,
       "fees": 1.5485346984021757,
       "complete": true,
-      "reference_price": 37.56999969482422,
-      "growth": 0.492204883971835,
+      "reference_price": 37.029998779296875,
+      "growth": 0.48513032740726736,
       "entry_session": "2026-10-13",
-      "benchmark_growth": 0.9246661749871757,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.921990361291774,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "SLS": {
@@ -20433,11 +20880,11 @@
       "dividends": 0.0,
       "fees": 1.4423465342363688,
       "complete": true,
-      "reference_price": 13.25,
-      "growth": 1.152173913043478,
+      "reference_price": 12.770000457763672,
+      "growth": 1.110434822414232,
       "entry_session": "2026-10-15",
-      "benchmark_growth": 0.9380489778752038,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.9353344368117862,
+      "benchmark_price": 716.7000122070312
     },
     "MPC": {
       "purchases": 2134.8722115632872,
@@ -20445,11 +20892,11 @@
       "dividends": 0.0,
       "fees": 4.206342994046915,
       "complete": true,
-      "reference_price": 355.1600036621094,
-      "growth": 0.7411518569621937,
+      "reference_price": 346.2699890136719,
+      "growth": 0.7226000752379795,
       "entry_session": "2026-10-16",
-      "benchmark_growth": 0.9295691355526077,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.9268791335918797,
+      "benchmark_price": 716.7000122070312
     },
     "CAKE": {
       "purchases": 756.9121625241075,
@@ -20457,11 +20904,11 @@
       "dividends": 0.0,
       "fees": 1.5006223626969009,
       "complete": true,
-      "reference_price": 109.41999816894531,
-      "growth": 0.9381131033953957,
+      "reference_price": 109.66000366210938,
+      "growth": 0.9401707921341255,
       "entry_session": "2026-10-16",
-      "benchmark_growth": 0.9295691355526077,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.9268791335918797,
+      "benchmark_price": 716.7000122070312
     },
     "FRO": {
       "purchases": 756.9121625241075,
@@ -20469,11 +20916,11 @@
       "dividends": 0.0,
       "fees": 1.50634408261723,
       "complete": true,
-      "reference_price": 47.529998779296875,
-      "growth": 0.8862576511779148,
+      "reference_price": 47.650001525878906,
+      "growth": 0.8884952559549427,
       "entry_session": "2026-10-16",
-      "benchmark_growth": 0.9295691355526077,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.9268791335918797,
+      "benchmark_price": 716.7000122070312
     },
     "MTRN": {
       "purchases": 746.539442847319,
@@ -20481,11 +20928,11 @@
       "dividends": 0.0,
       "fees": 1.494425332208637,
       "complete": true,
-      "reference_price": 186.99000549316406,
-      "growth": 0.7499647533993683,
+      "reference_price": 186.00999450683594,
+      "growth": 0.7460342026955923,
       "entry_session": "2026-10-16",
-      "benchmark_growth": 0.9295691355526077,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.9268791335918797,
+      "benchmark_price": 716.7000122070312
     },
     "AMN": {
       "purchases": 2152.5412891651213,
@@ -20493,11 +20940,11 @@
       "dividends": 0.0,
       "fees": 4.195482031384974,
       "complete": true,
-      "reference_price": 35.599998474121094,
-      "growth": 0.8751228664467744,
+      "reference_price": 34.7400016784668,
+      "growth": 0.8539823357387429,
       "entry_session": "2026-10-19",
-      "benchmark_growth": 0.9368508108321396,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.9341397370435828,
+      "benchmark_price": 716.7000122070312
     },
     "OKTA": {
       "purchases": 1487.8466731365784,
@@ -20505,11 +20952,11 @@
       "dividends": 0.0,
       "fees": 2.870381055491642,
       "complete": true,
-      "reference_price": 198.1199951171875,
-      "growth": 0.9833234034067814,
+      "reference_price": 201.77000427246094,
+      "growth": 1.0014393912600337,
       "entry_session": "2026-10-23",
-      "benchmark_growth": 0.9458876249558039,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9431504002906941,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "HNGE": {
@@ -20518,11 +20965,11 @@
       "dividends": 0.0,
       "fees": 4.089993932214374,
       "complete": true,
-      "reference_price": 109.02999877929688,
-      "growth": 0.9761840486707407,
+      "reference_price": 109.05999755859375,
+      "growth": 0.9764526383264049,
       "entry_session": "2026-10-26",
-      "benchmark_growth": 0.9429715044891768,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.94024271853989,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "CDNA": {
@@ -20531,11 +20978,11 @@
       "dividends": 0.0,
       "fees": 2.7309722198053015,
       "complete": true,
-      "reference_price": 77.83000183105469,
-      "growth": 0.9654531277489933,
+      "reference_price": 75.86000061035156,
+      "growth": 0.9410159724688776,
       "entry_session": "2026-10-30",
-      "benchmark_growth": 0.9440489961481268,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9413170921363266,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "CBRL": {
@@ -20544,11 +20991,11 @@
       "dividends": 0.0,
       "fees": 3.961581547734782,
       "complete": true,
-      "reference_price": 75.19000244140625,
-      "growth": 1.082337715851349,
+      "reference_price": 75.3499984741211,
+      "growth": 1.0846408111428913,
       "entry_session": "2026-11-03",
-      "benchmark_growth": 0.9548975701077653,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.9521342723199604,
+      "benchmark_price": 716.7000122070312
     },
     "TBBB": {
       "purchases": 1302.3739528397282,
@@ -20556,11 +21003,11 @@
       "dividends": 0.0,
       "fees": 2.6179776553388026,
       "complete": true,
-      "reference_price": 65.6500015258789,
-      "growth": 1.0299654815989336,
+      "reference_price": 65.58000183105469,
+      "growth": 1.0288672749315204,
       "entry_session": "2026-11-04",
-      "benchmark_growth": 0.9420569581470922,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9393308187265674,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "SEZL": {
@@ -20569,11 +21016,11 @@
       "dividends": 0.0,
       "fees": 2.5253924046063134,
       "complete": true,
-      "reference_price": 145.80999755859375,
-      "growth": 0.8440032541956595,
+      "reference_price": 145.7100067138672,
+      "growth": 0.8434244694775191,
       "entry_session": "2026-11-05",
-      "benchmark_growth": 0.939004868651656,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9362875614162942,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "HAE": {
@@ -20582,11 +21029,11 @@
       "dividends": 0.0,
       "fees": 1.2442299280648308,
       "complete": true,
-      "reference_price": 120.4000015258789,
-      "growth": 0.9937272852982906,
+      "reference_price": 120.44000244140625,
+      "growth": 0.9940574348057046,
       "entry_session": "2026-11-09",
-      "benchmark_growth": 0.9687715041054665,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.965968057706623,
+      "benchmark_price": 716.7000122070312
     },
     "ANF": {
       "purchases": 1274.6924291417997,
@@ -20594,11 +21041,11 @@
       "dividends": 0.0,
       "fees": 2.5507907031298265,
       "complete": true,
-      "reference_price": 168.10000610351562,
-      "growth": 1.1147955009490327,
+      "reference_price": 176.9600067138672,
+      "growth": 1.17355271962958,
       "entry_session": "2026-11-09",
-      "benchmark_growth": 0.9687715041054665,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.965968057706623,
+      "benchmark_price": 716.7000122070312
     },
     "STGW": {
       "purchases": 630.5985918568681,
@@ -20606,11 +21053,11 @@
       "dividends": 0.0,
       "fees": 1.2466821527056156,
       "complete": true,
-      "reference_price": 10.800000190734863,
-      "growth": 0.9207161647233825,
+      "reference_price": 11.010000228881836,
+      "growth": 0.9386189819733597,
       "entry_session": "2026-11-09",
-      "benchmark_growth": 0.9687715041054665,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.965968057706623,
+      "benchmark_price": 716.7000122070312
     },
     "CRL": {
       "purchases": 1274.6924291417997,
@@ -20618,11 +21065,11 @@
       "dividends": 0.0,
       "fees": 2.54050711624702,
       "complete": true,
-      "reference_price": 336.1300048828125,
-      "growth": 0.9787153578306858,
+      "reference_price": 332.0799865722656,
+      "growth": 0.9669228517692002,
       "entry_session": "2026-11-09",
-      "benchmark_growth": 0.9687715041054665,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.965968057706623,
+      "benchmark_price": 716.7000122070312
     },
     "OSPN": {
       "purchases": 1274.6924291417997,
@@ -20630,11 +21077,11 @@
       "dividends": 0.0,
       "fees": 2.567119057875625,
       "complete": true,
-      "reference_price": 23.360000610351562,
-      "growth": 1.0832696344501778,
+      "reference_price": 23.389999389648438,
+      "growth": 1.08466076312457,
       "entry_session": "2026-11-09",
-      "benchmark_growth": 0.9687715041054665,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.965968057706623,
+      "benchmark_price": 716.7000122070312
     },
     "VLO": {
       "purchases": 630.5985918568681,
@@ -20642,11 +21089,11 @@
       "dividends": 0.0,
       "fees": 1.26408930942527,
       "complete": true,
-      "reference_price": 324.6700134277344,
-      "growth": 0.9459216645217249,
+      "reference_price": 323.0,
+      "growth": 0.9410561031332298,
       "entry_session": "2026-11-09",
-      "benchmark_growth": 0.9687715041054665,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.965968057706623,
+      "benchmark_price": 716.7000122070312
     },
     "QMCO": {
       "purchases": 1274.6924291417997,
@@ -20654,11 +21101,11 @@
       "dividends": 0.0,
       "fees": 2.670922010748339,
       "complete": true,
-      "reference_price": 12.380000114440918,
-      "growth": 0.8336700199610131,
+      "reference_price": 12.09000015258789,
+      "growth": 0.8141414035028682,
       "entry_session": "2026-11-09",
-      "benchmark_growth": 0.9687715041054665,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.965968057706623,
+      "benchmark_price": 716.7000122070312
     },
     "RVTY": {
       "purchases": 630.5985918568681,
@@ -20666,11 +21113,11 @@
       "dividends": 0.0,
       "fees": 1.2774587989556716,
       "complete": true,
-      "reference_price": 153.1699981689453,
-      "growth": 0.9728785301940651,
+      "reference_price": 150.82000732421875,
+      "growth": 0.9579522674381867,
       "entry_session": "2026-11-09",
-      "benchmark_growth": 0.9687715041054665,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.965968057706623,
+      "benchmark_price": 716.7000122070312
     },
     "PEB": {
       "purchases": 1255.705403057894,
@@ -20678,11 +21125,11 @@
       "dividends": 0.0,
       "fees": 2.506274477696481,
       "complete": true,
-      "reference_price": 21.139999389648438,
-      "growth": 0.9773462880198837,
+      "reference_price": 21.270000457763672,
+      "growth": 0.9833565086929863,
       "entry_session": "2026-11-09",
-      "benchmark_growth": 0.9687715041054665,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.965968057706623,
+      "benchmark_price": 716.7000122070312
     },
     "VAC": {
       "purchases": 666.4066850655217,
@@ -20690,11 +21137,11 @@
       "dividends": 0.0,
       "fees": 1.3402167171518489,
       "complete": true,
-      "reference_price": 109.45999908447266,
-      "growth": 0.9568181610531816,
+      "reference_price": 106.7300033569336,
+      "growth": 0.9329545623545269,
       "entry_session": "2026-11-10",
-      "benchmark_growth": 0.9610129515076771,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.9582319569318365,
+      "benchmark_price": 716.7000122070312
     },
     "ORKA": {
       "purchases": 644.0938372849316,
@@ -20702,11 +21149,11 @@
       "dividends": 0.0,
       "fees": 1.2469996268450143,
       "complete": true,
-      "reference_price": 104.62999725341797,
-      "growth": 0.9318667473365747,
+      "reference_price": 106.01000213623047,
+      "growth": 0.9441574927749062,
       "entry_session": "2026-11-11",
-      "benchmark_growth": 0.9497622104791912,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.9470137734768206,
+      "benchmark_price": 716.7000122070312
     },
     "CXW": {
       "purchases": 644.0938372849316,
@@ -20714,11 +21161,11 @@
       "dividends": 0.0,
       "fees": 1.2991045375691181,
       "complete": true,
-      "reference_price": 29.59000015258789,
-      "growth": 0.9287507716799561,
+      "reference_price": 30.170000076293945,
+      "growth": 0.9469554142598313,
       "entry_session": "2026-11-11",
-      "benchmark_growth": 0.9497622104791912,
-      "benchmark_price": 718.780029296875
+      "benchmark_growth": 0.9470137734768206,
+      "benchmark_price": 716.7000122070312
     },
     "SN": {
       "purchases": 624.4886686903889,
@@ -20726,11 +21173,11 @@
       "dividends": 0.0,
       "fees": 1.2416320351696304,
       "complete": true,
-      "reference_price": 228.92999267578125,
-      "growth": 1.008502170377891,
+      "reference_price": 232.5,
+      "growth": 1.024229074889868,
       "entry_session": "2026-11-16",
-      "benchmark_growth": 0.9588080663849144,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.956033452340738,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "RNG": {
@@ -20739,11 +21186,11 @@
       "dividends": 0.0,
       "fees": 1.247914771127737,
       "complete": true,
-      "reference_price": 69.69999694824219,
-      "growth": 0.9523158166860554,
+      "reference_price": 71.12999725341797,
+      "growth": 0.9718540084810425,
       "entry_session": "2026-11-17",
-      "benchmark_growth": 0.9734422392468305,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9706252766002891,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "CHYM": {
@@ -20752,11 +21199,11 @@
       "dividends": 0.0,
       "fees": 1.1838689509722822,
       "complete": true,
-      "reference_price": 32.84000015258789,
-      "growth": 0.9741916655142983,
+      "reference_price": 33.029998779296875,
+      "growth": 0.9798279346293723,
       "entry_session": "2026-11-17",
-      "benchmark_growth": 0.9734422392468305,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9706252766002891,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     },
     "PRCH": {
@@ -20765,11 +21212,11 @@
       "dividends": 0.0,
       "fees": 1.1976026939121494,
       "complete": true,
-      "reference_price": 22.020000457763672,
-      "growth": 1.068932041262061,
+      "reference_price": 21.489999771118164,
+      "growth": 1.0432038530663823,
       "entry_session": "2026-11-18",
-      "benchmark_growth": 0.9801055866514132,
-      "benchmark_price": 718.780029296875,
+      "benchmark_growth": 0.9772693415040897,
+      "benchmark_price": 716.7000122070312,
       "reference_incomplete": true
     }
   }
