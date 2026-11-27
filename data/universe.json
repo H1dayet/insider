@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1125202621:32",
-    "other_listed_file_timestamp": "File Creation Time: 1125202621:32",
-    "retrieved_at": "2026-11-27T04:24:49.293130+00:00",
-    "directory_rows": 6736,
-    "eligible_common_shares": 4729,
-    "unclassified_sectors": 171,
-    "unresolved_issuer_ids": 4729
+    "nasdaq_file_timestamp": "File Creation Time: 1127202608:46",
+    "other_listed_file_timestamp": "File Creation Time: 1127202608:46",
+    "retrieved_at": "2026-11-27T13:55:15.499542+00:00",
+    "directory_rows": 6735,
+    "eligible_common_shares": 4727,
+    "unclassified_sectors": 169,
+    "unresolved_issuer_ids": 4727
   },
   "securities": [
     {
@@ -5515,7 +5515,7 @@
     {
       "ticker": "CAPS",
       "name": "Capstone Holding Corp. - Common Stock",
-      "sector": "Health Care",
+      "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:CAPS",
       "exchange": "Nasdaq"
     },
@@ -13270,7 +13270,7 @@
     },
     {
       "ticker": "GRDX",
-      "name": "GridAI Technologies Corp.  - Common Stock",
+      "name": "GridAI Power Corp. - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:GRDX",
       "exchange": "Nasdaq"
@@ -13847,13 +13847,6 @@
       "name": "Healthcare Services Group, Inc. - Common Stock",
       "sector": "Health Care",
       "permanent_id": "issuer-unresolved:HCSG",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "HCTI",
-      "name": "Healthcare Triangle, Inc. - Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:HCTI",
       "exchange": "Nasdaq"
     },
     {
@@ -21531,7 +21524,7 @@
     {
       "ticker": "OBMT",
       "name": "Opportunity Bancorp, Inc. - Common Stock",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:OBMT",
       "exchange": "Nasdaq"
     },
@@ -27523,7 +27516,7 @@
     {
       "ticker": "SPEG",
       "name": "Silver Pegasus Acquisition Corp - Class A Ordinary Shares",
-      "sector": "Unclassified",
+      "sector": "Finance",
       "permanent_id": "issuer-unresolved:SPEG",
       "exchange": "Nasdaq"
     },
@@ -31473,13 +31466,6 @@
       "name": "Vuzix Corporation  - Common Stock",
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:VUZI",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "VVOS",
-      "name": "Vivos Therapeutics, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:VVOS",
       "exchange": "Nasdaq"
     },
     {
