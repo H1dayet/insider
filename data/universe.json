@@ -1,13 +1,13 @@
 {
   "meta": {
     "source": "Nasdaq Trader Symbol Directory",
-    "nasdaq_file_timestamp": "File Creation Time: 1127202608:46",
-    "other_listed_file_timestamp": "File Creation Time: 1127202608:46",
-    "retrieved_at": "2026-11-27T13:55:15.499542+00:00",
-    "directory_rows": 6735,
-    "eligible_common_shares": 4727,
-    "unclassified_sectors": 169,
-    "unresolved_issuer_ids": 4727
+    "nasdaq_file_timestamp": "File Creation Time: 1127202621:33",
+    "other_listed_file_timestamp": "File Creation Time: 1127202621:33",
+    "retrieved_at": "2026-11-28T04:05:27.641990+00:00",
+    "directory_rows": 6730,
+    "eligible_common_shares": 4721,
+    "unclassified_sectors": 170,
+    "unresolved_issuer_ids": 4721
   },
   "securities": [
     {
@@ -2256,6 +2256,13 @@
       "sector": "Energy",
       "permanent_id": "issuer-unresolved:AR",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "ARAI",
+      "name": "Arrive AI Inc. - Common Stock",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:ARAI",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "ARAY",
@@ -4680,13 +4687,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "BOW",
-      "name": "Bowhead Specialty Holdings Inc. Common Stock",
-      "sector": "Finance",
-      "permanent_id": "issuer-unresolved:BOW",
-      "exchange": "NYSE"
-    },
-    {
       "ticker": "BOX",
       "name": "Box, Inc. Class A Common Stock",
       "sector": "Technology",
@@ -6871,13 +6871,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "CMPX",
-      "name": "Compass Therapeutics, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:CMPX",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "CMRC",
       "name": "Commerce.com, Inc. - Series 1 Common Stock",
       "sector": "Technology",
@@ -8251,7 +8244,7 @@
     },
     {
       "ticker": "CWT",
-      "name": "California Water Service Group Common Stock",
+      "name": "Watermark Utilities Common Stock",
       "sector": "Utilities",
       "permanent_id": "issuer-unresolved:CWT",
       "exchange": "NYSE"
@@ -9305,13 +9298,6 @@
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:DUOT",
       "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "DV",
-      "name": "DoubleVerify Holdings, Inc. Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:DV",
-      "exchange": "NYSE"
     },
     {
       "ticker": "DVA",
@@ -10847,13 +10833,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "FBDT",
-      "name": "First Breach Inc. - Common Stock",
-      "sector": "Industrials",
-      "permanent_id": "issuer-unresolved:FBDT",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "FBGL",
       "name": "FBS Global Limited - Ordinary Shares",
       "sector": "Consumer Discretionary",
@@ -10991,6 +10970,13 @@
       "name": "FirstCash Holdings, Inc. - Common Stock",
       "sector": "Consumer Discretionary",
       "permanent_id": "issuer-unresolved:FCFS",
+      "exchange": "Nasdaq"
+    },
+    {
+      "ticker": "FCHL",
+      "name": "Fitness Champs Holdings Limited - Ordinary Shares",
+      "sector": "Consumer Discretionary",
+      "permanent_id": "issuer-unresolved:FCHL",
       "exchange": "Nasdaq"
     },
     {
@@ -12448,6 +12434,13 @@
       "sector": "Finance",
       "permanent_id": "issuer-unresolved:GDOT",
       "exchange": "NYSE"
+    },
+    {
+      "ticker": "GDRX",
+      "name": "GoodRx Holdings, Inc. - Class A Common Stock",
+      "sector": "Technology",
+      "permanent_id": "issuer-unresolved:GDRX",
+      "exchange": "Nasdaq"
     },
     {
       "ticker": "GDV",
@@ -14785,13 +14778,6 @@
       "name": "Innovation Beverage Group Limited - Ordinary Shares",
       "sector": "Consumer Staples",
       "permanent_id": "issuer-unresolved:IBG",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "IBIO",
-      "name": "iBio, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:IBIO",
       "exchange": "Nasdaq"
     },
     {
@@ -21578,13 +21564,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "OCGN",
-      "name": "Ocugen, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:OCGN",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "OCLT",
       "name": "OceanLight Acquisition Corporation - Ordinary Shares",
       "sector": "Finance",
@@ -22850,13 +22829,6 @@
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:PCOR",
       "exchange": "NYSE"
-    },
-    {
-      "ticker": "PCSA",
-      "name": "Processa Pharmaceuticals, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:PCSA",
-      "exchange": "Nasdaq"
     },
     {
       "ticker": "PCT",
@@ -24812,6 +24784,13 @@
       "exchange": "NYSE"
     },
     {
+      "ticker": "RDAC",
+      "name": "Rising Dragon Acquisition Corp. - Ordinary Shares",
+      "sector": "Unclassified",
+      "permanent_id": "issuer-unresolved:RDAC",
+      "exchange": "Nasdaq"
+    },
+    {
       "ticker": "RDAG",
       "name": "Republic Digital Acquisition Company - Class A Ordinary Shares",
       "sector": "Finance",
@@ -25544,13 +25523,6 @@
       "name": "Rapid7, Inc. - Common Stock",
       "sector": "Technology",
       "permanent_id": "issuer-unresolved:RPD",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "RPGL",
-      "name": "Republic Power Group Limited - Class A Ordinary Shares",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:RPGL",
       "exchange": "Nasdaq"
     },
     {
@@ -27059,13 +27031,6 @@
       "exchange": "Nasdaq"
     },
     {
-      "ticker": "SLNH",
-      "name": "Soluna Holdings, Inc. - Common Stock",
-      "sector": "Technology",
-      "permanent_id": "issuer-unresolved:SLNH",
-      "exchange": "Nasdaq"
-    },
-    {
       "ticker": "SLQT",
       "name": "SelectQuote, Inc. Common Stock",
       "sector": "Finance",
@@ -28379,13 +28344,6 @@
       "name": "China SXT Pharmaceuticals, Inc. - Class A Ordinary Shares",
       "sector": "Unclassified",
       "permanent_id": "issuer-unresolved:SXTC",
-      "exchange": "Nasdaq"
-    },
-    {
-      "ticker": "SXTP",
-      "name": "60 Degrees Pharmaceuticals, Inc. - Common Stock",
-      "sector": "Health Care",
-      "permanent_id": "issuer-unresolved:SXTP",
       "exchange": "Nasdaq"
     },
     {
